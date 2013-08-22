@@ -1,0 +1,937 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D09FEBE17C28210006B5159 /* IBMAcmeMainViewCommonOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09FEBD17C28210006B5159 /* IBMAcmeMainViewCommonOperations.m */; };
+		3D09FEE417C548E9006B5159 /* libiOSSBTK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D09FEE317C548E9006B5159 /* libiOSSBTK.a */; };
+		3D09FF0B17C661F6006B5159 /* libiOSSBTK_iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D09FF0A17C661F6006B5159 /* libiOSSBTK_iphone.a */; };
+		3D824D5717AFF8AB000AD1EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824D5617AFF8AB000AD1EF /* UIKit.framework */; };
+		3D824D5917AFF8AB000AD1EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824D5817AFF8AB000AD1EF /* Foundation.framework */; };
+		3D824D5B17AFF8AB000AD1EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824D5A17AFF8AB000AD1EF /* CoreGraphics.framework */; };
+		3D824D6117AFF8AB000AD1EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D5F17AFF8AB000AD1EF /* InfoPlist.strings */; };
+		3D824D6317AFF8AB000AD1EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D6217AFF8AB000AD1EF /* main.m */; };
+		3D824D6917AFF8AB000AD1EF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D6817AFF8AB000AD1EF /* Default.png */; };
+		3D824D6B17AFF8AB000AD1EF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D6A17AFF8AB000AD1EF /* Default@2x.png */; };
+		3D824D6D17AFF8AB000AD1EF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D6C17AFF8AB000AD1EF /* Default-568h@2x.png */; };
+		3D824DAE17AFF948000AD1EF /* ComposeUpdate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D8C17AFF948000AD1EF /* ComposeUpdate.xib */; };
+		3D824DB017AFF948000AD1EF /* IBMAcmeCommunityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D8E17AFF948000AD1EF /* IBMAcmeCommunityView.xib */; };
+		3D824DB117AFF948000AD1EF /* IBMAcmeFlightStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D8F17AFF948000AD1EF /* IBMAcmeFlightStatusView.xib */; };
+		3D824DB217AFF948000AD1EF /* IBMAcmeFlightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9017AFF948000AD1EF /* IBMAcmeFlightView.xib */; };
+		3D824DB317AFF948000AD1EF /* IBMAcmeMyFlightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9117AFF948000AD1EF /* IBMAcmeMyFlightView.xib */; };
+		3D824DB417AFF948000AD1EF /* IBMAcmeMyProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9217AFF948000AD1EF /* IBMAcmeMyProfileView.xib */; };
+		3D824DB517AFF948000AD1EF /* IBMAcmeSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9317AFF948000AD1EF /* IBMAcmeSettingsView.xib */; };
+		3D824DB617AFF948000AD1EF /* IBMAcmeStatusUpdateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9417AFF948000AD1EF /* IBMAcmeStatusUpdateView.xib */; };
+		3D824DB717AFF948000AD1EF /* IBMAcmeWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9517AFF948000AD1EF /* IBMAcmeWebView.xib */; };
+		3D824DB817AFF948000AD1EF /* IBMProfileListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9617AFF948000AD1EF /* IBMProfileListView.xib */; };
+		3D824DB917AFF948000AD1EF /* IBMViewControllerIpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9717AFF948000AD1EF /* IBMViewControllerIpad.xib */; };
+		3D824DBA17AFF948000AD1EF /* IBMAcmeLargeImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9817AFF948000AD1EF /* IBMAcmeLargeImageView.xib */; };
+		3D824DBB17AFF948000AD1EF /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9917AFF948000AD1EF /* LoginView.xib */; };
+		3D824DBC17AFF948000AD1EF /* ComposeUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D9A17AFF948000AD1EF /* ComposeUpdate.m */; };
+		3D824DBF17AFF948000AD1EF /* IBMAcmeCommunityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D9D17AFF948000AD1EF /* IBMAcmeCommunityView.m */; };
+		3D824DC017AFF948000AD1EF /* IBMAcmeConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D9E17AFF948000AD1EF /* IBMAcmeConstant.m */; };
+		3D824DC117AFF948000AD1EF /* IBMAcmeFlight.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D9F17AFF948000AD1EF /* IBMAcmeFlight.m */; };
+		3D824DC217AFF948000AD1EF /* IBMAcmeFlightStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA017AFF948000AD1EF /* IBMAcmeFlightStatusView.m */; };
+		3D824DC317AFF948000AD1EF /* IBMAcmeFlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA117AFF948000AD1EF /* IBMAcmeFlightView.m */; };
+		3D824DC417AFF948000AD1EF /* IBMAcmeMyFlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA217AFF948000AD1EF /* IBMAcmeMyFlightView.m */; };
+		3D824DC517AFF948000AD1EF /* IBMAcmeMyProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA317AFF948000AD1EF /* IBMAcmeMyProfileView.m */; };
+		3D824DC617AFF948000AD1EF /* IBMAcmeSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA417AFF948000AD1EF /* IBMAcmeSettingsView.m */; };
+		3D824DC717AFF948000AD1EF /* IBMAcmeStatusUpdateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA517AFF948000AD1EF /* IBMAcmeStatusUpdateView.m */; };
+		3D824DC817AFF948000AD1EF /* IBMAcmeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA617AFF948000AD1EF /* IBMAcmeUtils.m */; };
+		3D824DC917AFF948000AD1EF /* IBMAcmeWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA717AFF948000AD1EF /* IBMAcmeWebView.m */; };
+		3D824DCA17AFF948000AD1EF /* IBMProfileListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA817AFF948000AD1EF /* IBMProfileListView.m */; };
+		3D824DCB17AFF948000AD1EF /* IBMViewControllerIpad.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA917AFF948000AD1EF /* IBMViewControllerIpad.m */; };
+		3D824DCC17AFF948000AD1EF /* IBMViewControllerIpadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DAA17AFF948000AD1EF /* IBMViewControllerIpadCell.m */; };
+		3D824DCD17AFF948000AD1EF /* IBMAcmeLargeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DAB17AFF948000AD1EF /* IBMAcmeLargeImageView.m */; };
+		3D824DCE17AFF948000AD1EF /* LikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DAC17AFF948000AD1EF /* LikeButton.m */; };
+		3D824DCF17AFF948000AD1EF /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DAD17AFF948000AD1EF /* LoginView.m */; };
+		3D824DED17AFF960000AD1EF /* @btnDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DD117AFF960000AD1EF /* @btnDefault.png */; };
+		3D824DEE17AFF960000AD1EF /* @btnDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DD217AFF960000AD1EF /* @btnDefault@2x.png */; };
+		3D824DF217AFF960000AD1EF /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DD617AFF960000AD1EF /* blue.png */; };
+		3D824DF317AFF960000AD1EF /* comment.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DD717AFF960000AD1EF /* comment.png */; };
+		3D824DF417AFF960000AD1EF /* flight_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DD817AFF960000AD1EF /* flight_icon.png */; };
+		3D824DF517AFF960000AD1EF /* flight_status.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DD917AFF960000AD1EF /* flight_status.png */; };
+		3D824DF617AFF960000AD1EF /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DDA17AFF960000AD1EF /* header.png */; };
+		3D824DF717AFF960000AD1EF /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DDB17AFF960000AD1EF /* left.png */; };
+		3D824DF817AFF960000AD1EF /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DDC17AFF960000AD1EF /* like.png */; };
+		3D824DFA17AFF960000AD1EF /* my_flights_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DDE17AFF960000AD1EF /* my_flights_blue.png */; };
+		3D824DFC17AFF960000AD1EF /* photobtnDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DE017AFF960000AD1EF /* photobtnDefault.png */; };
+		3D824DFD17AFF960000AD1EF /* photobtnDefault@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DE117AFF960000AD1EF /* photobtnDefault@2x.png */; };
+		3D824DFE17AFF960000AD1EF /* photobtnTap.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DE217AFF960000AD1EF /* photobtnTap.png */; };
+		3D824DFF17AFF960000AD1EF /* photobtnTap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DE317AFF960000AD1EF /* photobtnTap@2x.png */; };
+		3D824E0017AFF960000AD1EF /* placeholder_image.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DE417AFF960000AD1EF /* placeholder_image.png */; };
+		3D824E0117AFF960000AD1EF /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DE517AFF960000AD1EF /* plus.png */; };
+		3D824E0217AFF960000AD1EF /* profile_photo_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DE617AFF960000AD1EF /* profile_photo_default.png */; };
+		3D824E0317AFF960000AD1EF /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DE717AFF960000AD1EF /* right.png */; };
+		3D824E0517AFF960000AD1EF /* slideNavBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DE917AFF960000AD1EF /* slideNavBG.png */; };
+		3D824E0617AFF960000AD1EF /* slideNavBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DEA17AFF960000AD1EF /* slideNavBG@2x.png */; };
+		3D824E0C17AFF9D4000AD1EF /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824E0B17AFF9D4000AD1EF /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3D824E2B17AFFA8E000AD1EF /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824E2A17AFFA8E000AD1EF /* libxml2.dylib */; };
+		3D824E9917AFFC62000AD1EF /* IBMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824E9417AFFC62000AD1EF /* IBMViewController.xib */; };
+		3D824E9A17AFFC62000AD1EF /* IBMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824E9617AFFC62000AD1EF /* IBMAppDelegate.m */; };
+		3D824E9B17AFFC62000AD1EF /* IBMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824E9817AFFC62000AD1EF /* IBMViewController.m */; };
+		3D824E9D17AFFCAB000AD1EF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824E9C17AFFCAB000AD1EF /* MobileCoreServices.framework */; };
+		3D824F5917B05382000AD1EF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824F5717B05382000AD1EF /* Icon.png */; };
+		3D824F5A17B05382000AD1EF /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824F5817B05382000AD1EF /* Icon@2x.png */; };
+		3D824F6317B2D702000AD1EF /* IBMAcmeBookmarksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824F6117B2D702000AD1EF /* IBMAcmeBookmarksView.m */; };
+		3D824F6417B2D702000AD1EF /* IBMAcmeBookmarksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824F6217B2D702000AD1EF /* IBMAcmeBookmarksView.xib */; };
+		3DCCFBF717B3E7F70063C199 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFBEE17B3E7F70063C199 /* AFHTTPClient.m */; };
+		3DCCFBF817B3E7F70063C199 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFBEF17B3E7F70063C199 /* AFHTTPRequestOperation.m */; };
+		3DCCFBF917B3E7F70063C199 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFBF017B3E7F70063C199 /* AFImageRequestOperation.m */; };
+		3DCCFBFA17B3E7F70063C199 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFBF117B3E7F70063C199 /* AFJSONRequestOperation.m */; };
+		3DCCFBFB17B3E7F70063C199 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFBF217B3E7F70063C199 /* AFNetworkActivityIndicatorManager.m */; };
+		3DCCFBFC17B3E7F70063C199 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFBF317B3E7F70063C199 /* AFPropertyListRequestOperation.m */; };
+		3DCCFBFD17B3E7F70063C199 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFBF417B3E7F70063C199 /* AFURLConnectionOperation.m */; };
+		3DCCFBFE17B3E7F70063C199 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFBF517B3E7F70063C199 /* AFXMLRequestOperation.m */; };
+		3DCCFBFF17B3E7F70063C199 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFBF617B3E7F70063C199 /* UIImageView+AFNetworking.m */; };
+		3DCCFC0117B3E80C0063C199 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCCFC0017B3E80B0063C199 /* Security.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3D09FEBC17C28210006B5159 /* IBMAcmeMainViewCommonOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeMainViewCommonOperations.h; sourceTree = "<group>"; };
+		3D09FEBD17C28210006B5159 /* IBMAcmeMainViewCommonOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeMainViewCommonOperations.m; sourceTree = "<group>"; };
+		3D09FEC017C548E5006B5159 /* FBLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLog.h; sourceTree = "<group>"; };
+		3D09FEC117C548E5006B5159 /* IBMActivityStreamActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMActivityStreamActor.h; sourceTree = "<group>"; };
+		3D09FEC217C548E5006B5159 /* IBMActivityStreamAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMActivityStreamAttachment.h; sourceTree = "<group>"; };
+		3D09FEC317C548E5006B5159 /* IBMActivityStreamCommunity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMActivityStreamCommunity.h; sourceTree = "<group>"; };
+		3D09FEC417C548E5006B5159 /* IBMActivityStreamEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMActivityStreamEntry.h; sourceTree = "<group>"; };
+		3D09FEC517C548E5006B5159 /* IBMASApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMASApplication.h; sourceTree = "<group>"; };
+		3D09FEC617C548E5006B5159 /* IBMASGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMASGroup.h; sourceTree = "<group>"; };
+		3D09FEC717C548E5006B5159 /* IBMASUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMASUser.h; sourceTree = "<group>"; };
+		3D09FEC817C548E5006B5159 /* IBMBaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMBaseService.h; sourceTree = "<group>"; };
+		3D09FEC917C548E5006B5159 /* IBMBasicEndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMBasicEndPoint.h; sourceTree = "<group>"; };
+		3D09FECA17C548E5006B5159 /* IBMClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMClientService.h; sourceTree = "<group>"; };
+		3D09FECB17C548E5006B5159 /* IBMCommunityBookmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMCommunityBookmark.h; sourceTree = "<group>"; };
+		3D09FECC17C548E5006B5159 /* IBMCommunityForumTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMCommunityForumTopic.h; sourceTree = "<group>"; };
+		3D09FECD17C548E5006B5159 /* IBMCommunityMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMCommunityMember.h; sourceTree = "<group>"; };
+		3D09FECE17C548E5006B5159 /* IBMConnectionsActivityStreamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsActivityStreamService.h; sourceTree = "<group>"; };
+		3D09FECF17C548E5006B5159 /* IBMConnectionsBasicEndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsBasicEndPoint.h; sourceTree = "<group>"; };
+		3D09FED017C548E5006B5159 /* IBMConnectionsClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsClientService.h; sourceTree = "<group>"; };
+		3D09FED117C548E5006B5159 /* IBMConnectionsCommunity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsCommunity.h; sourceTree = "<group>"; };
+		3D09FED217C548E5006B5159 /* IBMConnectionsCommunityService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsCommunityService.h; sourceTree = "<group>"; };
+		3D09FED317C548E5006B5159 /* IBMConnectionsFileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsFileService.h; sourceTree = "<group>"; };
+		3D09FED417C548E5006B5159 /* IBMConnectionsOAuth2EndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsOAuth2EndPoint.h; sourceTree = "<group>"; };
+		3D09FED517C548E5006B5159 /* IBMConnectionsProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsProfile.h; sourceTree = "<group>"; };
+		3D09FED617C548E5006B5159 /* IBMConnectionsProfileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsProfileService.h; sourceTree = "<group>"; };
+		3D09FED717C548E5006B5159 /* IBMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConstants.h; sourceTree = "<group>"; };
+		3D09FED817C548E5006B5159 /* IBMCredentialStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMCredentialStore.h; sourceTree = "<group>"; };
+		3D09FED917C548E5006B5159 /* IBMEndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMEndPoint.h; sourceTree = "<group>"; };
+		3D09FEDA17C548E5006B5159 /* IBMEndPointFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMEndPointFactory.h; sourceTree = "<group>"; };
+		3D09FEDB17C548E5006B5159 /* IBMFileCommentEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMFileCommentEntry.h; sourceTree = "<group>"; };
+		3D09FEDC17C548E5006B5159 /* IBMFileEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMFileEntry.h; sourceTree = "<group>"; };
+		3D09FEDD17C548E5006B5159 /* IBMFilePersonEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMFilePersonEntry.h; sourceTree = "<group>"; };
+		3D09FEDE17C548E5006B5159 /* IBMFileRequestParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMFileRequestParameters.h; sourceTree = "<group>"; };
+		3D09FEDF17C548E5006B5159 /* IBMHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMHttpClient.h; sourceTree = "<group>"; };
+		3D09FEE017C548E5006B5159 /* IBMOAuth2EndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMOAuth2EndPoint.h; sourceTree = "<group>"; };
+		3D09FEE117C548E5006B5159 /* IBMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMUtils.h; sourceTree = "<group>"; };
+		3D09FEE217C548E5006B5159 /* IBMXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMXMLDocument.h; sourceTree = "<group>"; };
+		3D09FEE317C548E9006B5159 /* libiOSSBTK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiOSSBTK.a; sourceTree = "<group>"; };
+		3D09FF0A17C661F6006B5159 /* libiOSSBTK_iphone.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiOSSBTK_iphone.a; sourceTree = "<group>"; };
+		3D824D5317AFF8AB000AD1EF /* AcmeAirlines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AcmeAirlines.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D824D5617AFF8AB000AD1EF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3D824D5817AFF8AB000AD1EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3D824D5A17AFF8AB000AD1EF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3D824D5E17AFF8AB000AD1EF /* AcmeAirlines-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AcmeAirlines-Info.plist"; sourceTree = "<group>"; };
+		3D824D6017AFF8AB000AD1EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3D824D6217AFF8AB000AD1EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3D824D6417AFF8AB000AD1EF /* AcmeAirlines-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AcmeAirlines-Prefix.pch"; sourceTree = "<group>"; };
+		3D824D6817AFF8AB000AD1EF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3D824D6A17AFF8AB000AD1EF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3D824D6C17AFF8AB000AD1EF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3D824D7917AFF948000AD1EF /* ComposeUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeUpdate.h; sourceTree = "<group>"; };
+		3D824D7B17AFF948000AD1EF /* IBMAcmeCommunityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeCommunityView.h; sourceTree = "<group>"; };
+		3D824D7C17AFF948000AD1EF /* IBMAcmeConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeConstant.h; sourceTree = "<group>"; };
+		3D824D7D17AFF948000AD1EF /* IBMAcmeFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeFlight.h; sourceTree = "<group>"; };
+		3D824D7E17AFF948000AD1EF /* IBMAcmeFlightStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeFlightStatusView.h; sourceTree = "<group>"; };
+		3D824D7F17AFF948000AD1EF /* IBMAcmeFlightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeFlightView.h; sourceTree = "<group>"; };
+		3D824D8017AFF948000AD1EF /* IBMAcmeMyFlightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeMyFlightView.h; sourceTree = "<group>"; };
+		3D824D8117AFF948000AD1EF /* IBMAcmeMyProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeMyProfileView.h; sourceTree = "<group>"; };
+		3D824D8217AFF948000AD1EF /* IBMAcmeSettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeSettingsView.h; sourceTree = "<group>"; };
+		3D824D8317AFF948000AD1EF /* IBMAcmeStatusUpdateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeStatusUpdateView.h; sourceTree = "<group>"; };
+		3D824D8417AFF948000AD1EF /* IBMAcmeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeUtils.h; sourceTree = "<group>"; };
+		3D824D8517AFF948000AD1EF /* IBMAcmeWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeWebView.h; sourceTree = "<group>"; };
+		3D824D8617AFF948000AD1EF /* IBMProfileListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMProfileListView.h; sourceTree = "<group>"; };
+		3D824D8717AFF948000AD1EF /* IBMViewControllerIpad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMViewControllerIpad.h; sourceTree = "<group>"; };
+		3D824D8817AFF948000AD1EF /* IBMViewControllerIpadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMViewControllerIpadCell.h; sourceTree = "<group>"; };
+		3D824D8917AFF948000AD1EF /* IBMAcmeLargeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeLargeImageView.h; sourceTree = "<group>"; };
+		3D824D8A17AFF948000AD1EF /* LikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikeButton.h; sourceTree = "<group>"; };
+		3D824D8B17AFF948000AD1EF /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		3D824D8C17AFF948000AD1EF /* ComposeUpdate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeUpdate.xib; sourceTree = "<group>"; };
+		3D824D8E17AFF948000AD1EF /* IBMAcmeCommunityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeCommunityView.xib; sourceTree = "<group>"; };
+		3D824D8F17AFF948000AD1EF /* IBMAcmeFlightStatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeFlightStatusView.xib; sourceTree = "<group>"; };
+		3D824D9017AFF948000AD1EF /* IBMAcmeFlightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeFlightView.xib; sourceTree = "<group>"; };
+		3D824D9117AFF948000AD1EF /* IBMAcmeMyFlightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeMyFlightView.xib; sourceTree = "<group>"; };
+		3D824D9217AFF948000AD1EF /* IBMAcmeMyProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeMyProfileView.xib; sourceTree = "<group>"; };
+		3D824D9317AFF948000AD1EF /* IBMAcmeSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeSettingsView.xib; sourceTree = "<group>"; };
+		3D824D9417AFF948000AD1EF /* IBMAcmeStatusUpdateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeStatusUpdateView.xib; sourceTree = "<group>"; };
+		3D824D9517AFF948000AD1EF /* IBMAcmeWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeWebView.xib; sourceTree = "<group>"; };
+		3D824D9617AFF948000AD1EF /* IBMProfileListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMProfileListView.xib; sourceTree = "<group>"; };
+		3D824D9717AFF948000AD1EF /* IBMViewControllerIpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMViewControllerIpad.xib; sourceTree = "<group>"; };
+		3D824D9817AFF948000AD1EF /* IBMAcmeLargeImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeLargeImageView.xib; sourceTree = "<group>"; };
+		3D824D9917AFF948000AD1EF /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		3D824D9A17AFF948000AD1EF /* ComposeUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeUpdate.m; sourceTree = "<group>"; };
+		3D824D9D17AFF948000AD1EF /* IBMAcmeCommunityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeCommunityView.m; sourceTree = "<group>"; };
+		3D824D9E17AFF948000AD1EF /* IBMAcmeConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeConstant.m; sourceTree = "<group>"; };
+		3D824D9F17AFF948000AD1EF /* IBMAcmeFlight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeFlight.m; sourceTree = "<group>"; };
+		3D824DA017AFF948000AD1EF /* IBMAcmeFlightStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeFlightStatusView.m; sourceTree = "<group>"; };
+		3D824DA117AFF948000AD1EF /* IBMAcmeFlightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeFlightView.m; sourceTree = "<group>"; };
+		3D824DA217AFF948000AD1EF /* IBMAcmeMyFlightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeMyFlightView.m; sourceTree = "<group>"; };
+		3D824DA317AFF948000AD1EF /* IBMAcmeMyProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeMyProfileView.m; sourceTree = "<group>"; };
+		3D824DA417AFF948000AD1EF /* IBMAcmeSettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeSettingsView.m; sourceTree = "<group>"; };
+		3D824DA517AFF948000AD1EF /* IBMAcmeStatusUpdateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeStatusUpdateView.m; sourceTree = "<group>"; };
+		3D824DA617AFF948000AD1EF /* IBMAcmeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeUtils.m; sourceTree = "<group>"; };
+		3D824DA717AFF948000AD1EF /* IBMAcmeWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeWebView.m; sourceTree = "<group>"; };
+		3D824DA817AFF948000AD1EF /* IBMProfileListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMProfileListView.m; sourceTree = "<group>"; };
+		3D824DA917AFF948000AD1EF /* IBMViewControllerIpad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMViewControllerIpad.m; sourceTree = "<group>"; };
+		3D824DAA17AFF948000AD1EF /* IBMViewControllerIpadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMViewControllerIpadCell.m; sourceTree = "<group>"; };
+		3D824DAB17AFF948000AD1EF /* IBMAcmeLargeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeLargeImageView.m; sourceTree = "<group>"; };
+		3D824DAC17AFF948000AD1EF /* LikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikeButton.m; sourceTree = "<group>"; };
+		3D824DAD17AFF948000AD1EF /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
+		3D824DD117AFF960000AD1EF /* @btnDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "@btnDefault.png"; sourceTree = "<group>"; };
+		3D824DD217AFF960000AD1EF /* @btnDefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "@btnDefault@2x.png"; sourceTree = "<group>"; };
+		3D824DD617AFF960000AD1EF /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
+		3D824DD717AFF960000AD1EF /* comment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = comment.png; sourceTree = "<group>"; };
+		3D824DD817AFF960000AD1EF /* flight_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flight_icon.png; sourceTree = "<group>"; };
+		3D824DD917AFF960000AD1EF /* flight_status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flight_status.png; sourceTree = "<group>"; };
+		3D824DDA17AFF960000AD1EF /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
+		3D824DDB17AFF960000AD1EF /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
+		3D824DDC17AFF960000AD1EF /* like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like.png; sourceTree = "<group>"; };
+		3D824DDE17AFF960000AD1EF /* my_flights_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = my_flights_blue.png; sourceTree = "<group>"; };
+		3D824DE017AFF960000AD1EF /* photobtnDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photobtnDefault.png; sourceTree = "<group>"; };
+		3D824DE117AFF960000AD1EF /* photobtnDefault@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photobtnDefault@2x.png"; sourceTree = "<group>"; };
+		3D824DE217AFF960000AD1EF /* photobtnTap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photobtnTap.png; sourceTree = "<group>"; };
+		3D824DE317AFF960000AD1EF /* photobtnTap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photobtnTap@2x.png"; sourceTree = "<group>"; };
+		3D824DE417AFF960000AD1EF /* placeholder_image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_image.png; sourceTree = "<group>"; };
+		3D824DE517AFF960000AD1EF /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		3D824DE617AFF960000AD1EF /* profile_photo_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_photo_default.png; sourceTree = "<group>"; };
+		3D824DE717AFF960000AD1EF /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
+		3D824DE917AFF960000AD1EF /* slideNavBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slideNavBG.png; sourceTree = "<group>"; };
+		3D824DEA17AFF960000AD1EF /* slideNavBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "slideNavBG@2x.png"; sourceTree = "<group>"; };
+		3D824E0A17AFF9D4000AD1EF /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		3D824E0B17AFF9D4000AD1EF /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		3D824E2A17AFFA8E000AD1EF /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		3D824E9417AFFC62000AD1EF /* IBMViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMViewController.xib; sourceTree = "<group>"; };
+		3D824E9517AFFC62000AD1EF /* IBMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAppDelegate.h; sourceTree = "<group>"; };
+		3D824E9617AFFC62000AD1EF /* IBMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAppDelegate.m; sourceTree = "<group>"; };
+		3D824E9717AFFC62000AD1EF /* IBMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMViewController.h; sourceTree = "<group>"; };
+		3D824E9817AFFC62000AD1EF /* IBMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMViewController.m; sourceTree = "<group>"; };
+		3D824E9C17AFFCAB000AD1EF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		3D824F5717B05382000AD1EF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		3D824F5817B05382000AD1EF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		3D824F6017B2D702000AD1EF /* IBMAcmeBookmarksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeBookmarksView.h; sourceTree = "<group>"; };
+		3D824F6117B2D702000AD1EF /* IBMAcmeBookmarksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeBookmarksView.m; sourceTree = "<group>"; };
+		3D824F6217B2D702000AD1EF /* IBMAcmeBookmarksView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeBookmarksView.xib; sourceTree = "<group>"; };
+		3DCCFBE417B3E7F70063C199 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		3DCCFBE517B3E7F70063C199 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		3DCCFBE617B3E7F70063C199 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		3DCCFBE717B3E7F70063C199 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		3DCCFBE817B3E7F70063C199 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		3DCCFBE917B3E7F70063C199 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		3DCCFBEA17B3E7F70063C199 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		3DCCFBEB17B3E7F70063C199 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		3DCCFBEC17B3E7F70063C199 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		3DCCFBED17B3E7F70063C199 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		3DCCFBEE17B3E7F70063C199 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		3DCCFBEF17B3E7F70063C199 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		3DCCFBF017B3E7F70063C199 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		3DCCFBF117B3E7F70063C199 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		3DCCFBF217B3E7F70063C199 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		3DCCFBF317B3E7F70063C199 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		3DCCFBF417B3E7F70063C199 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		3DCCFBF517B3E7F70063C199 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		3DCCFBF617B3E7F70063C199 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		3DCCFC0017B3E80B0063C199 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D824D5017AFF8AB000AD1EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DCCFC0117B3E80C0063C199 /* Security.framework in Frameworks */,
+				3D824E9D17AFFCAB000AD1EF /* MobileCoreServices.framework in Frameworks */,
+				3D824E2B17AFFA8E000AD1EF /* libxml2.dylib in Frameworks */,
+				3D824D5717AFF8AB000AD1EF /* UIKit.framework in Frameworks */,
+				3D824D5917AFF8AB000AD1EF /* Foundation.framework in Frameworks */,
+				3D824D5B17AFF8AB000AD1EF /* CoreGraphics.framework in Frameworks */,
+				3D09FEE417C548E9006B5159 /* libiOSSBTK.a in Frameworks */,
+				3D09FF0B17C661F6006B5159 /* libiOSSBTK_iphone.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D824D4A17AFF8AB000AD1EF = {
+			isa = PBXGroup;
+			children = (
+				3D824D5C17AFF8AB000AD1EF /* AcmeAirlines */,
+				3D824D5517AFF8AB000AD1EF /* Frameworks */,
+				3D824D5417AFF8AB000AD1EF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D824D5417AFF8AB000AD1EF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D824D5317AFF8AB000AD1EF /* AcmeAirlines.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D824D5517AFF8AB000AD1EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DCCFC0017B3E80B0063C199 /* Security.framework */,
+				3D824E9C17AFFCAB000AD1EF /* MobileCoreServices.framework */,
+				3D824E2A17AFFA8E000AD1EF /* libxml2.dylib */,
+				3D824D5617AFF8AB000AD1EF /* UIKit.framework */,
+				3D824D5817AFF8AB000AD1EF /* Foundation.framework */,
+				3D824D5A17AFF8AB000AD1EF /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D824D5C17AFF8AB000AD1EF /* AcmeAirlines */ = {
+			isa = PBXGroup;
+			children = (
+				3D824F5F17B2D6D4000AD1EF /* BookmarksView */,
+				3D824EB117B00349000AD1EF /* SettingsView */,
+				3D824EB017B00336000AD1EF /* LargeImageView */,
+				3D824EAF17B00317000AD1EF /* ComposeUpdateView */,
+				3D824EAE17B002CF000AD1EF /* StatusUpdateView */,
+				3D824EAD17B002AB000AD1EF /* CommunityView */,
+				3D824EAC17B0028A000AD1EF /* ProfileListView */,
+				3D824EAB17B00269000AD1EF /* MyProfileView */,
+				3D824EAA17B0024D000AD1EF /* WebView */,
+				3D824EA917B0021C000AD1EF /* LoginView */,
+				3D824EA817B00201000AD1EF /* FlightStatusView */,
+				3D824EA717B001E0000AD1EF /* MyFlightsView */,
+				3D824EA617B001BF000AD1EF /* FlightObject */,
+				3D824EA517B00182000AD1EF /* FlightView */,
+				3D824EA117B00110000AD1EF /* MainView */,
+				3D824EA017B000FA000AD1EF /* Utils */,
+				3D824E9F17B000CF000AD1EF /* Constants */,
+				3D824E9517AFFC62000AD1EF /* IBMAppDelegate.h */,
+				3D824E9617AFFC62000AD1EF /* IBMAppDelegate.m */,
+				3D824E0917AFF971000AD1EF /* ExternalLibraries */,
+				3D824DD017AFF94D000AD1EF /* images */,
+				3D824D5D17AFF8AB000AD1EF /* Supporting Files */,
+			);
+			path = AcmeAirlines;
+			sourceTree = "<group>";
+		};
+		3D824D5D17AFF8AB000AD1EF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D824D5E17AFF8AB000AD1EF /* AcmeAirlines-Info.plist */,
+				3D824D5F17AFF8AB000AD1EF /* InfoPlist.strings */,
+				3D824D6217AFF8AB000AD1EF /* main.m */,
+				3D824D6417AFF8AB000AD1EF /* AcmeAirlines-Prefix.pch */,
+				3D824D6817AFF8AB000AD1EF /* Default.png */,
+				3D824D6A17AFF8AB000AD1EF /* Default@2x.png */,
+				3D824D6C17AFF8AB000AD1EF /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D824DD017AFF94D000AD1EF /* images */ = {
+			isa = PBXGroup;
+			children = (
+				3D824F5717B05382000AD1EF /* Icon.png */,
+				3D824F5817B05382000AD1EF /* Icon@2x.png */,
+				3D824DD117AFF960000AD1EF /* @btnDefault.png */,
+				3D824DD217AFF960000AD1EF /* @btnDefault@2x.png */,
+				3D824DD617AFF960000AD1EF /* blue.png */,
+				3D824DD717AFF960000AD1EF /* comment.png */,
+				3D824DD817AFF960000AD1EF /* flight_icon.png */,
+				3D824DD917AFF960000AD1EF /* flight_status.png */,
+				3D824DDA17AFF960000AD1EF /* header.png */,
+				3D824DDB17AFF960000AD1EF /* left.png */,
+				3D824DDC17AFF960000AD1EF /* like.png */,
+				3D824DDE17AFF960000AD1EF /* my_flights_blue.png */,
+				3D824DE017AFF960000AD1EF /* photobtnDefault.png */,
+				3D824DE117AFF960000AD1EF /* photobtnDefault@2x.png */,
+				3D824DE217AFF960000AD1EF /* photobtnTap.png */,
+				3D824DE317AFF960000AD1EF /* photobtnTap@2x.png */,
+				3D824DE417AFF960000AD1EF /* placeholder_image.png */,
+				3D824DE517AFF960000AD1EF /* plus.png */,
+				3D824DE617AFF960000AD1EF /* profile_photo_default.png */,
+				3D824DE717AFF960000AD1EF /* right.png */,
+				3D824DE917AFF960000AD1EF /* slideNavBG.png */,
+				3D824DEA17AFF960000AD1EF /* slideNavBG@2x.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		3D824E0917AFF971000AD1EF /* ExternalLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				3D824F2F17B03637000AD1EF /* iOSSBTK */,
+				3D824E9E17AFFE7C000AD1EF /* GDataXML */,
+				3D824E0D17AFF9E2000AD1EF /* AFNetworking */,
+			);
+			name = ExternalLibraries;
+			sourceTree = "<group>";
+		};
+		3D824E0D17AFF9E2000AD1EF /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				3DCCFBE417B3E7F70063C199 /* AFHTTPClient.h */,
+				3DCCFBE517B3E7F70063C199 /* AFHTTPRequestOperation.h */,
+				3DCCFBE617B3E7F70063C199 /* AFImageRequestOperation.h */,
+				3DCCFBE717B3E7F70063C199 /* AFJSONRequestOperation.h */,
+				3DCCFBE817B3E7F70063C199 /* AFNetworkActivityIndicatorManager.h */,
+				3DCCFBE917B3E7F70063C199 /* AFNetworking.h */,
+				3DCCFBEA17B3E7F70063C199 /* AFPropertyListRequestOperation.h */,
+				3DCCFBEB17B3E7F70063C199 /* AFURLConnectionOperation.h */,
+				3DCCFBEC17B3E7F70063C199 /* AFXMLRequestOperation.h */,
+				3DCCFBED17B3E7F70063C199 /* UIImageView+AFNetworking.h */,
+				3DCCFBEE17B3E7F70063C199 /* AFHTTPClient.m */,
+				3DCCFBEF17B3E7F70063C199 /* AFHTTPRequestOperation.m */,
+				3DCCFBF017B3E7F70063C199 /* AFImageRequestOperation.m */,
+				3DCCFBF117B3E7F70063C199 /* AFJSONRequestOperation.m */,
+				3DCCFBF217B3E7F70063C199 /* AFNetworkActivityIndicatorManager.m */,
+				3DCCFBF317B3E7F70063C199 /* AFPropertyListRequestOperation.m */,
+				3DCCFBF417B3E7F70063C199 /* AFURLConnectionOperation.m */,
+				3DCCFBF517B3E7F70063C199 /* AFXMLRequestOperation.m */,
+				3DCCFBF617B3E7F70063C199 /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		3D824E9E17AFFE7C000AD1EF /* GDataXML */ = {
+			isa = PBXGroup;
+			children = (
+				3D824E0A17AFF9D4000AD1EF /* GDataXMLNode.h */,
+				3D824E0B17AFF9D4000AD1EF /* GDataXMLNode.m */,
+			);
+			name = GDataXML;
+			sourceTree = "<group>";
+		};
+		3D824E9F17B000CF000AD1EF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3D824D7C17AFF948000AD1EF /* IBMAcmeConstant.h */,
+				3D824D9E17AFF948000AD1EF /* IBMAcmeConstant.m */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		3D824EA017B000FA000AD1EF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3D824EB217B003A9000AD1EF /* LikeButton */,
+				3D824D8417AFF948000AD1EF /* IBMAcmeUtils.h */,
+				3D824DA617AFF948000AD1EF /* IBMAcmeUtils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		3D824EA117B00110000AD1EF /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				3D824EA317B00123000AD1EF /* iPad */,
+				3D824EA217B0011E000AD1EF /* iPhone */,
+				3D09FEBC17C28210006B5159 /* IBMAcmeMainViewCommonOperations.h */,
+				3D09FEBD17C28210006B5159 /* IBMAcmeMainViewCommonOperations.m */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
+		3D824EA217B0011E000AD1EF /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				3D824E9717AFFC62000AD1EF /* IBMViewController.h */,
+				3D824E9817AFFC62000AD1EF /* IBMViewController.m */,
+				3D824E9417AFFC62000AD1EF /* IBMViewController.xib */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		3D824EA317B00123000AD1EF /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				3D824EA417B00140000AD1EF /* Cell */,
+				3D824D8717AFF948000AD1EF /* IBMViewControllerIpad.h */,
+				3D824DA917AFF948000AD1EF /* IBMViewControllerIpad.m */,
+				3D824D9717AFF948000AD1EF /* IBMViewControllerIpad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		3D824EA417B00140000AD1EF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3D824D8817AFF948000AD1EF /* IBMViewControllerIpadCell.h */,
+				3D824DAA17AFF948000AD1EF /* IBMViewControllerIpadCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		3D824EA517B00182000AD1EF /* FlightView */ = {
+			isa = PBXGroup;
+			children = (
+				3D824D7F17AFF948000AD1EF /* IBMAcmeFlightView.h */,
+				3D824DA117AFF948000AD1EF /* IBMAcmeFlightView.m */,
+				3D824D9017AFF948000AD1EF /* IBMAcmeFlightView.xib */,
+			);
+			name = FlightView;
+			sourceTree = "<group>";
+		};
+		3D824EA617B001BF000AD1EF /* FlightObject */ = {
+			isa = PBXGroup;
+			children = (
+				3D824D7D17AFF948000AD1EF /* IBMAcmeFlight.h */,
+				3D824D9F17AFF948000AD1EF /* IBMAcmeFlight.m */,
+			);
+			name = FlightObject;
+			sourceTree = "<group>";
+		};
+		3D824EA717B001E0000AD1EF /* MyFlightsView */ = {
+			isa = PBXGroup;
+			children = (
+				3D824D8017AFF948000AD1EF /* IBMAcmeMyFlightView.h */,
+				3D824DA217AFF948000AD1EF /* IBMAcmeMyFlightView.m */,
+				3D824D9117AFF948000AD1EF /* IBMAcmeMyFlightView.xib */,
+			);
+			name = MyFlightsView;
+			sourceTree = "<group>";
+		};
+		3D824EA817B00201000AD1EF /* FlightStatusView */ = {
+			isa = PBXGroup;
+			children = (
+				3D824D7E17AFF948000AD1EF /* IBMAcmeFlightStatusView.h */,
+				3D824DA017AFF948000AD1EF /* IBMAcmeFlightStatusView.m */,
+				3D824D8F17AFF948000AD1EF /* IBMAcmeFlightStatusView.xib */,
+			);
+			name = FlightStatusView;
+			sourceTree = "<group>";
+		};
+		3D824EA917B0021C000AD1EF /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				3D824D8B17AFF948000AD1EF /* LoginView.h */,
+				3D824DAD17AFF948000AD1EF /* LoginView.m */,
+				3D824D9917AFF948000AD1EF /* LoginView.xib */,
+			);
+			name = LoginView;
+			sourceTree = "<group>";
+		};
+		3D824EAA17B0024D000AD1EF /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				3D824D8517AFF948000AD1EF /* IBMAcmeWebView.h */,
+				3D824DA717AFF948000AD1EF /* IBMAcmeWebView.m */,
+				3D824D9517AFF948000AD1EF /* IBMAcmeWebView.xib */,
+			);
+			name = WebView;
+			sourceTree = "<group>";
+		};
+		3D824EAB17B00269000AD1EF /* MyProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				3D824D8117AFF948000AD1EF /* IBMAcmeMyProfileView.h */,
+				3D824DA317AFF948000AD1EF /* IBMAcmeMyProfileView.m */,
+				3D824D9217AFF948000AD1EF /* IBMAcmeMyProfileView.xib */,
+			);
+			name = MyProfileView;
+			sourceTree = "<group>";
+		};
+		3D824EAC17B0028A000AD1EF /* ProfileListView */ = {
+			isa = PBXGroup;
+			children = (
+				3D824D8617AFF948000AD1EF /* IBMProfileListView.h */,
+				3D824DA817AFF948000AD1EF /* IBMProfileListView.m */,
+				3D824D9617AFF948000AD1EF /* IBMProfileListView.xib */,
+			);
+			name = ProfileListView;
+			sourceTree = "<group>";
+		};
+		3D824EAD17B002AB000AD1EF /* CommunityView */ = {
+			isa = PBXGroup;
+			children = (
+				3D824D7B17AFF948000AD1EF /* IBMAcmeCommunityView.h */,
+				3D824D9D17AFF948000AD1EF /* IBMAcmeCommunityView.m */,
+				3D824D8E17AFF948000AD1EF /* IBMAcmeCommunityView.xib */,
+			);
+			name = CommunityView;
+			sourceTree = "<group>";
+		};
+		3D824EAE17B002CF000AD1EF /* StatusUpdateView */ = {
+			isa = PBXGroup;
+			children = (
+				3D824D8317AFF948000AD1EF /* IBMAcmeStatusUpdateView.h */,
+				3D824DA517AFF948000AD1EF /* IBMAcmeStatusUpdateView.m */,
+				3D824D9417AFF948000AD1EF /* IBMAcmeStatusUpdateView.xib */,
+			);
+			name = StatusUpdateView;
+			sourceTree = "<group>";
+		};
+		3D824EAF17B00317000AD1EF /* ComposeUpdateView */ = {
+			isa = PBXGroup;
+			children = (
+				3D824D7917AFF948000AD1EF /* ComposeUpdate.h */,
+				3D824D9A17AFF948000AD1EF /* ComposeUpdate.m */,
+				3D824D8C17AFF948000AD1EF /* ComposeUpdate.xib */,
+			);
+			name = ComposeUpdateView;
+			sourceTree = "<group>";
+		};
+		3D824EB017B00336000AD1EF /* LargeImageView */ = {
+			isa = PBXGroup;
+			children = (
+				3D824D8917AFF948000AD1EF /* IBMAcmeLargeImageView.h */,
+				3D824DAB17AFF948000AD1EF /* IBMAcmeLargeImageView.m */,
+				3D824D9817AFF948000AD1EF /* IBMAcmeLargeImageView.xib */,
+			);
+			name = LargeImageView;
+			sourceTree = "<group>";
+		};
+		3D824EB117B00349000AD1EF /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				3D824D8217AFF948000AD1EF /* IBMAcmeSettingsView.h */,
+				3D824DA417AFF948000AD1EF /* IBMAcmeSettingsView.m */,
+				3D824D9317AFF948000AD1EF /* IBMAcmeSettingsView.xib */,
+			);
+			name = SettingsView;
+			sourceTree = "<group>";
+		};
+		3D824EB217B003A9000AD1EF /* LikeButton */ = {
+			isa = PBXGroup;
+			children = (
+				3D824D8A17AFF948000AD1EF /* LikeButton.h */,
+				3D824DAC17AFF948000AD1EF /* LikeButton.m */,
+			);
+			name = LikeButton;
+			sourceTree = "<group>";
+		};
+		3D824F2F17B03637000AD1EF /* iOSSBTK */ = {
+			isa = PBXGroup;
+			children = (
+				3D09FEE317C548E9006B5159 /* libiOSSBTK.a */,
+				3D09FF0A17C661F6006B5159 /* libiOSSBTK_iphone.a */,
+				3D09FEC017C548E5006B5159 /* FBLog.h */,
+				3D09FEC117C548E5006B5159 /* IBMActivityStreamActor.h */,
+				3D09FEC217C548E5006B5159 /* IBMActivityStreamAttachment.h */,
+				3D09FEC317C548E5006B5159 /* IBMActivityStreamCommunity.h */,
+				3D09FEC417C548E5006B5159 /* IBMActivityStreamEntry.h */,
+				3D09FEC517C548E5006B5159 /* IBMASApplication.h */,
+				3D09FEC617C548E5006B5159 /* IBMASGroup.h */,
+				3D09FEC717C548E5006B5159 /* IBMASUser.h */,
+				3D09FEC817C548E5006B5159 /* IBMBaseService.h */,
+				3D09FEC917C548E5006B5159 /* IBMBasicEndPoint.h */,
+				3D09FECA17C548E5006B5159 /* IBMClientService.h */,
+				3D09FECB17C548E5006B5159 /* IBMCommunityBookmark.h */,
+				3D09FECC17C548E5006B5159 /* IBMCommunityForumTopic.h */,
+				3D09FECD17C548E5006B5159 /* IBMCommunityMember.h */,
+				3D09FECE17C548E5006B5159 /* IBMConnectionsActivityStreamService.h */,
+				3D09FECF17C548E5006B5159 /* IBMConnectionsBasicEndPoint.h */,
+				3D09FED017C548E5006B5159 /* IBMConnectionsClientService.h */,
+				3D09FED117C548E5006B5159 /* IBMConnectionsCommunity.h */,
+				3D09FED217C548E5006B5159 /* IBMConnectionsCommunityService.h */,
+				3D09FED317C548E5006B5159 /* IBMConnectionsFileService.h */,
+				3D09FED417C548E5006B5159 /* IBMConnectionsOAuth2EndPoint.h */,
+				3D09FED517C548E5006B5159 /* IBMConnectionsProfile.h */,
+				3D09FED617C548E5006B5159 /* IBMConnectionsProfileService.h */,
+				3D09FED717C548E5006B5159 /* IBMConstants.h */,
+				3D09FED817C548E5006B5159 /* IBMCredentialStore.h */,
+				3D09FED917C548E5006B5159 /* IBMEndPoint.h */,
+				3D09FEDA17C548E5006B5159 /* IBMEndPointFactory.h */,
+				3D09FEDB17C548E5006B5159 /* IBMFileCommentEntry.h */,
+				3D09FEDC17C548E5006B5159 /* IBMFileEntry.h */,
+				3D09FEDD17C548E5006B5159 /* IBMFilePersonEntry.h */,
+				3D09FEDE17C548E5006B5159 /* IBMFileRequestParameters.h */,
+				3D09FEDF17C548E5006B5159 /* IBMHttpClient.h */,
+				3D09FEE017C548E5006B5159 /* IBMOAuth2EndPoint.h */,
+				3D09FEE117C548E5006B5159 /* IBMUtils.h */,
+				3D09FEE217C548E5006B5159 /* IBMXMLDocument.h */,
+			);
+			path = iOSSBTK;
+			sourceTree = "<group>";
+		};
+		3D824F5F17B2D6D4000AD1EF /* BookmarksView */ = {
+			isa = PBXGroup;
+			children = (
+				3D824F6017B2D702000AD1EF /* IBMAcmeBookmarksView.h */,
+				3D824F6117B2D702000AD1EF /* IBMAcmeBookmarksView.m */,
+				3D824F6217B2D702000AD1EF /* IBMAcmeBookmarksView.xib */,
+			);
+			name = BookmarksView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D824D5217AFF8AB000AD1EF /* AcmeAirlines */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D824D7617AFF8AB000AD1EF /* Build configuration list for PBXNativeTarget "AcmeAirlines" */;
+			buildPhases = (
+				3D824D4F17AFF8AB000AD1EF /* Sources */,
+				3D824D5017AFF8AB000AD1EF /* Frameworks */,
+				3D824D5117AFF8AB000AD1EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AcmeAirlines;
+			productName = AcmeAirlines;
+			productReference = 3D824D5317AFF8AB000AD1EF /* AcmeAirlines.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D824D4B17AFF8AB000AD1EF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IBM;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = ibm;
+			};
+			buildConfigurationList = 3D824D4E17AFF8AB000AD1EF /* Build configuration list for PBXProject "AcmeAirlines" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3D824D4A17AFF8AB000AD1EF;
+			productRefGroup = 3D824D5417AFF8AB000AD1EF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D824D5217AFF8AB000AD1EF /* AcmeAirlines */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D824D5117AFF8AB000AD1EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D824D6117AFF8AB000AD1EF /* InfoPlist.strings in Resources */,
+				3D824D6917AFF8AB000AD1EF /* Default.png in Resources */,
+				3D824D6B17AFF8AB000AD1EF /* Default@2x.png in Resources */,
+				3D824D6D17AFF8AB000AD1EF /* Default-568h@2x.png in Resources */,
+				3D824DAE17AFF948000AD1EF /* ComposeUpdate.xib in Resources */,
+				3D824DB017AFF948000AD1EF /* IBMAcmeCommunityView.xib in Resources */,
+				3D824DB117AFF948000AD1EF /* IBMAcmeFlightStatusView.xib in Resources */,
+				3D824DB217AFF948000AD1EF /* IBMAcmeFlightView.xib in Resources */,
+				3D824DB317AFF948000AD1EF /* IBMAcmeMyFlightView.xib in Resources */,
+				3D824DB417AFF948000AD1EF /* IBMAcmeMyProfileView.xib in Resources */,
+				3D824DB517AFF948000AD1EF /* IBMAcmeSettingsView.xib in Resources */,
+				3D824DB617AFF948000AD1EF /* IBMAcmeStatusUpdateView.xib in Resources */,
+				3D824DB717AFF948000AD1EF /* IBMAcmeWebView.xib in Resources */,
+				3D824DB817AFF948000AD1EF /* IBMProfileListView.xib in Resources */,
+				3D824DB917AFF948000AD1EF /* IBMViewControllerIpad.xib in Resources */,
+				3D824DBA17AFF948000AD1EF /* IBMAcmeLargeImageView.xib in Resources */,
+				3D824DBB17AFF948000AD1EF /* LoginView.xib in Resources */,
+				3D824DED17AFF960000AD1EF /* @btnDefault.png in Resources */,
+				3D824DEE17AFF960000AD1EF /* @btnDefault@2x.png in Resources */,
+				3D824DF217AFF960000AD1EF /* blue.png in Resources */,
+				3D824DF317AFF960000AD1EF /* comment.png in Resources */,
+				3D824DF417AFF960000AD1EF /* flight_icon.png in Resources */,
+				3D824DF517AFF960000AD1EF /* flight_status.png in Resources */,
+				3D824DF617AFF960000AD1EF /* header.png in Resources */,
+				3D824DF717AFF960000AD1EF /* left.png in Resources */,
+				3D824DF817AFF960000AD1EF /* like.png in Resources */,
+				3D824DFA17AFF960000AD1EF /* my_flights_blue.png in Resources */,
+				3D824DFC17AFF960000AD1EF /* photobtnDefault.png in Resources */,
+				3D824DFD17AFF960000AD1EF /* photobtnDefault@2x.png in Resources */,
+				3D824DFE17AFF960000AD1EF /* photobtnTap.png in Resources */,
+				3D824DFF17AFF960000AD1EF /* photobtnTap@2x.png in Resources */,
+				3D824E0017AFF960000AD1EF /* placeholder_image.png in Resources */,
+				3D824E0117AFF960000AD1EF /* plus.png in Resources */,
+				3D824E0217AFF960000AD1EF /* profile_photo_default.png in Resources */,
+				3D824E0317AFF960000AD1EF /* right.png in Resources */,
+				3D824E0517AFF960000AD1EF /* slideNavBG.png in Resources */,
+				3D824E0617AFF960000AD1EF /* slideNavBG@2x.png in Resources */,
+				3D824E9917AFFC62000AD1EF /* IBMViewController.xib in Resources */,
+				3D824F5917B05382000AD1EF /* Icon.png in Resources */,
+				3D824F5A17B05382000AD1EF /* Icon@2x.png in Resources */,
+				3D824F6417B2D702000AD1EF /* IBMAcmeBookmarksView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D824D4F17AFF8AB000AD1EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D824D6317AFF8AB000AD1EF /* main.m in Sources */,
+				3D824DBC17AFF948000AD1EF /* ComposeUpdate.m in Sources */,
+				3D824DBF17AFF948000AD1EF /* IBMAcmeCommunityView.m in Sources */,
+				3D824DC017AFF948000AD1EF /* IBMAcmeConstant.m in Sources */,
+				3D824DC117AFF948000AD1EF /* IBMAcmeFlight.m in Sources */,
+				3D824DC217AFF948000AD1EF /* IBMAcmeFlightStatusView.m in Sources */,
+				3D824DC317AFF948000AD1EF /* IBMAcmeFlightView.m in Sources */,
+				3D824DC417AFF948000AD1EF /* IBMAcmeMyFlightView.m in Sources */,
+				3D824DC517AFF948000AD1EF /* IBMAcmeMyProfileView.m in Sources */,
+				3D824DC617AFF948000AD1EF /* IBMAcmeSettingsView.m in Sources */,
+				3D824DC717AFF948000AD1EF /* IBMAcmeStatusUpdateView.m in Sources */,
+				3D824DC817AFF948000AD1EF /* IBMAcmeUtils.m in Sources */,
+				3D824DC917AFF948000AD1EF /* IBMAcmeWebView.m in Sources */,
+				3D824DCA17AFF948000AD1EF /* IBMProfileListView.m in Sources */,
+				3D824DCB17AFF948000AD1EF /* IBMViewControllerIpad.m in Sources */,
+				3D824DCC17AFF948000AD1EF /* IBMViewControllerIpadCell.m in Sources */,
+				3D824DCD17AFF948000AD1EF /* IBMAcmeLargeImageView.m in Sources */,
+				3D824DCE17AFF948000AD1EF /* LikeButton.m in Sources */,
+				3D824DCF17AFF948000AD1EF /* LoginView.m in Sources */,
+				3D824E0C17AFF9D4000AD1EF /* GDataXMLNode.m in Sources */,
+				3D824E9A17AFFC62000AD1EF /* IBMAppDelegate.m in Sources */,
+				3D824E9B17AFFC62000AD1EF /* IBMViewController.m in Sources */,
+				3D824F6317B2D702000AD1EF /* IBMAcmeBookmarksView.m in Sources */,
+				3DCCFBF717B3E7F70063C199 /* AFHTTPClient.m in Sources */,
+				3DCCFBF817B3E7F70063C199 /* AFHTTPRequestOperation.m in Sources */,
+				3DCCFBF917B3E7F70063C199 /* AFImageRequestOperation.m in Sources */,
+				3DCCFBFA17B3E7F70063C199 /* AFJSONRequestOperation.m in Sources */,
+				3DCCFBFB17B3E7F70063C199 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				3DCCFBFC17B3E7F70063C199 /* AFPropertyListRequestOperation.m in Sources */,
+				3DCCFBFD17B3E7F70063C199 /* AFURLConnectionOperation.m in Sources */,
+				3DCCFBFE17B3E7F70063C199 /* AFXMLRequestOperation.m in Sources */,
+				3DCCFBFF17B3E7F70063C199 /* UIImageView+AFNetworking.m in Sources */,
+				3D09FEBE17C28210006B5159 /* IBMAcmeMainViewCommonOperations.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3D824D5F17AFF8AB000AD1EF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D824D6017AFF8AB000AD1EF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D824D7417AFF8AB000AD1EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3D824D7517AFF8AB000AD1EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D824D7717AFF8AB000AD1EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AcmeAirlines/AcmeAirlines-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "AcmeAirlines/AcmeAirlines-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/AcmeAirlines/iOSSBTK\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3D824D7817AFF8AB000AD1EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AcmeAirlines/AcmeAirlines-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "AcmeAirlines/AcmeAirlines-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/AcmeAirlines/iOSSBTK\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D824D4E17AFF8AB000AD1EF /* Build configuration list for PBXProject "AcmeAirlines" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D824D7417AFF8AB000AD1EF /* Debug */,
+				3D824D7517AFF8AB000AD1EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D824D7617AFF8AB000AD1EF /* Build configuration list for PBXNativeTarget "AcmeAirlines" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D824D7717AFF8AB000AD1EF /* Debug */,
+				3D824D7817AFF8AB000AD1EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D824D4B17AFF8AB000AD1EF /* Project object */;
+}

@@ -1,0 +1,52 @@
+/*
+ * © Copyright IBM Corp. 2013
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at:
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+ * implied. See the License for the specific language governing
+ * permissions and limitations under the License.
+ */
+
+//  This class represent the community object for connections
+
+#import <Foundation/Foundation.h>
+#import "IBMXMLDocument.h"
+
+@interface IBMConnectionsCommunity : NSObject
+
+#pragma mark - properties
+
+@property (strong, nonatomic) IBMXMLDocument *xmlDocument;
+@property (strong, nonatomic) NSString *communityUuid;
+@property (strong, nonatomic) NSString *parentCommunityUuid;
+@property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *communityType;
+@property (strong, nonatomic) NSString *content;
+@property (strong, nonatomic) NSString *communityUrl;
+@property (strong, nonatomic) NSString *logoUrl;
+@property (strong, nonatomic) NSString *summary;
+@property (strong, nonatomic) NSMutableArray *tags;
+@property (strong, nonatomic) NSNumber *memberCount;
+@property (strong, nonatomic) NSString *authorId;
+@property (strong, nonatomic) NSString *contributorId;
+@property (strong, nonatomic) NSDate *datePublished;
+@property (strong, nonatomic) NSDate *dateUpdated;
+
+/* Fields dictionary for holding changed or created fields */
+@property (strong, nonatomic) NSMutableDictionary *fieldsDict;
+
+#pragma mark - methods
+
+- (id) init;
+- (id) initWithXMLDocument:(IBMXMLDocument *) document;
++ (NSDictionary *) namespacesForCommunity;
+- (NSString *) constructRequestBody;
+
+@end

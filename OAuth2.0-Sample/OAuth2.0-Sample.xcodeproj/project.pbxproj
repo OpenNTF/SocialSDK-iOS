@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3D09FF0917C54B83006B5159 /* libiOSSBTK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D09FF0817C54B83006B5159 /* libiOSSBTK.a */; };
+		3D09FF0D17C66523006B5159 /* libiOSSBTK_iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D09FF0C17C66523006B5159 /* libiOSSBTK_iphone.a */; };
+		3D9994FE17BBDB790038CEE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9994FD17BBDB790038CEE2 /* UIKit.framework */; };
+		3D99950017BBDB790038CEE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9994FF17BBDB790038CEE2 /* Foundation.framework */; };
+		3D99950217BBDB790038CEE2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D99950117BBDB790038CEE2 /* CoreGraphics.framework */; };
+		3D99950817BBDB790038CEE2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D99950617BBDB790038CEE2 /* InfoPlist.strings */; };
+		3D99950A17BBDB790038CEE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99950917BBDB790038CEE2 /* main.m */; };
+		3D99950E17BBDB790038CEE2 /* IBMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99950D17BBDB790038CEE2 /* IBMAppDelegate.m */; };
+		3D99951017BBDB790038CEE2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D99950F17BBDB790038CEE2 /* Default.png */; };
+		3D99951217BBDB790038CEE2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D99951117BBDB790038CEE2 /* Default@2x.png */; };
+		3D99951417BBDB790038CEE2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D99951317BBDB790038CEE2 /* Default-568h@2x.png */; };
+		3D99951717BBDB790038CEE2 /* IBMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99951617BBDB790038CEE2 /* IBMViewController.m */; };
+		3D99951A17BBDB790038CEE2 /* IBMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D99951817BBDB790038CEE2 /* IBMViewController.xib */; };
+		3D99955A17BBE01A0038CEE2 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99954817BBE01A0038CEE2 /* AFHTTPClient.m */; };
+		3D99955B17BBE01A0038CEE2 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99954A17BBE01A0038CEE2 /* AFHTTPRequestOperation.m */; };
+		3D99955C17BBE01A0038CEE2 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99954C17BBE01A0038CEE2 /* AFImageRequestOperation.m */; };
+		3D99955D17BBE01A0038CEE2 /* AFJSONRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99954E17BBE01A0038CEE2 /* AFJSONRequestOperation.m */; };
+		3D99955E17BBE01A0038CEE2 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99955017BBE01A0038CEE2 /* AFNetworkActivityIndicatorManager.m */; };
+		3D99955F17BBE01A0038CEE2 /* AFPropertyListRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99955317BBE01A0038CEE2 /* AFPropertyListRequestOperation.m */; };
+		3D99956017BBE01A0038CEE2 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99955517BBE01A0038CEE2 /* AFURLConnectionOperation.m */; };
+		3D99956117BBE01A0038CEE2 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99955717BBE01A0038CEE2 /* AFXMLRequestOperation.m */; };
+		3D99956217BBE01A0038CEE2 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99955917BBE01A0038CEE2 /* UIImageView+AFNetworking.m */; };
+		3D99956517BBE0450038CEE2 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99956417BBE0450038CEE2 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3D99956717BBE0A20038CEE2 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D99956617BBE0A20038CEE2 /* libxml2.dylib */; };
+		3D99956917BBE0B00038CEE2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D99956817BBE0B00038CEE2 /* MobileCoreServices.framework */; };
+		3D99956B17BBE16A0038CEE2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D99956A17BBE16A0038CEE2 /* Security.framework */; };
+		3D99957417BD483B0038CEE2 /* IBMAPIExplorer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99957217BD483B0038CEE2 /* IBMAPIExplorer.m */; };
+		3D99957517BD483B0038CEE2 /* IBMAPIExplorer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D99957317BD483B0038CEE2 /* IBMAPIExplorer.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3D09FEE517C54B7F006B5159 /* FBLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLog.h; sourceTree = "<group>"; };
+		3D09FEE617C54B7F006B5159 /* IBMActivityStreamActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMActivityStreamActor.h; sourceTree = "<group>"; };
+		3D09FEE717C54B7F006B5159 /* IBMActivityStreamAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMActivityStreamAttachment.h; sourceTree = "<group>"; };
+		3D09FEE817C54B7F006B5159 /* IBMActivityStreamCommunity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMActivityStreamCommunity.h; sourceTree = "<group>"; };
+		3D09FEE917C54B7F006B5159 /* IBMActivityStreamEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMActivityStreamEntry.h; sourceTree = "<group>"; };
+		3D09FEEA17C54B7F006B5159 /* IBMASApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMASApplication.h; sourceTree = "<group>"; };
+		3D09FEEB17C54B7F006B5159 /* IBMASGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMASGroup.h; sourceTree = "<group>"; };
+		3D09FEEC17C54B7F006B5159 /* IBMASUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMASUser.h; sourceTree = "<group>"; };
+		3D09FEED17C54B7F006B5159 /* IBMBaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMBaseService.h; sourceTree = "<group>"; };
+		3D09FEEE17C54B7F006B5159 /* IBMBasicEndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMBasicEndPoint.h; sourceTree = "<group>"; };
+		3D09FEEF17C54B7F006B5159 /* IBMClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMClientService.h; sourceTree = "<group>"; };
+		3D09FEF017C54B7F006B5159 /* IBMCommunityBookmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMCommunityBookmark.h; sourceTree = "<group>"; };
+		3D09FEF117C54B7F006B5159 /* IBMCommunityForumTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMCommunityForumTopic.h; sourceTree = "<group>"; };
+		3D09FEF217C54B7F006B5159 /* IBMCommunityMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMCommunityMember.h; sourceTree = "<group>"; };
+		3D09FEF317C54B7F006B5159 /* IBMConnectionsActivityStreamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsActivityStreamService.h; sourceTree = "<group>"; };
+		3D09FEF417C54B7F006B5159 /* IBMConnectionsBasicEndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsBasicEndPoint.h; sourceTree = "<group>"; };
+		3D09FEF517C54B7F006B5159 /* IBMConnectionsClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsClientService.h; sourceTree = "<group>"; };
+		3D09FEF617C54B7F006B5159 /* IBMConnectionsCommunity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsCommunity.h; sourceTree = "<group>"; };
+		3D09FEF717C54B7F006B5159 /* IBMConnectionsCommunityService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsCommunityService.h; sourceTree = "<group>"; };
+		3D09FEF817C54B7F006B5159 /* IBMConnectionsFileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsFileService.h; sourceTree = "<group>"; };
+		3D09FEF917C54B7F006B5159 /* IBMConnectionsOAuth2EndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsOAuth2EndPoint.h; sourceTree = "<group>"; };
+		3D09FEFA17C54B7F006B5159 /* IBMConnectionsProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsProfile.h; sourceTree = "<group>"; };
+		3D09FEFB17C54B7F006B5159 /* IBMConnectionsProfileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsProfileService.h; sourceTree = "<group>"; };
+		3D09FEFC17C54B7F006B5159 /* IBMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConstants.h; sourceTree = "<group>"; };
+		3D09FEFD17C54B7F006B5159 /* IBMCredentialStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMCredentialStore.h; sourceTree = "<group>"; };
+		3D09FEFE17C54B7F006B5159 /* IBMEndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMEndPoint.h; sourceTree = "<group>"; };
+		3D09FEFF17C54B7F006B5159 /* IBMEndPointFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMEndPointFactory.h; sourceTree = "<group>"; };
+		3D09FF0017C54B7F006B5159 /* IBMFileCommentEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMFileCommentEntry.h; sourceTree = "<group>"; };
+		3D09FF0117C54B7F006B5159 /* IBMFileEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMFileEntry.h; sourceTree = "<group>"; };
+		3D09FF0217C54B7F006B5159 /* IBMFilePersonEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMFilePersonEntry.h; sourceTree = "<group>"; };
+		3D09FF0317C54B7F006B5159 /* IBMFileRequestParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMFileRequestParameters.h; sourceTree = "<group>"; };
+		3D09FF0417C54B7F006B5159 /* IBMHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMHttpClient.h; sourceTree = "<group>"; };
+		3D09FF0517C54B7F006B5159 /* IBMOAuth2EndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMOAuth2EndPoint.h; sourceTree = "<group>"; };
+		3D09FF0617C54B7F006B5159 /* IBMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMUtils.h; sourceTree = "<group>"; };
+		3D09FF0717C54B7F006B5159 /* IBMXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMXMLDocument.h; sourceTree = "<group>"; };
+		3D09FF0817C54B83006B5159 /* libiOSSBTK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiOSSBTK.a; sourceTree = "<group>"; };
+		3D09FF0C17C66523006B5159 /* libiOSSBTK_iphone.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiOSSBTK_iphone.a; sourceTree = "<group>"; };
+		3D9994FA17BBDB790038CEE2 /* OAuth2.0-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OAuth2.0-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D9994FD17BBDB790038CEE2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3D9994FF17BBDB790038CEE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3D99950117BBDB790038CEE2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3D99950517BBDB790038CEE2 /* OAuth2.0-Sample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OAuth2.0-Sample-Info.plist"; sourceTree = "<group>"; };
+		3D99950717BBDB790038CEE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3D99950917BBDB790038CEE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3D99950B17BBDB790038CEE2 /* OAuth2.0-Sample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OAuth2.0-Sample-Prefix.pch"; sourceTree = "<group>"; };
+		3D99950C17BBDB790038CEE2 /* IBMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IBMAppDelegate.h; sourceTree = "<group>"; };
+		3D99950D17BBDB790038CEE2 /* IBMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IBMAppDelegate.m; sourceTree = "<group>"; };
+		3D99950F17BBDB790038CEE2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3D99951117BBDB790038CEE2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3D99951317BBDB790038CEE2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3D99951517BBDB790038CEE2 /* IBMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IBMViewController.h; sourceTree = "<group>"; };
+		3D99951617BBDB790038CEE2 /* IBMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IBMViewController.m; sourceTree = "<group>"; };
+		3D99951917BBDB790038CEE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/IBMViewController.xib; sourceTree = "<group>"; };
+		3D99954717BBE01A0038CEE2 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
+		3D99954817BBE01A0038CEE2 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
+		3D99954917BBE01A0038CEE2 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		3D99954A17BBE01A0038CEE2 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		3D99954B17BBE01A0038CEE2 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
+		3D99954C17BBE01A0038CEE2 /* AFImageRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFImageRequestOperation.m; sourceTree = "<group>"; };
+		3D99954D17BBE01A0038CEE2 /* AFJSONRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFJSONRequestOperation.h; sourceTree = "<group>"; };
+		3D99954E17BBE01A0038CEE2 /* AFJSONRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFJSONRequestOperation.m; sourceTree = "<group>"; };
+		3D99954F17BBE01A0038CEE2 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
+		3D99955017BBE01A0038CEE2 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
+		3D99955117BBE01A0038CEE2 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		3D99955217BBE01A0038CEE2 /* AFPropertyListRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPropertyListRequestOperation.h; sourceTree = "<group>"; };
+		3D99955317BBE01A0038CEE2 /* AFPropertyListRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPropertyListRequestOperation.m; sourceTree = "<group>"; };
+		3D99955417BBE01A0038CEE2 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		3D99955517BBE01A0038CEE2 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		3D99955617BBE01A0038CEE2 /* AFXMLRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFXMLRequestOperation.h; sourceTree = "<group>"; };
+		3D99955717BBE01A0038CEE2 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
+		3D99955817BBE01A0038CEE2 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
+		3D99955917BBE01A0038CEE2 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		3D99956317BBE0450038CEE2 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
+		3D99956417BBE0450038CEE2 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		3D99956617BBE0A20038CEE2 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		3D99956817BBE0B00038CEE2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		3D99956A17BBE16A0038CEE2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		3D99957117BD483B0038CEE2 /* IBMAPIExplorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAPIExplorer.h; sourceTree = "<group>"; };
+		3D99957217BD483B0038CEE2 /* IBMAPIExplorer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAPIExplorer.m; sourceTree = "<group>"; };
+		3D99957317BD483B0038CEE2 /* IBMAPIExplorer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAPIExplorer.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3D9994F717BBDB790038CEE2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D99956B17BBE16A0038CEE2 /* Security.framework in Frameworks */,
+				3D99956917BBE0B00038CEE2 /* MobileCoreServices.framework in Frameworks */,
+				3D99956717BBE0A20038CEE2 /* libxml2.dylib in Frameworks */,
+				3D9994FE17BBDB790038CEE2 /* UIKit.framework in Frameworks */,
+				3D99950017BBDB790038CEE2 /* Foundation.framework in Frameworks */,
+				3D99950217BBDB790038CEE2 /* CoreGraphics.framework in Frameworks */,
+				3D09FF0917C54B83006B5159 /* libiOSSBTK.a in Frameworks */,
+				3D09FF0D17C66523006B5159 /* libiOSSBTK_iphone.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3D9994F117BBDB790038CEE2 = {
+			isa = PBXGroup;
+			children = (
+				3D99950317BBDB790038CEE2 /* OAuth2.0-Sample */,
+				3D9994FC17BBDB790038CEE2 /* Frameworks */,
+				3D9994FB17BBDB790038CEE2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3D9994FB17BBDB790038CEE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3D9994FA17BBDB790038CEE2 /* OAuth2.0-Sample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3D9994FC17BBDB790038CEE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D99956A17BBE16A0038CEE2 /* Security.framework */,
+				3D99956817BBE0B00038CEE2 /* MobileCoreServices.framework */,
+				3D99956617BBE0A20038CEE2 /* libxml2.dylib */,
+				3D9994FD17BBDB790038CEE2 /* UIKit.framework */,
+				3D9994FF17BBDB790038CEE2 /* Foundation.framework */,
+				3D99950117BBDB790038CEE2 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D99950317BBDB790038CEE2 /* OAuth2.0-Sample */ = {
+			isa = PBXGroup;
+			children = (
+				3D99956D17BD46870038CEE2 /* APIExplorer */,
+				3D99956C17BBEA910038CEE2 /* GDataXML */,
+				3D99954617BBE01A0038CEE2 /* AFNetworking */,
+				3D99952017BBDBF40038CEE2 /* iOSSBTK */,
+				3D99950C17BBDB790038CEE2 /* IBMAppDelegate.h */,
+				3D99950D17BBDB790038CEE2 /* IBMAppDelegate.m */,
+				3D99951517BBDB790038CEE2 /* IBMViewController.h */,
+				3D99951617BBDB790038CEE2 /* IBMViewController.m */,
+				3D99951817BBDB790038CEE2 /* IBMViewController.xib */,
+				3D99950417BBDB790038CEE2 /* Supporting Files */,
+			);
+			path = "OAuth2.0-Sample";
+			sourceTree = "<group>";
+		};
+		3D99950417BBDB790038CEE2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3D99950517BBDB790038CEE2 /* OAuth2.0-Sample-Info.plist */,
+				3D99950617BBDB790038CEE2 /* InfoPlist.strings */,
+				3D99950917BBDB790038CEE2 /* main.m */,
+				3D99950B17BBDB790038CEE2 /* OAuth2.0-Sample-Prefix.pch */,
+				3D99950F17BBDB790038CEE2 /* Default.png */,
+				3D99951117BBDB790038CEE2 /* Default@2x.png */,
+				3D99951317BBDB790038CEE2 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3D99952017BBDBF40038CEE2 /* iOSSBTK */ = {
+			isa = PBXGroup;
+			children = (
+				3D09FF0817C54B83006B5159 /* libiOSSBTK.a */,
+				3D09FF0C17C66523006B5159 /* libiOSSBTK_iphone.a */,
+				3D09FEE517C54B7F006B5159 /* FBLog.h */,
+				3D09FEE617C54B7F006B5159 /* IBMActivityStreamActor.h */,
+				3D09FEE717C54B7F006B5159 /* IBMActivityStreamAttachment.h */,
+				3D09FEE817C54B7F006B5159 /* IBMActivityStreamCommunity.h */,
+				3D09FEE917C54B7F006B5159 /* IBMActivityStreamEntry.h */,
+				3D09FEEA17C54B7F006B5159 /* IBMASApplication.h */,
+				3D09FEEB17C54B7F006B5159 /* IBMASGroup.h */,
+				3D09FEEC17C54B7F006B5159 /* IBMASUser.h */,
+				3D09FEED17C54B7F006B5159 /* IBMBaseService.h */,
+				3D09FEEE17C54B7F006B5159 /* IBMBasicEndPoint.h */,
+				3D09FEEF17C54B7F006B5159 /* IBMClientService.h */,
+				3D09FEF017C54B7F006B5159 /* IBMCommunityBookmark.h */,
+				3D09FEF117C54B7F006B5159 /* IBMCommunityForumTopic.h */,
+				3D09FEF217C54B7F006B5159 /* IBMCommunityMember.h */,
+				3D09FEF317C54B7F006B5159 /* IBMConnectionsActivityStreamService.h */,
+				3D09FEF417C54B7F006B5159 /* IBMConnectionsBasicEndPoint.h */,
+				3D09FEF517C54B7F006B5159 /* IBMConnectionsClientService.h */,
+				3D09FEF617C54B7F006B5159 /* IBMConnectionsCommunity.h */,
+				3D09FEF717C54B7F006B5159 /* IBMConnectionsCommunityService.h */,
+				3D09FEF817C54B7F006B5159 /* IBMConnectionsFileService.h */,
+				3D09FEF917C54B7F006B5159 /* IBMConnectionsOAuth2EndPoint.h */,
+				3D09FEFA17C54B7F006B5159 /* IBMConnectionsProfile.h */,
+				3D09FEFB17C54B7F006B5159 /* IBMConnectionsProfileService.h */,
+				3D09FEFC17C54B7F006B5159 /* IBMConstants.h */,
+				3D09FEFD17C54B7F006B5159 /* IBMCredentialStore.h */,
+				3D09FEFE17C54B7F006B5159 /* IBMEndPoint.h */,
+				3D09FEFF17C54B7F006B5159 /* IBMEndPointFactory.h */,
+				3D09FF0017C54B7F006B5159 /* IBMFileCommentEntry.h */,
+				3D09FF0117C54B7F006B5159 /* IBMFileEntry.h */,
+				3D09FF0217C54B7F006B5159 /* IBMFilePersonEntry.h */,
+				3D09FF0317C54B7F006B5159 /* IBMFileRequestParameters.h */,
+				3D09FF0417C54B7F006B5159 /* IBMHttpClient.h */,
+				3D09FF0517C54B7F006B5159 /* IBMOAuth2EndPoint.h */,
+				3D09FF0617C54B7F006B5159 /* IBMUtils.h */,
+				3D09FF0717C54B7F006B5159 /* IBMXMLDocument.h */,
+			);
+			path = iOSSBTK;
+			sourceTree = "<group>";
+		};
+		3D99954617BBE01A0038CEE2 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				3D99954717BBE01A0038CEE2 /* AFHTTPClient.h */,
+				3D99954817BBE01A0038CEE2 /* AFHTTPClient.m */,
+				3D99954917BBE01A0038CEE2 /* AFHTTPRequestOperation.h */,
+				3D99954A17BBE01A0038CEE2 /* AFHTTPRequestOperation.m */,
+				3D99954B17BBE01A0038CEE2 /* AFImageRequestOperation.h */,
+				3D99954C17BBE01A0038CEE2 /* AFImageRequestOperation.m */,
+				3D99954D17BBE01A0038CEE2 /* AFJSONRequestOperation.h */,
+				3D99954E17BBE01A0038CEE2 /* AFJSONRequestOperation.m */,
+				3D99954F17BBE01A0038CEE2 /* AFNetworkActivityIndicatorManager.h */,
+				3D99955017BBE01A0038CEE2 /* AFNetworkActivityIndicatorManager.m */,
+				3D99955117BBE01A0038CEE2 /* AFNetworking.h */,
+				3D99955217BBE01A0038CEE2 /* AFPropertyListRequestOperation.h */,
+				3D99955317BBE01A0038CEE2 /* AFPropertyListRequestOperation.m */,
+				3D99955417BBE01A0038CEE2 /* AFURLConnectionOperation.h */,
+				3D99955517BBE01A0038CEE2 /* AFURLConnectionOperation.m */,
+				3D99955617BBE01A0038CEE2 /* AFXMLRequestOperation.h */,
+				3D99955717BBE01A0038CEE2 /* AFXMLRequestOperation.m */,
+				3D99955817BBE01A0038CEE2 /* UIImageView+AFNetworking.h */,
+				3D99955917BBE01A0038CEE2 /* UIImageView+AFNetworking.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		3D99956C17BBEA910038CEE2 /* GDataXML */ = {
+			isa = PBXGroup;
+			children = (
+				3D99956317BBE0450038CEE2 /* GDataXMLNode.h */,
+				3D99956417BBE0450038CEE2 /* GDataXMLNode.m */,
+			);
+			name = GDataXML;
+			sourceTree = "<group>";
+		};
+		3D99956D17BD46870038CEE2 /* APIExplorer */ = {
+			isa = PBXGroup;
+			children = (
+				3D99957117BD483B0038CEE2 /* IBMAPIExplorer.h */,
+				3D99957217BD483B0038CEE2 /* IBMAPIExplorer.m */,
+				3D99957317BD483B0038CEE2 /* IBMAPIExplorer.xib */,
+			);
+			name = APIExplorer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3D9994F917BBDB790038CEE2 /* OAuth2.0-Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D99951D17BBDB790038CEE2 /* Build configuration list for PBXNativeTarget "OAuth2.0-Sample" */;
+			buildPhases = (
+				3D9994F617BBDB790038CEE2 /* Sources */,
+				3D9994F717BBDB790038CEE2 /* Frameworks */,
+				3D9994F817BBDB790038CEE2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OAuth2.0-Sample";
+			productName = "OAuth2.0-Sample";
+			productReference = 3D9994FA17BBDB790038CEE2 /* OAuth2.0-Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3D9994F217BBDB790038CEE2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IBM;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = ibm;
+			};
+			buildConfigurationList = 3D9994F517BBDB790038CEE2 /* Build configuration list for PBXProject "OAuth2.0-Sample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3D9994F117BBDB790038CEE2;
+			productRefGroup = 3D9994FB17BBDB790038CEE2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3D9994F917BBDB790038CEE2 /* OAuth2.0-Sample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D9994F817BBDB790038CEE2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D99950817BBDB790038CEE2 /* InfoPlist.strings in Resources */,
+				3D99951017BBDB790038CEE2 /* Default.png in Resources */,
+				3D99951217BBDB790038CEE2 /* Default@2x.png in Resources */,
+				3D99951417BBDB790038CEE2 /* Default-568h@2x.png in Resources */,
+				3D99951A17BBDB790038CEE2 /* IBMViewController.xib in Resources */,
+				3D99957517BD483B0038CEE2 /* IBMAPIExplorer.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3D9994F617BBDB790038CEE2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D99950A17BBDB790038CEE2 /* main.m in Sources */,
+				3D99950E17BBDB790038CEE2 /* IBMAppDelegate.m in Sources */,
+				3D99951717BBDB790038CEE2 /* IBMViewController.m in Sources */,
+				3D99955A17BBE01A0038CEE2 /* AFHTTPClient.m in Sources */,
+				3D99955B17BBE01A0038CEE2 /* AFHTTPRequestOperation.m in Sources */,
+				3D99955C17BBE01A0038CEE2 /* AFImageRequestOperation.m in Sources */,
+				3D99955D17BBE01A0038CEE2 /* AFJSONRequestOperation.m in Sources */,
+				3D99955E17BBE01A0038CEE2 /* AFNetworkActivityIndicatorManager.m in Sources */,
+				3D99955F17BBE01A0038CEE2 /* AFPropertyListRequestOperation.m in Sources */,
+				3D99956017BBE01A0038CEE2 /* AFURLConnectionOperation.m in Sources */,
+				3D99956117BBE01A0038CEE2 /* AFXMLRequestOperation.m in Sources */,
+				3D99956217BBE01A0038CEE2 /* UIImageView+AFNetworking.m in Sources */,
+				3D99956517BBE0450038CEE2 /* GDataXMLNode.m in Sources */,
+				3D99957417BD483B0038CEE2 /* IBMAPIExplorer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3D99950617BBDB790038CEE2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D99950717BBDB790038CEE2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3D99951817BBDB790038CEE2 /* IBMViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D99951917BBDB790038CEE2 /* en */,
+			);
+			name = IBMViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D99951B17BBDB790038CEE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3D99951C17BBDB790038CEE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3D99951E17BBDB790038CEE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OAuth2.0-Sample/OAuth2.0-Sample-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "OAuth2.0-Sample/OAuth2.0-Sample-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/OAuth2.0-Sample/iOSSBTK\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3D99951F17BBDB790038CEE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OAuth2.0-Sample/OAuth2.0-Sample-Prefix.pch";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
+				INFOPLIST_FILE = "OAuth2.0-Sample/OAuth2.0-Sample-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/OAuth2.0-Sample/iOSSBTK\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D9994F517BBDB790038CEE2 /* Build configuration list for PBXProject "OAuth2.0-Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D99951B17BBDB790038CEE2 /* Debug */,
+				3D99951C17BBDB790038CEE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D99951D17BBDB790038CEE2 /* Build configuration list for PBXNativeTarget "OAuth2.0-Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D99951E17BBDB790038CEE2 /* Debug */,
+				3D99951F17BBDB790038CEE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3D9994F217BBDB790038CEE2 /* Project object */;
+}
