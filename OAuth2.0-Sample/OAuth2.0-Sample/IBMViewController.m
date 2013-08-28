@@ -33,7 +33,7 @@
     self.title = @"OAuth 2.0 Sample App";
     
     NSString *IBM_CREDENTIAL_CONNECTIONS_URL = @"IBM_CREDENTIAL_CONNECTIONS_URL";
-    NSString *TEST_BASE_URL = @"https://vhost0120.dc1.on.ca.compute.ihost.com:444";
+    NSString *TEST_BASE_URL = @"https://sbtdev.swg.usma.ibm.com:444";
     [IBMCredentialStore storeWithKey:IBM_CREDENTIAL_CONNECTIONS_URL value:TEST_BASE_URL];
 }
 
@@ -49,7 +49,7 @@
 - (IBAction)authenticate:(id)sender {
     
     NSString *clientId = @"iosOAuthSampleApp";
-    NSString *redirectUri = @"ibmoauthsmaple://test";
+    NSString *redirectUri = @"ibmoauthsample://test";
     IBMConnectionsOAuth2EndPoint *endPoint = (IBMConnectionsOAuth2EndPoint *) [IBMEndPoint findEndPoint:@"connectionsOA2"];
     NSURL *urlToOpen = [endPoint formAuthenticationUrlWithClientId:clientId
                                                        callbackUri:redirectUri];

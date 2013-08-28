@@ -29,7 +29,7 @@
 			<string>com.ibm.OAuth2-0-Sample</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>ibmoauthsmaple</string>
+				<string>ibmoauthsample</string>
 			</array>
 		</dict>
 	</array>

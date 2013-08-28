@@ -79,8 +79,8 @@
     NSLog(@"OAuth code: %@", oauthCode);
     
     NSString *clientId = @"iosOAuthSampleApp";
-    NSString *clientSecret = @"PEphOq46JNQrgiPDLg6H79RUMhLMkFWl2iEOz1rgLejv2iT8MXFz7mxCRFhj";
-    NSString *redirectUri = @"ibmoauthsmaple://";
+    NSString *clientSecret = @"56vjIoiFwNFiPiGNCQM9egCpFfkFEjGyFHmDJbLVwqtzaBwasm3ZfimrBSmB";
+    NSString *redirectUri = @"ibmoauthsample://test";
     
     IBMConnectionsOAuth2EndPoint *endPoint = (IBMConnectionsOAuth2EndPoint *) [IBMEndPoint findEndPoint:@"connectionsOA2"];
     [endPoint retriveAccessTokenWithClientId:clientId
