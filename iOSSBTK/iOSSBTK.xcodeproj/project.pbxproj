@@ -6,6 +6,22 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		073B65EA18508A56000FDFB6 /* OCLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 073B65ED18508A56000FDFB6 /* Build configuration list for PBXAggregateTarget "OCLint" */;
+			buildPhases = (
+				073B65EE1850C593000FDFB6 /* ShellScript */,
+			);
+			dependencies = (
+				073B65F21850DE08000FDFB6 /* PBXTargetDependency */,
+				073B65F01850DE04000FDFB6 /* PBXTargetDependency */,
+			);
+			name = OCLint;
+			productName = OCLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		3D824C4B17AFECB8000AD1EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824C4A17AFECB8000AD1EF /* Foundation.framework */; };
 		3D824D1E17AFF67D000AD1EF /* FBLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CDD17AFF67C000AD1EF /* FBLog.m */; };
@@ -71,6 +87,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		073B65EF1850DE04000FDFB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D824C3F17AFECB8000AD1EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D824C4617AFECB8000AD1EF;
+			remoteInfo = iOSSBTK;
+		};
+		073B65F11850DE08000FDFB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D824C3F17AFECB8000AD1EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D824ED917B00FC3000AD1EF;
+			remoteInfo = TestiOSSBTK;
+		};
 		3D824EED17B0104B000AD1EF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3D824C3F17AFECB8000AD1EF /* Project object */;
@@ -861,6 +891,7 @@
 			targets = (
 				3D824C4617AFECB8000AD1EF /* iOSSBTK */,
 				3D824ED917B00FC3000AD1EF /* TestiOSSBTK */,
+				073B65EA18508A56000FDFB6 /* OCLint */,
 			);
 		};
 /* End PBXProject section */
@@ -877,6 +908,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		073B65EE1850C593000FDFB6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/Users/carlos/Projects/XcodePlugins/scripts/build/oclint-xcodebuild.sh";
+		};
 		3D824ED817B00FC3000AD1EF /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -962,6 +1006,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		073B65F01850DE04000FDFB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D824C4617AFECB8000AD1EF /* iOSSBTK */;
+			targetProxy = 073B65EF1850DE04000FDFB6 /* PBXContainerItemProxy */;
+		};
+		073B65F21850DE08000FDFB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D824ED917B00FC3000AD1EF /* TestiOSSBTK */;
+			targetProxy = 073B65F11850DE08000FDFB6 /* PBXContainerItemProxy */;
+		};
 		3D824EEE17B0104B000AD1EF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3D824C4617AFECB8000AD1EF /* iOSSBTK */;
@@ -981,6 +1035,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		073B65EB18508A56000FDFB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		073B65EC18508A56000FDFB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		3D824C5317AFECB8000AD1EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1099,6 +1167,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		073B65ED18508A56000FDFB6 /* Build configuration list for PBXAggregateTarget "OCLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				073B65EB18508A56000FDFB6 /* Debug */,
+				073B65EC18508A56000FDFB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		3D824C4217AFECB8000AD1EF /* Build configuration list for PBXProject "iOSSBTK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

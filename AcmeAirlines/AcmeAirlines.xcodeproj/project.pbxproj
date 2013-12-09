@@ -6,6 +6,21 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		078BFA6A1850E8A400408957 /* OCLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 078BFA6D1850E8A400408957 /* Build configuration list for PBXAggregateTarget "OCLint" */;
+			buildPhases = (
+				078BFA6E1850E8B100408957 /* ShellScript */,
+			);
+			dependencies = (
+				078BFA701850E91C00408957 /* PBXTargetDependency */,
+			);
+			name = OCLint;
+			productName = OCLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		3D09FEBE17C28210006B5159 /* IBMAcmeMainViewCommonOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09FEBD17C28210006B5159 /* IBMAcmeMainViewCommonOperations.m */; };
 		3D09FEE417C548E9006B5159 /* libiOSSBTK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D09FEE317C548E9006B5159 /* libiOSSBTK.a */; };
@@ -90,6 +105,16 @@
 		3DCCFBFF17B3E7F70063C199 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFBF617B3E7F70063C199 /* UIImageView+AFNetworking.m */; };
 		3DCCFC0117B3E80C0063C199 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCCFC0017B3E80B0063C199 /* Security.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		078BFA6F1850E91C00408957 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3D824D4B17AFF8AB000AD1EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D824D5217AFF8AB000AD1EF;
+			remoteInfo = AcmeAirlines;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3D09FEBC17C28210006B5159 /* IBMAcmeMainViewCommonOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeMainViewCommonOperations.h; sourceTree = "<group>"; };
@@ -708,6 +733,7 @@
 			projectRoot = "";
 			targets = (
 				3D824D5217AFF8AB000AD1EF /* AcmeAirlines */,
+				078BFA6A1850E8A400408957 /* OCLint */,
 			);
 		};
 /* End PBXProject section */
@@ -763,6 +789,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		078BFA6E1850E8B100408957 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/Users/carlos/Projects/XcodePlugins/scripts/build/oclint-xcodebuild.sh";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3D824D4F17AFF8AB000AD1EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -806,6 +848,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		078BFA701850E91C00408957 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D824D5217AFF8AB000AD1EF /* AcmeAirlines */;
+			targetProxy = 078BFA6F1850E91C00408957 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		3D824D5F17AFF8AB000AD1EF /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -818,6 +868,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		078BFA6B1850E8A400408957 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		078BFA6C1850E8A400408957 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		3D824D7417AFF8AB000AD1EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -913,6 +977,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		078BFA6D1850E8A400408957 /* Build configuration list for PBXAggregateTarget "OCLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				078BFA6B1850E8A400408957 /* Debug */,
+				078BFA6C1850E8A400408957 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		3D824D4E17AFF8AB000AD1EF /* Build configuration list for PBXProject "AcmeAirlines" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
