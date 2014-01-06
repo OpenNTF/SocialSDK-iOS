@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "IBMAppDelegate.h"
+#import "SBTAppDelegate.h"
 
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([IBMAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([SBTAppDelegate class]));
     }
 }

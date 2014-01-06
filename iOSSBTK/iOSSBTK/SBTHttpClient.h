@@ -14,19 +14,13 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+#import <Foundation/Foundation.h>
+#import "AFHTTPClient.h"
+#import "SBTEndPoint.h"
 
-@interface SBTConnectionsClientService : SBTClientService
+@interface SBTHttpClient : AFHTTPClient
 
-#pragma mark - properties
-
-#pragma mark - methods
-
-- (id) init;
-
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
+- (void)setUsername:(NSString *)username andPassword:(NSString *)password;
++ (void) deleteLtpaToken;
 
 @end

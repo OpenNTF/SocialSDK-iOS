@@ -14,19 +14,26 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+#import <Foundation/Foundation.h>
+#import "SBTXMLDocument.h"
 
-@interface SBTConnectionsClientService : SBTClientService
+@interface SBTCommunityForumTopic : NSObject
 
 #pragma mark - properties
+
+@property (strong, nonatomic) SBTXMLDocument *xmlDocument;
+@property (strong, nonatomic) NSString *fId;
+@property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) NSString *summary;
+
+/* Fields dictionary for holding changed or created fields */
+@property (strong, nonatomic) NSMutableDictionary *fieldsDict;
 
 #pragma mark - methods
 
 - (id) init;
-
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
+- (id) initWithXMLDocument:(SBTXMLDocument *) document;
++ (NSDictionary *) namespacesForCommunityForumTopic;
+- (NSString *) description;
 
 @end

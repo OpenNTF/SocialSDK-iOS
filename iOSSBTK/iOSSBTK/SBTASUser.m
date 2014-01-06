@@ -14,19 +14,28 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+#import "SBTASUser.h"
 
-@interface SBTConnectionsClientService : SBTClientService
+@implementation SBTASUser
 
-#pragma mark - properties
-
-#pragma mark - methods
-
-- (id) init;
-
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
++ (NSString*) convertToString:(AS_USER_TYPE) type {
+    NSString *result = nil;
+    
+    switch(type) {
+        case U_ME:
+            result = @"@me";
+            break;
+        case U_PUBLIC:
+            result = @"@public";
+            break;
+        case U_COMMUNITY:
+            result = @"urn:lsid:lconn.ibm.com:communities.community";
+            break;
+        default:
+            result = @"@me";
+    }
+    
+    return result;
+}
 
 @end

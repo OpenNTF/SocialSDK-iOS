@@ -25,38 +25,38 @@
 /* Begin PBXBuildFile section */
 		3D824C4B17AFECB8000AD1EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824C4A17AFECB8000AD1EF /* Foundation.framework */; };
 		3D824D1E17AFF67D000AD1EF /* FBLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CDD17AFF67C000AD1EF /* FBLog.m */; };
-		3D824D1F17AFF67D000AD1EF /* IBMActivityStreamActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CDF17AFF67C000AD1EF /* IBMActivityStreamActor.m */; };
-		3D824D2017AFF67D000AD1EF /* IBMActivityStreamAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CE117AFF67C000AD1EF /* IBMActivityStreamAttachment.m */; };
-		3D824D2117AFF67D000AD1EF /* IBMActivityStreamCommunity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CE317AFF67C000AD1EF /* IBMActivityStreamCommunity.m */; };
-		3D824D2217AFF67D000AD1EF /* IBMActivityStreamEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CE517AFF67C000AD1EF /* IBMActivityStreamEntry.m */; };
-		3D824D2317AFF67D000AD1EF /* IBMASApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CE717AFF67C000AD1EF /* IBMASApplication.m */; };
-		3D824D2417AFF67D000AD1EF /* IBMASGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CE917AFF67C000AD1EF /* IBMASGroup.m */; };
-		3D824D2517AFF67D000AD1EF /* IBMASUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CEB17AFF67C000AD1EF /* IBMASUser.m */; };
-		3D824D2617AFF67D000AD1EF /* IBMBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CED17AFF67C000AD1EF /* IBMBaseService.m */; };
-		3D824D2717AFF67D000AD1EF /* IBMBasicEndPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CEF17AFF67C000AD1EF /* IBMBasicEndPoint.m */; };
-		3D824D2817AFF67D000AD1EF /* IBMEndPointFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CF117AFF67C000AD1EF /* IBMEndPointFactory.m */; };
-		3D824D2917AFF67D000AD1EF /* IBMClientService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CF317AFF67C000AD1EF /* IBMClientService.m */; };
-		3D824D2A17AFF67D000AD1EF /* IBMCommunityBookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CF517AFF67C000AD1EF /* IBMCommunityBookmark.m */; };
-		3D824D2B17AFF67D000AD1EF /* IBMCommunityForumTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CF717AFF67C000AD1EF /* IBMCommunityForumTopic.m */; };
-		3D824D2C17AFF67D000AD1EF /* IBMCommunityMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CF917AFF67C000AD1EF /* IBMCommunityMember.m */; };
-		3D824D2D17AFF67D000AD1EF /* IBMConnectionsActivityStreamService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CFB17AFF67C000AD1EF /* IBMConnectionsActivityStreamService.m */; };
-		3D824D2E17AFF67D000AD1EF /* IBMConnectionsBasicEndPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CFD17AFF67C000AD1EF /* IBMConnectionsBasicEndPoint.m */; };
-		3D824D2F17AFF67D000AD1EF /* IBMConnectionsCommunity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CFF17AFF67C000AD1EF /* IBMConnectionsCommunity.m */; };
-		3D824D3017AFF67D000AD1EF /* IBMConnectionsCommunityService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D0117AFF67C000AD1EF /* IBMConnectionsCommunityService.m */; };
-		3D824D3117AFF67D000AD1EF /* IBMConnectionsFileService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D0317AFF67C000AD1EF /* IBMConnectionsFileService.m */; };
-		3D824D3217AFF67D000AD1EF /* IBMConnectionsProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D0517AFF67C000AD1EF /* IBMConnectionsProfile.m */; };
-		3D824D3317AFF67D000AD1EF /* IBMConnectionsProfileService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D0717AFF67C000AD1EF /* IBMConnectionsProfileService.m */; };
-		3D824D3417AFF67D000AD1EF /* IBMConnectionsClientService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D0917AFF67C000AD1EF /* IBMConnectionsClientService.m */; };
-		3D824D3517AFF67D000AD1EF /* IBMConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D0B17AFF67C000AD1EF /* IBMConstants.m */; };
-		3D824D3617AFF67D000AD1EF /* IBMCredentialStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D0D17AFF67C000AD1EF /* IBMCredentialStore.m */; };
-		3D824D3717AFF67D000AD1EF /* IBMEndPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D0F17AFF67C000AD1EF /* IBMEndPoint.m */; };
-		3D824D3817AFF67D000AD1EF /* IBMFileCommentEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D1117AFF67C000AD1EF /* IBMFileCommentEntry.m */; };
-		3D824D3917AFF67D000AD1EF /* IBMFileEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D1317AFF67C000AD1EF /* IBMFileEntry.m */; };
-		3D824D3A17AFF67D000AD1EF /* IBMFilePersonEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D1517AFF67C000AD1EF /* IBMFilePersonEntry.m */; };
-		3D824D3B17AFF67D000AD1EF /* IBMFileRequestParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D1717AFF67D000AD1EF /* IBMFileRequestParameters.m */; };
-		3D824D3C17AFF67D000AD1EF /* IBMHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D1917AFF67D000AD1EF /* IBMHttpClient.m */; };
-		3D824D3D17AFF67D000AD1EF /* IBMUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D1B17AFF67D000AD1EF /* IBMUtils.m */; };
-		3D824D3E17AFF67D000AD1EF /* IBMXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D1D17AFF67D000AD1EF /* IBMXMLDocument.m */; };
+		3D824D1F17AFF67D000AD1EF /* SBTActivityStreamActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CDF17AFF67C000AD1EF /* SBTActivityStreamActor.m */; };
+		3D824D2017AFF67D000AD1EF /* SBTActivityStreamAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CE117AFF67C000AD1EF /* SBTActivityStreamAttachment.m */; };
+		3D824D2117AFF67D000AD1EF /* SBTActivityStreamCommunity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CE317AFF67C000AD1EF /* SBTActivityStreamCommunity.m */; };
+		3D824D2217AFF67D000AD1EF /* SBTActivityStreamEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CE517AFF67C000AD1EF /* SBTActivityStreamEntry.m */; };
+		3D824D2317AFF67D000AD1EF /* SBTASApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CE717AFF67C000AD1EF /* SBTASApplication.m */; };
+		3D824D2417AFF67D000AD1EF /* SBTASGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CE917AFF67C000AD1EF /* SBTASGroup.m */; };
+		3D824D2517AFF67D000AD1EF /* SBTASUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CEB17AFF67C000AD1EF /* SBTASUser.m */; };
+		3D824D2617AFF67D000AD1EF /* SBTBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CED17AFF67C000AD1EF /* SBTBaseService.m */; };
+		3D824D2717AFF67D000AD1EF /* SBTBasicEndPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CEF17AFF67C000AD1EF /* SBTBasicEndPoint.m */; };
+		3D824D2817AFF67D000AD1EF /* SBTEndPointFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CF117AFF67C000AD1EF /* SBTEndPointFactory.m */; };
+		3D824D2917AFF67D000AD1EF /* SBTClientService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CF317AFF67C000AD1EF /* SBTClientService.m */; };
+		3D824D2A17AFF67D000AD1EF /* SBTCommunityBookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CF517AFF67C000AD1EF /* SBTCommunityBookmark.m */; };
+		3D824D2B17AFF67D000AD1EF /* SBTCommunityForumTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CF717AFF67C000AD1EF /* SBTCommunityForumTopic.m */; };
+		3D824D2C17AFF67D000AD1EF /* SBTCommunityMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CF917AFF67C000AD1EF /* SBTCommunityMember.m */; };
+		3D824D2D17AFF67D000AD1EF /* SBTConnectionsActivityStreamService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CFB17AFF67C000AD1EF /* SBTConnectionsActivityStreamService.m */; };
+		3D824D2E17AFF67D000AD1EF /* SBTConnectionsBasicEndPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CFD17AFF67C000AD1EF /* SBTConnectionsBasicEndPoint.m */; };
+		3D824D2F17AFF67D000AD1EF /* SBTConnectionsCommunity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CFF17AFF67C000AD1EF /* SBTConnectionsCommunity.m */; };
+		3D824D3017AFF67D000AD1EF /* SBTConnectionsCommunityService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D0117AFF67C000AD1EF /* SBTConnectionsCommunityService.m */; };
+		3D824D3117AFF67D000AD1EF /* SBTConnectionsFileService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D0317AFF67C000AD1EF /* SBTConnectionsFileService.m */; };
+		3D824D3217AFF67D000AD1EF /* SBTConnectionsProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D0517AFF67C000AD1EF /* SBTConnectionsProfile.m */; };
+		3D824D3317AFF67D000AD1EF /* SBTConnectionsProfileService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D0717AFF67C000AD1EF /* SBTConnectionsProfileService.m */; };
+		3D824D3417AFF67D000AD1EF /* SBTConnectionsClientService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D0917AFF67C000AD1EF /* SBTConnectionsClientService.m */; };
+		3D824D3517AFF67D000AD1EF /* SBTConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D0B17AFF67C000AD1EF /* SBTConstants.m */; };
+		3D824D3617AFF67D000AD1EF /* SBTCredentialStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D0D17AFF67C000AD1EF /* SBTCredentialStore.m */; };
+		3D824D3717AFF67D000AD1EF /* SBTEndPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D0F17AFF67C000AD1EF /* SBTEndPoint.m */; };
+		3D824D3817AFF67D000AD1EF /* SBTFileCommentEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D1117AFF67C000AD1EF /* SBTFileCommentEntry.m */; };
+		3D824D3917AFF67D000AD1EF /* SBTFileEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D1317AFF67C000AD1EF /* SBTFileEntry.m */; };
+		3D824D3A17AFF67D000AD1EF /* SBTFilePersonEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D1517AFF67C000AD1EF /* SBTFilePersonEntry.m */; };
+		3D824D3B17AFF67D000AD1EF /* SBTFileRequestParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D1717AFF67D000AD1EF /* SBTFileRequestParameters.m */; };
+		3D824D3C17AFF67D000AD1EF /* SBTHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D1917AFF67D000AD1EF /* SBTHttpClient.m */; };
+		3D824D3D17AFF67D000AD1EF /* SBTUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D1B17AFF67D000AD1EF /* SBTUtils.m */; };
+		3D824D3E17AFF67D000AD1EF /* SBTXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D1D17AFF67D000AD1EF /* SBTXMLDocument.m */; };
 		3D824EDC17B00FC3000AD1EF /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824EDB17B00FC3000AD1EF /* SenTestingKit.framework */; };
 		3D824EDE17B00FC3000AD1EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824EDD17B00FC3000AD1EF /* UIKit.framework */; };
 		3D824EDF17B00FC3000AD1EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824C4A17AFECB8000AD1EF /* Foundation.framework */; };
@@ -64,12 +64,12 @@
 		3D824EF117B0151D000AD1EF /* libiOSSBTK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824C4717AFECB8000AD1EF /* libiOSSBTK.a */; };
 		3D824EF617B015BA000AD1EF /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824EF517B015BA000AD1EF /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3D824F1417B0162C000AD1EF /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824F1317B0162C000AD1EF /* libxml2.dylib */; };
-		3D824F1E17B016DB000AD1EF /* IBMUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824F1D17B016DB000AD1EF /* IBMUtilsTest.m */; };
-		3D824F2117B016EA000AD1EF /* IBMConstantsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824F2017B016EA000AD1EF /* IBMConstantsTest.m */; };
-		3D824F2417B016FD000AD1EF /* IBMConnectionsProfileServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824F2317B016FD000AD1EF /* IBMConnectionsProfileServiceTest.m */; };
-		3D824F2717B01710000AD1EF /* IBMConnectionsCommunityServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824F2617B01710000AD1EF /* IBMConnectionsCommunityServiceTest.m */; };
-		3D824F2A17B01719000AD1EF /* IBMConnectionsActivityStreamServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824F2917B01719000AD1EF /* IBMConnectionsActivityStreamServiceTest.m */; };
-		3D824F2D17B01725000AD1EF /* IBMConnectionsFileServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824F2C17B01725000AD1EF /* IBMConnectionsFileServiceTest.m */; };
+		3D824F1E17B016DB000AD1EF /* SBTUtilsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824F1D17B016DB000AD1EF /* SBTUtilsTest.m */; };
+		3D824F2117B016EA000AD1EF /* SBTConstantsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824F2017B016EA000AD1EF /* SBTConstantsTest.m */; };
+		3D824F2417B016FD000AD1EF /* SBTConnectionsProfileServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824F2317B016FD000AD1EF /* SBTConnectionsProfileServiceTest.m */; };
+		3D824F2717B01710000AD1EF /* SBTConnectionsCommunityServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824F2617B01710000AD1EF /* SBTConnectionsCommunityServiceTest.m */; };
+		3D824F2A17B01719000AD1EF /* SBTConnectionsActivityStreamServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824F2917B01719000AD1EF /* SBTConnectionsActivityStreamServiceTest.m */; };
+		3D824F2D17B01725000AD1EF /* SBTConnectionsFileServiceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824F2C17B01725000AD1EF /* SBTConnectionsFileServiceTest.m */; };
 		3DCCFBCD17B3E4430063C199 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFBBB17B3E4430063C199 /* AFHTTPClient.m */; };
 		3DCCFBCE17B3E4430063C199 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFBBD17B3E4430063C199 /* AFHTTPRequestOperation.m */; };
 		3DCCFBCF17B3E4430063C199 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFBBF17B3E4430063C199 /* AFImageRequestOperation.m */; };
@@ -81,9 +81,9 @@
 		3DCCFBD517B3E4430063C199 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFBCC17B3E4430063C199 /* UIImageView+AFNetworking.m */; };
 		3DCCFBE117B3E5B20063C199 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCCFBE017B3E5B20063C199 /* CoreGraphics.framework */; };
 		3DCCFBE317B3E5DA0063C199 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DCCFBE217B3E5DA0063C199 /* Security.framework */; };
-		3DCCFC4F17B44F720063C199 /* IBMCredentialStoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFC4E17B44F720063C199 /* IBMCredentialStoreTest.m */; };
-		3DCCFC7B17B57CB50063C199 /* IBMOAuth2EndPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFC7A17B57CB50063C199 /* IBMOAuth2EndPoint.m */; };
-		3DCCFC7E17B57DAC0063C199 /* IBMConnectionsOAuth2EndPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFC7D17B57DAC0063C199 /* IBMConnectionsOAuth2EndPoint.m */; };
+		3DCCFC4F17B44F720063C199 /* SBTCredentialStoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFC4E17B44F720063C199 /* SBTCredentialStoreTest.m */; };
+		3DCCFC7B17B57CB50063C199 /* SBTOAuth2EndPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFC7A17B57CB50063C199 /* SBTOAuth2EndPoint.m */; };
+		3DCCFC7E17B57DAC0063C199 /* SBTConnectionsOAuth2EndPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFC7D17B57DAC0063C199 /* SBTConnectionsOAuth2EndPoint.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,70 +128,70 @@
 		3D824C4E17AFECB8000AD1EF /* iOSSBTK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSSBTK-Prefix.pch"; sourceTree = "<group>"; };
 		3D824CDC17AFF67C000AD1EF /* FBLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLog.h; sourceTree = "<group>"; };
 		3D824CDD17AFF67C000AD1EF /* FBLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBLog.m; sourceTree = "<group>"; };
-		3D824CDE17AFF67C000AD1EF /* IBMActivityStreamActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMActivityStreamActor.h; sourceTree = "<group>"; };
-		3D824CDF17AFF67C000AD1EF /* IBMActivityStreamActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMActivityStreamActor.m; sourceTree = "<group>"; };
-		3D824CE017AFF67C000AD1EF /* IBMActivityStreamAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMActivityStreamAttachment.h; sourceTree = "<group>"; };
-		3D824CE117AFF67C000AD1EF /* IBMActivityStreamAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMActivityStreamAttachment.m; sourceTree = "<group>"; };
-		3D824CE217AFF67C000AD1EF /* IBMActivityStreamCommunity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMActivityStreamCommunity.h; sourceTree = "<group>"; };
-		3D824CE317AFF67C000AD1EF /* IBMActivityStreamCommunity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMActivityStreamCommunity.m; sourceTree = "<group>"; };
-		3D824CE417AFF67C000AD1EF /* IBMActivityStreamEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMActivityStreamEntry.h; sourceTree = "<group>"; };
-		3D824CE517AFF67C000AD1EF /* IBMActivityStreamEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMActivityStreamEntry.m; sourceTree = "<group>"; };
-		3D824CE617AFF67C000AD1EF /* IBMASApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMASApplication.h; sourceTree = "<group>"; };
-		3D824CE717AFF67C000AD1EF /* IBMASApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMASApplication.m; sourceTree = "<group>"; };
-		3D824CE817AFF67C000AD1EF /* IBMASGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMASGroup.h; sourceTree = "<group>"; };
-		3D824CE917AFF67C000AD1EF /* IBMASGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMASGroup.m; sourceTree = "<group>"; };
-		3D824CEA17AFF67C000AD1EF /* IBMASUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMASUser.h; sourceTree = "<group>"; };
-		3D824CEB17AFF67C000AD1EF /* IBMASUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMASUser.m; sourceTree = "<group>"; };
-		3D824CEC17AFF67C000AD1EF /* IBMBaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMBaseService.h; sourceTree = "<group>"; };
-		3D824CED17AFF67C000AD1EF /* IBMBaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMBaseService.m; sourceTree = "<group>"; };
-		3D824CEE17AFF67C000AD1EF /* IBMBasicEndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMBasicEndPoint.h; sourceTree = "<group>"; };
-		3D824CEF17AFF67C000AD1EF /* IBMBasicEndPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMBasicEndPoint.m; sourceTree = "<group>"; };
-		3D824CF017AFF67C000AD1EF /* IBMEndPointFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMEndPointFactory.h; sourceTree = "<group>"; };
-		3D824CF117AFF67C000AD1EF /* IBMEndPointFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMEndPointFactory.m; sourceTree = "<group>"; };
-		3D824CF217AFF67C000AD1EF /* IBMClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMClientService.h; sourceTree = "<group>"; };
-		3D824CF317AFF67C000AD1EF /* IBMClientService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMClientService.m; sourceTree = "<group>"; };
-		3D824CF417AFF67C000AD1EF /* IBMCommunityBookmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMCommunityBookmark.h; sourceTree = "<group>"; };
-		3D824CF517AFF67C000AD1EF /* IBMCommunityBookmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMCommunityBookmark.m; sourceTree = "<group>"; };
-		3D824CF617AFF67C000AD1EF /* IBMCommunityForumTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMCommunityForumTopic.h; sourceTree = "<group>"; };
-		3D824CF717AFF67C000AD1EF /* IBMCommunityForumTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMCommunityForumTopic.m; sourceTree = "<group>"; };
-		3D824CF817AFF67C000AD1EF /* IBMCommunityMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMCommunityMember.h; sourceTree = "<group>"; };
-		3D824CF917AFF67C000AD1EF /* IBMCommunityMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMCommunityMember.m; sourceTree = "<group>"; };
-		3D824CFA17AFF67C000AD1EF /* IBMConnectionsActivityStreamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsActivityStreamService.h; sourceTree = "<group>"; };
-		3D824CFB17AFF67C000AD1EF /* IBMConnectionsActivityStreamService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMConnectionsActivityStreamService.m; sourceTree = "<group>"; };
-		3D824CFC17AFF67C000AD1EF /* IBMConnectionsBasicEndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsBasicEndPoint.h; sourceTree = "<group>"; };
-		3D824CFD17AFF67C000AD1EF /* IBMConnectionsBasicEndPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMConnectionsBasicEndPoint.m; sourceTree = "<group>"; };
-		3D824CFE17AFF67C000AD1EF /* IBMConnectionsCommunity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsCommunity.h; sourceTree = "<group>"; };
-		3D824CFF17AFF67C000AD1EF /* IBMConnectionsCommunity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMConnectionsCommunity.m; sourceTree = "<group>"; };
-		3D824D0017AFF67C000AD1EF /* IBMConnectionsCommunityService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsCommunityService.h; sourceTree = "<group>"; };
-		3D824D0117AFF67C000AD1EF /* IBMConnectionsCommunityService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMConnectionsCommunityService.m; sourceTree = "<group>"; };
-		3D824D0217AFF67C000AD1EF /* IBMConnectionsFileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsFileService.h; sourceTree = "<group>"; };
-		3D824D0317AFF67C000AD1EF /* IBMConnectionsFileService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMConnectionsFileService.m; sourceTree = "<group>"; };
-		3D824D0417AFF67C000AD1EF /* IBMConnectionsProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsProfile.h; sourceTree = "<group>"; };
-		3D824D0517AFF67C000AD1EF /* IBMConnectionsProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMConnectionsProfile.m; sourceTree = "<group>"; };
-		3D824D0617AFF67C000AD1EF /* IBMConnectionsProfileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsProfileService.h; sourceTree = "<group>"; };
-		3D824D0717AFF67C000AD1EF /* IBMConnectionsProfileService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMConnectionsProfileService.m; sourceTree = "<group>"; };
-		3D824D0817AFF67C000AD1EF /* IBMConnectionsClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsClientService.h; sourceTree = "<group>"; };
-		3D824D0917AFF67C000AD1EF /* IBMConnectionsClientService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMConnectionsClientService.m; sourceTree = "<group>"; };
-		3D824D0A17AFF67C000AD1EF /* IBMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConstants.h; sourceTree = "<group>"; };
-		3D824D0B17AFF67C000AD1EF /* IBMConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMConstants.m; sourceTree = "<group>"; };
-		3D824D0C17AFF67C000AD1EF /* IBMCredentialStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMCredentialStore.h; sourceTree = "<group>"; };
-		3D824D0D17AFF67C000AD1EF /* IBMCredentialStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMCredentialStore.m; sourceTree = "<group>"; };
-		3D824D0E17AFF67C000AD1EF /* IBMEndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMEndPoint.h; sourceTree = "<group>"; };
-		3D824D0F17AFF67C000AD1EF /* IBMEndPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMEndPoint.m; sourceTree = "<group>"; };
-		3D824D1017AFF67C000AD1EF /* IBMFileCommentEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMFileCommentEntry.h; sourceTree = "<group>"; };
-		3D824D1117AFF67C000AD1EF /* IBMFileCommentEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMFileCommentEntry.m; sourceTree = "<group>"; };
-		3D824D1217AFF67C000AD1EF /* IBMFileEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMFileEntry.h; sourceTree = "<group>"; };
-		3D824D1317AFF67C000AD1EF /* IBMFileEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMFileEntry.m; sourceTree = "<group>"; };
-		3D824D1417AFF67C000AD1EF /* IBMFilePersonEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMFilePersonEntry.h; sourceTree = "<group>"; };
-		3D824D1517AFF67C000AD1EF /* IBMFilePersonEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMFilePersonEntry.m; sourceTree = "<group>"; };
-		3D824D1617AFF67D000AD1EF /* IBMFileRequestParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMFileRequestParameters.h; sourceTree = "<group>"; };
-		3D824D1717AFF67D000AD1EF /* IBMFileRequestParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMFileRequestParameters.m; sourceTree = "<group>"; };
-		3D824D1817AFF67D000AD1EF /* IBMHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMHttpClient.h; sourceTree = "<group>"; };
-		3D824D1917AFF67D000AD1EF /* IBMHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMHttpClient.m; sourceTree = "<group>"; };
-		3D824D1A17AFF67D000AD1EF /* IBMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMUtils.h; sourceTree = "<group>"; };
-		3D824D1B17AFF67D000AD1EF /* IBMUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMUtils.m; sourceTree = "<group>"; };
-		3D824D1C17AFF67D000AD1EF /* IBMXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMXMLDocument.h; sourceTree = "<group>"; };
-		3D824D1D17AFF67D000AD1EF /* IBMXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMXMLDocument.m; sourceTree = "<group>"; };
+		3D824CDE17AFF67C000AD1EF /* SBTActivityStreamActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTActivityStreamActor.h; sourceTree = "<group>"; };
+		3D824CDF17AFF67C000AD1EF /* SBTActivityStreamActor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTActivityStreamActor.m; sourceTree = "<group>"; };
+		3D824CE017AFF67C000AD1EF /* SBTActivityStreamAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTActivityStreamAttachment.h; sourceTree = "<group>"; };
+		3D824CE117AFF67C000AD1EF /* SBTActivityStreamAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTActivityStreamAttachment.m; sourceTree = "<group>"; };
+		3D824CE217AFF67C000AD1EF /* SBTActivityStreamCommunity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTActivityStreamCommunity.h; sourceTree = "<group>"; };
+		3D824CE317AFF67C000AD1EF /* SBTActivityStreamCommunity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTActivityStreamCommunity.m; sourceTree = "<group>"; };
+		3D824CE417AFF67C000AD1EF /* SBTActivityStreamEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTActivityStreamEntry.h; sourceTree = "<group>"; };
+		3D824CE517AFF67C000AD1EF /* SBTActivityStreamEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTActivityStreamEntry.m; sourceTree = "<group>"; };
+		3D824CE617AFF67C000AD1EF /* SBTASApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTASApplication.h; sourceTree = "<group>"; };
+		3D824CE717AFF67C000AD1EF /* SBTASApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTASApplication.m; sourceTree = "<group>"; };
+		3D824CE817AFF67C000AD1EF /* SBTASGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTASGroup.h; sourceTree = "<group>"; };
+		3D824CE917AFF67C000AD1EF /* SBTASGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTASGroup.m; sourceTree = "<group>"; };
+		3D824CEA17AFF67C000AD1EF /* SBTASUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTASUser.h; sourceTree = "<group>"; };
+		3D824CEB17AFF67C000AD1EF /* SBTASUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTASUser.m; sourceTree = "<group>"; };
+		3D824CEC17AFF67C000AD1EF /* SBTBaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTBaseService.h; sourceTree = "<group>"; };
+		3D824CED17AFF67C000AD1EF /* SBTBaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTBaseService.m; sourceTree = "<group>"; };
+		3D824CEE17AFF67C000AD1EF /* SBTBasicEndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTBasicEndPoint.h; sourceTree = "<group>"; };
+		3D824CEF17AFF67C000AD1EF /* SBTBasicEndPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTBasicEndPoint.m; sourceTree = "<group>"; };
+		3D824CF017AFF67C000AD1EF /* SBTEndPointFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTEndPointFactory.h; sourceTree = "<group>"; };
+		3D824CF117AFF67C000AD1EF /* SBTEndPointFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTEndPointFactory.m; sourceTree = "<group>"; };
+		3D824CF217AFF67C000AD1EF /* SBTClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTClientService.h; sourceTree = "<group>"; };
+		3D824CF317AFF67C000AD1EF /* SBTClientService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTClientService.m; sourceTree = "<group>"; };
+		3D824CF417AFF67C000AD1EF /* SBTCommunityBookmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTCommunityBookmark.h; sourceTree = "<group>"; };
+		3D824CF517AFF67C000AD1EF /* SBTCommunityBookmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTCommunityBookmark.m; sourceTree = "<group>"; };
+		3D824CF617AFF67C000AD1EF /* SBTCommunityForumTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTCommunityForumTopic.h; sourceTree = "<group>"; };
+		3D824CF717AFF67C000AD1EF /* SBTCommunityForumTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTCommunityForumTopic.m; sourceTree = "<group>"; };
+		3D824CF817AFF67C000AD1EF /* SBTCommunityMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTCommunityMember.h; sourceTree = "<group>"; };
+		3D824CF917AFF67C000AD1EF /* SBTCommunityMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTCommunityMember.m; sourceTree = "<group>"; };
+		3D824CFA17AFF67C000AD1EF /* SBTConnectionsActivityStreamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsActivityStreamService.h; sourceTree = "<group>"; };
+		3D824CFB17AFF67C000AD1EF /* SBTConnectionsActivityStreamService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTConnectionsActivityStreamService.m; sourceTree = "<group>"; };
+		3D824CFC17AFF67C000AD1EF /* SBTConnectionsBasicEndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsBasicEndPoint.h; sourceTree = "<group>"; };
+		3D824CFD17AFF67C000AD1EF /* SBTConnectionsBasicEndPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTConnectionsBasicEndPoint.m; sourceTree = "<group>"; };
+		3D824CFE17AFF67C000AD1EF /* SBTConnectionsCommunity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsCommunity.h; sourceTree = "<group>"; };
+		3D824CFF17AFF67C000AD1EF /* SBTConnectionsCommunity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTConnectionsCommunity.m; sourceTree = "<group>"; };
+		3D824D0017AFF67C000AD1EF /* SBTConnectionsCommunityService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsCommunityService.h; sourceTree = "<group>"; };
+		3D824D0117AFF67C000AD1EF /* SBTConnectionsCommunityService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTConnectionsCommunityService.m; sourceTree = "<group>"; };
+		3D824D0217AFF67C000AD1EF /* SBTConnectionsFileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsFileService.h; sourceTree = "<group>"; };
+		3D824D0317AFF67C000AD1EF /* SBTConnectionsFileService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTConnectionsFileService.m; sourceTree = "<group>"; };
+		3D824D0417AFF67C000AD1EF /* SBTConnectionsProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsProfile.h; sourceTree = "<group>"; };
+		3D824D0517AFF67C000AD1EF /* SBTConnectionsProfile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTConnectionsProfile.m; sourceTree = "<group>"; };
+		3D824D0617AFF67C000AD1EF /* SBTConnectionsProfileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsProfileService.h; sourceTree = "<group>"; };
+		3D824D0717AFF67C000AD1EF /* SBTConnectionsProfileService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTConnectionsProfileService.m; sourceTree = "<group>"; };
+		3D824D0817AFF67C000AD1EF /* SBTConnectionsClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsClientService.h; sourceTree = "<group>"; };
+		3D824D0917AFF67C000AD1EF /* SBTConnectionsClientService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTConnectionsClientService.m; sourceTree = "<group>"; };
+		3D824D0A17AFF67C000AD1EF /* SBTConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConstants.h; sourceTree = "<group>"; };
+		3D824D0B17AFF67C000AD1EF /* SBTConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTConstants.m; sourceTree = "<group>"; };
+		3D824D0C17AFF67C000AD1EF /* SBTCredentialStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTCredentialStore.h; sourceTree = "<group>"; };
+		3D824D0D17AFF67C000AD1EF /* SBTCredentialStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTCredentialStore.m; sourceTree = "<group>"; };
+		3D824D0E17AFF67C000AD1EF /* SBTEndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTEndPoint.h; sourceTree = "<group>"; };
+		3D824D0F17AFF67C000AD1EF /* SBTEndPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTEndPoint.m; sourceTree = "<group>"; };
+		3D824D1017AFF67C000AD1EF /* SBTFileCommentEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTFileCommentEntry.h; sourceTree = "<group>"; };
+		3D824D1117AFF67C000AD1EF /* SBTFileCommentEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTFileCommentEntry.m; sourceTree = "<group>"; };
+		3D824D1217AFF67C000AD1EF /* SBTFileEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTFileEntry.h; sourceTree = "<group>"; };
+		3D824D1317AFF67C000AD1EF /* SBTFileEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTFileEntry.m; sourceTree = "<group>"; };
+		3D824D1417AFF67C000AD1EF /* SBTFilePersonEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTFilePersonEntry.h; sourceTree = "<group>"; };
+		3D824D1517AFF67C000AD1EF /* SBTFilePersonEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTFilePersonEntry.m; sourceTree = "<group>"; };
+		3D824D1617AFF67D000AD1EF /* SBTFileRequestParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTFileRequestParameters.h; sourceTree = "<group>"; };
+		3D824D1717AFF67D000AD1EF /* SBTFileRequestParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTFileRequestParameters.m; sourceTree = "<group>"; };
+		3D824D1817AFF67D000AD1EF /* SBTHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTHttpClient.h; sourceTree = "<group>"; };
+		3D824D1917AFF67D000AD1EF /* SBTHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTHttpClient.m; sourceTree = "<group>"; };
+		3D824D1A17AFF67D000AD1EF /* SBTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTUtils.h; sourceTree = "<group>"; };
+		3D824D1B17AFF67D000AD1EF /* SBTUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTUtils.m; sourceTree = "<group>"; };
+		3D824D1C17AFF67D000AD1EF /* SBTXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTXMLDocument.h; sourceTree = "<group>"; };
+		3D824D1D17AFF67D000AD1EF /* SBTXMLDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTXMLDocument.m; sourceTree = "<group>"; };
 		3D824D3F17AFF695000AD1EF /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		3D824EDA17B00FC3000AD1EF /* TestiOSSBTK.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestiOSSBTK.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D824EDB17B00FC3000AD1EF /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -202,18 +202,18 @@
 		3D824EF417B015BA000AD1EF /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		3D824EF517B015BA000AD1EF /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		3D824F1317B0162C000AD1EF /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		3D824F1C17B016DB000AD1EF /* IBMUtilsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMUtilsTest.h; sourceTree = "<group>"; };
-		3D824F1D17B016DB000AD1EF /* IBMUtilsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMUtilsTest.m; sourceTree = "<group>"; };
-		3D824F1F17B016EA000AD1EF /* IBMConstantsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConstantsTest.h; sourceTree = "<group>"; };
-		3D824F2017B016EA000AD1EF /* IBMConstantsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMConstantsTest.m; sourceTree = "<group>"; };
-		3D824F2217B016FD000AD1EF /* IBMConnectionsProfileServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsProfileServiceTest.h; sourceTree = "<group>"; };
-		3D824F2317B016FD000AD1EF /* IBMConnectionsProfileServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMConnectionsProfileServiceTest.m; sourceTree = "<group>"; };
-		3D824F2517B01710000AD1EF /* IBMConnectionsCommunityServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsCommunityServiceTest.h; sourceTree = "<group>"; };
-		3D824F2617B01710000AD1EF /* IBMConnectionsCommunityServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMConnectionsCommunityServiceTest.m; sourceTree = "<group>"; };
-		3D824F2817B01719000AD1EF /* IBMConnectionsActivityStreamServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsActivityStreamServiceTest.h; sourceTree = "<group>"; };
-		3D824F2917B01719000AD1EF /* IBMConnectionsActivityStreamServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMConnectionsActivityStreamServiceTest.m; sourceTree = "<group>"; };
-		3D824F2B17B01725000AD1EF /* IBMConnectionsFileServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsFileServiceTest.h; sourceTree = "<group>"; };
-		3D824F2C17B01725000AD1EF /* IBMConnectionsFileServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMConnectionsFileServiceTest.m; sourceTree = "<group>"; };
+		3D824F1C17B016DB000AD1EF /* SBTUtilsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTUtilsTest.h; sourceTree = "<group>"; };
+		3D824F1D17B016DB000AD1EF /* SBTUtilsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTUtilsTest.m; sourceTree = "<group>"; };
+		3D824F1F17B016EA000AD1EF /* SBTConstantsTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConstantsTest.h; sourceTree = "<group>"; };
+		3D824F2017B016EA000AD1EF /* SBTConstantsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTConstantsTest.m; sourceTree = "<group>"; };
+		3D824F2217B016FD000AD1EF /* SBTConnectionsProfileServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsProfileServiceTest.h; sourceTree = "<group>"; };
+		3D824F2317B016FD000AD1EF /* SBTConnectionsProfileServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTConnectionsProfileServiceTest.m; sourceTree = "<group>"; };
+		3D824F2517B01710000AD1EF /* SBTConnectionsCommunityServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsCommunityServiceTest.h; sourceTree = "<group>"; };
+		3D824F2617B01710000AD1EF /* SBTConnectionsCommunityServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTConnectionsCommunityServiceTest.m; sourceTree = "<group>"; };
+		3D824F2817B01719000AD1EF /* SBTConnectionsActivityStreamServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsActivityStreamServiceTest.h; sourceTree = "<group>"; };
+		3D824F2917B01719000AD1EF /* SBTConnectionsActivityStreamServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTConnectionsActivityStreamServiceTest.m; sourceTree = "<group>"; };
+		3D824F2B17B01725000AD1EF /* SBTConnectionsFileServiceTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsFileServiceTest.h; sourceTree = "<group>"; };
+		3D824F2C17B01725000AD1EF /* SBTConnectionsFileServiceTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTConnectionsFileServiceTest.m; sourceTree = "<group>"; };
 		3DCCFBBA17B3E4430063C199 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		3DCCFBBB17B3E4430063C199 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		3DCCFBBC17B3E4430063C199 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -245,12 +245,12 @@
 		3DCCFBDF17B3E47E0063C199 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		3DCCFBE017B3E5B20063C199 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3DCCFBE217B3E5DA0063C199 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		3DCCFC4D17B44F720063C199 /* IBMCredentialStoreTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMCredentialStoreTest.h; sourceTree = "<group>"; };
-		3DCCFC4E17B44F720063C199 /* IBMCredentialStoreTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMCredentialStoreTest.m; sourceTree = "<group>"; };
-		3DCCFC7917B57CB50063C199 /* IBMOAuth2EndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMOAuth2EndPoint.h; sourceTree = "<group>"; };
-		3DCCFC7A17B57CB50063C199 /* IBMOAuth2EndPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMOAuth2EndPoint.m; sourceTree = "<group>"; };
-		3DCCFC7C17B57DAB0063C199 /* IBMConnectionsOAuth2EndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsOAuth2EndPoint.h; sourceTree = "<group>"; };
-		3DCCFC7D17B57DAC0063C199 /* IBMConnectionsOAuth2EndPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMConnectionsOAuth2EndPoint.m; sourceTree = "<group>"; };
+		3DCCFC4D17B44F720063C199 /* SBTCredentialStoreTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTCredentialStoreTest.h; sourceTree = "<group>"; };
+		3DCCFC4E17B44F720063C199 /* SBTCredentialStoreTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTCredentialStoreTest.m; sourceTree = "<group>"; };
+		3DCCFC7917B57CB50063C199 /* SBTOAuth2EndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTOAuth2EndPoint.h; sourceTree = "<group>"; };
+		3DCCFC7A17B57CB50063C199 /* SBTOAuth2EndPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTOAuth2EndPoint.m; sourceTree = "<group>"; };
+		3DCCFC7C17B57DAB0063C199 /* SBTConnectionsOAuth2EndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsOAuth2EndPoint.h; sourceTree = "<group>"; };
+		3DCCFC7D17B57DAC0063C199 /* SBTConnectionsOAuth2EndPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTConnectionsOAuth2EndPoint.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,8 +338,8 @@
 		3D824EB417B00663000AD1EF /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D0A17AFF67C000AD1EF /* IBMConstants.h */,
-				3D824D0B17AFF67C000AD1EF /* IBMConstants.m */,
+				3D824D0A17AFF67C000AD1EF /* SBTConstants.h */,
+				3D824D0B17AFF67C000AD1EF /* SBTConstants.m */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -349,8 +349,8 @@
 			children = (
 				3D824CDC17AFF67C000AD1EF /* FBLog.h */,
 				3D824CDD17AFF67C000AD1EF /* FBLog.m */,
-				3D824D1A17AFF67D000AD1EF /* IBMUtils.h */,
-				3D824D1B17AFF67D000AD1EF /* IBMUtils.m */,
+				3D824D1A17AFF67D000AD1EF /* SBTUtils.h */,
+				3D824D1B17AFF67D000AD1EF /* SBTUtils.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -358,8 +358,8 @@
 		3D824EB617B0067F000AD1EF /* XMLParser */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D1C17AFF67D000AD1EF /* IBMXMLDocument.h */,
-				3D824D1D17AFF67D000AD1EF /* IBMXMLDocument.m */,
+				3D824D1C17AFF67D000AD1EF /* SBTXMLDocument.h */,
+				3D824D1D17AFF67D000AD1EF /* SBTXMLDocument.m */,
 			);
 			name = XMLParser;
 			sourceTree = "<group>";
@@ -369,8 +369,8 @@
 			children = (
 				3D824ED117B0096E000AD1EF /* ConnectionsClientService */,
 				3D824ED017B00964000AD1EF /* HttpClient */,
-				3D824CF217AFF67C000AD1EF /* IBMClientService.h */,
-				3D824CF317AFF67C000AD1EF /* IBMClientService.m */,
+				3D824CF217AFF67C000AD1EF /* SBTClientService.h */,
+				3D824CF317AFF67C000AD1EF /* SBTClientService.m */,
 			);
 			name = ClientService;
 			sourceTree = "<group>";
@@ -381,10 +381,10 @@
 				3D824ECF17B00937000AD1EF /* ConnectionsEndPoint */,
 				3DCCFD8317B92BDD0063C199 /* OAuth2 */,
 				3DCCFD8217B92BD60063C199 /* Basic */,
-				3D824CF017AFF67C000AD1EF /* IBMEndPointFactory.h */,
-				3D824CF117AFF67C000AD1EF /* IBMEndPointFactory.m */,
-				3D824D0E17AFF67C000AD1EF /* IBMEndPoint.h */,
-				3D824D0F17AFF67C000AD1EF /* IBMEndPoint.m */,
+				3D824CF017AFF67C000AD1EF /* SBTEndPointFactory.h */,
+				3D824CF117AFF67C000AD1EF /* SBTEndPointFactory.m */,
+				3D824D0E17AFF67C000AD1EF /* SBTEndPoint.h */,
+				3D824D0F17AFF67C000AD1EF /* SBTEndPoint.m */,
 			);
 			name = EndPoint;
 			sourceTree = "<group>";
@@ -396,8 +396,8 @@
 				3D824EBE17B006D5000AD1EF /* ConnectionsActivityStreamService */,
 				3D824EBD17B006CC000AD1EF /* ConnectionsCommunityService */,
 				3D824EBC17B006C2000AD1EF /* ConnectionsProfileService */,
-				3D824CEC17AFF67C000AD1EF /* IBMBaseService.h */,
-				3D824CED17AFF67C000AD1EF /* IBMBaseService.m */,
+				3D824CEC17AFF67C000AD1EF /* SBTBaseService.h */,
+				3D824CED17AFF67C000AD1EF /* SBTBaseService.m */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -405,8 +405,8 @@
 		3D824EBA17B006A4000AD1EF /* CredentialStore */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D0C17AFF67C000AD1EF /* IBMCredentialStore.h */,
-				3D824D0D17AFF67C000AD1EF /* IBMCredentialStore.m */,
+				3D824D0C17AFF67C000AD1EF /* SBTCredentialStore.h */,
+				3D824D0D17AFF67C000AD1EF /* SBTCredentialStore.m */,
 			);
 			name = CredentialStore;
 			sourceTree = "<group>";
@@ -418,8 +418,8 @@
 				3D824EC117B006FB000AD1EF /* PersonEntry */,
 				3D824EC317B00759000AD1EF /* CommentEntry */,
 				3D824EC017B006F5000AD1EF /* FileEntry */,
-				3D824D0217AFF67C000AD1EF /* IBMConnectionsFileService.h */,
-				3D824D0317AFF67C000AD1EF /* IBMConnectionsFileService.m */,
+				3D824D0217AFF67C000AD1EF /* SBTConnectionsFileService.h */,
+				3D824D0317AFF67C000AD1EF /* SBTConnectionsFileService.m */,
 			);
 			name = ConnectionsFileService;
 			sourceTree = "<group>";
@@ -428,8 +428,8 @@
 			isa = PBXGroup;
 			children = (
 				3D824ECE17B008D3000AD1EF /* ProfileObject */,
-				3D824D0617AFF67C000AD1EF /* IBMConnectionsProfileService.h */,
-				3D824D0717AFF67C000AD1EF /* IBMConnectionsProfileService.m */,
+				3D824D0617AFF67C000AD1EF /* SBTConnectionsProfileService.h */,
+				3D824D0717AFF67C000AD1EF /* SBTConnectionsProfileService.m */,
 			);
 			name = ConnectionsProfileService;
 			sourceTree = "<group>";
@@ -441,8 +441,8 @@
 				3D824ECC17B00879000AD1EF /* BookmarkObject */,
 				3D824ECB17B00873000AD1EF /* MemberObject */,
 				3D824ECA17B00867000AD1EF /* CommunityObject */,
-				3D824D0017AFF67C000AD1EF /* IBMConnectionsCommunityService.h */,
-				3D824D0117AFF67C000AD1EF /* IBMConnectionsCommunityService.m */,
+				3D824D0017AFF67C000AD1EF /* SBTConnectionsCommunityService.h */,
+				3D824D0117AFF67C000AD1EF /* SBTConnectionsCommunityService.m */,
 			);
 			name = ConnectionsCommunityService;
 			sourceTree = "<group>";
@@ -452,8 +452,8 @@
 			children = (
 				3D824EC517B007C6000AD1EF /* Constants */,
 				3D824EC417B007C1000AD1EF /* Entities */,
-				3D824CFA17AFF67C000AD1EF /* IBMConnectionsActivityStreamService.h */,
-				3D824CFB17AFF67C000AD1EF /* IBMConnectionsActivityStreamService.m */,
+				3D824CFA17AFF67C000AD1EF /* SBTConnectionsActivityStreamService.h */,
+				3D824CFB17AFF67C000AD1EF /* SBTConnectionsActivityStreamService.m */,
 			);
 			name = ConnectionsActivityStreamService;
 			sourceTree = "<group>";
@@ -461,8 +461,8 @@
 		3D824EC017B006F5000AD1EF /* FileEntry */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D1217AFF67C000AD1EF /* IBMFileEntry.h */,
-				3D824D1317AFF67C000AD1EF /* IBMFileEntry.m */,
+				3D824D1217AFF67C000AD1EF /* SBTFileEntry.h */,
+				3D824D1317AFF67C000AD1EF /* SBTFileEntry.m */,
 			);
 			name = FileEntry;
 			sourceTree = "<group>";
@@ -470,8 +470,8 @@
 		3D824EC117B006FB000AD1EF /* PersonEntry */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D1417AFF67C000AD1EF /* IBMFilePersonEntry.h */,
-				3D824D1517AFF67C000AD1EF /* IBMFilePersonEntry.m */,
+				3D824D1417AFF67C000AD1EF /* SBTFilePersonEntry.h */,
+				3D824D1517AFF67C000AD1EF /* SBTFilePersonEntry.m */,
 			);
 			name = PersonEntry;
 			sourceTree = "<group>";
@@ -479,8 +479,8 @@
 		3D824EC217B00701000AD1EF /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D1617AFF67D000AD1EF /* IBMFileRequestParameters.h */,
-				3D824D1717AFF67D000AD1EF /* IBMFileRequestParameters.m */,
+				3D824D1617AFF67D000AD1EF /* SBTFileRequestParameters.h */,
+				3D824D1717AFF67D000AD1EF /* SBTFileRequestParameters.m */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -488,8 +488,8 @@
 		3D824EC317B00759000AD1EF /* CommentEntry */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D1017AFF67C000AD1EF /* IBMFileCommentEntry.h */,
-				3D824D1117AFF67C000AD1EF /* IBMFileCommentEntry.m */,
+				3D824D1017AFF67C000AD1EF /* SBTFileCommentEntry.h */,
+				3D824D1117AFF67C000AD1EF /* SBTFileCommentEntry.m */,
 			);
 			name = CommentEntry;
 			sourceTree = "<group>";
@@ -508,12 +508,12 @@
 		3D824EC517B007C6000AD1EF /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				3D824CE617AFF67C000AD1EF /* IBMASApplication.h */,
-				3D824CE717AFF67C000AD1EF /* IBMASApplication.m */,
-				3D824CE817AFF67C000AD1EF /* IBMASGroup.h */,
-				3D824CE917AFF67C000AD1EF /* IBMASGroup.m */,
-				3D824CEA17AFF67C000AD1EF /* IBMASUser.h */,
-				3D824CEB17AFF67C000AD1EF /* IBMASUser.m */,
+				3D824CE617AFF67C000AD1EF /* SBTASApplication.h */,
+				3D824CE717AFF67C000AD1EF /* SBTASApplication.m */,
+				3D824CE817AFF67C000AD1EF /* SBTASGroup.h */,
+				3D824CE917AFF67C000AD1EF /* SBTASGroup.m */,
+				3D824CEA17AFF67C000AD1EF /* SBTASUser.h */,
+				3D824CEB17AFF67C000AD1EF /* SBTASUser.m */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -521,8 +521,8 @@
 		3D824EC617B007E4000AD1EF /* ActivityStreamEntry */ = {
 			isa = PBXGroup;
 			children = (
-				3D824CE417AFF67C000AD1EF /* IBMActivityStreamEntry.h */,
-				3D824CE517AFF67C000AD1EF /* IBMActivityStreamEntry.m */,
+				3D824CE417AFF67C000AD1EF /* SBTActivityStreamEntry.h */,
+				3D824CE517AFF67C000AD1EF /* SBTActivityStreamEntry.m */,
 			);
 			name = ActivityStreamEntry;
 			sourceTree = "<group>";
@@ -530,8 +530,8 @@
 		3D824EC717B007F2000AD1EF /* ActivityStreamActor */ = {
 			isa = PBXGroup;
 			children = (
-				3D824CDE17AFF67C000AD1EF /* IBMActivityStreamActor.h */,
-				3D824CDF17AFF67C000AD1EF /* IBMActivityStreamActor.m */,
+				3D824CDE17AFF67C000AD1EF /* SBTActivityStreamActor.h */,
+				3D824CDF17AFF67C000AD1EF /* SBTActivityStreamActor.m */,
 			);
 			name = ActivityStreamActor;
 			sourceTree = "<group>";
@@ -539,8 +539,8 @@
 		3D824EC817B00800000AD1EF /* ActivityStreamCommunity */ = {
 			isa = PBXGroup;
 			children = (
-				3D824CE217AFF67C000AD1EF /* IBMActivityStreamCommunity.h */,
-				3D824CE317AFF67C000AD1EF /* IBMActivityStreamCommunity.m */,
+				3D824CE217AFF67C000AD1EF /* SBTActivityStreamCommunity.h */,
+				3D824CE317AFF67C000AD1EF /* SBTActivityStreamCommunity.m */,
 			);
 			name = ActivityStreamCommunity;
 			sourceTree = "<group>";
@@ -548,8 +548,8 @@
 		3D824EC917B0080E000AD1EF /* ActivityStreamAttachment */ = {
 			isa = PBXGroup;
 			children = (
-				3D824CE017AFF67C000AD1EF /* IBMActivityStreamAttachment.h */,
-				3D824CE117AFF67C000AD1EF /* IBMActivityStreamAttachment.m */,
+				3D824CE017AFF67C000AD1EF /* SBTActivityStreamAttachment.h */,
+				3D824CE117AFF67C000AD1EF /* SBTActivityStreamAttachment.m */,
 			);
 			name = ActivityStreamAttachment;
 			sourceTree = "<group>";
@@ -557,8 +557,8 @@
 		3D824ECA17B00867000AD1EF /* CommunityObject */ = {
 			isa = PBXGroup;
 			children = (
-				3D824CFE17AFF67C000AD1EF /* IBMConnectionsCommunity.h */,
-				3D824CFF17AFF67C000AD1EF /* IBMConnectionsCommunity.m */,
+				3D824CFE17AFF67C000AD1EF /* SBTConnectionsCommunity.h */,
+				3D824CFF17AFF67C000AD1EF /* SBTConnectionsCommunity.m */,
 			);
 			name = CommunityObject;
 			sourceTree = "<group>";
@@ -566,8 +566,8 @@
 		3D824ECB17B00873000AD1EF /* MemberObject */ = {
 			isa = PBXGroup;
 			children = (
-				3D824CF817AFF67C000AD1EF /* IBMCommunityMember.h */,
-				3D824CF917AFF67C000AD1EF /* IBMCommunityMember.m */,
+				3D824CF817AFF67C000AD1EF /* SBTCommunityMember.h */,
+				3D824CF917AFF67C000AD1EF /* SBTCommunityMember.m */,
 			);
 			name = MemberObject;
 			sourceTree = "<group>";
@@ -575,8 +575,8 @@
 		3D824ECC17B00879000AD1EF /* BookmarkObject */ = {
 			isa = PBXGroup;
 			children = (
-				3D824CF417AFF67C000AD1EF /* IBMCommunityBookmark.h */,
-				3D824CF517AFF67C000AD1EF /* IBMCommunityBookmark.m */,
+				3D824CF417AFF67C000AD1EF /* SBTCommunityBookmark.h */,
+				3D824CF517AFF67C000AD1EF /* SBTCommunityBookmark.m */,
 			);
 			name = BookmarkObject;
 			sourceTree = "<group>";
@@ -584,8 +584,8 @@
 		3D824ECD17B00882000AD1EF /* ForumTopicObject */ = {
 			isa = PBXGroup;
 			children = (
-				3D824CF617AFF67C000AD1EF /* IBMCommunityForumTopic.h */,
-				3D824CF717AFF67C000AD1EF /* IBMCommunityForumTopic.m */,
+				3D824CF617AFF67C000AD1EF /* SBTCommunityForumTopic.h */,
+				3D824CF717AFF67C000AD1EF /* SBTCommunityForumTopic.m */,
 			);
 			name = ForumTopicObject;
 			sourceTree = "<group>";
@@ -593,8 +593,8 @@
 		3D824ECE17B008D3000AD1EF /* ProfileObject */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D0417AFF67C000AD1EF /* IBMConnectionsProfile.h */,
-				3D824D0517AFF67C000AD1EF /* IBMConnectionsProfile.m */,
+				3D824D0417AFF67C000AD1EF /* SBTConnectionsProfile.h */,
+				3D824D0517AFF67C000AD1EF /* SBTConnectionsProfile.m */,
 			);
 			name = ProfileObject;
 			sourceTree = "<group>";
@@ -611,8 +611,8 @@
 		3D824ED017B00964000AD1EF /* HttpClient */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D1817AFF67D000AD1EF /* IBMHttpClient.h */,
-				3D824D1917AFF67D000AD1EF /* IBMHttpClient.m */,
+				3D824D1817AFF67D000AD1EF /* SBTHttpClient.h */,
+				3D824D1917AFF67D000AD1EF /* SBTHttpClient.m */,
 			);
 			name = HttpClient;
 			sourceTree = "<group>";
@@ -620,8 +620,8 @@
 		3D824ED117B0096E000AD1EF /* ConnectionsClientService */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D0817AFF67C000AD1EF /* IBMConnectionsClientService.h */,
-				3D824D0917AFF67C000AD1EF /* IBMConnectionsClientService.m */,
+				3D824D0817AFF67C000AD1EF /* SBTConnectionsClientService.h */,
+				3D824D0917AFF67C000AD1EF /* SBTConnectionsClientService.m */,
 			);
 			name = ConnectionsClientService;
 			sourceTree = "<group>";
@@ -733,8 +733,8 @@
 		3D824F1617B01688000AD1EF /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				3D824F1C17B016DB000AD1EF /* IBMUtilsTest.h */,
-				3D824F1D17B016DB000AD1EF /* IBMUtilsTest.m */,
+				3D824F1C17B016DB000AD1EF /* SBTUtilsTest.h */,
+				3D824F1D17B016DB000AD1EF /* SBTUtilsTest.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -742,8 +742,8 @@
 		3D824F1717B0168F000AD1EF /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				3D824F1F17B016EA000AD1EF /* IBMConstantsTest.h */,
-				3D824F2017B016EA000AD1EF /* IBMConstantsTest.m */,
+				3D824F1F17B016EA000AD1EF /* SBTConstantsTest.h */,
+				3D824F2017B016EA000AD1EF /* SBTConstantsTest.m */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -751,8 +751,8 @@
 		3D824F1817B01694000AD1EF /* ConnectionsProfileService */ = {
 			isa = PBXGroup;
 			children = (
-				3D824F2217B016FD000AD1EF /* IBMConnectionsProfileServiceTest.h */,
-				3D824F2317B016FD000AD1EF /* IBMConnectionsProfileServiceTest.m */,
+				3D824F2217B016FD000AD1EF /* SBTConnectionsProfileServiceTest.h */,
+				3D824F2317B016FD000AD1EF /* SBTConnectionsProfileServiceTest.m */,
 			);
 			name = ConnectionsProfileService;
 			sourceTree = "<group>";
@@ -760,8 +760,8 @@
 		3D824F1917B016A2000AD1EF /* ConnectionsCommunityService */ = {
 			isa = PBXGroup;
 			children = (
-				3D824F2517B01710000AD1EF /* IBMConnectionsCommunityServiceTest.h */,
-				3D824F2617B01710000AD1EF /* IBMConnectionsCommunityServiceTest.m */,
+				3D824F2517B01710000AD1EF /* SBTConnectionsCommunityServiceTest.h */,
+				3D824F2617B01710000AD1EF /* SBTConnectionsCommunityServiceTest.m */,
 			);
 			name = ConnectionsCommunityService;
 			sourceTree = "<group>";
@@ -769,8 +769,8 @@
 		3D824F1A17B016AB000AD1EF /* ConnectionsActivityStreamService */ = {
 			isa = PBXGroup;
 			children = (
-				3D824F2817B01719000AD1EF /* IBMConnectionsActivityStreamServiceTest.h */,
-				3D824F2917B01719000AD1EF /* IBMConnectionsActivityStreamServiceTest.m */,
+				3D824F2817B01719000AD1EF /* SBTConnectionsActivityStreamServiceTest.h */,
+				3D824F2917B01719000AD1EF /* SBTConnectionsActivityStreamServiceTest.m */,
 			);
 			name = ConnectionsActivityStreamService;
 			sourceTree = "<group>";
@@ -778,8 +778,8 @@
 		3D824F1B17B016BA000AD1EF /* ConnectionsFileService */ = {
 			isa = PBXGroup;
 			children = (
-				3D824F2B17B01725000AD1EF /* IBMConnectionsFileServiceTest.h */,
-				3D824F2C17B01725000AD1EF /* IBMConnectionsFileServiceTest.m */,
+				3D824F2B17B01725000AD1EF /* SBTConnectionsFileServiceTest.h */,
+				3D824F2C17B01725000AD1EF /* SBTConnectionsFileServiceTest.m */,
 			);
 			name = ConnectionsFileService;
 			sourceTree = "<group>";
@@ -787,8 +787,8 @@
 		3DCCFC4C17B44F1E0063C199 /* CredentialStore */ = {
 			isa = PBXGroup;
 			children = (
-				3DCCFC4D17B44F720063C199 /* IBMCredentialStoreTest.h */,
-				3DCCFC4E17B44F720063C199 /* IBMCredentialStoreTest.m */,
+				3DCCFC4D17B44F720063C199 /* SBTCredentialStoreTest.h */,
+				3DCCFC4E17B44F720063C199 /* SBTCredentialStoreTest.m */,
 			);
 			name = CredentialStore;
 			sourceTree = "<group>";
@@ -796,8 +796,8 @@
 		3DCCFC7717B57C580063C199 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
-				3D824CFC17AFF67C000AD1EF /* IBMConnectionsBasicEndPoint.h */,
-				3D824CFD17AFF67C000AD1EF /* IBMConnectionsBasicEndPoint.m */,
+				3D824CFC17AFF67C000AD1EF /* SBTConnectionsBasicEndPoint.h */,
+				3D824CFD17AFF67C000AD1EF /* SBTConnectionsBasicEndPoint.m */,
 			);
 			name = Basic;
 			sourceTree = "<group>";
@@ -805,8 +805,8 @@
 		3DCCFC7817B57C640063C199 /* OAuth2 */ = {
 			isa = PBXGroup;
 			children = (
-				3DCCFC7C17B57DAB0063C199 /* IBMConnectionsOAuth2EndPoint.h */,
-				3DCCFC7D17B57DAC0063C199 /* IBMConnectionsOAuth2EndPoint.m */,
+				3DCCFC7C17B57DAB0063C199 /* SBTConnectionsOAuth2EndPoint.h */,
+				3DCCFC7D17B57DAC0063C199 /* SBTConnectionsOAuth2EndPoint.m */,
 			);
 			name = OAuth2;
 			sourceTree = "<group>";
@@ -814,8 +814,8 @@
 		3DCCFD8217B92BD60063C199 /* Basic */ = {
 			isa = PBXGroup;
 			children = (
-				3D824CEE17AFF67C000AD1EF /* IBMBasicEndPoint.h */,
-				3D824CEF17AFF67C000AD1EF /* IBMBasicEndPoint.m */,
+				3D824CEE17AFF67C000AD1EF /* SBTBasicEndPoint.h */,
+				3D824CEF17AFF67C000AD1EF /* SBTBasicEndPoint.m */,
 			);
 			name = Basic;
 			sourceTree = "<group>";
@@ -823,8 +823,8 @@
 		3DCCFD8317B92BDD0063C199 /* OAuth2 */ = {
 			isa = PBXGroup;
 			children = (
-				3DCCFC7917B57CB50063C199 /* IBMOAuth2EndPoint.h */,
-				3DCCFC7A17B57CB50063C199 /* IBMOAuth2EndPoint.m */,
+				3DCCFC7917B57CB50063C199 /* SBTOAuth2EndPoint.h */,
+				3DCCFC7A17B57CB50063C199 /* SBTOAuth2EndPoint.m */,
 			);
 			name = OAuth2;
 			sourceTree = "<group>";
@@ -942,40 +942,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D824D1E17AFF67D000AD1EF /* FBLog.m in Sources */,
-				3D824D1F17AFF67D000AD1EF /* IBMActivityStreamActor.m in Sources */,
-				3D824D2017AFF67D000AD1EF /* IBMActivityStreamAttachment.m in Sources */,
-				3D824D2117AFF67D000AD1EF /* IBMActivityStreamCommunity.m in Sources */,
-				3D824D2217AFF67D000AD1EF /* IBMActivityStreamEntry.m in Sources */,
-				3D824D2317AFF67D000AD1EF /* IBMASApplication.m in Sources */,
-				3D824D2417AFF67D000AD1EF /* IBMASGroup.m in Sources */,
-				3D824D2517AFF67D000AD1EF /* IBMASUser.m in Sources */,
-				3D824D2617AFF67D000AD1EF /* IBMBaseService.m in Sources */,
-				3D824D2717AFF67D000AD1EF /* IBMBasicEndPoint.m in Sources */,
-				3D824D2817AFF67D000AD1EF /* IBMEndPointFactory.m in Sources */,
-				3D824D2917AFF67D000AD1EF /* IBMClientService.m in Sources */,
-				3D824D2A17AFF67D000AD1EF /* IBMCommunityBookmark.m in Sources */,
-				3D824D2B17AFF67D000AD1EF /* IBMCommunityForumTopic.m in Sources */,
-				3D824D2C17AFF67D000AD1EF /* IBMCommunityMember.m in Sources */,
-				3D824D2D17AFF67D000AD1EF /* IBMConnectionsActivityStreamService.m in Sources */,
-				3D824D2E17AFF67D000AD1EF /* IBMConnectionsBasicEndPoint.m in Sources */,
-				3D824D2F17AFF67D000AD1EF /* IBMConnectionsCommunity.m in Sources */,
-				3D824D3017AFF67D000AD1EF /* IBMConnectionsCommunityService.m in Sources */,
-				3D824D3117AFF67D000AD1EF /* IBMConnectionsFileService.m in Sources */,
-				3D824D3217AFF67D000AD1EF /* IBMConnectionsProfile.m in Sources */,
-				3D824D3317AFF67D000AD1EF /* IBMConnectionsProfileService.m in Sources */,
-				3D824D3417AFF67D000AD1EF /* IBMConnectionsClientService.m in Sources */,
-				3D824D3517AFF67D000AD1EF /* IBMConstants.m in Sources */,
-				3D824D3617AFF67D000AD1EF /* IBMCredentialStore.m in Sources */,
-				3D824D3717AFF67D000AD1EF /* IBMEndPoint.m in Sources */,
-				3D824D3817AFF67D000AD1EF /* IBMFileCommentEntry.m in Sources */,
-				3D824D3917AFF67D000AD1EF /* IBMFileEntry.m in Sources */,
-				3D824D3A17AFF67D000AD1EF /* IBMFilePersonEntry.m in Sources */,
-				3D824D3B17AFF67D000AD1EF /* IBMFileRequestParameters.m in Sources */,
-				3D824D3C17AFF67D000AD1EF /* IBMHttpClient.m in Sources */,
-				3D824D3D17AFF67D000AD1EF /* IBMUtils.m in Sources */,
-				3D824D3E17AFF67D000AD1EF /* IBMXMLDocument.m in Sources */,
-				3DCCFC7B17B57CB50063C199 /* IBMOAuth2EndPoint.m in Sources */,
-				3DCCFC7E17B57DAC0063C199 /* IBMConnectionsOAuth2EndPoint.m in Sources */,
+				3D824D1F17AFF67D000AD1EF /* SBTActivityStreamActor.m in Sources */,
+				3D824D2017AFF67D000AD1EF /* SBTActivityStreamAttachment.m in Sources */,
+				3D824D2117AFF67D000AD1EF /* SBTActivityStreamCommunity.m in Sources */,
+				3D824D2217AFF67D000AD1EF /* SBTActivityStreamEntry.m in Sources */,
+				3D824D2317AFF67D000AD1EF /* SBTASApplication.m in Sources */,
+				3D824D2417AFF67D000AD1EF /* SBTASGroup.m in Sources */,
+				3D824D2517AFF67D000AD1EF /* SBTASUser.m in Sources */,
+				3D824D2617AFF67D000AD1EF /* SBTBaseService.m in Sources */,
+				3D824D2717AFF67D000AD1EF /* SBTBasicEndPoint.m in Sources */,
+				3D824D2817AFF67D000AD1EF /* SBTEndPointFactory.m in Sources */,
+				3D824D2917AFF67D000AD1EF /* SBTClientService.m in Sources */,
+				3D824D2A17AFF67D000AD1EF /* SBTCommunityBookmark.m in Sources */,
+				3D824D2B17AFF67D000AD1EF /* SBTCommunityForumTopic.m in Sources */,
+				3D824D2C17AFF67D000AD1EF /* SBTCommunityMember.m in Sources */,
+				3D824D2D17AFF67D000AD1EF /* SBTConnectionsActivityStreamService.m in Sources */,
+				3D824D2E17AFF67D000AD1EF /* SBTConnectionsBasicEndPoint.m in Sources */,
+				3D824D2F17AFF67D000AD1EF /* SBTConnectionsCommunity.m in Sources */,
+				3D824D3017AFF67D000AD1EF /* SBTConnectionsCommunityService.m in Sources */,
+				3D824D3117AFF67D000AD1EF /* SBTConnectionsFileService.m in Sources */,
+				3D824D3217AFF67D000AD1EF /* SBTConnectionsProfile.m in Sources */,
+				3D824D3317AFF67D000AD1EF /* SBTConnectionsProfileService.m in Sources */,
+				3D824D3417AFF67D000AD1EF /* SBTConnectionsClientService.m in Sources */,
+				3D824D3517AFF67D000AD1EF /* SBTConstants.m in Sources */,
+				3D824D3617AFF67D000AD1EF /* SBTCredentialStore.m in Sources */,
+				3D824D3717AFF67D000AD1EF /* SBTEndPoint.m in Sources */,
+				3D824D3817AFF67D000AD1EF /* SBTFileCommentEntry.m in Sources */,
+				3D824D3917AFF67D000AD1EF /* SBTFileEntry.m in Sources */,
+				3D824D3A17AFF67D000AD1EF /* SBTFilePersonEntry.m in Sources */,
+				3D824D3B17AFF67D000AD1EF /* SBTFileRequestParameters.m in Sources */,
+				3D824D3C17AFF67D000AD1EF /* SBTHttpClient.m in Sources */,
+				3D824D3D17AFF67D000AD1EF /* SBTUtils.m in Sources */,
+				3D824D3E17AFF67D000AD1EF /* SBTXMLDocument.m in Sources */,
+				3DCCFC7B17B57CB50063C199 /* SBTOAuth2EndPoint.m in Sources */,
+				3DCCFC7E17B57DAC0063C199 /* SBTConnectionsOAuth2EndPoint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -984,12 +984,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D824EF617B015BA000AD1EF /* GDataXMLNode.m in Sources */,
-				3D824F1E17B016DB000AD1EF /* IBMUtilsTest.m in Sources */,
-				3D824F2117B016EA000AD1EF /* IBMConstantsTest.m in Sources */,
-				3D824F2417B016FD000AD1EF /* IBMConnectionsProfileServiceTest.m in Sources */,
-				3D824F2717B01710000AD1EF /* IBMConnectionsCommunityServiceTest.m in Sources */,
-				3D824F2A17B01719000AD1EF /* IBMConnectionsActivityStreamServiceTest.m in Sources */,
-				3D824F2D17B01725000AD1EF /* IBMConnectionsFileServiceTest.m in Sources */,
+				3D824F1E17B016DB000AD1EF /* SBTUtilsTest.m in Sources */,
+				3D824F2117B016EA000AD1EF /* SBTConstantsTest.m in Sources */,
+				3D824F2417B016FD000AD1EF /* SBTConnectionsProfileServiceTest.m in Sources */,
+				3D824F2717B01710000AD1EF /* SBTConnectionsCommunityServiceTest.m in Sources */,
+				3D824F2A17B01719000AD1EF /* SBTConnectionsActivityStreamServiceTest.m in Sources */,
+				3D824F2D17B01725000AD1EF /* SBTConnectionsFileServiceTest.m in Sources */,
 				3DCCFBCD17B3E4430063C199 /* AFHTTPClient.m in Sources */,
 				3DCCFBCE17B3E4430063C199 /* AFHTTPRequestOperation.m in Sources */,
 				3DCCFBCF17B3E4430063C199 /* AFImageRequestOperation.m in Sources */,
@@ -999,7 +999,7 @@
 				3DCCFBD317B3E4430063C199 /* AFURLConnectionOperation.m in Sources */,
 				3DCCFBD417B3E4430063C199 /* AFXMLRequestOperation.m in Sources */,
 				3DCCFBD517B3E4430063C199 /* UIImageView+AFNetworking.m in Sources */,
-				3DCCFC4F17B44F720063C199 /* IBMCredentialStoreTest.m in Sources */,
+				3DCCFC4F17B44F720063C199 /* SBTCredentialStoreTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1174,6 +1174,7 @@
 				073B65EC18508A56000FDFB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D824C4217AFECB8000AD1EF /* Build configuration list for PBXProject "iOSSBTK" */ = {
 			isa = XCConfigurationList;

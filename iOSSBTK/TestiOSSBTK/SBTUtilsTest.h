@@ -14,19 +14,25 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+//  Utility class for testing
 
-@interface SBTConnectionsClientService : SBTClientService
+#import <Foundation/Foundation.h>
 
-#pragma mark - properties
-
-#pragma mark - methods
-
-- (id) init;
+@interface SBTUtilsTest : NSObject
 
 /**
- This method initializes IBMConnectionsClientService with an endpoint
+ Call this method to execute async test operations, it will automatically handle semaphores to provide
+ concurrency. You can define your testblock as follows:
+ void (^testBlock)(void (^completionBlock)(void)) = ^(void (^completionBlock)(void)) {
+    // Your async operation goes here
+ }
+ @param testBlock
  */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
++ (void) executeAsyncBlock:(void (^)(void (^completionBlock)(void))) testBlock;
+
+/**
+ Use this method to initialize credentials for unit testing
+ */
++ (void) setCredentials;
 
 @end

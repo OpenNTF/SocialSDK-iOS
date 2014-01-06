@@ -14,19 +14,12 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+//  This class is a unit test class for Connections' Community Service
+//  This class creates a test community at the beginning of the test and
+//  delete it after all the test cases completed
 
-@interface SBTConnectionsClientService : SBTClientService
+#import <SenTestingKit/SenTestingKit.h>
 
-#pragma mark - properties
-
-#pragma mark - methods
-
-- (id) init;
-
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
+@interface SBTConnectionsCommunityServiceTest : SenTestCase
 
 @end

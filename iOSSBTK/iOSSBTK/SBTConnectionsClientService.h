@@ -27,6 +27,6 @@
 /**
  This method initializes IBMConnectionsClientService with an endpoint
  */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
+- (id) initWithEndPoint:(SBTEndPoint *) endPoint;
 
 @end

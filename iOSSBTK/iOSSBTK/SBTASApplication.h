@@ -14,19 +14,19 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+#import <Foundation/Foundation.h>
 
-@interface SBTConnectionsClientService : SBTClientService
+@interface SBTASApplication : NSObject
 
-#pragma mark - properties
+typedef enum {
+    A_COMMUNITIES,
+    A_TAGS,
+    A_PEOPLE,
+    A_STATUS,
+    A_ALL,
+    A_NOAPP
+} AS_APPLICATION_TYPE;
 
-#pragma mark - methods
-
-- (id) init;
-
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
++ (NSString*) convertToString:(AS_APPLICATION_TYPE) type;
 
 @end

@@ -14,19 +14,26 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+#import <Foundation/Foundation.h>
 
-@interface SBTConnectionsClientService : SBTClientService
+@interface SBTASGroup : NSObject
 
-#pragma mark - properties
 
-#pragma mark - methods
+typedef enum {
+    G_ALL,
+    G_FOLLOWING,
+    G_FRIENDS,
+    G_SELF,
+    G_INVOLVED,
+    G_SAVED,
+    G_ACTION,
+    G_RESPONSES,
+    G_NOTESFORME,
+    G_NOTESFROMME
+} AS_GROUP_TYPE;
 
-- (id) init;
++ (NSString*) convertToString:(AS_GROUP_TYPE) type;
 
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
+
 
 @end

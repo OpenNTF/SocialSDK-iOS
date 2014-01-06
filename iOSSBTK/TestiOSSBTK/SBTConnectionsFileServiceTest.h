@@ -14,19 +14,11 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+//  This class is a unit test class for Connections' File Service
+//  A test file is created at the beginning and deleted at the end of the test cases
 
-@interface SBTConnectionsClientService : SBTClientService
+#import <SenTestingKit/SenTestingKit.h>
 
-#pragma mark - properties
-
-#pragma mark - methods
-
-- (id) init;
-
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
+@interface SBTConnectionsFileServiceTest : SenTestCase
 
 @end

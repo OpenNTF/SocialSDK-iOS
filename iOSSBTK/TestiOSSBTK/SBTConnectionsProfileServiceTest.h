@@ -14,19 +14,12 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+//  This class is a unit test class for Connections' Profile Service
+//  We get the test profile at the beginning of the test
 
-@interface SBTConnectionsClientService : SBTClientService
+#import <SenTestingKit/SenTestingKit.h>
 
-#pragma mark - properties
+@interface SBTConnectionsProfileServiceTest : SenTestCase
 
-#pragma mark - methods
-
-- (id) init;
-
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
 
 @end

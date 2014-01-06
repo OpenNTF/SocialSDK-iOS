@@ -14,19 +14,19 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+// This class is a wrapper to the xml parser we're using. It is used to abstract the xml parser we're using.
+// Currently we're using Google's objective-c xml parser.
 
-@interface SBTConnectionsClientService : SBTClientService
+#import "GDataXMLNode.h"
+
+@interface SBTXMLDocument : GDataXMLDocument
 
 #pragma mark - properties
 
+@property (strong, nonatomic) NSDictionary *namespaces;
+
 #pragma mark - methods
 
-- (id) init;
 
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
 
 @end

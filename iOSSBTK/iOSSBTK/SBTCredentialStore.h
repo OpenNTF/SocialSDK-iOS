@@ -14,19 +14,15 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+//  This class is used to store and retrieve credentials, including username, passwords and outh token
+//  !!!---We currently use the NSUserDefaults but a more secure way may be needed---!!!
 
-@interface SBTConnectionsClientService : SBTClientService
+#import <Foundation/Foundation.h>
 
-#pragma mark - properties
+@interface SBTCredentialStore : NSObject
 
-#pragma mark - methods
-
-- (id) init;
-
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
++ (BOOL) storeWithKey:(NSString *) key value:(id) value;
++ (id) loadWithKey:(NSString *) key;
++ (BOOL) removeWithKey:(NSString *) key;
 
 @end

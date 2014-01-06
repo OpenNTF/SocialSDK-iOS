@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07312380187AAFD100BEE3B5 /* SBTHttpClient.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D09FF0417C54B7F006B5159 /* SBTHttpClient.h */; };
+		07312381187AAFE500BEE3B5 /* SBTEndPointFactory.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D09FEFF17C54B7F006B5159 /* SBTEndPointFactory.h */; };
+		07312382187AAFF000BEE3B5 /* SBTBasicEndPoint.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D09FEEE17C54B7F006B5159 /* SBTBasicEndPoint.h */; };
+		07312383187AAFFF00BEE3B5 /* SBTConnectionsBasicEndPoint.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D09FEF417C54B7F006B5159 /* SBTConnectionsBasicEndPoint.h */; };
+		07312384187AAFFF00BEE3B5 /* IBMConnectionsClientService.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D09FEF517C54B7F006B5159 /* IBMConnectionsClientService.h */; };
+		07312385187AB00C00BEE3B5 /* SBTConstants.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D09FEFC17C54B7F006B5159 /* SBTConstants.h */; };
 		3D09FF0917C54B83006B5159 /* libiOSSBTK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D09FF0817C54B83006B5159 /* libiOSSBTK.a */; };
 		3D09FF0D17C66523006B5159 /* libiOSSBTK_iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D09FF0C17C66523006B5159 /* libiOSSBTK_iphone.a */; };
 		3D9994FE17BBDB790038CEE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9994FD17BBDB790038CEE2 /* UIKit.framework */; };
@@ -14,12 +20,12 @@
 		3D99950217BBDB790038CEE2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D99950117BBDB790038CEE2 /* CoreGraphics.framework */; };
 		3D99950817BBDB790038CEE2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D99950617BBDB790038CEE2 /* InfoPlist.strings */; };
 		3D99950A17BBDB790038CEE2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99950917BBDB790038CEE2 /* main.m */; };
-		3D99950E17BBDB790038CEE2 /* IBMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99950D17BBDB790038CEE2 /* IBMAppDelegate.m */; };
+		3D99950E17BBDB790038CEE2 /* SBTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99950D17BBDB790038CEE2 /* SBTAppDelegate.m */; };
 		3D99951017BBDB790038CEE2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D99950F17BBDB790038CEE2 /* Default.png */; };
 		3D99951217BBDB790038CEE2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D99951117BBDB790038CEE2 /* Default@2x.png */; };
 		3D99951417BBDB790038CEE2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D99951317BBDB790038CEE2 /* Default-568h@2x.png */; };
-		3D99951717BBDB790038CEE2 /* IBMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99951617BBDB790038CEE2 /* IBMViewController.m */; };
-		3D99951A17BBDB790038CEE2 /* IBMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D99951817BBDB790038CEE2 /* IBMViewController.xib */; };
+		3D99951717BBDB790038CEE2 /* SBTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99951617BBDB790038CEE2 /* SBTViewController.m */; };
+		3D99951A17BBDB790038CEE2 /* SBTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D99951817BBDB790038CEE2 /* SBTViewController.xib */; };
 		3D99955A17BBE01A0038CEE2 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99954817BBE01A0038CEE2 /* AFHTTPClient.m */; };
 		3D99955B17BBE01A0038CEE2 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99954A17BBE01A0038CEE2 /* AFHTTPRequestOperation.m */; };
 		3D99955C17BBE01A0038CEE2 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99954C17BBE01A0038CEE2 /* AFImageRequestOperation.m */; };
@@ -33,46 +39,46 @@
 		3D99956717BBE0A20038CEE2 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D99956617BBE0A20038CEE2 /* libxml2.dylib */; };
 		3D99956917BBE0B00038CEE2 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D99956817BBE0B00038CEE2 /* MobileCoreServices.framework */; };
 		3D99956B17BBE16A0038CEE2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D99956A17BBE16A0038CEE2 /* Security.framework */; };
-		3D99957417BD483B0038CEE2 /* IBMAPIExplorer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99957217BD483B0038CEE2 /* IBMAPIExplorer.m */; };
-		3D99957517BD483B0038CEE2 /* IBMAPIExplorer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D99957317BD483B0038CEE2 /* IBMAPIExplorer.xib */; };
+		3D99957417BD483B0038CEE2 /* SBTAPIExplorer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D99957217BD483B0038CEE2 /* SBTAPIExplorer.m */; };
+		3D99957517BD483B0038CEE2 /* SBTAPIExplorer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D99957317BD483B0038CEE2 /* SBTAPIExplorer.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3D09FEE517C54B7F006B5159 /* FBLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLog.h; sourceTree = "<group>"; };
-		3D09FEE617C54B7F006B5159 /* IBMActivityStreamActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMActivityStreamActor.h; sourceTree = "<group>"; };
-		3D09FEE717C54B7F006B5159 /* IBMActivityStreamAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMActivityStreamAttachment.h; sourceTree = "<group>"; };
-		3D09FEE817C54B7F006B5159 /* IBMActivityStreamCommunity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMActivityStreamCommunity.h; sourceTree = "<group>"; };
-		3D09FEE917C54B7F006B5159 /* IBMActivityStreamEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMActivityStreamEntry.h; sourceTree = "<group>"; };
-		3D09FEEA17C54B7F006B5159 /* IBMASApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMASApplication.h; sourceTree = "<group>"; };
-		3D09FEEB17C54B7F006B5159 /* IBMASGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMASGroup.h; sourceTree = "<group>"; };
-		3D09FEEC17C54B7F006B5159 /* IBMASUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMASUser.h; sourceTree = "<group>"; };
-		3D09FEED17C54B7F006B5159 /* IBMBaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMBaseService.h; sourceTree = "<group>"; };
-		3D09FEEE17C54B7F006B5159 /* IBMBasicEndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMBasicEndPoint.h; sourceTree = "<group>"; };
-		3D09FEEF17C54B7F006B5159 /* IBMClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMClientService.h; sourceTree = "<group>"; };
-		3D09FEF017C54B7F006B5159 /* IBMCommunityBookmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMCommunityBookmark.h; sourceTree = "<group>"; };
-		3D09FEF117C54B7F006B5159 /* IBMCommunityForumTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMCommunityForumTopic.h; sourceTree = "<group>"; };
-		3D09FEF217C54B7F006B5159 /* IBMCommunityMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMCommunityMember.h; sourceTree = "<group>"; };
-		3D09FEF317C54B7F006B5159 /* IBMConnectionsActivityStreamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsActivityStreamService.h; sourceTree = "<group>"; };
-		3D09FEF417C54B7F006B5159 /* IBMConnectionsBasicEndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsBasicEndPoint.h; sourceTree = "<group>"; };
+		3D09FEE617C54B7F006B5159 /* SBTActivityStreamActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTActivityStreamActor.h; sourceTree = "<group>"; };
+		3D09FEE717C54B7F006B5159 /* SBTActivityStreamAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTActivityStreamAttachment.h; sourceTree = "<group>"; };
+		3D09FEE817C54B7F006B5159 /* SBTActivityStreamCommunity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTActivityStreamCommunity.h; sourceTree = "<group>"; };
+		3D09FEE917C54B7F006B5159 /* SBTActivityStreamEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTActivityStreamEntry.h; sourceTree = "<group>"; };
+		3D09FEEA17C54B7F006B5159 /* SBTASApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTASApplication.h; sourceTree = "<group>"; };
+		3D09FEEB17C54B7F006B5159 /* SBTASGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTASGroup.h; sourceTree = "<group>"; };
+		3D09FEEC17C54B7F006B5159 /* SBTASUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTASUser.h; sourceTree = "<group>"; };
+		3D09FEED17C54B7F006B5159 /* SBTBaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTBaseService.h; sourceTree = "<group>"; };
+		3D09FEEE17C54B7F006B5159 /* SBTBasicEndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTBasicEndPoint.h; sourceTree = "<group>"; };
+		3D09FEEF17C54B7F006B5159 /* SBTClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTClientService.h; sourceTree = "<group>"; };
+		3D09FEF017C54B7F006B5159 /* SBTCommunityBookmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTCommunityBookmark.h; sourceTree = "<group>"; };
+		3D09FEF117C54B7F006B5159 /* SBTCommunityForumTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTCommunityForumTopic.h; sourceTree = "<group>"; };
+		3D09FEF217C54B7F006B5159 /* SBTCommunityMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTCommunityMember.h; sourceTree = "<group>"; };
+		3D09FEF317C54B7F006B5159 /* SBTConnectionsActivityStreamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsActivityStreamService.h; sourceTree = "<group>"; };
+		3D09FEF417C54B7F006B5159 /* SBTConnectionsBasicEndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsBasicEndPoint.h; sourceTree = "<group>"; };
 		3D09FEF517C54B7F006B5159 /* IBMConnectionsClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsClientService.h; sourceTree = "<group>"; };
-		3D09FEF617C54B7F006B5159 /* IBMConnectionsCommunity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsCommunity.h; sourceTree = "<group>"; };
-		3D09FEF717C54B7F006B5159 /* IBMConnectionsCommunityService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsCommunityService.h; sourceTree = "<group>"; };
-		3D09FEF817C54B7F006B5159 /* IBMConnectionsFileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsFileService.h; sourceTree = "<group>"; };
-		3D09FEF917C54B7F006B5159 /* IBMConnectionsOAuth2EndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsOAuth2EndPoint.h; sourceTree = "<group>"; };
-		3D09FEFA17C54B7F006B5159 /* IBMConnectionsProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsProfile.h; sourceTree = "<group>"; };
-		3D09FEFB17C54B7F006B5159 /* IBMConnectionsProfileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsProfileService.h; sourceTree = "<group>"; };
-		3D09FEFC17C54B7F006B5159 /* IBMConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConstants.h; sourceTree = "<group>"; };
-		3D09FEFD17C54B7F006B5159 /* IBMCredentialStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMCredentialStore.h; sourceTree = "<group>"; };
-		3D09FEFE17C54B7F006B5159 /* IBMEndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMEndPoint.h; sourceTree = "<group>"; };
-		3D09FEFF17C54B7F006B5159 /* IBMEndPointFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMEndPointFactory.h; sourceTree = "<group>"; };
-		3D09FF0017C54B7F006B5159 /* IBMFileCommentEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMFileCommentEntry.h; sourceTree = "<group>"; };
-		3D09FF0117C54B7F006B5159 /* IBMFileEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMFileEntry.h; sourceTree = "<group>"; };
-		3D09FF0217C54B7F006B5159 /* IBMFilePersonEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMFilePersonEntry.h; sourceTree = "<group>"; };
-		3D09FF0317C54B7F006B5159 /* IBMFileRequestParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMFileRequestParameters.h; sourceTree = "<group>"; };
-		3D09FF0417C54B7F006B5159 /* IBMHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMHttpClient.h; sourceTree = "<group>"; };
-		3D09FF0517C54B7F006B5159 /* IBMOAuth2EndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMOAuth2EndPoint.h; sourceTree = "<group>"; };
-		3D09FF0617C54B7F006B5159 /* IBMUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMUtils.h; sourceTree = "<group>"; };
-		3D09FF0717C54B7F006B5159 /* IBMXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMXMLDocument.h; sourceTree = "<group>"; };
+		3D09FEF617C54B7F006B5159 /* SBTConnectionsCommunity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsCommunity.h; sourceTree = "<group>"; };
+		3D09FEF717C54B7F006B5159 /* SBTConnectionsCommunityService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsCommunityService.h; sourceTree = "<group>"; };
+		3D09FEF817C54B7F006B5159 /* SBTConnectionsFileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsFileService.h; sourceTree = "<group>"; };
+		3D09FEF917C54B7F006B5159 /* SBTConnectionsOAuth2EndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsOAuth2EndPoint.h; sourceTree = "<group>"; };
+		3D09FEFA17C54B7F006B5159 /* SBTConnectionsProfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsProfile.h; sourceTree = "<group>"; };
+		3D09FEFB17C54B7F006B5159 /* SBTConnectionsProfileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsProfileService.h; sourceTree = "<group>"; };
+		3D09FEFC17C54B7F006B5159 /* SBTConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConstants.h; sourceTree = "<group>"; };
+		3D09FEFD17C54B7F006B5159 /* SBTCredentialStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTCredentialStore.h; sourceTree = "<group>"; };
+		3D09FEFE17C54B7F006B5159 /* SBTEndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTEndPoint.h; sourceTree = "<group>"; };
+		3D09FEFF17C54B7F006B5159 /* SBTEndPointFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTEndPointFactory.h; sourceTree = "<group>"; };
+		3D09FF0017C54B7F006B5159 /* SBTFileCommentEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTFileCommentEntry.h; sourceTree = "<group>"; };
+		3D09FF0117C54B7F006B5159 /* SBTFileEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTFileEntry.h; sourceTree = "<group>"; };
+		3D09FF0217C54B7F006B5159 /* SBTFilePersonEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTFilePersonEntry.h; sourceTree = "<group>"; };
+		3D09FF0317C54B7F006B5159 /* SBTFileRequestParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTFileRequestParameters.h; sourceTree = "<group>"; };
+		3D09FF0417C54B7F006B5159 /* SBTHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTHttpClient.h; sourceTree = "<group>"; };
+		3D09FF0517C54B7F006B5159 /* SBTOAuth2EndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTOAuth2EndPoint.h; sourceTree = "<group>"; };
+		3D09FF0617C54B7F006B5159 /* SBTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTUtils.h; sourceTree = "<group>"; };
+		3D09FF0717C54B7F006B5159 /* SBTXMLDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTXMLDocument.h; sourceTree = "<group>"; };
 		3D09FF0817C54B83006B5159 /* libiOSSBTK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiOSSBTK.a; sourceTree = "<group>"; };
 		3D09FF0C17C66523006B5159 /* libiOSSBTK_iphone.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libiOSSBTK_iphone.a; sourceTree = "<group>"; };
 		3D9994FA17BBDB790038CEE2 /* OAuth2.0-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OAuth2.0-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,14 +89,14 @@
 		3D99950717BBDB790038CEE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3D99950917BBDB790038CEE2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3D99950B17BBDB790038CEE2 /* OAuth2.0-Sample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OAuth2.0-Sample-Prefix.pch"; sourceTree = "<group>"; };
-		3D99950C17BBDB790038CEE2 /* IBMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IBMAppDelegate.h; sourceTree = "<group>"; };
-		3D99950D17BBDB790038CEE2 /* IBMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IBMAppDelegate.m; sourceTree = "<group>"; };
+		3D99950C17BBDB790038CEE2 /* SBTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBTAppDelegate.h; sourceTree = "<group>"; };
+		3D99950D17BBDB790038CEE2 /* SBTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBTAppDelegate.m; sourceTree = "<group>"; };
 		3D99950F17BBDB790038CEE2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3D99951117BBDB790038CEE2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3D99951317BBDB790038CEE2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		3D99951517BBDB790038CEE2 /* IBMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IBMViewController.h; sourceTree = "<group>"; };
-		3D99951617BBDB790038CEE2 /* IBMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IBMViewController.m; sourceTree = "<group>"; };
-		3D99951917BBDB790038CEE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/IBMViewController.xib; sourceTree = "<group>"; };
+		3D99951517BBDB790038CEE2 /* SBTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBTViewController.h; sourceTree = "<group>"; };
+		3D99951617BBDB790038CEE2 /* SBTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBTViewController.m; sourceTree = "<group>"; };
+		3D99951917BBDB790038CEE2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SBTViewController.xib; sourceTree = "<group>"; };
 		3D99954717BBE01A0038CEE2 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		3D99954817BBE01A0038CEE2 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		3D99954917BBE01A0038CEE2 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -115,9 +121,9 @@
 		3D99956617BBE0A20038CEE2 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		3D99956817BBE0B00038CEE2 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3D99956A17BBE16A0038CEE2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		3D99957117BD483B0038CEE2 /* IBMAPIExplorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAPIExplorer.h; sourceTree = "<group>"; };
-		3D99957217BD483B0038CEE2 /* IBMAPIExplorer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAPIExplorer.m; sourceTree = "<group>"; };
-		3D99957317BD483B0038CEE2 /* IBMAPIExplorer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAPIExplorer.xib; sourceTree = "<group>"; };
+		3D99957117BD483B0038CEE2 /* SBTAPIExplorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTAPIExplorer.h; sourceTree = "<group>"; };
+		3D99957217BD483B0038CEE2 /* SBTAPIExplorer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTAPIExplorer.m; sourceTree = "<group>"; };
+		3D99957317BD483B0038CEE2 /* SBTAPIExplorer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTAPIExplorer.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,11 +182,11 @@
 				3D99956C17BBEA910038CEE2 /* GDataXML */,
 				3D99954617BBE01A0038CEE2 /* AFNetworking */,
 				3D99952017BBDBF40038CEE2 /* iOSSBTK */,
-				3D99950C17BBDB790038CEE2 /* IBMAppDelegate.h */,
-				3D99950D17BBDB790038CEE2 /* IBMAppDelegate.m */,
-				3D99951517BBDB790038CEE2 /* IBMViewController.h */,
-				3D99951617BBDB790038CEE2 /* IBMViewController.m */,
-				3D99951817BBDB790038CEE2 /* IBMViewController.xib */,
+				3D99950C17BBDB790038CEE2 /* SBTAppDelegate.h */,
+				3D99950D17BBDB790038CEE2 /* SBTAppDelegate.m */,
+				3D99951517BBDB790038CEE2 /* SBTViewController.h */,
+				3D99951617BBDB790038CEE2 /* SBTViewController.m */,
+				3D99951817BBDB790038CEE2 /* SBTViewController.xib */,
 				3D99950417BBDB790038CEE2 /* Supporting Files */,
 			);
 			path = "OAuth2.0-Sample";
@@ -206,40 +212,40 @@
 				3D09FF0817C54B83006B5159 /* libiOSSBTK.a */,
 				3D09FF0C17C66523006B5159 /* libiOSSBTK_iphone.a */,
 				3D09FEE517C54B7F006B5159 /* FBLog.h */,
-				3D09FEE617C54B7F006B5159 /* IBMActivityStreamActor.h */,
-				3D09FEE717C54B7F006B5159 /* IBMActivityStreamAttachment.h */,
-				3D09FEE817C54B7F006B5159 /* IBMActivityStreamCommunity.h */,
-				3D09FEE917C54B7F006B5159 /* IBMActivityStreamEntry.h */,
-				3D09FEEA17C54B7F006B5159 /* IBMASApplication.h */,
-				3D09FEEB17C54B7F006B5159 /* IBMASGroup.h */,
-				3D09FEEC17C54B7F006B5159 /* IBMASUser.h */,
-				3D09FEED17C54B7F006B5159 /* IBMBaseService.h */,
-				3D09FEEE17C54B7F006B5159 /* IBMBasicEndPoint.h */,
-				3D09FEEF17C54B7F006B5159 /* IBMClientService.h */,
-				3D09FEF017C54B7F006B5159 /* IBMCommunityBookmark.h */,
-				3D09FEF117C54B7F006B5159 /* IBMCommunityForumTopic.h */,
-				3D09FEF217C54B7F006B5159 /* IBMCommunityMember.h */,
-				3D09FEF317C54B7F006B5159 /* IBMConnectionsActivityStreamService.h */,
-				3D09FEF417C54B7F006B5159 /* IBMConnectionsBasicEndPoint.h */,
+				3D09FEE617C54B7F006B5159 /* SBTActivityStreamActor.h */,
+				3D09FEE717C54B7F006B5159 /* SBTActivityStreamAttachment.h */,
+				3D09FEE817C54B7F006B5159 /* SBTActivityStreamCommunity.h */,
+				3D09FEE917C54B7F006B5159 /* SBTActivityStreamEntry.h */,
+				3D09FEEA17C54B7F006B5159 /* SBTASApplication.h */,
+				3D09FEEB17C54B7F006B5159 /* SBTASGroup.h */,
+				3D09FEEC17C54B7F006B5159 /* SBTASUser.h */,
+				3D09FEED17C54B7F006B5159 /* SBTBaseService.h */,
+				3D09FEEE17C54B7F006B5159 /* SBTBasicEndPoint.h */,
+				3D09FEEF17C54B7F006B5159 /* SBTClientService.h */,
+				3D09FEF017C54B7F006B5159 /* SBTCommunityBookmark.h */,
+				3D09FEF117C54B7F006B5159 /* SBTCommunityForumTopic.h */,
+				3D09FEF217C54B7F006B5159 /* SBTCommunityMember.h */,
+				3D09FEF317C54B7F006B5159 /* SBTConnectionsActivityStreamService.h */,
+				3D09FEF417C54B7F006B5159 /* SBTConnectionsBasicEndPoint.h */,
 				3D09FEF517C54B7F006B5159 /* IBMConnectionsClientService.h */,
-				3D09FEF617C54B7F006B5159 /* IBMConnectionsCommunity.h */,
-				3D09FEF717C54B7F006B5159 /* IBMConnectionsCommunityService.h */,
-				3D09FEF817C54B7F006B5159 /* IBMConnectionsFileService.h */,
-				3D09FEF917C54B7F006B5159 /* IBMConnectionsOAuth2EndPoint.h */,
-				3D09FEFA17C54B7F006B5159 /* IBMConnectionsProfile.h */,
-				3D09FEFB17C54B7F006B5159 /* IBMConnectionsProfileService.h */,
-				3D09FEFC17C54B7F006B5159 /* IBMConstants.h */,
-				3D09FEFD17C54B7F006B5159 /* IBMCredentialStore.h */,
-				3D09FEFE17C54B7F006B5159 /* IBMEndPoint.h */,
-				3D09FEFF17C54B7F006B5159 /* IBMEndPointFactory.h */,
-				3D09FF0017C54B7F006B5159 /* IBMFileCommentEntry.h */,
-				3D09FF0117C54B7F006B5159 /* IBMFileEntry.h */,
-				3D09FF0217C54B7F006B5159 /* IBMFilePersonEntry.h */,
-				3D09FF0317C54B7F006B5159 /* IBMFileRequestParameters.h */,
-				3D09FF0417C54B7F006B5159 /* IBMHttpClient.h */,
-				3D09FF0517C54B7F006B5159 /* IBMOAuth2EndPoint.h */,
-				3D09FF0617C54B7F006B5159 /* IBMUtils.h */,
-				3D09FF0717C54B7F006B5159 /* IBMXMLDocument.h */,
+				3D09FEF617C54B7F006B5159 /* SBTConnectionsCommunity.h */,
+				3D09FEF717C54B7F006B5159 /* SBTConnectionsCommunityService.h */,
+				3D09FEF817C54B7F006B5159 /* SBTConnectionsFileService.h */,
+				3D09FEF917C54B7F006B5159 /* SBTConnectionsOAuth2EndPoint.h */,
+				3D09FEFA17C54B7F006B5159 /* SBTConnectionsProfile.h */,
+				3D09FEFB17C54B7F006B5159 /* SBTConnectionsProfileService.h */,
+				3D09FEFC17C54B7F006B5159 /* SBTConstants.h */,
+				3D09FEFD17C54B7F006B5159 /* SBTCredentialStore.h */,
+				3D09FEFE17C54B7F006B5159 /* SBTEndPoint.h */,
+				3D09FEFF17C54B7F006B5159 /* SBTEndPointFactory.h */,
+				3D09FF0017C54B7F006B5159 /* SBTFileCommentEntry.h */,
+				3D09FF0117C54B7F006B5159 /* SBTFileEntry.h */,
+				3D09FF0217C54B7F006B5159 /* SBTFilePersonEntry.h */,
+				3D09FF0317C54B7F006B5159 /* SBTFileRequestParameters.h */,
+				3D09FF0417C54B7F006B5159 /* SBTHttpClient.h */,
+				3D09FF0517C54B7F006B5159 /* SBTOAuth2EndPoint.h */,
+				3D09FF0617C54B7F006B5159 /* SBTUtils.h */,
+				3D09FF0717C54B7F006B5159 /* SBTXMLDocument.h */,
 			);
 			path = iOSSBTK;
 			sourceTree = "<group>";
@@ -282,9 +288,9 @@
 		3D99956D17BD46870038CEE2 /* APIExplorer */ = {
 			isa = PBXGroup;
 			children = (
-				3D99957117BD483B0038CEE2 /* IBMAPIExplorer.h */,
-				3D99957217BD483B0038CEE2 /* IBMAPIExplorer.m */,
-				3D99957317BD483B0038CEE2 /* IBMAPIExplorer.xib */,
+				3D99957117BD483B0038CEE2 /* SBTAPIExplorer.h */,
+				3D99957217BD483B0038CEE2 /* SBTAPIExplorer.m */,
+				3D99957317BD483B0038CEE2 /* SBTAPIExplorer.xib */,
 			);
 			name = APIExplorer;
 			sourceTree = "<group>";
@@ -315,9 +321,9 @@
 		3D9994F217BBDB790038CEE2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = IBM;
+				CLASSPREFIX = SBT;
 				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = ibm;
+				ORGANIZATIONNAME = IBM;
 			};
 			buildConfigurationList = 3D9994F517BBDB790038CEE2 /* Build configuration list for PBXProject "OAuth2.0-Sample" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -345,8 +351,8 @@
 				3D99951017BBDB790038CEE2 /* Default.png in Resources */,
 				3D99951217BBDB790038CEE2 /* Default@2x.png in Resources */,
 				3D99951417BBDB790038CEE2 /* Default-568h@2x.png in Resources */,
-				3D99951A17BBDB790038CEE2 /* IBMViewController.xib in Resources */,
-				3D99957517BD483B0038CEE2 /* IBMAPIExplorer.xib in Resources */,
+				3D99951A17BBDB790038CEE2 /* SBTViewController.xib in Resources */,
+				3D99957517BD483B0038CEE2 /* SBTAPIExplorer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,9 +363,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07312385187AB00C00BEE3B5 /* SBTConstants.h in Sources */,
+				07312383187AAFFF00BEE3B5 /* SBTConnectionsBasicEndPoint.h in Sources */,
+				07312384187AAFFF00BEE3B5 /* IBMConnectionsClientService.h in Sources */,
+				07312382187AAFF000BEE3B5 /* SBTBasicEndPoint.h in Sources */,
+				07312381187AAFE500BEE3B5 /* SBTEndPointFactory.h in Sources */,
+				07312380187AAFD100BEE3B5 /* SBTHttpClient.h in Sources */,
 				3D99950A17BBDB790038CEE2 /* main.m in Sources */,
-				3D99950E17BBDB790038CEE2 /* IBMAppDelegate.m in Sources */,
-				3D99951717BBDB790038CEE2 /* IBMViewController.m in Sources */,
+				3D99950E17BBDB790038CEE2 /* SBTAppDelegate.m in Sources */,
+				3D99951717BBDB790038CEE2 /* SBTViewController.m in Sources */,
 				3D99955A17BBE01A0038CEE2 /* AFHTTPClient.m in Sources */,
 				3D99955B17BBE01A0038CEE2 /* AFHTTPRequestOperation.m in Sources */,
 				3D99955C17BBE01A0038CEE2 /* AFImageRequestOperation.m in Sources */,
@@ -370,7 +382,7 @@
 				3D99956117BBE01A0038CEE2 /* AFXMLRequestOperation.m in Sources */,
 				3D99956217BBE01A0038CEE2 /* UIImageView+AFNetworking.m in Sources */,
 				3D99956517BBE0450038CEE2 /* GDataXMLNode.m in Sources */,
-				3D99957417BD483B0038CEE2 /* IBMAPIExplorer.m in Sources */,
+				3D99957417BD483B0038CEE2 /* SBTAPIExplorer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,12 +397,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		3D99951817BBDB790038CEE2 /* IBMViewController.xib */ = {
+		3D99951817BBDB790038CEE2 /* SBTViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3D99951917BBDB790038CEE2 /* en */,
 			);
-			name = IBMViewController.xib;
+			name = SBTViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -14,19 +14,19 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+#import <Foundation/Foundation.h>
 
-@interface SBTConnectionsClientService : SBTClientService
+@interface SBTUtils : NSObject
 
-#pragma mark - properties
 
-#pragma mark - methods
+typedef enum {
+    RESPONSE_XML,
+    RESPONSE_JSON,
+    RESPONSE_TEXT,
+    RESPONSE_NONE
+} ResponseType;
 
-- (id) init;
-
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
++ (BOOL) isEmail:(NSString *) str;
++ (NSString *) getUrlForEndPoint:(NSString *) endPointName;
 
 @end

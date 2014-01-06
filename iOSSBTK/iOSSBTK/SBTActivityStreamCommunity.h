@@ -14,19 +14,13 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+#import <Foundation/Foundation.h>
 
-@interface SBTConnectionsClientService : SBTClientService
+@interface SBTActivityStreamCommunity : NSObject
 
-#pragma mark - properties
+@property (strong, nonatomic) NSString *communityName;
+@property (strong, nonatomic) NSString *communityId;
 
-#pragma mark - methods
-
-- (id) init;
-
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
+- (NSString *) description;
 
 @end

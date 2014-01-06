@@ -14,19 +14,14 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+//  This class is responsible for creating and returning EndPoints. For each endPointName,
+//  there is only one EndPoint is created.
 
-@interface SBTConnectionsClientService : SBTClientService
+#import <Foundation/Foundation.h>
+#import "SBTEndPoint.h"
 
-#pragma mark - properties
+@interface SBTEndPointFactory : NSObject
 
-#pragma mark - methods
-
-- (id) init;
-
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
++ (SBTEndPoint *) createEndPointWithName:(NSString *) endPointName;
 
 @end

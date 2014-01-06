@@ -14,19 +14,9 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+#import "SBTXMLDocument.h"
 
-@interface SBTConnectionsClientService : SBTClientService
+@implementation SBTXMLDocument
 
-#pragma mark - properties
-
-#pragma mark - methods
-
-- (id) init;
-
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
 
 @end

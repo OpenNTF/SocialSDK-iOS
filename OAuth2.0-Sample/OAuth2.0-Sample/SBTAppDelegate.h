@@ -14,19 +14,14 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+#import <UIKit/UIKit.h>
 
-@interface SBTConnectionsClientService : SBTClientService
+@class SBTViewController;
 
-#pragma mark - properties
+@interface SBTAppDelegate : UIResponder <UIApplicationDelegate>
 
-#pragma mark - methods
+@property (strong, nonatomic) UIWindow *window;
 
-- (id) init;
-
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
+@property (strong, nonatomic) SBTViewController *viewController;
 
 @end

@@ -14,19 +14,14 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+//  This is the controller of the main view. It allows user to authenticate, logout and explore some of the APIs that reuqire authentication
 
-@interface SBTConnectionsClientService : SBTClientService
+#import <UIKit/UIKit.h>
 
-#pragma mark - properties
+@interface SBTViewController : UIViewController
 
-#pragma mark - methods
-
-- (id) init;
-
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
+- (IBAction)authenticate:(id)sender;
+- (IBAction)logout:(id)sender;
+- (IBAction)explore:(id)sender;
 
 @end

@@ -14,19 +14,16 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+#import <Foundation/Foundation.h>
 
-@interface SBTConnectionsClientService : SBTClientService
+@interface SBTASUser : NSObject
 
-#pragma mark - properties
+typedef enum {
+    U_ME,
+    U_PUBLIC,
+    U_COMMUNITY
+} AS_USER_TYPE;
 
-#pragma mark - methods
-
-- (id) init;
-
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
++ (NSString*) convertToString:(AS_USER_TYPE) type;
 
 @end

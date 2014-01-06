@@ -14,19 +14,18 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+#import "SBTActivityStreamActor.h"
 
-@interface SBTConnectionsClientService : SBTClientService
+@implementation SBTActivityStreamActor
 
-#pragma mark - properties
-
-#pragma mark - methods
-
-- (id) init;
-
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
+- (NSString *) description {
+    
+    NSString *description = @"\n";
+    description = [description stringByAppendingFormat:@"Id: %@\n", self.aId];
+    description = [description stringByAppendingFormat:@"Name: %@\n", self.name];
+    description = [description stringByAppendingFormat:@"Type: %@\n", self.type];
+    
+    return description;
+}
 
 @end

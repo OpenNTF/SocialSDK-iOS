@@ -14,19 +14,10 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+//  This is a controller for the API explorer.
 
-@interface SBTConnectionsClientService : SBTClientService
+#import <UIKit/UIKit.h>
 
-#pragma mark - properties
-
-#pragma mark - methods
-
-- (id) init;
-
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
+@interface SBTAPIExplorer : UITableViewController
 
 @end

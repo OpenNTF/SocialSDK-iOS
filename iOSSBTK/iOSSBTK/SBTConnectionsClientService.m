@@ -14,19 +14,24 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+#import "SBTConnectionsClientService.h"
 
-@interface SBTConnectionsClientService : SBTClientService
+@implementation SBTConnectionsClientService
 
-#pragma mark - properties
+- (id) init {
+    if (self = [super init]) {
+        
+    }
+    
+    return self;
+}
 
-#pragma mark - methods
-
-- (id) init;
-
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
+- (id) initWithEndPoint:(SBTEndPoint *) endPoint {
+    if (self = [super initWithEndPoint:endPoint]) {
+        
+    }
+    
+    return self;
+}
 
 @end

@@ -14,19 +14,21 @@
  * permissions and limitations under the License.
  */
 
-#import "SBTClientService.h"
+#import <Foundation/Foundation.h>
+#import "SBTActivityStreamActor.h"
 
-@interface SBTConnectionsClientService : SBTClientService
+@interface SBTActivityStreamAttachment : NSObject
 
-#pragma mark - properties
+@property (strong, nonatomic) NSNumber *isImage;
+@property (strong, nonatomic) NSString *summary;
+@property (strong, nonatomic) SBTActivityStreamActor *author;
+@property (strong, nonatomic) NSString *aId;
+@property (strong, nonatomic) NSString *published;
+@property (strong, nonatomic) NSString *url;
+@property (strong, nonatomic) NSString *displayName;
+@property (strong, nonatomic) NSString *imageUrl;
 
-#pragma mark - methods
 
-- (id) init;
-
-/**
- This method initializes IBMConnectionsClientService with an endpoint
- */
-- (id) initWithEndPoint:(IBMEndPoint *) endPoint;
+- (NSString *) description;
 
 @end
