@@ -22,9 +22,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		3D09FEBE17C28210006B5159 /* IBMAcmeMainViewCommonOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09FEBD17C28210006B5159 /* IBMAcmeMainViewCommonOperations.m */; };
-		3D09FEE417C548E9006B5159 /* libiOSSBTK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D09FEE317C548E9006B5159 /* libiOSSBTK.a */; };
-		3D09FF0B17C661F6006B5159 /* libiOSSBTK_iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D09FF0A17C661F6006B5159 /* libiOSSBTK_iphone.a */; };
+		3D09FEBE17C28210006B5159 /* SBTAcmeMainViewCommonOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09FEBD17C28210006B5159 /* SBTAcmeMainViewCommonOperations.m */; };
 		3D824D5717AFF8AB000AD1EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824D5617AFF8AB000AD1EF /* UIKit.framework */; };
 		3D824D5917AFF8AB000AD1EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824D5817AFF8AB000AD1EF /* Foundation.framework */; };
 		3D824D5B17AFF8AB000AD1EF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824D5A17AFF8AB000AD1EF /* CoreGraphics.framework */; };
@@ -34,34 +32,34 @@
 		3D824D6B17AFF8AB000AD1EF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D6A17AFF8AB000AD1EF /* Default@2x.png */; };
 		3D824D6D17AFF8AB000AD1EF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D6C17AFF8AB000AD1EF /* Default-568h@2x.png */; };
 		3D824DAE17AFF948000AD1EF /* ComposeUpdate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D8C17AFF948000AD1EF /* ComposeUpdate.xib */; };
-		3D824DB017AFF948000AD1EF /* IBMAcmeCommunityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D8E17AFF948000AD1EF /* IBMAcmeCommunityView.xib */; };
-		3D824DB117AFF948000AD1EF /* IBMAcmeFlightStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D8F17AFF948000AD1EF /* IBMAcmeFlightStatusView.xib */; };
-		3D824DB217AFF948000AD1EF /* IBMAcmeFlightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9017AFF948000AD1EF /* IBMAcmeFlightView.xib */; };
-		3D824DB317AFF948000AD1EF /* IBMAcmeMyFlightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9117AFF948000AD1EF /* IBMAcmeMyFlightView.xib */; };
-		3D824DB417AFF948000AD1EF /* IBMAcmeMyProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9217AFF948000AD1EF /* IBMAcmeMyProfileView.xib */; };
-		3D824DB517AFF948000AD1EF /* IBMAcmeSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9317AFF948000AD1EF /* IBMAcmeSettingsView.xib */; };
-		3D824DB617AFF948000AD1EF /* IBMAcmeStatusUpdateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9417AFF948000AD1EF /* IBMAcmeStatusUpdateView.xib */; };
-		3D824DB717AFF948000AD1EF /* IBMAcmeWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9517AFF948000AD1EF /* IBMAcmeWebView.xib */; };
-		3D824DB817AFF948000AD1EF /* IBMProfileListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9617AFF948000AD1EF /* IBMProfileListView.xib */; };
-		3D824DB917AFF948000AD1EF /* IBMViewControllerIpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9717AFF948000AD1EF /* IBMViewControllerIpad.xib */; };
+		3D824DB017AFF948000AD1EF /* SBTAcmeCommunityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D8E17AFF948000AD1EF /* SBTAcmeCommunityView.xib */; };
+		3D824DB117AFF948000AD1EF /* SBTAcmeFlightStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D8F17AFF948000AD1EF /* SBTAcmeFlightStatusView.xib */; };
+		3D824DB217AFF948000AD1EF /* SBTAcmeFlightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9017AFF948000AD1EF /* SBTAcmeFlightView.xib */; };
+		3D824DB317AFF948000AD1EF /* SBTAcmeMyFlightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9117AFF948000AD1EF /* SBTAcmeMyFlightView.xib */; };
+		3D824DB417AFF948000AD1EF /* SBTAcmeMyProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9217AFF948000AD1EF /* SBTAcmeMyProfileView.xib */; };
+		3D824DB517AFF948000AD1EF /* SBTAcmeSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9317AFF948000AD1EF /* SBTAcmeSettingsView.xib */; };
+		3D824DB617AFF948000AD1EF /* SBTAcmeStatusUpdateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9417AFF948000AD1EF /* SBTAcmeStatusUpdateView.xib */; };
+		3D824DB717AFF948000AD1EF /* SBTAcmeWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9517AFF948000AD1EF /* SBTAcmeWebView.xib */; };
+		3D824DB817AFF948000AD1EF /* SBTProfileListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9617AFF948000AD1EF /* SBTProfileListView.xib */; };
+		3D824DB917AFF948000AD1EF /* SBTViewControllerIpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9717AFF948000AD1EF /* SBTViewControllerIpad.xib */; };
 		3D824DBA17AFF948000AD1EF /* IBMAcmeLargeImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9817AFF948000AD1EF /* IBMAcmeLargeImageView.xib */; };
 		3D824DBB17AFF948000AD1EF /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9917AFF948000AD1EF /* LoginView.xib */; };
 		3D824DBC17AFF948000AD1EF /* ComposeUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D9A17AFF948000AD1EF /* ComposeUpdate.m */; };
-		3D824DBF17AFF948000AD1EF /* IBMAcmeCommunityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D9D17AFF948000AD1EF /* IBMAcmeCommunityView.m */; };
+		3D824DBF17AFF948000AD1EF /* SBTAcmeCommunityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D9D17AFF948000AD1EF /* SBTAcmeCommunityView.m */; };
 		3D824DC017AFF948000AD1EF /* IBMAcmeConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D9E17AFF948000AD1EF /* IBMAcmeConstant.m */; };
-		3D824DC117AFF948000AD1EF /* IBMAcmeFlight.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D9F17AFF948000AD1EF /* IBMAcmeFlight.m */; };
-		3D824DC217AFF948000AD1EF /* IBMAcmeFlightStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA017AFF948000AD1EF /* IBMAcmeFlightStatusView.m */; };
-		3D824DC317AFF948000AD1EF /* IBMAcmeFlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA117AFF948000AD1EF /* IBMAcmeFlightView.m */; };
-		3D824DC417AFF948000AD1EF /* IBMAcmeMyFlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA217AFF948000AD1EF /* IBMAcmeMyFlightView.m */; };
-		3D824DC517AFF948000AD1EF /* IBMAcmeMyProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA317AFF948000AD1EF /* IBMAcmeMyProfileView.m */; };
-		3D824DC617AFF948000AD1EF /* IBMAcmeSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA417AFF948000AD1EF /* IBMAcmeSettingsView.m */; };
-		3D824DC717AFF948000AD1EF /* IBMAcmeStatusUpdateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA517AFF948000AD1EF /* IBMAcmeStatusUpdateView.m */; };
-		3D824DC817AFF948000AD1EF /* IBMAcmeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA617AFF948000AD1EF /* IBMAcmeUtils.m */; };
-		3D824DC917AFF948000AD1EF /* IBMAcmeWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA717AFF948000AD1EF /* IBMAcmeWebView.m */; };
-		3D824DCA17AFF948000AD1EF /* IBMProfileListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA817AFF948000AD1EF /* IBMProfileListView.m */; };
-		3D824DCB17AFF948000AD1EF /* IBMViewControllerIpad.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA917AFF948000AD1EF /* IBMViewControllerIpad.m */; };
+		3D824DC117AFF948000AD1EF /* SBTAcmeFlight.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D9F17AFF948000AD1EF /* SBTAcmeFlight.m */; };
+		3D824DC217AFF948000AD1EF /* SBTAcmeFlightStatusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA017AFF948000AD1EF /* SBTAcmeFlightStatusView.m */; };
+		3D824DC317AFF948000AD1EF /* SBTAcmeFlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA117AFF948000AD1EF /* SBTAcmeFlightView.m */; };
+		3D824DC417AFF948000AD1EF /* SBTAcmeMyFlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA217AFF948000AD1EF /* SBTAcmeMyFlightView.m */; };
+		3D824DC517AFF948000AD1EF /* SBTAcmeMyProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA317AFF948000AD1EF /* SBTAcmeMyProfileView.m */; };
+		3D824DC617AFF948000AD1EF /* SBTAcmeSettingsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA417AFF948000AD1EF /* SBTAcmeSettingsView.m */; };
+		3D824DC717AFF948000AD1EF /* SBTAcmeStatusUpdateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA517AFF948000AD1EF /* SBTAcmeStatusUpdateView.m */; };
+		3D824DC817AFF948000AD1EF /* SBTAcmeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA617AFF948000AD1EF /* SBTAcmeUtils.m */; };
+		3D824DC917AFF948000AD1EF /* SBTAcmeWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA717AFF948000AD1EF /* SBTAcmeWebView.m */; };
+		3D824DCA17AFF948000AD1EF /* SBTProfileListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA817AFF948000AD1EF /* SBTProfileListView.m */; };
+		3D824DCB17AFF948000AD1EF /* SBTViewControllerIpad.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DA917AFF948000AD1EF /* SBTViewControllerIpad.m */; };
 		3D824DCC17AFF948000AD1EF /* IBMViewControllerIpadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DAA17AFF948000AD1EF /* IBMViewControllerIpadCell.m */; };
-		3D824DCD17AFF948000AD1EF /* IBMAcmeLargeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DAB17AFF948000AD1EF /* IBMAcmeLargeImageView.m */; };
+		3D824DCD17AFF948000AD1EF /* SBTAcmeLargeImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DAB17AFF948000AD1EF /* SBTAcmeLargeImageView.m */; };
 		3D824DCE17AFF948000AD1EF /* LikeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DAC17AFF948000AD1EF /* LikeButton.m */; };
 		3D824DCF17AFF948000AD1EF /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824DAD17AFF948000AD1EF /* LoginView.m */; };
 		3D824DED17AFF960000AD1EF /* @btnDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DD117AFF960000AD1EF /* @btnDefault.png */; };
@@ -86,14 +84,14 @@
 		3D824E0617AFF960000AD1EF /* slideNavBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824DEA17AFF960000AD1EF /* slideNavBG@2x.png */; };
 		3D824E0C17AFF9D4000AD1EF /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824E0B17AFF9D4000AD1EF /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		3D824E2B17AFFA8E000AD1EF /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824E2A17AFFA8E000AD1EF /* libxml2.dylib */; };
-		3D824E9917AFFC62000AD1EF /* IBMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824E9417AFFC62000AD1EF /* IBMViewController.xib */; };
-		3D824E9A17AFFC62000AD1EF /* IBMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824E9617AFFC62000AD1EF /* IBMAppDelegate.m */; };
-		3D824E9B17AFFC62000AD1EF /* IBMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824E9817AFFC62000AD1EF /* IBMViewController.m */; };
+		3D824E9917AFFC62000AD1EF /* SBTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824E9417AFFC62000AD1EF /* SBTViewController.xib */; };
+		3D824E9A17AFFC62000AD1EF /* SBTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824E9617AFFC62000AD1EF /* SBTAppDelegate.m */; };
+		3D824E9B17AFFC62000AD1EF /* SBTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824E9817AFFC62000AD1EF /* SBTViewController.m */; };
 		3D824E9D17AFFCAB000AD1EF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824E9C17AFFCAB000AD1EF /* MobileCoreServices.framework */; };
 		3D824F5917B05382000AD1EF /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824F5717B05382000AD1EF /* Icon.png */; };
 		3D824F5A17B05382000AD1EF /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824F5817B05382000AD1EF /* Icon@2x.png */; };
-		3D824F6317B2D702000AD1EF /* IBMAcmeBookmarksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824F6117B2D702000AD1EF /* IBMAcmeBookmarksView.m */; };
-		3D824F6417B2D702000AD1EF /* IBMAcmeBookmarksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824F6217B2D702000AD1EF /* IBMAcmeBookmarksView.xib */; };
+		3D824F6317B2D702000AD1EF /* SBTAcmeBookmarksView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824F6117B2D702000AD1EF /* SBTAcmeBookmarksView.m */; };
+		3D824F6417B2D702000AD1EF /* SBTAcmeBookmarksView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824F6217B2D702000AD1EF /* SBTAcmeBookmarksView.xib */; };
 		3DCCFBF717B3E7F70063C199 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFBEE17B3E7F70063C199 /* AFHTTPClient.m */; };
 		3DCCFBF817B3E7F70063C199 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFBEF17B3E7F70063C199 /* AFHTTPRequestOperation.m */; };
 		3DCCFBF917B3E7F70063C199 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DCCFBF017B3E7F70063C199 /* AFImageRequestOperation.m */; };
@@ -107,6 +105,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		075DE14A187C52CE0099BA87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 075DE144187C52CD0099BA87 /* iOSSBTK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D824C4717AFECB8000AD1EF;
+			remoteInfo = iOSSBTK;
+		};
+		075DE14C187C52CE0099BA87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 075DE144187C52CD0099BA87 /* iOSSBTK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D824EDA17B00FC3000AD1EF;
+			remoteInfo = TestiOSSBTK;
+		};
 		078BFA6F1850E91C00408957 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3D824D4B17AFF8AB000AD1EF /* Project object */;
@@ -117,8 +129,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D09FEBC17C28210006B5159 /* IBMAcmeMainViewCommonOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeMainViewCommonOperations.h; sourceTree = "<group>"; };
-		3D09FEBD17C28210006B5159 /* IBMAcmeMainViewCommonOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeMainViewCommonOperations.m; sourceTree = "<group>"; };
+		075DE144187C52CD0099BA87 /* iOSSBTK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iOSSBTK.xcodeproj; path = ../iOSSBTK/iOSSBTK.xcodeproj; sourceTree = "<group>"; };
+		3D09FEBC17C28210006B5159 /* SBTAcmeMainViewCommonOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTAcmeMainViewCommonOperations.h; sourceTree = "<group>"; };
+		3D09FEBD17C28210006B5159 /* SBTAcmeMainViewCommonOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTAcmeMainViewCommonOperations.m; sourceTree = "<group>"; };
 		3D09FEC017C548E5006B5159 /* FBLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBLog.h; sourceTree = "<group>"; };
 		3D09FEC117C548E5006B5159 /* IBMActivityStreamActor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMActivityStreamActor.h; sourceTree = "<group>"; };
 		3D09FEC217C548E5006B5159 /* IBMActivityStreamAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMActivityStreamAttachment.h; sourceTree = "<group>"; };
@@ -168,52 +181,52 @@
 		3D824D6A17AFF8AB000AD1EF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3D824D6C17AFF8AB000AD1EF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3D824D7917AFF948000AD1EF /* ComposeUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComposeUpdate.h; sourceTree = "<group>"; };
-		3D824D7B17AFF948000AD1EF /* IBMAcmeCommunityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeCommunityView.h; sourceTree = "<group>"; };
+		3D824D7B17AFF948000AD1EF /* SBTAcmeCommunityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTAcmeCommunityView.h; sourceTree = "<group>"; };
 		3D824D7C17AFF948000AD1EF /* IBMAcmeConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeConstant.h; sourceTree = "<group>"; };
-		3D824D7D17AFF948000AD1EF /* IBMAcmeFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeFlight.h; sourceTree = "<group>"; };
-		3D824D7E17AFF948000AD1EF /* IBMAcmeFlightStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeFlightStatusView.h; sourceTree = "<group>"; };
-		3D824D7F17AFF948000AD1EF /* IBMAcmeFlightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeFlightView.h; sourceTree = "<group>"; };
-		3D824D8017AFF948000AD1EF /* IBMAcmeMyFlightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeMyFlightView.h; sourceTree = "<group>"; };
-		3D824D8117AFF948000AD1EF /* IBMAcmeMyProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeMyProfileView.h; sourceTree = "<group>"; };
-		3D824D8217AFF948000AD1EF /* IBMAcmeSettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeSettingsView.h; sourceTree = "<group>"; };
-		3D824D8317AFF948000AD1EF /* IBMAcmeStatusUpdateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeStatusUpdateView.h; sourceTree = "<group>"; };
-		3D824D8417AFF948000AD1EF /* IBMAcmeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeUtils.h; sourceTree = "<group>"; };
-		3D824D8517AFF948000AD1EF /* IBMAcmeWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeWebView.h; sourceTree = "<group>"; };
-		3D824D8617AFF948000AD1EF /* IBMProfileListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMProfileListView.h; sourceTree = "<group>"; };
-		3D824D8717AFF948000AD1EF /* IBMViewControllerIpad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMViewControllerIpad.h; sourceTree = "<group>"; };
+		3D824D7D17AFF948000AD1EF /* SBTAcmeFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTAcmeFlight.h; sourceTree = "<group>"; };
+		3D824D7E17AFF948000AD1EF /* SBTAcmeFlightStatusView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTAcmeFlightStatusView.h; sourceTree = "<group>"; };
+		3D824D7F17AFF948000AD1EF /* SBTAcmeFlightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTAcmeFlightView.h; sourceTree = "<group>"; };
+		3D824D8017AFF948000AD1EF /* SBTAcmeMyFlightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTAcmeMyFlightView.h; sourceTree = "<group>"; };
+		3D824D8117AFF948000AD1EF /* SBTAcmeMyProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTAcmeMyProfileView.h; sourceTree = "<group>"; };
+		3D824D8217AFF948000AD1EF /* SBTAcmeSettingsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTAcmeSettingsView.h; sourceTree = "<group>"; };
+		3D824D8317AFF948000AD1EF /* SBTAcmeStatusUpdateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTAcmeStatusUpdateView.h; sourceTree = "<group>"; };
+		3D824D8417AFF948000AD1EF /* SBTAcmeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTAcmeUtils.h; sourceTree = "<group>"; };
+		3D824D8517AFF948000AD1EF /* SBTAcmeWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTAcmeWebView.h; sourceTree = "<group>"; };
+		3D824D8617AFF948000AD1EF /* SBTProfileListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTProfileListView.h; sourceTree = "<group>"; };
+		3D824D8717AFF948000AD1EF /* SBTViewControllerIpad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTViewControllerIpad.h; sourceTree = "<group>"; };
 		3D824D8817AFF948000AD1EF /* IBMViewControllerIpadCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMViewControllerIpadCell.h; sourceTree = "<group>"; };
-		3D824D8917AFF948000AD1EF /* IBMAcmeLargeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeLargeImageView.h; sourceTree = "<group>"; };
+		3D824D8917AFF948000AD1EF /* SBTAcmeLargeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTAcmeLargeImageView.h; sourceTree = "<group>"; };
 		3D824D8A17AFF948000AD1EF /* LikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikeButton.h; sourceTree = "<group>"; };
 		3D824D8B17AFF948000AD1EF /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
 		3D824D8C17AFF948000AD1EF /* ComposeUpdate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeUpdate.xib; sourceTree = "<group>"; };
-		3D824D8E17AFF948000AD1EF /* IBMAcmeCommunityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeCommunityView.xib; sourceTree = "<group>"; };
-		3D824D8F17AFF948000AD1EF /* IBMAcmeFlightStatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeFlightStatusView.xib; sourceTree = "<group>"; };
-		3D824D9017AFF948000AD1EF /* IBMAcmeFlightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeFlightView.xib; sourceTree = "<group>"; };
-		3D824D9117AFF948000AD1EF /* IBMAcmeMyFlightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeMyFlightView.xib; sourceTree = "<group>"; };
-		3D824D9217AFF948000AD1EF /* IBMAcmeMyProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeMyProfileView.xib; sourceTree = "<group>"; };
-		3D824D9317AFF948000AD1EF /* IBMAcmeSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeSettingsView.xib; sourceTree = "<group>"; };
-		3D824D9417AFF948000AD1EF /* IBMAcmeStatusUpdateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeStatusUpdateView.xib; sourceTree = "<group>"; };
-		3D824D9517AFF948000AD1EF /* IBMAcmeWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeWebView.xib; sourceTree = "<group>"; };
-		3D824D9617AFF948000AD1EF /* IBMProfileListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMProfileListView.xib; sourceTree = "<group>"; };
-		3D824D9717AFF948000AD1EF /* IBMViewControllerIpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMViewControllerIpad.xib; sourceTree = "<group>"; };
+		3D824D8E17AFF948000AD1EF /* SBTAcmeCommunityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTAcmeCommunityView.xib; sourceTree = "<group>"; };
+		3D824D8F17AFF948000AD1EF /* SBTAcmeFlightStatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTAcmeFlightStatusView.xib; sourceTree = "<group>"; };
+		3D824D9017AFF948000AD1EF /* SBTAcmeFlightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTAcmeFlightView.xib; sourceTree = "<group>"; };
+		3D824D9117AFF948000AD1EF /* SBTAcmeMyFlightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTAcmeMyFlightView.xib; sourceTree = "<group>"; };
+		3D824D9217AFF948000AD1EF /* SBTAcmeMyProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTAcmeMyProfileView.xib; sourceTree = "<group>"; };
+		3D824D9317AFF948000AD1EF /* SBTAcmeSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTAcmeSettingsView.xib; sourceTree = "<group>"; };
+		3D824D9417AFF948000AD1EF /* SBTAcmeStatusUpdateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTAcmeStatusUpdateView.xib; sourceTree = "<group>"; };
+		3D824D9517AFF948000AD1EF /* SBTAcmeWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTAcmeWebView.xib; sourceTree = "<group>"; };
+		3D824D9617AFF948000AD1EF /* SBTProfileListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTProfileListView.xib; sourceTree = "<group>"; };
+		3D824D9717AFF948000AD1EF /* SBTViewControllerIpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTViewControllerIpad.xib; sourceTree = "<group>"; };
 		3D824D9817AFF948000AD1EF /* IBMAcmeLargeImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeLargeImageView.xib; sourceTree = "<group>"; };
 		3D824D9917AFF948000AD1EF /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		3D824D9A17AFF948000AD1EF /* ComposeUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeUpdate.m; sourceTree = "<group>"; };
-		3D824D9D17AFF948000AD1EF /* IBMAcmeCommunityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeCommunityView.m; sourceTree = "<group>"; };
+		3D824D9D17AFF948000AD1EF /* SBTAcmeCommunityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTAcmeCommunityView.m; sourceTree = "<group>"; };
 		3D824D9E17AFF948000AD1EF /* IBMAcmeConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeConstant.m; sourceTree = "<group>"; };
-		3D824D9F17AFF948000AD1EF /* IBMAcmeFlight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeFlight.m; sourceTree = "<group>"; };
-		3D824DA017AFF948000AD1EF /* IBMAcmeFlightStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeFlightStatusView.m; sourceTree = "<group>"; };
-		3D824DA117AFF948000AD1EF /* IBMAcmeFlightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeFlightView.m; sourceTree = "<group>"; };
-		3D824DA217AFF948000AD1EF /* IBMAcmeMyFlightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeMyFlightView.m; sourceTree = "<group>"; };
-		3D824DA317AFF948000AD1EF /* IBMAcmeMyProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeMyProfileView.m; sourceTree = "<group>"; };
-		3D824DA417AFF948000AD1EF /* IBMAcmeSettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeSettingsView.m; sourceTree = "<group>"; };
-		3D824DA517AFF948000AD1EF /* IBMAcmeStatusUpdateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeStatusUpdateView.m; sourceTree = "<group>"; };
-		3D824DA617AFF948000AD1EF /* IBMAcmeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeUtils.m; sourceTree = "<group>"; };
-		3D824DA717AFF948000AD1EF /* IBMAcmeWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeWebView.m; sourceTree = "<group>"; };
-		3D824DA817AFF948000AD1EF /* IBMProfileListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMProfileListView.m; sourceTree = "<group>"; };
-		3D824DA917AFF948000AD1EF /* IBMViewControllerIpad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMViewControllerIpad.m; sourceTree = "<group>"; };
+		3D824D9F17AFF948000AD1EF /* SBTAcmeFlight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTAcmeFlight.m; sourceTree = "<group>"; };
+		3D824DA017AFF948000AD1EF /* SBTAcmeFlightStatusView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTAcmeFlightStatusView.m; sourceTree = "<group>"; };
+		3D824DA117AFF948000AD1EF /* SBTAcmeFlightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTAcmeFlightView.m; sourceTree = "<group>"; };
+		3D824DA217AFF948000AD1EF /* SBTAcmeMyFlightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTAcmeMyFlightView.m; sourceTree = "<group>"; };
+		3D824DA317AFF948000AD1EF /* SBTAcmeMyProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTAcmeMyProfileView.m; sourceTree = "<group>"; };
+		3D824DA417AFF948000AD1EF /* SBTAcmeSettingsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTAcmeSettingsView.m; sourceTree = "<group>"; };
+		3D824DA517AFF948000AD1EF /* SBTAcmeStatusUpdateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTAcmeStatusUpdateView.m; sourceTree = "<group>"; };
+		3D824DA617AFF948000AD1EF /* SBTAcmeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTAcmeUtils.m; sourceTree = "<group>"; };
+		3D824DA717AFF948000AD1EF /* SBTAcmeWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTAcmeWebView.m; sourceTree = "<group>"; };
+		3D824DA817AFF948000AD1EF /* SBTProfileListView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTProfileListView.m; sourceTree = "<group>"; };
+		3D824DA917AFF948000AD1EF /* SBTViewControllerIpad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTViewControllerIpad.m; sourceTree = "<group>"; };
 		3D824DAA17AFF948000AD1EF /* IBMViewControllerIpadCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMViewControllerIpadCell.m; sourceTree = "<group>"; };
-		3D824DAB17AFF948000AD1EF /* IBMAcmeLargeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeLargeImageView.m; sourceTree = "<group>"; };
+		3D824DAB17AFF948000AD1EF /* SBTAcmeLargeImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTAcmeLargeImageView.m; sourceTree = "<group>"; };
 		3D824DAC17AFF948000AD1EF /* LikeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikeButton.m; sourceTree = "<group>"; };
 		3D824DAD17AFF948000AD1EF /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
 		3D824DD117AFF960000AD1EF /* @btnDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "@btnDefault.png"; sourceTree = "<group>"; };
@@ -239,17 +252,17 @@
 		3D824E0A17AFF9D4000AD1EF /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		3D824E0B17AFF9D4000AD1EF /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
 		3D824E2A17AFFA8E000AD1EF /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		3D824E9417AFFC62000AD1EF /* IBMViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMViewController.xib; sourceTree = "<group>"; };
-		3D824E9517AFFC62000AD1EF /* IBMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAppDelegate.h; sourceTree = "<group>"; };
-		3D824E9617AFFC62000AD1EF /* IBMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAppDelegate.m; sourceTree = "<group>"; };
-		3D824E9717AFFC62000AD1EF /* IBMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMViewController.h; sourceTree = "<group>"; };
-		3D824E9817AFFC62000AD1EF /* IBMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMViewController.m; sourceTree = "<group>"; };
+		3D824E9417AFFC62000AD1EF /* SBTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTViewController.xib; sourceTree = "<group>"; };
+		3D824E9517AFFC62000AD1EF /* SBTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTAppDelegate.h; sourceTree = "<group>"; };
+		3D824E9617AFFC62000AD1EF /* SBTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTAppDelegate.m; sourceTree = "<group>"; };
+		3D824E9717AFFC62000AD1EF /* SBTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTViewController.h; sourceTree = "<group>"; };
+		3D824E9817AFFC62000AD1EF /* SBTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTViewController.m; sourceTree = "<group>"; };
 		3D824E9C17AFFCAB000AD1EF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		3D824F5717B05382000AD1EF /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		3D824F5817B05382000AD1EF /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
-		3D824F6017B2D702000AD1EF /* IBMAcmeBookmarksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMAcmeBookmarksView.h; sourceTree = "<group>"; };
-		3D824F6117B2D702000AD1EF /* IBMAcmeBookmarksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBMAcmeBookmarksView.m; sourceTree = "<group>"; };
-		3D824F6217B2D702000AD1EF /* IBMAcmeBookmarksView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeBookmarksView.xib; sourceTree = "<group>"; };
+		3D824F6017B2D702000AD1EF /* SBTAcmeBookmarksView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTAcmeBookmarksView.h; sourceTree = "<group>"; };
+		3D824F6117B2D702000AD1EF /* SBTAcmeBookmarksView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTAcmeBookmarksView.m; sourceTree = "<group>"; };
+		3D824F6217B2D702000AD1EF /* SBTAcmeBookmarksView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTAcmeBookmarksView.xib; sourceTree = "<group>"; };
 		3DCCFBE417B3E7F70063C199 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		3DCCFBE517B3E7F70063C199 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
 		3DCCFBE617B3E7F70063C199 /* AFImageRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFImageRequestOperation.h; sourceTree = "<group>"; };
@@ -283,14 +296,21 @@
 				3D824D5717AFF8AB000AD1EF /* UIKit.framework in Frameworks */,
 				3D824D5917AFF8AB000AD1EF /* Foundation.framework in Frameworks */,
 				3D824D5B17AFF8AB000AD1EF /* CoreGraphics.framework in Frameworks */,
-				3D09FEE417C548E9006B5159 /* libiOSSBTK.a in Frameworks */,
-				3D09FF0B17C661F6006B5159 /* libiOSSBTK_iphone.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		075DE145187C52CD0099BA87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				075DE14B187C52CE0099BA87 /* libiOSSBTK.a */,
+				075DE14D187C52CE0099BA87 /* TestiOSSBTK.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		3D824D4A17AFF8AB000AD1EF = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +331,7 @@
 		3D824D5517AFF8AB000AD1EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				075DE144187C52CD0099BA87 /* iOSSBTK.xcodeproj */,
 				3DCCFC0017B3E80B0063C199 /* Security.framework */,
 				3D824E9C17AFFCAB000AD1EF /* MobileCoreServices.framework */,
 				3D824E2A17AFFA8E000AD1EF /* libxml2.dylib */,
@@ -341,8 +362,8 @@
 				3D824EA117B00110000AD1EF /* MainView */,
 				3D824EA017B000FA000AD1EF /* Utils */,
 				3D824E9F17B000CF000AD1EF /* Constants */,
-				3D824E9517AFFC62000AD1EF /* IBMAppDelegate.h */,
-				3D824E9617AFFC62000AD1EF /* IBMAppDelegate.m */,
+				3D824E9517AFFC62000AD1EF /* SBTAppDelegate.h */,
+				3D824E9617AFFC62000AD1EF /* SBTAppDelegate.m */,
 				3D824E0917AFF971000AD1EF /* ExternalLibraries */,
 				3D824DD017AFF94D000AD1EF /* images */,
 				3D824D5D17AFF8AB000AD1EF /* Supporting Files */,
@@ -451,8 +472,8 @@
 			isa = PBXGroup;
 			children = (
 				3D824EB217B003A9000AD1EF /* LikeButton */,
-				3D824D8417AFF948000AD1EF /* IBMAcmeUtils.h */,
-				3D824DA617AFF948000AD1EF /* IBMAcmeUtils.m */,
+				3D824D8417AFF948000AD1EF /* SBTAcmeUtils.h */,
+				3D824DA617AFF948000AD1EF /* SBTAcmeUtils.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -462,8 +483,8 @@
 			children = (
 				3D824EA317B00123000AD1EF /* iPad */,
 				3D824EA217B0011E000AD1EF /* iPhone */,
-				3D09FEBC17C28210006B5159 /* IBMAcmeMainViewCommonOperations.h */,
-				3D09FEBD17C28210006B5159 /* IBMAcmeMainViewCommonOperations.m */,
+				3D09FEBC17C28210006B5159 /* SBTAcmeMainViewCommonOperations.h */,
+				3D09FEBD17C28210006B5159 /* SBTAcmeMainViewCommonOperations.m */,
 			);
 			name = MainView;
 			sourceTree = "<group>";
@@ -471,9 +492,9 @@
 		3D824EA217B0011E000AD1EF /* iPhone */ = {
 			isa = PBXGroup;
 			children = (
-				3D824E9717AFFC62000AD1EF /* IBMViewController.h */,
-				3D824E9817AFFC62000AD1EF /* IBMViewController.m */,
-				3D824E9417AFFC62000AD1EF /* IBMViewController.xib */,
+				3D824E9717AFFC62000AD1EF /* SBTViewController.h */,
+				3D824E9817AFFC62000AD1EF /* SBTViewController.m */,
+				3D824E9417AFFC62000AD1EF /* SBTViewController.xib */,
 			);
 			name = iPhone;
 			sourceTree = "<group>";
@@ -482,9 +503,9 @@
 			isa = PBXGroup;
 			children = (
 				3D824EA417B00140000AD1EF /* Cell */,
-				3D824D8717AFF948000AD1EF /* IBMViewControllerIpad.h */,
-				3D824DA917AFF948000AD1EF /* IBMViewControllerIpad.m */,
-				3D824D9717AFF948000AD1EF /* IBMViewControllerIpad.xib */,
+				3D824D8717AFF948000AD1EF /* SBTViewControllerIpad.h */,
+				3D824DA917AFF948000AD1EF /* SBTViewControllerIpad.m */,
+				3D824D9717AFF948000AD1EF /* SBTViewControllerIpad.xib */,
 			);
 			name = iPad;
 			sourceTree = "<group>";
@@ -501,9 +522,9 @@
 		3D824EA517B00182000AD1EF /* FlightView */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D7F17AFF948000AD1EF /* IBMAcmeFlightView.h */,
-				3D824DA117AFF948000AD1EF /* IBMAcmeFlightView.m */,
-				3D824D9017AFF948000AD1EF /* IBMAcmeFlightView.xib */,
+				3D824D7F17AFF948000AD1EF /* SBTAcmeFlightView.h */,
+				3D824DA117AFF948000AD1EF /* SBTAcmeFlightView.m */,
+				3D824D9017AFF948000AD1EF /* SBTAcmeFlightView.xib */,
 			);
 			name = FlightView;
 			sourceTree = "<group>";
@@ -511,8 +532,8 @@
 		3D824EA617B001BF000AD1EF /* FlightObject */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D7D17AFF948000AD1EF /* IBMAcmeFlight.h */,
-				3D824D9F17AFF948000AD1EF /* IBMAcmeFlight.m */,
+				3D824D7D17AFF948000AD1EF /* SBTAcmeFlight.h */,
+				3D824D9F17AFF948000AD1EF /* SBTAcmeFlight.m */,
 			);
 			name = FlightObject;
 			sourceTree = "<group>";
@@ -520,9 +541,9 @@
 		3D824EA717B001E0000AD1EF /* MyFlightsView */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D8017AFF948000AD1EF /* IBMAcmeMyFlightView.h */,
-				3D824DA217AFF948000AD1EF /* IBMAcmeMyFlightView.m */,
-				3D824D9117AFF948000AD1EF /* IBMAcmeMyFlightView.xib */,
+				3D824D8017AFF948000AD1EF /* SBTAcmeMyFlightView.h */,
+				3D824DA217AFF948000AD1EF /* SBTAcmeMyFlightView.m */,
+				3D824D9117AFF948000AD1EF /* SBTAcmeMyFlightView.xib */,
 			);
 			name = MyFlightsView;
 			sourceTree = "<group>";
@@ -530,9 +551,9 @@
 		3D824EA817B00201000AD1EF /* FlightStatusView */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D7E17AFF948000AD1EF /* IBMAcmeFlightStatusView.h */,
-				3D824DA017AFF948000AD1EF /* IBMAcmeFlightStatusView.m */,
-				3D824D8F17AFF948000AD1EF /* IBMAcmeFlightStatusView.xib */,
+				3D824D7E17AFF948000AD1EF /* SBTAcmeFlightStatusView.h */,
+				3D824DA017AFF948000AD1EF /* SBTAcmeFlightStatusView.m */,
+				3D824D8F17AFF948000AD1EF /* SBTAcmeFlightStatusView.xib */,
 			);
 			name = FlightStatusView;
 			sourceTree = "<group>";
@@ -550,9 +571,9 @@
 		3D824EAA17B0024D000AD1EF /* WebView */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D8517AFF948000AD1EF /* IBMAcmeWebView.h */,
-				3D824DA717AFF948000AD1EF /* IBMAcmeWebView.m */,
-				3D824D9517AFF948000AD1EF /* IBMAcmeWebView.xib */,
+				3D824D8517AFF948000AD1EF /* SBTAcmeWebView.h */,
+				3D824DA717AFF948000AD1EF /* SBTAcmeWebView.m */,
+				3D824D9517AFF948000AD1EF /* SBTAcmeWebView.xib */,
 			);
 			name = WebView;
 			sourceTree = "<group>";
@@ -560,9 +581,9 @@
 		3D824EAB17B00269000AD1EF /* MyProfileView */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D8117AFF948000AD1EF /* IBMAcmeMyProfileView.h */,
-				3D824DA317AFF948000AD1EF /* IBMAcmeMyProfileView.m */,
-				3D824D9217AFF948000AD1EF /* IBMAcmeMyProfileView.xib */,
+				3D824D8117AFF948000AD1EF /* SBTAcmeMyProfileView.h */,
+				3D824DA317AFF948000AD1EF /* SBTAcmeMyProfileView.m */,
+				3D824D9217AFF948000AD1EF /* SBTAcmeMyProfileView.xib */,
 			);
 			name = MyProfileView;
 			sourceTree = "<group>";
@@ -570,9 +591,9 @@
 		3D824EAC17B0028A000AD1EF /* ProfileListView */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D8617AFF948000AD1EF /* IBMProfileListView.h */,
-				3D824DA817AFF948000AD1EF /* IBMProfileListView.m */,
-				3D824D9617AFF948000AD1EF /* IBMProfileListView.xib */,
+				3D824D8617AFF948000AD1EF /* SBTProfileListView.h */,
+				3D824DA817AFF948000AD1EF /* SBTProfileListView.m */,
+				3D824D9617AFF948000AD1EF /* SBTProfileListView.xib */,
 			);
 			name = ProfileListView;
 			sourceTree = "<group>";
@@ -580,9 +601,9 @@
 		3D824EAD17B002AB000AD1EF /* CommunityView */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D7B17AFF948000AD1EF /* IBMAcmeCommunityView.h */,
-				3D824D9D17AFF948000AD1EF /* IBMAcmeCommunityView.m */,
-				3D824D8E17AFF948000AD1EF /* IBMAcmeCommunityView.xib */,
+				3D824D7B17AFF948000AD1EF /* SBTAcmeCommunityView.h */,
+				3D824D9D17AFF948000AD1EF /* SBTAcmeCommunityView.m */,
+				3D824D8E17AFF948000AD1EF /* SBTAcmeCommunityView.xib */,
 			);
 			name = CommunityView;
 			sourceTree = "<group>";
@@ -590,9 +611,9 @@
 		3D824EAE17B002CF000AD1EF /* StatusUpdateView */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D8317AFF948000AD1EF /* IBMAcmeStatusUpdateView.h */,
-				3D824DA517AFF948000AD1EF /* IBMAcmeStatusUpdateView.m */,
-				3D824D9417AFF948000AD1EF /* IBMAcmeStatusUpdateView.xib */,
+				3D824D8317AFF948000AD1EF /* SBTAcmeStatusUpdateView.h */,
+				3D824DA517AFF948000AD1EF /* SBTAcmeStatusUpdateView.m */,
+				3D824D9417AFF948000AD1EF /* SBTAcmeStatusUpdateView.xib */,
 			);
 			name = StatusUpdateView;
 			sourceTree = "<group>";
@@ -610,8 +631,8 @@
 		3D824EB017B00336000AD1EF /* LargeImageView */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D8917AFF948000AD1EF /* IBMAcmeLargeImageView.h */,
-				3D824DAB17AFF948000AD1EF /* IBMAcmeLargeImageView.m */,
+				3D824D8917AFF948000AD1EF /* SBTAcmeLargeImageView.h */,
+				3D824DAB17AFF948000AD1EF /* SBTAcmeLargeImageView.m */,
 				3D824D9817AFF948000AD1EF /* IBMAcmeLargeImageView.xib */,
 			);
 			name = LargeImageView;
@@ -620,9 +641,9 @@
 		3D824EB117B00349000AD1EF /* SettingsView */ = {
 			isa = PBXGroup;
 			children = (
-				3D824D8217AFF948000AD1EF /* IBMAcmeSettingsView.h */,
-				3D824DA417AFF948000AD1EF /* IBMAcmeSettingsView.m */,
-				3D824D9317AFF948000AD1EF /* IBMAcmeSettingsView.xib */,
+				3D824D8217AFF948000AD1EF /* SBTAcmeSettingsView.h */,
+				3D824DA417AFF948000AD1EF /* SBTAcmeSettingsView.m */,
+				3D824D9317AFF948000AD1EF /* SBTAcmeSettingsView.xib */,
 			);
 			name = SettingsView;
 			sourceTree = "<group>";
@@ -683,9 +704,9 @@
 		3D824F5F17B2D6D4000AD1EF /* BookmarksView */ = {
 			isa = PBXGroup;
 			children = (
-				3D824F6017B2D702000AD1EF /* IBMAcmeBookmarksView.h */,
-				3D824F6117B2D702000AD1EF /* IBMAcmeBookmarksView.m */,
-				3D824F6217B2D702000AD1EF /* IBMAcmeBookmarksView.xib */,
+				3D824F6017B2D702000AD1EF /* SBTAcmeBookmarksView.h */,
+				3D824F6117B2D702000AD1EF /* SBTAcmeBookmarksView.m */,
+				3D824F6217B2D702000AD1EF /* SBTAcmeBookmarksView.xib */,
 			);
 			name = BookmarksView;
 			sourceTree = "<group>";
@@ -730,6 +751,12 @@
 			mainGroup = 3D824D4A17AFF8AB000AD1EF;
 			productRefGroup = 3D824D5417AFF8AB000AD1EF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 075DE145187C52CD0099BA87 /* Products */;
+					ProjectRef = 075DE144187C52CD0099BA87 /* iOSSBTK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3D824D5217AFF8AB000AD1EF /* AcmeAirlines */,
@@ -737,6 +764,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		075DE14B187C52CE0099BA87 /* libiOSSBTK.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libiOSSBTK.a;
+			remoteRef = 075DE14A187C52CE0099BA87 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		075DE14D187C52CE0099BA87 /* TestiOSSBTK.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TestiOSSBTK.octest;
+			remoteRef = 075DE14C187C52CE0099BA87 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3D824D5117AFF8AB000AD1EF /* Resources */ = {
@@ -748,16 +792,16 @@
 				3D824D6B17AFF8AB000AD1EF /* Default@2x.png in Resources */,
 				3D824D6D17AFF8AB000AD1EF /* Default-568h@2x.png in Resources */,
 				3D824DAE17AFF948000AD1EF /* ComposeUpdate.xib in Resources */,
-				3D824DB017AFF948000AD1EF /* IBMAcmeCommunityView.xib in Resources */,
-				3D824DB117AFF948000AD1EF /* IBMAcmeFlightStatusView.xib in Resources */,
-				3D824DB217AFF948000AD1EF /* IBMAcmeFlightView.xib in Resources */,
-				3D824DB317AFF948000AD1EF /* IBMAcmeMyFlightView.xib in Resources */,
-				3D824DB417AFF948000AD1EF /* IBMAcmeMyProfileView.xib in Resources */,
-				3D824DB517AFF948000AD1EF /* IBMAcmeSettingsView.xib in Resources */,
-				3D824DB617AFF948000AD1EF /* IBMAcmeStatusUpdateView.xib in Resources */,
-				3D824DB717AFF948000AD1EF /* IBMAcmeWebView.xib in Resources */,
-				3D824DB817AFF948000AD1EF /* IBMProfileListView.xib in Resources */,
-				3D824DB917AFF948000AD1EF /* IBMViewControllerIpad.xib in Resources */,
+				3D824DB017AFF948000AD1EF /* SBTAcmeCommunityView.xib in Resources */,
+				3D824DB117AFF948000AD1EF /* SBTAcmeFlightStatusView.xib in Resources */,
+				3D824DB217AFF948000AD1EF /* SBTAcmeFlightView.xib in Resources */,
+				3D824DB317AFF948000AD1EF /* SBTAcmeMyFlightView.xib in Resources */,
+				3D824DB417AFF948000AD1EF /* SBTAcmeMyProfileView.xib in Resources */,
+				3D824DB517AFF948000AD1EF /* SBTAcmeSettingsView.xib in Resources */,
+				3D824DB617AFF948000AD1EF /* SBTAcmeStatusUpdateView.xib in Resources */,
+				3D824DB717AFF948000AD1EF /* SBTAcmeWebView.xib in Resources */,
+				3D824DB817AFF948000AD1EF /* SBTProfileListView.xib in Resources */,
+				3D824DB917AFF948000AD1EF /* SBTViewControllerIpad.xib in Resources */,
 				3D824DBA17AFF948000AD1EF /* IBMAcmeLargeImageView.xib in Resources */,
 				3D824DBB17AFF948000AD1EF /* LoginView.xib in Resources */,
 				3D824DED17AFF960000AD1EF /* @btnDefault.png in Resources */,
@@ -780,10 +824,10 @@
 				3D824E0317AFF960000AD1EF /* right.png in Resources */,
 				3D824E0517AFF960000AD1EF /* slideNavBG.png in Resources */,
 				3D824E0617AFF960000AD1EF /* slideNavBG@2x.png in Resources */,
-				3D824E9917AFFC62000AD1EF /* IBMViewController.xib in Resources */,
+				3D824E9917AFFC62000AD1EF /* SBTViewController.xib in Resources */,
 				3D824F5917B05382000AD1EF /* Icon.png in Resources */,
 				3D824F5A17B05382000AD1EF /* Icon@2x.png in Resources */,
-				3D824F6417B2D702000AD1EF /* IBMAcmeBookmarksView.xib in Resources */,
+				3D824F6417B2D702000AD1EF /* SBTAcmeBookmarksView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,27 +856,27 @@
 			files = (
 				3D824D6317AFF8AB000AD1EF /* main.m in Sources */,
 				3D824DBC17AFF948000AD1EF /* ComposeUpdate.m in Sources */,
-				3D824DBF17AFF948000AD1EF /* IBMAcmeCommunityView.m in Sources */,
+				3D824DBF17AFF948000AD1EF /* SBTAcmeCommunityView.m in Sources */,
 				3D824DC017AFF948000AD1EF /* IBMAcmeConstant.m in Sources */,
-				3D824DC117AFF948000AD1EF /* IBMAcmeFlight.m in Sources */,
-				3D824DC217AFF948000AD1EF /* IBMAcmeFlightStatusView.m in Sources */,
-				3D824DC317AFF948000AD1EF /* IBMAcmeFlightView.m in Sources */,
-				3D824DC417AFF948000AD1EF /* IBMAcmeMyFlightView.m in Sources */,
-				3D824DC517AFF948000AD1EF /* IBMAcmeMyProfileView.m in Sources */,
-				3D824DC617AFF948000AD1EF /* IBMAcmeSettingsView.m in Sources */,
-				3D824DC717AFF948000AD1EF /* IBMAcmeStatusUpdateView.m in Sources */,
-				3D824DC817AFF948000AD1EF /* IBMAcmeUtils.m in Sources */,
-				3D824DC917AFF948000AD1EF /* IBMAcmeWebView.m in Sources */,
-				3D824DCA17AFF948000AD1EF /* IBMProfileListView.m in Sources */,
-				3D824DCB17AFF948000AD1EF /* IBMViewControllerIpad.m in Sources */,
+				3D824DC117AFF948000AD1EF /* SBTAcmeFlight.m in Sources */,
+				3D824DC217AFF948000AD1EF /* SBTAcmeFlightStatusView.m in Sources */,
+				3D824DC317AFF948000AD1EF /* SBTAcmeFlightView.m in Sources */,
+				3D824DC417AFF948000AD1EF /* SBTAcmeMyFlightView.m in Sources */,
+				3D824DC517AFF948000AD1EF /* SBTAcmeMyProfileView.m in Sources */,
+				3D824DC617AFF948000AD1EF /* SBTAcmeSettingsView.m in Sources */,
+				3D824DC717AFF948000AD1EF /* SBTAcmeStatusUpdateView.m in Sources */,
+				3D824DC817AFF948000AD1EF /* SBTAcmeUtils.m in Sources */,
+				3D824DC917AFF948000AD1EF /* SBTAcmeWebView.m in Sources */,
+				3D824DCA17AFF948000AD1EF /* SBTProfileListView.m in Sources */,
+				3D824DCB17AFF948000AD1EF /* SBTViewControllerIpad.m in Sources */,
 				3D824DCC17AFF948000AD1EF /* IBMViewControllerIpadCell.m in Sources */,
-				3D824DCD17AFF948000AD1EF /* IBMAcmeLargeImageView.m in Sources */,
+				3D824DCD17AFF948000AD1EF /* SBTAcmeLargeImageView.m in Sources */,
 				3D824DCE17AFF948000AD1EF /* LikeButton.m in Sources */,
 				3D824DCF17AFF948000AD1EF /* LoginView.m in Sources */,
 				3D824E0C17AFF9D4000AD1EF /* GDataXMLNode.m in Sources */,
-				3D824E9A17AFFC62000AD1EF /* IBMAppDelegate.m in Sources */,
-				3D824E9B17AFFC62000AD1EF /* IBMViewController.m in Sources */,
-				3D824F6317B2D702000AD1EF /* IBMAcmeBookmarksView.m in Sources */,
+				3D824E9A17AFFC62000AD1EF /* SBTAppDelegate.m in Sources */,
+				3D824E9B17AFFC62000AD1EF /* SBTViewController.m in Sources */,
+				3D824F6317B2D702000AD1EF /* SBTAcmeBookmarksView.m in Sources */,
 				3DCCFBF717B3E7F70063C199 /* AFHTTPClient.m in Sources */,
 				3DCCFBF817B3E7F70063C199 /* AFHTTPRequestOperation.m in Sources */,
 				3DCCFBF917B3E7F70063C199 /* AFImageRequestOperation.m in Sources */,
@@ -842,7 +886,7 @@
 				3DCCFBFD17B3E7F70063C199 /* AFURLConnectionOperation.m in Sources */,
 				3DCCFBFE17B3E7F70063C199 /* AFXMLRequestOperation.m in Sources */,
 				3DCCFBFF17B3E7F70063C199 /* UIImageView+AFNetworking.m in Sources */,
-				3D09FEBE17C28210006B5159 /* IBMAcmeMainViewCommonOperations.m in Sources */,
+				3D09FEBE17C28210006B5159 /* SBTAcmeMainViewCommonOperations.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -948,7 +992,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/AcmeAirlines/iOSSBTK\"",
+					"\\\"$(SRCROOT)/AcmeAirlines/iOSSBTK\\\"",
+					"/Users/carlos/Projects/SocialSDK-iOS/AcmeAirlines/AcmeAirlines/iOSSBTK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -966,7 +1011,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/AcmeAirlines/iOSSBTK\"",
+					"\\\"$(SRCROOT)/AcmeAirlines/iOSSBTK\\\"",
+					"/Users/carlos/Projects/SocialSDK-iOS/AcmeAirlines/AcmeAirlines/iOSSBTK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -984,6 +1030,7 @@
 				078BFA6C1850E8A400408957 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3D824D4E17AFF8AB000AD1EF /* Build configuration list for PBXProject "AcmeAirlines" */ = {
 			isa = XCConfigurationList;

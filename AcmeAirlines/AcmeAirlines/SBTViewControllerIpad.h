@@ -19,7 +19,7 @@
 #import <UIKit/UIKit.h>
 #import "IBMConnectionsProfileService.h"
 
-@interface IBMViewControllerIpad : UIViewController
+@interface SBTViewControllerIpad : UIViewController
 
 @property (strong, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong, nonatomic) NSMutableArray *listOfFlights;

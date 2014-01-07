@@ -18,7 +18,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IBMAcmeFlightStatusView : UITableViewController
+@interface SBTAcmeFlightStatusView : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *listOfFlights;
 @property (strong, nonatomic) NSMutableDictionary *flightStatus;

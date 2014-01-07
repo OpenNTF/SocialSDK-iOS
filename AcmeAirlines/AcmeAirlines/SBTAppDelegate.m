@@ -14,9 +14,9 @@
  * permissions and limitations under the License.
  */
 
-#import "IBMAppDelegate.h"
-#import "IBMViewController.h"
-#import "IBMViewControllerIpad.h"
+#import "SBTAppDelegate.h"
+#import "SBTViewController.h"
+#import "SBTViewControllerIpad.h"
 #import "LoginView.h"
 #import "FBLog.h"
 #import "IBMHttpClient.h"
@@ -25,7 +25,7 @@
 #import "IBMConstants.h"
 #import "IBMConnectionsOAuth2EndPoint.h"
 
-@implementation IBMAppDelegate
+@implementation SBTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -35,9 +35,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-        self.viewController = [[IBMViewControllerIpad alloc] initWithNibName:@"IBMViewControllerIpad" bundle:nil];
+        self.viewController = [[SBTViewControllerIpad alloc] initWithNibName:@"IBMViewControllerIpad" bundle:nil];
     else
-        self.viewController = [[IBMViewController alloc] initWithNibName:@"IBMViewController" bundle:nil];
+        self.viewController = [[SBTViewController alloc] initWithNibName:@"IBMViewController" bundle:nil];
     
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
     self.window.rootViewController = navController;

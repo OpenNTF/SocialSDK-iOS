@@ -21,7 +21,7 @@
 #import "IBMActivityStreamEntry.h"
 #import "IBMConnectionsProfileService.h"
 
-@interface IBMAcmeUtils : NSObject
+@interface SBTAcmeUtils : NSObject
 
 /**
  Retrieve the base url for Acme App from Credential Store

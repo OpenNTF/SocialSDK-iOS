@@ -16,20 +16,20 @@
 
 //  This class is a way to set up things for the purpose of demo.
 
-#import "IBMAcmeSettingsView.h"
+#import "SBTAcmeSettingsView.h"
 #import "IBMAcmeConstant.h"
-#import "IBMAcmeUtils.h"
+#import "SBTAcmeUtils.h"
 #import "IBMCredentialStore.h"
-#import "IBMAcmeFlight.h"
+#import "SBTAcmeFlight.h"
 #import "IBMConnectionsCommunityService.h"
 #import "IBMConnectionsFileService.h"
 #import "FBLog.h"
 
-@interface IBMAcmeSettingsView ()
+@interface SBTAcmeSettingsView ()
 
 @end
 
-@implementation IBMAcmeSettingsView
+@implementation SBTAcmeSettingsView
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -177,7 +177,7 @@
         if (indexPath.row == 0) {
             // Create a community
             NSString *key = @"101";
-            UIAlertView *progressView = [IBMAcmeUtils showProgressBar];
+            UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
             IBMConnectionsCommunityService *comService = [[IBMConnectionsCommunityService alloc] init];
             IBMConnectionsCommunity *comm = [[IBMConnectionsCommunity alloc] init];
             comm.title = [NSString stringWithFormat:@"Flight %@ Community %f", key, [[NSDate date] timeIntervalSince1970]];
@@ -199,7 +199,7 @@
         } else if (indexPath.row == 1) {
             // Remove the community
             NSString *key = @"101";
-            UIAlertView *progressView = [IBMAcmeUtils showProgressBar];
+            UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
             IBMConnectionsCommunityService *comService = [[IBMConnectionsCommunityService alloc] init];
             IBMConnectionsCommunity *comm = [[IBMConnectionsCommunity alloc] init];
             comm.communityUuid = [IBMCredentialStore loadWithKey:key];
@@ -219,7 +219,7 @@
         }
     } else if (indexPath.section == 1) {
         // Upload log files to Connections File
-        UIAlertView *progressView = [IBMAcmeUtils showProgressBar];
+        UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
         NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"fb_log"];

@@ -21,7 +21,7 @@
 #import "IBMConnectionsProfile.h"
 #import "IBMConnectionsCommunity.h"
 
-@interface IBMAcmeStatusUpdateView : UITableViewController
+@interface SBTAcmeStatusUpdateView : UITableViewController
 
 @property (strong, nonatomic) IBMActivityStreamEntry *entry;
 @property (strong, nonatomic) IBMConnectionsProfile *myProfile;

@@ -18,7 +18,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface IBMAcmeFlight : NSObject
+@interface SBTAcmeFlight : NSObject
 
 #pragma mark - Properties
 

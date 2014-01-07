@@ -17,14 +17,14 @@
 #import <UIKit/UIKit.h>
 #import "IBMConnectionsProfile.h"
 
-@class IBMViewController;
-@class IBMViewControllerIpad;
+@class SBTViewController;
+@class SBTViewControllerIpad;
 
-@interface IBMAppDelegate : UIResponder <UIApplicationDelegate>
+@interface SBTAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
 @property (strong, nonatomic) UIViewController *viewController;
-@property (strong, nonatomic) IBMViewControllerIpad *viewControllerIpad;
+@property (strong, nonatomic) SBTViewControllerIpad *viewControllerIpad;
 
 @end

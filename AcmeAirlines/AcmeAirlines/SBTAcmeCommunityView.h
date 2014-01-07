@@ -19,7 +19,7 @@
 #import <UIKit/UIKit.h>
 #import "IBMConnectionsProfile.h"
 
-@interface IBMAcmeCommunityView : UITableViewController
+@interface SBTAcmeCommunityView : UITableViewController
 
 @property (strong, nonatomic) NSString *communityUuid;
 @property (strong, nonatomic) IBMConnectionsProfile *myProfile;

@@ -23,6 +23,41 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		07DA5971187C651700363E5D /* SBTFileRequestParameters.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824D1617AFF67D000AD1EF /* SBTFileRequestParameters.h */; };
+		07DA5972187C651700363E5D /* SBTFilePersonEntry.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824D1417AFF67C000AD1EF /* SBTFilePersonEntry.h */; };
+		07DA5973187C651700363E5D /* SBTFileCommentEntry.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824D1017AFF67C000AD1EF /* SBTFileCommentEntry.h */; };
+		07DA5974187C651700363E5D /* SBTFileEntry.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824D1217AFF67C000AD1EF /* SBTFileEntry.h */; };
+		07DA5975187C651700363E5D /* SBTConnectionsFileService.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824D0217AFF67C000AD1EF /* SBTConnectionsFileService.h */; };
+		07DA5976187C651700363E5D /* SBTASApplication.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824CE617AFF67C000AD1EF /* SBTASApplication.h */; };
+		07DA5977187C651700363E5D /* SBTASGroup.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824CE817AFF67C000AD1EF /* SBTASGroup.h */; };
+		07DA5978187C651700363E5D /* SBTASUser.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824CEA17AFF67C000AD1EF /* SBTASUser.h */; };
+		07DA5979187C651700363E5D /* SBTActivityStreamAttachment.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824CE017AFF67C000AD1EF /* SBTActivityStreamAttachment.h */; };
+		07DA597A187C651700363E5D /* SBTActivityStreamCommunity.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824CE217AFF67C000AD1EF /* SBTActivityStreamCommunity.h */; };
+		07DA597B187C651700363E5D /* SBTActivityStreamActor.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824CDE17AFF67C000AD1EF /* SBTActivityStreamActor.h */; };
+		07DA597C187C651700363E5D /* SBTActivityStreamEntry.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824CE417AFF67C000AD1EF /* SBTActivityStreamEntry.h */; };
+		07DA597D187C651700363E5D /* SBTConnectionsActivityStreamService.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824CFA17AFF67C000AD1EF /* SBTConnectionsActivityStreamService.h */; };
+		07DA597E187C651700363E5D /* SBTCommunityForumTopic.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824CF617AFF67C000AD1EF /* SBTCommunityForumTopic.h */; };
+		07DA597F187C651700363E5D /* SBTCommunityBookmark.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824CF417AFF67C000AD1EF /* SBTCommunityBookmark.h */; };
+		07DA5980187C651700363E5D /* SBTCommunityMember.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824CF817AFF67C000AD1EF /* SBTCommunityMember.h */; };
+		07DA5981187C651700363E5D /* SBTConnectionsCommunity.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824CFE17AFF67C000AD1EF /* SBTConnectionsCommunity.h */; };
+		07DA5982187C651700363E5D /* SBTConnectionsCommunityService.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824D0017AFF67C000AD1EF /* SBTConnectionsCommunityService.h */; };
+		07DA5983187C651700363E5D /* SBTConnectionsProfile.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824D0417AFF67C000AD1EF /* SBTConnectionsProfile.h */; };
+		07DA5984187C651700363E5D /* SBTConnectionsProfileService.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824D0617AFF67C000AD1EF /* SBTConnectionsProfileService.h */; };
+		07DA5985187C651700363E5D /* SBTBaseService.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824CEC17AFF67C000AD1EF /* SBTBaseService.h */; };
+		07DA5986187C651700363E5D /* SBTConnectionsOAuth2EndPoint.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DCCFC7C17B57DAB0063C199 /* SBTConnectionsOAuth2EndPoint.h */; };
+		07DA5987187C651700363E5D /* SBTConnectionsBasicEndPoint.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824CFC17AFF67C000AD1EF /* SBTConnectionsBasicEndPoint.h */; };
+		07DA5988187C651700363E5D /* SBTOAuth2EndPoint.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DCCFC7917B57CB50063C199 /* SBTOAuth2EndPoint.h */; };
+		07DA5989187C651700363E5D /* SBTBasicEndPoint.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824CEE17AFF67C000AD1EF /* SBTBasicEndPoint.h */; };
+		07DA598A187C651700363E5D /* SBTEndPointFactory.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824CF017AFF67C000AD1EF /* SBTEndPointFactory.h */; };
+		07DA598B187C651700363E5D /* SBTEndPoint.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824D0E17AFF67C000AD1EF /* SBTEndPoint.h */; };
+		07DA598C187C651700363E5D /* SBTConnectionsClientService.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824D0817AFF67C000AD1EF /* SBTConnectionsClientService.h */; };
+		07DA598D187C651700363E5D /* SBTHttpClient.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824D1817AFF67D000AD1EF /* SBTHttpClient.h */; };
+		07DA598E187C651700363E5D /* SBTClientService.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824CF217AFF67C000AD1EF /* SBTClientService.h */; };
+		07DA598F187C651700363E5D /* SBTXMLDocument.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824D1C17AFF67D000AD1EF /* SBTXMLDocument.h */; };
+		07DA5990187C651700363E5D /* SBTCredentialStore.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824D0C17AFF67C000AD1EF /* SBTCredentialStore.h */; };
+		07DA5991187C651700363E5D /* FBLog.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824CDC17AFF67C000AD1EF /* FBLog.h */; };
+		07DA5992187C651700363E5D /* SBTUtils.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824D1A17AFF67D000AD1EF /* SBTUtils.h */; };
+		07DA5993187C651700363E5D /* SBTConstants.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3D824D0A17AFF67C000AD1EF /* SBTConstants.h */; };
 		3D824C4B17AFECB8000AD1EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824C4A17AFECB8000AD1EF /* Foundation.framework */; };
 		3D824D1E17AFF67D000AD1EF /* FBLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CDD17AFF67C000AD1EF /* FBLog.m */; };
 		3D824D1F17AFF67D000AD1EF /* SBTActivityStreamActor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824CDF17AFF67C000AD1EF /* SBTActivityStreamActor.m */; };
@@ -117,6 +152,41 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
+				07DA5971187C651700363E5D /* SBTFileRequestParameters.h in CopyFiles */,
+				07DA5972187C651700363E5D /* SBTFilePersonEntry.h in CopyFiles */,
+				07DA5973187C651700363E5D /* SBTFileCommentEntry.h in CopyFiles */,
+				07DA5974187C651700363E5D /* SBTFileEntry.h in CopyFiles */,
+				07DA5975187C651700363E5D /* SBTConnectionsFileService.h in CopyFiles */,
+				07DA5976187C651700363E5D /* SBTASApplication.h in CopyFiles */,
+				07DA5977187C651700363E5D /* SBTASGroup.h in CopyFiles */,
+				07DA5978187C651700363E5D /* SBTASUser.h in CopyFiles */,
+				07DA5979187C651700363E5D /* SBTActivityStreamAttachment.h in CopyFiles */,
+				07DA597A187C651700363E5D /* SBTActivityStreamCommunity.h in CopyFiles */,
+				07DA597B187C651700363E5D /* SBTActivityStreamActor.h in CopyFiles */,
+				07DA597C187C651700363E5D /* SBTActivityStreamEntry.h in CopyFiles */,
+				07DA597D187C651700363E5D /* SBTConnectionsActivityStreamService.h in CopyFiles */,
+				07DA597E187C651700363E5D /* SBTCommunityForumTopic.h in CopyFiles */,
+				07DA597F187C651700363E5D /* SBTCommunityBookmark.h in CopyFiles */,
+				07DA5980187C651700363E5D /* SBTCommunityMember.h in CopyFiles */,
+				07DA5981187C651700363E5D /* SBTConnectionsCommunity.h in CopyFiles */,
+				07DA5982187C651700363E5D /* SBTConnectionsCommunityService.h in CopyFiles */,
+				07DA5983187C651700363E5D /* SBTConnectionsProfile.h in CopyFiles */,
+				07DA5984187C651700363E5D /* SBTConnectionsProfileService.h in CopyFiles */,
+				07DA5985187C651700363E5D /* SBTBaseService.h in CopyFiles */,
+				07DA5986187C651700363E5D /* SBTConnectionsOAuth2EndPoint.h in CopyFiles */,
+				07DA5987187C651700363E5D /* SBTConnectionsBasicEndPoint.h in CopyFiles */,
+				07DA5988187C651700363E5D /* SBTOAuth2EndPoint.h in CopyFiles */,
+				07DA5989187C651700363E5D /* SBTBasicEndPoint.h in CopyFiles */,
+				07DA598A187C651700363E5D /* SBTEndPointFactory.h in CopyFiles */,
+				07DA598B187C651700363E5D /* SBTEndPoint.h in CopyFiles */,
+				07DA598C187C651700363E5D /* SBTConnectionsClientService.h in CopyFiles */,
+				07DA598D187C651700363E5D /* SBTHttpClient.h in CopyFiles */,
+				07DA598E187C651700363E5D /* SBTClientService.h in CopyFiles */,
+				07DA598F187C651700363E5D /* SBTXMLDocument.h in CopyFiles */,
+				07DA5990187C651700363E5D /* SBTCredentialStore.h in CopyFiles */,
+				07DA5991187C651700363E5D /* FBLog.h in CopyFiles */,
+				07DA5992187C651700363E5D /* SBTUtils.h in CopyFiles */,
+				07DA5993187C651700363E5D /* SBTConstants.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

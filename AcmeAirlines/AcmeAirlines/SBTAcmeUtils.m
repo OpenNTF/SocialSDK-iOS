@@ -16,17 +16,17 @@
 
 //  Utils class for various operations
 
-#import "IBMAcmeUtils.h"
+#import "SBTAcmeUtils.h"
 #import <QuartzCore/QuartzCore.h>
 #import "LikeButton.h"
-#import "IBMAcmeStatusUpdateView.h"
+#import "SBTAcmeStatusUpdateView.h"
 #import "IBMCredentialStore.h"
-#import "IBMAcmeCommunityView.h"
+#import "SBTAcmeCommunityView.h"
 #import "UIImageView+AFNetworking.h"
 #import "IBMConstants.h"
 #import "FBLog.h"
 
-@implementation IBMAcmeUtils
+@implementation SBTAcmeUtils
 
 + (NSString *) getAcmeUrl {
     return [IBMCredentialStore loadWithKey:IBM_CREDENTIAL_ACME_URL];
@@ -66,7 +66,7 @@
             }];
         };
         
-        [IBMAcmeUtils executeAsyncBlock:testBlock];
+        [SBTAcmeUtils executeAsyncBlock:testBlock];
     }
     
     return myProfile;
@@ -96,8 +96,8 @@
 
 + (UITableViewCell *) getStatusUpdateCellForEntry:(IBMActivityStreamEntry *) entry tableView:(UITableView *) tableView atIndexPath:(NSIndexPath *) indexPath viewController:(UIViewController *) viewController  {
     
-    if ([IBMAcmeUtils hasImage:entry] == YES) {
-        return [IBMAcmeUtils getStatusUpdateWithImageCellForEntry:entry tableView:tableView atIndexPath:indexPath viewController:viewController];
+    if ([SBTAcmeUtils hasImage:entry] == YES) {
+        return [SBTAcmeUtils getStatusUpdateWithImageCellForEntry:entry tableView:tableView atIndexPath:indexPath viewController:viewController];
     }
     
     static NSString *CellIdentifier = @"StatusUpdateCell";
@@ -106,7 +106,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.accessoryType = UITableViewCellAccessoryNone;
-        [IBMAcmeUtils addUpdateViewToCell:cell entry:entry viewController:viewController atIndexPath:indexPath];
+        [SBTAcmeUtils addUpdateViewToCell:cell entry:entry viewController:viewController atIndexPath:indexPath];
     }
     
     UIImageView *imageView = (UIImageView *) [cell.contentView viewWithTag:1];
@@ -120,7 +120,7 @@
     LikeButton *likeButton = (LikeButton *) [statsView viewWithTag:7];
     
     NSString *urlStr = [NSString stringWithFormat:@"%@/profiles/photo.do?userid=%@", [IBMUtils getUrlForEndPoint:@"connections"], entry.actor.aId];
-    [IBMAcmeUtils downloadAndSetImage:imageView url:urlStr];
+    [SBTAcmeUtils downloadAndSetImage:imageView url:urlStr];
     nameLabel.text = entry.plainTitle;
     
     
@@ -132,7 +132,7 @@
     }
     
     
-    CGSize requiredSize = [IBMAcmeUtils getRequiredSizeForText:entry.summary type:@"update"];
+    CGSize requiredSize = [SBTAcmeUtils getRequiredSizeForText:entry.summary type:@"update"];
     NSLayoutConstraint *constraintHeight;
     constraintHeight = [NSLayoutConstraint constraintWithItem:updateLabel
                                                                         attribute:NSLayoutAttributeHeight
@@ -167,9 +167,9 @@
                                                                         constant:-10];
     [cell.contentView addConstraints:[NSArray arrayWithObjects:constraintHeight, constraintTop, constraintLeft, constraintRight, nil]];
     
-    updateLabel.numberOfLines = requiredSize.height / [IBMAcmeUtils heighForOneLine];
+    updateLabel.numberOfLines = requiredSize.height / [SBTAcmeUtils heighForOneLine];
     updateLabel.text = entry.summary;
-    timeLabel.text = [IBMAcmeUtils timeLabelStrFromdateStr:entry.updated];
+    timeLabel.text = [SBTAcmeUtils timeLabelStrFromdateStr:entry.updated];
     commentNumberLabel.text = [NSString stringWithFormat:@"%d", [entry.numComments intValue]];
     likeNumberLabel.text = [NSString stringWithFormat:@"%d", [entry.numLikes intValue]];
     
@@ -177,7 +177,7 @@
     likeImageView.indexPath = indexPath;
     likeButton.entry = entry;
     likeButton.indexPath = indexPath;
-    if ([IBMAcmeUtils didILikeThisEntry:entry])
+    if ([SBTAcmeUtils didILikeThisEntry:entry])
         [likeButton setTitle:@"Unlike" forState:UIControlStateNormal];
     else
         [likeButton setTitle:@"Like" forState:UIControlStateNormal];
@@ -192,7 +192,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.accessoryType = UITableViewCellAccessoryNone;
-        [IBMAcmeUtils addCommentViewToCell:cell entry:entry viewController:viewController atIndexPath:indexPath];
+        [SBTAcmeUtils addCommentViewToCell:cell entry:entry viewController:viewController atIndexPath:indexPath];
     }
     
     UIImageView *imageView = (UIImageView *) [cell.contentView viewWithTag:1];
@@ -205,7 +205,7 @@
     LikeButton *likeButton = (LikeButton *) [statsView viewWithTag:7];
     
     NSString *urlStr = [NSString stringWithFormat:@"%@/profiles/photo.do?userid=%@", [IBMUtils getUrlForEndPoint:@"connections"], entry.actor.aId];
-    [IBMAcmeUtils downloadAndSetImage:imageView url:urlStr];
+    [SBTAcmeUtils downloadAndSetImage:imageView url:urlStr];
     nameLabel.text = entry.actor.name;
     
     // Remove old constraints
@@ -215,7 +215,7 @@
         }
     }
     
-    CGSize requiredSize = [IBMAcmeUtils getRequiredSizeForText:entry.summary type:@"comment"];
+    CGSize requiredSize = [SBTAcmeUtils getRequiredSizeForText:entry.summary type:@"comment"];
     NSLayoutConstraint *constraintHeight;
     constraintHeight = [NSLayoutConstraint constraintWithItem:updateLabel
                                                     attribute:NSLayoutAttributeHeight
@@ -250,17 +250,17 @@
                                                     constant:-10];
     [cell.contentView addConstraints:[NSArray arrayWithObjects:constraintHeight, constraintTop, constraintLeft, constraintRight, nil]];
     
-    updateLabel.numberOfLines = requiredSize.height / [IBMAcmeUtils heighForOneLine];
+    updateLabel.numberOfLines = requiredSize.height / [SBTAcmeUtils heighForOneLine];
     updateLabel.text = entry.summary;
     
-    timeLabel.text = [IBMAcmeUtils timeLabelStrFromdateStr:entry.updated];
+    timeLabel.text = [SBTAcmeUtils timeLabelStrFromdateStr:entry.updated];
     likeNumberLabel.text = [NSString stringWithFormat:@"%d", [entry.numLikes intValue]];
     
     likeImageView.entry = entry;
     likeImageView.indexPath = indexPath;
     likeButton.entry = entry;
     likeButton.indexPath = indexPath;
-    if ([IBMAcmeUtils didILikeThisEntry:entry])
+    if ([SBTAcmeUtils didILikeThisEntry:entry])
         [likeButton setTitle:@"Unlike" forState:UIControlStateNormal];
     else
         [likeButton setTitle:@"Like" forState:UIControlStateNormal];
@@ -275,7 +275,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         cell.accessoryType = UITableViewCellAccessoryNone;
-        [IBMAcmeUtils addUpdateImageViewToCell:cell entry:entry viewController:viewController atIndexPath:indexPath];
+        [SBTAcmeUtils addUpdateImageViewToCell:cell entry:entry viewController:viewController atIndexPath:indexPath];
     }
     
     UIImageView *profilePhotoView = (UIImageView *) [cell.contentView viewWithTag:1];
@@ -290,7 +290,7 @@
     LikeButton *likeButton = (LikeButton *) [statsView viewWithTag:7];
     
     NSString *urlStr = [NSString stringWithFormat:@"%@/profiles/photo.do?userid=%@", [IBMUtils getUrlForEndPoint:@"connections"], entry.actor.aId];
-    [IBMAcmeUtils downloadAndSetImage:profilePhotoView url:urlStr];
+    [SBTAcmeUtils downloadAndSetImage:profilePhotoView url:urlStr];
     nameLabel.text = entry.plainTitle;
     
     // Remove old constraints
@@ -300,7 +300,7 @@
         }
     }
     
-    CGSize requiredSize = [IBMAcmeUtils getRequiredSizeForText:entry.summary type:@"update"];
+    CGSize requiredSize = [SBTAcmeUtils getRequiredSizeForText:entry.summary type:@"update"];
     NSLayoutConstraint *constraintHeight;
     constraintHeight = [NSLayoutConstraint constraintWithItem:updateLabel
                                                     attribute:NSLayoutAttributeHeight
@@ -335,10 +335,10 @@
                                                     constant:-10];
     [cell.contentView addConstraints:[NSArray arrayWithObjects:constraintHeight, constraintTop, constraintLeft, constraintRight, nil]];
     
-    updateLabel.numberOfLines = requiredSize.height / [IBMAcmeUtils heighForOneLine];
+    updateLabel.numberOfLines = requiredSize.height / [SBTAcmeUtils heighForOneLine];
     updateLabel.text = entry.summary;
     
-    timeLabel.text = [IBMAcmeUtils timeLabelStrFromdateStr:entry.updated];
+    timeLabel.text = [SBTAcmeUtils timeLabelStrFromdateStr:entry.updated];
     
     commentNumberLabel.text = [NSString stringWithFormat:@"%d", [entry.numComments intValue]];
     likeNumberLabel.text = [NSString stringWithFormat:@"%d", [entry.numLikes intValue]];
@@ -347,7 +347,7 @@
     likeImageView.indexPath = indexPath;
     likeButton.entry = entry;
     likeButton.indexPath = indexPath;
-    if ([IBMAcmeUtils didILikeThisEntry:entry])
+    if ([SBTAcmeUtils didILikeThisEntry:entry])
         [likeButton setTitle:@"Unlike" forState:UIControlStateNormal];
     else
         [likeButton setTitle:@"Like" forState:UIControlStateNormal];
@@ -355,7 +355,7 @@
     // Set image here, use only the first one
     IBMActivityStreamAttachment *attachment = [entry.attachments objectAtIndex:0];
     imageView.image = nil;
-    [IBMAcmeUtils downloadAndSetImage:imageView url:attachment.imageUrl];
+    [SBTAcmeUtils downloadAndSetImage:imageView url:attachment.imageUrl];
     
     return cell;
 }
@@ -363,13 +363,13 @@
 + (CGFloat) getHeightForStatusUpdateCell:(IBMActivityStreamEntry *) entry {
     CGSize requiredSize = [self getRequiredSizeForText:entry.summary type:@"update"];
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-        if ([IBMAcmeUtils hasImage:entry] == YES) {
+        if ([SBTAcmeUtils hasImage:entry] == YES) {
             return 5 + 45 + 300 + requiredSize.height + 5 + 30 + 5 + 2 + 3 + 3;
         } else {
             return 5 + 45 + requiredSize.height + 5 + 30 + 5 + 3;
         }
     } else {
-        if ([IBMAcmeUtils hasImage:entry] == YES) {
+        if ([SBTAcmeUtils hasImage:entry] == YES) {
             return 5 + 30 + 150 + requiredSize.height + 5 + 15 + 5 + 2 + 3;
         } else {
             return 5 + 30 + requiredSize.height + 5 + 15 + 5;
@@ -378,7 +378,7 @@
 }
 
 + (CGFloat) getHeightForCommentCell:(IBMActivityStreamEntry *) entry {
-    CGSize requiredSize = [IBMAcmeUtils getRequiredSizeForText:entry.summary type:@"comment"];
+    CGSize requiredSize = [SBTAcmeUtils getRequiredSizeForText:entry.summary type:@"comment"];
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         return 5 + 45 + requiredSize.height + 5 + 30 + 5;
     } else {
@@ -569,7 +569,7 @@
     UILabel *updateLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     updateLabel.tag = 3;
     updateLabel.backgroundColor = [UIColor clearColor];
-    updateLabel.font = [UIFont fontWithName:TEXT_FONT size:[IBMAcmeUtils getUpdateTextSize]];
+    updateLabel.font = [UIFont fontWithName:TEXT_FONT size:[SBTAcmeUtils getUpdateTextSize]];
     //updateLabel.textColor = [UIColor colorWithRed:68.0/255 green:68.0/255 blue:68.0/255 alpha:1];
     updateLabel.translatesAutoresizingMaskIntoConstraints = NO;
     
@@ -639,7 +639,7 @@
     timeLabel.textAlignment = NSTextAlignmentRight;
     timeLabel.tag = 5;
     timeLabel.backgroundColor = [UIColor clearColor];
-    timeLabel.font = [UIFont fontWithName:TEXT_FONT size:[IBMAcmeUtils getTimeTextSize]];
+    timeLabel.font = [UIFont fontWithName:TEXT_FONT size:[SBTAcmeUtils getTimeTextSize]];
     timeLabel.textColor = [UIColor colorWithRed:136.0/255 green:136.0/255 blue:136.0/255 alpha:1];
     timeLabel.translatesAutoresizingMaskIntoConstraints = NO;
     
@@ -742,7 +742,7 @@
         [view addSubview:likeImageView];
         [view addSubview:likeNumberLabel];
     }
-    if ([viewController isKindOfClass:[IBMAcmeCommunityView class]] == NO) {
+    if ([viewController isKindOfClass:[SBTAcmeCommunityView class]] == NO) {
         LikeButton *likeButton = [LikeButton buttonWithType:UIButtonTypeCustom];
         likeButton.frame = CGRectMake(likeNumberLabel.frame.origin.x + likeNumberLabel.frame.size.width + 3, likeNumberLabel.frame.origin.y, 3 * width, height);
         [likeButton setTitleColor:[UIColor colorWithRed:136.0/255 green:136.0/255 blue:136.0/255 alpha:1] forState:UIControlStateNormal];
@@ -790,7 +790,7 @@
 }
 
 + (BOOL) didILikeThisEntry:(IBMActivityStreamEntry *) entry {
-    IBMConnectionsProfile *myProfile = [IBMAcmeUtils getMyProfileForce:NO];
+    IBMConnectionsProfile *myProfile = [SBTAcmeUtils getMyProfileForce:NO];
     NSMutableArray *likes;
     if ([entry.objectObjectType isEqualToString:@"comment"])
         likes = entry.targetLikes;
@@ -866,26 +866,26 @@
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         if ([type isEqualToString:@"update"]) {
             CGSize constrainedSize = CGSizeMake(width-2*MARGIN_FOR_IPAD_GROUPED_TABLEVIEW-marginOfProfilePhotoFromRight - profilePhotoSize - marginFromProfilePhoto - marginFromRight, 800);
-            CGSize requiredSize = [text sizeWithFont:[UIFont fontWithName:TEXT_FONT size:[IBMAcmeUtils getUpdateTextSize]] constrainedToSize:constrainedSize lineBreakMode:NSLineBreakByTruncatingTail];
+            CGSize requiredSize = [text sizeWithFont:[UIFont fontWithName:TEXT_FONT size:[SBTAcmeUtils getUpdateTextSize]] constrainedToSize:constrainedSize lineBreakMode:NSLineBreakByTruncatingTail];
             
             return requiredSize;
         } else {
             // Comment
             CGSize constrainedSize = CGSizeMake(width-2*MARGIN_FOR_IPAD_GROUPED_TABLEVIEW-marginOfProfilePhotoFromRight - profilePhotoSize - marginFromProfilePhoto - marginFromRight, 800);
-            CGSize requiredSize = [text sizeWithFont:[UIFont fontWithName:TEXT_FONT size:[IBMAcmeUtils getCommentTextSize]] constrainedToSize:constrainedSize lineBreakMode:NSLineBreakByTruncatingTail];
+            CGSize requiredSize = [text sizeWithFont:[UIFont fontWithName:TEXT_FONT size:[SBTAcmeUtils getCommentTextSize]] constrainedToSize:constrainedSize lineBreakMode:NSLineBreakByTruncatingTail];
             
             return requiredSize;
         }
     } else {
         if ([type isEqualToString:@"update"]) {
             CGSize constrainedSize = CGSizeMake(width-2*MARGIN_FOR_IPHONE_GROUPED_TABLEVIEW-marginOfProfilePhotoFromRight - profilePhotoSize - marginFromProfilePhoto - marginFromRight, 800);
-            CGSize requiredSize = [text sizeWithFont:[UIFont fontWithName:TEXT_FONT size:[IBMAcmeUtils getUpdateTextSize]] constrainedToSize:constrainedSize lineBreakMode:NSLineBreakByTruncatingTail];
+            CGSize requiredSize = [text sizeWithFont:[UIFont fontWithName:TEXT_FONT size:[SBTAcmeUtils getUpdateTextSize]] constrainedToSize:constrainedSize lineBreakMode:NSLineBreakByTruncatingTail];
             
             return requiredSize;
         } else {
             // Comment
             CGSize constrainedSize = CGSizeMake(width-2*MARGIN_FOR_IPHONE_GROUPED_TABLEVIEW -marginOfProfilePhotoFromRight - profilePhotoSize - marginFromProfilePhoto - marginFromRight, 800);
-            CGSize requiredSize = [text sizeWithFont:[UIFont fontWithName:TEXT_FONT size:[IBMAcmeUtils getCommentTextSize]] constrainedToSize:constrainedSize lineBreakMode:NSLineBreakByTruncatingTail];
+            CGSize requiredSize = [text sizeWithFont:[UIFont fontWithName:TEXT_FONT size:[SBTAcmeUtils getCommentTextSize]] constrainedToSize:constrainedSize lineBreakMode:NSLineBreakByTruncatingTail];
             
             return requiredSize;
         }

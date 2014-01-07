@@ -17,12 +17,12 @@
 //  This class handles the common operations performed by the main view of the app
 
 #import <Foundation/Foundation.h>
-#import "IBMAcmeFlightView.h"
-#import "IBMAcmeMyFlightView.h"
-#import "IBMAcmeFlightStatusView.h"
-#import "IBMAcmeMyProfileView.h"
+#import "SBTAcmeFlightView.h"
+#import "SBTAcmeMyFlightView.h"
+#import "SBTAcmeFlightStatusView.h"
+#import "SBTAcmeMyProfileView.h"
 
-@interface IBMAcmeMainViewCommonOperations : NSObject
+@interface SBTAcmeMainViewCommonOperations : NSObject
 
 /**
  This method returns the titles

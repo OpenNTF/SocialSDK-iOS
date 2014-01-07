@@ -16,15 +16,15 @@
 
 //  Used to show image in full view
 
-#import "IBMAcmeLargeImageView.h"
+#import "SBTAcmeLargeImageView.h"
 #import "ComposeUpdate.h"
-#import "IBMAcmeUtils.h"
+#import "SBTAcmeUtils.h"
 #import "UIImageView+AFNetworking.h"
 #import "FBLog.h"
 
 #define ZOOM_STEP 1.5
 
-@implementation IBMAcmeLargeImageView
+@implementation SBTAcmeLargeImageView
 
 @synthesize photoView, scrollView;
 
@@ -113,9 +113,9 @@
 #pragma mark Utility methods
 
 - (void) downloadAndSetImage {
-    __block IBMAcmeLargeImageView *largeImageView = self;
+    __block SBTAcmeLargeImageView *largeImageView = self;
     __block UIImageView *imageView = self.photoView;
-    UIAlertView *progressView = [IBMAcmeUtils showProgressBar];
+    UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.urlStr]
                                              cachePolicy:NSURLRequestUseProtocolCachePolicy
                                          timeoutInterval:30];

@@ -17,7 +17,7 @@
 #import <UIKit/UIKit.h>
 #import "IBMConnectionsCommunityService.h"
 
-@interface IBMAcmeBookmarksView : UITableViewController
+@interface SBTAcmeBookmarksView : UITableViewController
 
 @property (strong, nonatomic) IBMConnectionsCommunity *community;
 

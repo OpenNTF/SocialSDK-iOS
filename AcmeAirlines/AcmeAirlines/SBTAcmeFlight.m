@@ -16,9 +16,9 @@
 
 //  This class represent a flight entity
 
-#import "IBMAcmeFlight.h"
+#import "SBTAcmeFlight.h"
 
-@implementation IBMAcmeFlight
+@implementation SBTAcmeFlight
 
 
 - (NSString *) description {

@@ -16,20 +16,20 @@
 
 //  This class is used to handle all flights, uncluding showing the list and booking
 
-#import "IBMAcmeFlightView.h"
-#import "IBMAcmeUtils.h"
-#import "IBMAcmeCommunityView.h"
-#import "IBMProfileListView.h"
+#import "SBTAcmeFlightView.h"
+#import "SBTAcmeUtils.h"
+#import "SBTAcmeCommunityView.h"
+#import "SBTProfileListView.h"
 #import "IBMHttpClient.h"
 #import "FBLog.h"
 
-@interface IBMAcmeFlightView ()
+@interface SBTAcmeFlightView ()
 
-@property (strong, nonatomic) IBMAcmeFlight *flightInProgressOfBooking;
+@property (strong, nonatomic) SBTAcmeFlight *flightInProgressOfBooking;
 
 @end
 
-@implementation IBMAcmeFlightView
+@implementation SBTAcmeFlightView
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -68,7 +68,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    IBMAcmeFlight *flight = [self.listOfFlights objectAtIndex:indexPath.row];
+    SBTAcmeFlight *flight = [self.listOfFlights objectAtIndex:indexPath.row];
     
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -154,7 +154,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    IBMAcmeFlight *flight = [self.listOfFlights objectAtIndex:indexPath.row];
+    SBTAcmeFlight *flight = [self.listOfFlights objectAtIndex:indexPath.row];
     self.flightInProgressOfBooking = flight;
     
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@""
@@ -170,11 +170,11 @@
 - (void) actionSheet:(UIActionSheet *) actionSheet clickedButtonAtIndex:(NSInteger) buttonIndex {
     if (buttonIndex == 0) {
         // Book
-        IBMAcmeFlight *flight = self.flightInProgressOfBooking;
+        SBTAcmeFlight *flight = self.flightInProgressOfBooking;
         if ([flight.booked boolValue] == NO) {
             flight.isBooking = [NSNumber numberWithBool:YES];
             [self.tableView reloadData];
-            UIAlertView *progressView = [IBMAcmeUtils showProgressBar];
+            UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
             [self getFirstLineManagerWithFlight:flight myProfile:self.myProfile completionHandler:^(BOOL success) {
                 [progressView dismissWithClickedButtonIndex:100 animated:YES];
             }];
@@ -184,21 +184,21 @@
         }
     } else if (buttonIndex == 1) {
         // Colleague view
-        UIAlertView *progressView = [IBMAcmeUtils showProgressBar];
+        UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
         [self retrieveColleaguesForFlight:self.flightInProgressOfBooking completionHandler:^(NSMutableArray *list) {
             [progressView dismissWithClickedButtonIndex:100 animated:YES];
             if (list != nil) {
-                IBMProfileListView *listView = [[IBMProfileListView alloc] init];
+                SBTProfileListView *listView = [[SBTProfileListView alloc] init];
                 listView.listOfProfiles = list;
                 listView.title = @"Colleagues";
                 [self.navigationController pushViewController:listView animated:YES];
             }
         }];
     } else if (buttonIndex == 2) {
-        NSString *communityUuid = [IBMAcmeUtils getTestCommunityUUidForFlightId:self.flightInProgressOfBooking.flightId];
+        NSString *communityUuid = [SBTAcmeUtils getTestCommunityUUidForFlightId:self.flightInProgressOfBooking.flightId];
         if (communityUuid != nil) {
-            UIAlertView *progressView = [IBMAcmeUtils showProgressBar];
-            IBMAcmeCommunityView *communityView = [[IBMAcmeCommunityView alloc] init];
+            UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
+            SBTAcmeCommunityView *communityView = [[SBTAcmeCommunityView alloc] init];
             communityView.myProfile = self.myProfile;
             communityView.communityUuid = communityUuid;
             [communityView getCommunityWithCompletionHandler:^(BOOL success) {
@@ -216,8 +216,8 @@
 
 #pragma mark - Helper methods
 
-- (void) getUsersAndCheckWithColleagues:(NSMutableDictionary *) colleagues flight:(IBMAcmeFlight *) flight completionHandler:(void (^)(NSMutableArray *)) completionHandler; {
-    NSURL *baseUrl = [NSURL URLWithString:[IBMAcmeUtils getAcmeUrl]];
+- (void) getUsersAndCheckWithColleagues:(NSMutableDictionary *) colleagues flight:(SBTAcmeFlight *) flight completionHandler:(void (^)(NSMutableArray *)) completionHandler; {
+    NSURL *baseUrl = [NSURL URLWithString:[SBTAcmeUtils getAcmeUrl]];
     IBMHttpClient *httpClient = [[IBMHttpClient alloc] initWithBaseURL:baseUrl];
     NSString *path = [NSString stringWithFormat:@"/acme.social.sample.dataapp/rest/flights/%@/users", flight.flightId];
     [httpClient getPath:path
@@ -240,7 +240,7 @@
                 }];
 }
 
-- (void) retrieveColleaguesForFlight:(IBMAcmeFlight *) flight completionHandler:(void (^)(NSMutableArray *)) completionHandler {
+- (void) retrieveColleaguesForFlight:(SBTAcmeFlight *) flight completionHandler:(void (^)(NSMutableArray *)) completionHandler {
     IBMConnectionsProfileService *profileService = [[IBMConnectionsProfileService alloc] init];
     [profileService getColleaguesWithProfile:self.myProfile success:^(NSMutableArray *list) {
         NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
@@ -262,7 +262,7 @@
  @param flight: flight
  @param myProfile: myProfile
  */
-- (void) getFirstLineManagerWithFlight:(IBMAcmeFlight *) flight
+- (void) getFirstLineManagerWithFlight:(SBTAcmeFlight *) flight
                              myProfile:(IBMConnectionsProfile *) myProfile
                      completionHandler:(void (^)(BOOL)) completionHandler {
     
@@ -301,12 +301,12 @@
  @param myProfile
  @param manager
  */
-- (void) putRequestToAcmeWithFlight:(IBMAcmeFlight *) flight
+- (void) putRequestToAcmeWithFlight:(SBTAcmeFlight *) flight
                           myProfile:(IBMConnectionsProfile *) myProfile
                             manager:(IBMConnectionsProfile *) manager
                   completionHandler:(void (^)(BOOL)) completionHandler {
     
-    NSURL *baseUrl = [NSURL URLWithString:[IBMAcmeUtils getAcmeUrl]];
+    NSURL *baseUrl = [NSURL URLWithString:[SBTAcmeUtils getAcmeUrl]];
     IBMHttpClient *httpClient = [[IBMHttpClient alloc] initWithBaseURL:baseUrl];
     [httpClient setDefaultHeader:@"Content-Type" value:@"application/json"];
     NSDictionary *jsonDict = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -344,7 +344,7 @@
  @param myProfile
  @param manager
  */
-- (void) postActivityStreamWithFlight:(IBMAcmeFlight *) flight
+- (void) postActivityStreamWithFlight:(SBTAcmeFlight *) flight
                             myProfile:(IBMConnectionsProfile *) myProfile
                               manager:(IBMConnectionsProfile *) manager
                     completionHandler:(void (^)(BOOL)) completionHandler {
@@ -379,11 +379,11 @@
  @param myProfile
  @param manager
  */
-- (NSDictionary *) generatePayloaWithFlight:(IBMAcmeFlight *) flight
+- (NSDictionary *) generatePayloaWithFlight:(SBTAcmeFlight *) flight
                                   myProfile:(IBMConnectionsProfile *) myProfile
                                     manager:(IBMConnectionsProfile *) manager {
     
-    NSString *homePageUrl = [NSString stringWithFormat:@"%@/acme.social.sample.webapp", [IBMAcmeUtils getAcmeUrl]];
+    NSString *homePageUrl = [NSString stringWithFormat:@"%@/acme.social.sample.webapp", [SBTAcmeUtils getAcmeUrl]];
     NSString *myId = myProfile.userId;
     NSString *approverId = manager.userId;
     
@@ -452,7 +452,7 @@
                             flight.departureTime, @"Arrive",
                             flight.departureTime, @"Depart",
                             nil];
-    NSString *gadgetUrl = [NSString stringWithFormat:@"%@/acme.social.sample.webapp/gadgets/airlines/airlines.xml", [IBMAcmeUtils getAcmeUrl]];
+    NSString *gadgetUrl = [NSString stringWithFormat:@"%@/acme.social.sample.webapp/gadgets/airlines/airlines.xml", [SBTAcmeUtils getAcmeUrl]];
     NSDictionary *embed = [NSDictionary dictionaryWithObjectsAndKeys:
                            gadgetUrl, @"gadget",
                            flightContext, @"context",

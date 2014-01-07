@@ -19,7 +19,7 @@
 #import <UIKit/UIKit.h>
 #import "IBMConnectionsProfile.h"
 
-@interface IBMAcmeMyFlightView : UITableViewController
+@interface SBTAcmeMyFlightView : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *listOfFlights;
 @property (strong, nonatomic) NSMutableArray *listOfMyFlights;

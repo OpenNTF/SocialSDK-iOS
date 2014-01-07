@@ -19,7 +19,7 @@
 #import <UIKit/UIKit.h>
 #import "IBMConnectionsProfileService.h"
 
-@interface IBMViewController : UIViewController
+@interface SBTViewController : UIViewController
 
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;

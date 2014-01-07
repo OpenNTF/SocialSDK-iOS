@@ -16,15 +16,15 @@
 
 //  This class handles the common operations performed by the main view of the app
 
-#import "IBMAcmeMainViewCommonOperations.h"
+#import "SBTAcmeMainViewCommonOperations.h"
 #import "LoginView.h"
 #import "IBMConnectionsBasicEndPoint.h"
-#import "IBMAcmeUtils.h"
+#import "SBTAcmeUtils.h"
 #import "IBMHttpClient.h"
 #import "IBMAcmeConstant.h"
 #import "FBLog.h"
 
-@implementation IBMAcmeMainViewCommonOperations
+@implementation SBTAcmeMainViewCommonOperations
 
 + (NSMutableArray *) getTitles {
     NSMutableArray *listOfTitles = [[NSMutableArray alloc] initWithObjects:
@@ -51,7 +51,7 @@
                  myProfile:(IBMConnectionsProfile *) myProfile
              listOfFlights:(NSMutableArray *) listOfFlights
               airportCodes:(NSMutableDictionary *) airportCodes {
-    IBMAcmeFlightView *flightView = [[IBMAcmeFlightView alloc] init];
+    SBTAcmeFlightView *flightView = [[SBTAcmeFlightView alloc] init];
     flightView.myProfile = myProfile;
     flightView.listOfFlights = listOfFlights;
     flightView.airportCodes = airportCodes;
@@ -61,7 +61,7 @@
 + (void) openMyFlightViewFor:(UIViewController *) viewController
                    myProfile:(IBMConnectionsProfile *) myProfile
                listOfFlights:(NSMutableArray *) listOfFlights {
-    IBMAcmeMyFlightView *myFlight = [[IBMAcmeMyFlightView alloc] init];
+    SBTAcmeMyFlightView *myFlight = [[SBTAcmeMyFlightView alloc] init];
     myFlight.listOfFlights = listOfFlights;
     myFlight.myProfile = myProfile;
     [viewController.navigationController pushViewController:myFlight animated:YES];
@@ -72,7 +72,7 @@
                    listOfFlights:(NSMutableArray *) listOfFlights
                     airportCodes:(NSMutableDictionary *) airportCodes
                     flightStatus:(NSMutableDictionary *) flightStatus {
-    IBMAcmeFlightStatusView *flightStatusView = [[IBMAcmeFlightStatusView alloc] init];
+    SBTAcmeFlightStatusView *flightStatusView = [[SBTAcmeFlightStatusView alloc] init];
     flightStatusView.listOfFlights = listOfFlights;
     flightStatusView.airportCodes = airportCodes;
     flightStatusView.flightStatus = flightStatus;
@@ -81,7 +81,7 @@
 
 + (void) openMyProfileViewFor:(UIViewController *) viewController
                     myProfile:(IBMConnectionsProfile *) myProfile {
-    IBMAcmeMyProfileView *profileView = [[IBMAcmeMyProfileView alloc] init];
+    SBTAcmeMyProfileView *profileView = [[SBTAcmeMyProfileView alloc] init];
     profileView.myProfile = myProfile;
     profileView.comingFrom = @"IBMViewController";
     [viewController.navigationController pushViewController:profileView animated:YES];
@@ -100,12 +100,12 @@
     IBMConnectionsBasicEndPoint *endPoint = (IBMConnectionsBasicEndPoint *) [IBMEndPoint findEndPoint:@"connections"];
     [endPoint logout];
     
-    [IBMAcmeMainViewCommonOperations loginIsNeededForViewController:viewController];
+    [SBTAcmeMainViewCommonOperations loginIsNeededForViewController:viewController];
 }
 
 + (void) populateFlightsWithCompletionHandler:(void (^)(NSMutableArray *)) completionHandler {
     NSMutableArray *listOfFlights = [[NSMutableArray alloc] init];
-    NSURL *baseUrl = [NSURL URLWithString:[IBMAcmeUtils getAcmeUrl]];
+    NSURL *baseUrl = [NSURL URLWithString:[SBTAcmeUtils getAcmeUrl]];
     IBMHttpClient *httpClient = [[IBMHttpClient alloc] initWithBaseURL:baseUrl];
     NSString *path = [NSString stringWithFormat:@"/acme.social.sample.dataapp/rest/api/flights/all"];
     [httpClient getPath:path
@@ -115,7 +115,7 @@
                     NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:result options:NSJSONReadingMutableContainers error:&error];
                     NSMutableArray *flights = [jsonDict objectForKey:@"flights"];
                     for (NSDictionary *entry in flights) {
-                        IBMAcmeFlight *flight = [[IBMAcmeFlight alloc] init];
+                        SBTAcmeFlight *flight = [[SBTAcmeFlight alloc] init];
                         flight.flightId = [entry valueForKey:@"Flight"];
                         flight.departureCity = [entry valueForKey:@"Depart"];
                         flight.arrivalCity = [entry valueForKey:@"Arrive"];
@@ -133,7 +133,7 @@
 
 + (void) populateAirportCodesWithCompletionHandler:(void (^)(NSMutableDictionary *)) completionHandler {
     NSMutableDictionary *airportCodes = [[NSMutableDictionary alloc] init];
-    NSURL *baseUrl = [NSURL URLWithString:[IBMAcmeUtils getAcmeUrl]];
+    NSURL *baseUrl = [NSURL URLWithString:[SBTAcmeUtils getAcmeUrl]];
     IBMHttpClient *httpClient = [[IBMHttpClient alloc] initWithBaseURL:baseUrl];
     NSString *path = [NSString stringWithFormat:@"/acme.social.sample.dataapp/rest/api/airportcodes"];
     [httpClient getPath:path
@@ -163,7 +163,7 @@
 
 + (void) populateFlightStatusWithCompletionHandler:(void (^)(NSMutableDictionary *)) completionHandler {
     NSMutableDictionary *flightStatus = [[NSMutableDictionary alloc] init];
-    NSURL *baseUrl = [NSURL URLWithString:[IBMAcmeUtils getAcmeUrl]];
+    NSURL *baseUrl = [NSURL URLWithString:[SBTAcmeUtils getAcmeUrl]];
     IBMHttpClient *httpClient = [[IBMHttpClient alloc] initWithBaseURL:baseUrl];
     NSString *path = [NSString stringWithFormat:@"/acme.social.sample.dataapp/rest/api/fc/all"];
     [httpClient getPath:path

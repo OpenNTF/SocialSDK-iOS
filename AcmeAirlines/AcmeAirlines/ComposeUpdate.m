@@ -20,7 +20,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <QuartzCore/QuartzCore.h>
-#import "IBMAcmeUtils.h"
+#import "SBTAcmeUtils.h"
 #import "IBMConnectionsFileService.h"
 #import "IBMConnectionsProfile.h"
 #import "FBLog.h"
@@ -519,7 +519,7 @@
     }
     
     // Now construct the payload
-    IBMConnectionsProfile *myProfile = [IBMAcmeUtils getMyProfileForce:NO];
+    IBMConnectionsProfile *myProfile = [SBTAcmeUtils getMyProfileForce:NO];
     NSDictionary *author = [NSDictionary dictionaryWithObjectsAndKeys:
                             myProfile.userId, @"id",
                             nil];

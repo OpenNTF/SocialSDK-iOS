@@ -17,7 +17,7 @@
 //  Controller to manage login
 
 #import "LoginView.h"
-#import "IBMAppDelegate.h"
+#import "SBTAppDelegate.h"
 #import <QuartzCore/QuartzCore.h>
 #import "IBMCredentialStore.h"
 #import "IBMConstants.h"

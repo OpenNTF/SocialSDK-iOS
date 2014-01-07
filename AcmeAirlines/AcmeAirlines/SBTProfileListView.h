@@ -19,7 +19,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IBMProfileListView : UITableViewController
+@interface SBTProfileListView : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *listOfProfiles;
 

@@ -19,7 +19,7 @@
 #import <UIKit/UIKit.h>
 #import "IBMConnectionsProfile.h"
 
-@interface IBMAcmeMyProfileView : UITableViewController
+@interface SBTAcmeMyProfileView : UITableViewController
 
 @property (strong, nonatomic) IBMConnectionsProfile *myProfile;
 @property (strong, nonatomic) NSString *comingFrom;

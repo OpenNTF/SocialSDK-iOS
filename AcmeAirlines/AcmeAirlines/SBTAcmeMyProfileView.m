@@ -16,16 +16,16 @@
 
 //  This class present the profile information of a user
 
-#import "IBMAcmeMyProfileView.h"
+#import "SBTAcmeMyProfileView.h"
 #import "IBMAcmeConstant.h"
-#import "IBMAcmeWebView.h"
+#import "SBTAcmeWebView.h"
 #import <QuartzCore/QuartzCore.h>
 #import "IBMConnectionsProfileService.h"
-#import "IBMProfileListView.h"
+#import "SBTProfileListView.h"
 #import "FBLog.h"
-#import "IBMAcmeUtils.h"
+#import "SBTAcmeUtils.h"
 
-@interface IBMAcmeMyProfileView ()
+@interface SBTAcmeMyProfileView ()
 
 @property (strong, nonatomic) UIImage *profilePhoto;
 @property (strong, nonatomic) UIPopoverController *popOverController;
@@ -33,7 +33,7 @@
 
 @end
 
-@implementation IBMAcmeMyProfileView
+@implementation SBTAcmeMyProfileView
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -63,7 +63,7 @@
     // If thumbnail url is nil it is probably a not complete profile info, so go ahead and retrieve it.
     // This usually happens when we retrieve a community member which only has name and userid
     if (self.myProfile.thumbnailURL == nil) {
-        UIAlertView *progressView = [IBMAcmeUtils showProgressBar];
+        UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
         [self retrieveProfileWithCompletionHandler:^(BOOL success) {
             if (success) {
                 [self.tableView reloadData];
@@ -138,7 +138,7 @@
         
         UIImageView *profilePictureView = (UIImageView *) [cell.contentView viewWithTag:1];
         profilePictureView.image = [UIImage imageNamed:@"profile_photo_default.png"];
-        [IBMAcmeUtils downloadAndSetImage:profilePictureView url:self.myProfile.thumbnailURL];
+        [SBTAcmeUtils downloadAndSetImage:profilePictureView url:self.myProfile.thumbnailURL];
         
         return cell;
     } else {
@@ -439,7 +439,7 @@
  This methods updates the profile photo and let user knows about the result
  */
 - (void) updateUI {
-    self.myProfile = [IBMAcmeUtils getMyProfileForce:YES];
+    self.myProfile = [SBTAcmeUtils getMyProfileForce:YES];
     [self.popOverController dismissPopoverAnimated:YES];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
                                                     message:[NSString stringWithFormat:@"Your photo has been changed"]
@@ -483,7 +483,7 @@
  */
 - (void) openProfileListViewWithList:(NSMutableArray *) list {
     
-    IBMProfileListView *listView = [[IBMProfileListView alloc] init];
+    SBTProfileListView *listView = [[SBTProfileListView alloc] init];
     listView.listOfProfiles = list;
     [self.navigationController pushViewController:listView animated:YES];
 }
@@ -493,7 +493,7 @@
  */
 - (void) getReportToChain {
     
-    UIAlertView *progressView = [IBMAcmeUtils showProgressBar];
+    UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
     IBMConnectionsProfileService *profileService = [[IBMConnectionsProfileService alloc] init];
     [profileService getReportToChainWithUserId:self.myProfile.email parameters:nil success:^(NSMutableArray *list) {
         if (list != nil)
@@ -512,7 +512,7 @@
  Get the profiles with the same manager as the current person
  */
 - (void) getSameManager {
-    UIAlertView *progressView = [IBMAcmeUtils showProgressBar];
+    UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
     IBMConnectionsProfileService *profileService = [[IBMConnectionsProfileService alloc] init];
     [profileService getReportToChainWithUserId:self.myProfile.email parameters:nil success:^(NSMutableArray *list) {
         if (list != nil && [list count] >= 2) {
@@ -550,7 +550,7 @@
  */
 - (void) getPeopleManaged {
     
-    UIAlertView *progressView = [IBMAcmeUtils showProgressBar];
+    UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
     IBMConnectionsProfileService *profileService = [[IBMConnectionsProfileService alloc] init];
     [profileService getDirectReportsWithUserId:self.myProfile.userId parameters:nil success:^(NSMutableArray *list) {
         if (list != nil) {

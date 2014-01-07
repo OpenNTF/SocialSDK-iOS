@@ -11,7 +11,7 @@
 		07312381187AAFE500BEE3B5 /* SBTEndPointFactory.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D09FEFF17C54B7F006B5159 /* SBTEndPointFactory.h */; };
 		07312382187AAFF000BEE3B5 /* SBTBasicEndPoint.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D09FEEE17C54B7F006B5159 /* SBTBasicEndPoint.h */; };
 		07312383187AAFFF00BEE3B5 /* SBTConnectionsBasicEndPoint.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D09FEF417C54B7F006B5159 /* SBTConnectionsBasicEndPoint.h */; };
-		07312384187AAFFF00BEE3B5 /* IBMConnectionsClientService.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D09FEF517C54B7F006B5159 /* IBMConnectionsClientService.h */; };
+		07312384187AAFFF00BEE3B5 /* SBTConnectionsClientService.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D09FEF517C54B7F006B5159 /* SBTConnectionsClientService.h */; };
 		07312385187AB00C00BEE3B5 /* SBTConstants.h in Sources */ = {isa = PBXBuildFile; fileRef = 3D09FEFC17C54B7F006B5159 /* SBTConstants.h */; };
 		3D09FF0917C54B83006B5159 /* libiOSSBTK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D09FF0817C54B83006B5159 /* libiOSSBTK.a */; };
 		3D09FF0D17C66523006B5159 /* libiOSSBTK_iphone.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D09FF0C17C66523006B5159 /* libiOSSBTK_iphone.a */; };
@@ -60,7 +60,7 @@
 		3D09FEF217C54B7F006B5159 /* SBTCommunityMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTCommunityMember.h; sourceTree = "<group>"; };
 		3D09FEF317C54B7F006B5159 /* SBTConnectionsActivityStreamService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsActivityStreamService.h; sourceTree = "<group>"; };
 		3D09FEF417C54B7F006B5159 /* SBTConnectionsBasicEndPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsBasicEndPoint.h; sourceTree = "<group>"; };
-		3D09FEF517C54B7F006B5159 /* IBMConnectionsClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBMConnectionsClientService.h; sourceTree = "<group>"; };
+		3D09FEF517C54B7F006B5159 /* SBTConnectionsClientService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsClientService.h; sourceTree = "<group>"; };
 		3D09FEF617C54B7F006B5159 /* SBTConnectionsCommunity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsCommunity.h; sourceTree = "<group>"; };
 		3D09FEF717C54B7F006B5159 /* SBTConnectionsCommunityService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsCommunityService.h; sourceTree = "<group>"; };
 		3D09FEF817C54B7F006B5159 /* SBTConnectionsFileService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTConnectionsFileService.h; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 				3D09FEF217C54B7F006B5159 /* SBTCommunityMember.h */,
 				3D09FEF317C54B7F006B5159 /* SBTConnectionsActivityStreamService.h */,
 				3D09FEF417C54B7F006B5159 /* SBTConnectionsBasicEndPoint.h */,
-				3D09FEF517C54B7F006B5159 /* IBMConnectionsClientService.h */,
+				3D09FEF517C54B7F006B5159 /* SBTConnectionsClientService.h */,
 				3D09FEF617C54B7F006B5159 /* SBTConnectionsCommunity.h */,
 				3D09FEF717C54B7F006B5159 /* SBTConnectionsCommunityService.h */,
 				3D09FEF817C54B7F006B5159 /* SBTConnectionsFileService.h */,
@@ -365,7 +365,7 @@
 			files = (
 				07312385187AB00C00BEE3B5 /* SBTConstants.h in Sources */,
 				07312383187AAFFF00BEE3B5 /* SBTConnectionsBasicEndPoint.h in Sources */,
-				07312384187AAFFF00BEE3B5 /* IBMConnectionsClientService.h in Sources */,
+				07312384187AAFFF00BEE3B5 /* SBTConnectionsClientService.h in Sources */,
 				07312382187AAFF000BEE3B5 /* SBTBasicEndPoint.h in Sources */,
 				07312381187AAFE500BEE3B5 /* SBTEndPointFactory.h in Sources */,
 				07312380187AAFD100BEE3B5 /* SBTHttpClient.h in Sources */,

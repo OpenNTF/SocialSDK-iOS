@@ -18,7 +18,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IBMAcmeSettingsView : UITableViewController
+@interface SBTAcmeSettingsView : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *listOfFlights;
 

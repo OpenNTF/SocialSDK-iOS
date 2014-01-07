@@ -16,15 +16,15 @@
 
 //  This class list the flight status read from a static file
 
-#import "IBMAcmeFlightStatusView.h"
+#import "SBTAcmeFlightStatusView.h"
 #import "IBMAcmeConstant.h"
-#import "IBMAcmeFlight.h"
+#import "SBTAcmeFlight.h"
 
-@interface IBMAcmeFlightStatusView ()
+@interface SBTAcmeFlightStatusView ()
 
 @end
 
-@implementation IBMAcmeFlightStatusView
+@implementation SBTAcmeFlightStatusView
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -64,7 +64,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    IBMAcmeFlight *flight = [self.listOfFlights objectAtIndex:indexPath.row];
+    SBTAcmeFlight *flight = [self.listOfFlights objectAtIndex:indexPath.row];
     
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];

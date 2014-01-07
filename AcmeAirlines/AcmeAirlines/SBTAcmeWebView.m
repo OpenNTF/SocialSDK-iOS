@@ -16,15 +16,15 @@
 
 //  This class is a generic webview. Before pushing or presenting it, a link needs to be set
 
-#import "IBMAcmeWebView.h"
+#import "SBTAcmeWebView.h"
 #import "FBLog.h"
 #import "IBMAcmeConstant.h"
 
-@interface IBMAcmeWebView ()
+@interface SBTAcmeWebView ()
 
 @end
 
-@implementation IBMAcmeWebView
+@implementation SBTAcmeWebView
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

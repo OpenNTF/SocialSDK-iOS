@@ -14,18 +14,18 @@
  * permissions and limitations under the License.
  */
 
-#import "IBMAcmeBookmarksView.h"
+#import "SBTAcmeBookmarksView.h"
 #import "FBLog.h"
-#import "IBMAcmeUtils.h"
-#import "IBMAcmeWebView.h"
+#import "SBTAcmeUtils.h"
+#import "SBTAcmeWebView.h"
 
-@interface IBMAcmeBookmarksView ()
+@interface SBTAcmeBookmarksView ()
 
 @property (strong, nonatomic) NSMutableArray *listOfBookmarks;
 
 @end
 
-@implementation IBMAcmeBookmarksView
+@implementation SBTAcmeBookmarksView
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -82,7 +82,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     IBMCommunityBookmark *bookmark = [self.listOfBookmarks objectAtIndex:indexPath.row];
-    IBMAcmeWebView *webView = [[IBMAcmeWebView alloc] init];
+    SBTAcmeWebView *webView = [[SBTAcmeWebView alloc] init];
     webView.link = bookmark.bUrl;
     [self.navigationController pushViewController:webView animated:YES];
     

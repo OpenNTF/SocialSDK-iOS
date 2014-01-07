@@ -18,7 +18,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IBMAcmeWebView : UIViewController
+@interface SBTAcmeWebView : UIViewController
 
 @property (strong, nonatomic) NSString *link;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *actIndicator;

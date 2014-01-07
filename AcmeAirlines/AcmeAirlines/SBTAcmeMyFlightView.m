@@ -16,18 +16,18 @@
 
 //   This class list and handles my booked flights
 
-#import "IBMAcmeMyFlightView.h"
+#import "SBTAcmeMyFlightView.h"
 #import "IBMAcmeConstant.h"
-#import "IBMAcmeFlight.h"
-#import "IBMAcmeUtils.h"
+#import "SBTAcmeFlight.h"
+#import "SBTAcmeUtils.h"
 #import "IBMHttpClient.h"
 #import "FBLog.h"
 
-@interface IBMAcmeMyFlightView ()
+@interface SBTAcmeMyFlightView ()
 
 @end
 
-@implementation IBMAcmeMyFlightView
+@implementation SBTAcmeMyFlightView
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -71,7 +71,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    IBMAcmeFlight *flight = [self.listOfMyFlights objectAtIndex:indexPath.row];
+    SBTAcmeFlight *flight = [self.listOfMyFlights objectAtIndex:indexPath.row];
     
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -148,7 +148,7 @@
         return;
     
     IBMHttpClient *httpClient = [[IBMHttpClient alloc] initWithBaseURL:
-                                 [NSURL URLWithString:[IBMAcmeUtils getAcmeUrl]]];
+                                 [NSURL URLWithString:[SBTAcmeUtils getAcmeUrl]]];
     
     NSString *path = [NSString stringWithFormat:@"/acme.social.sample.dataapp/rest/flights/%@/lists",
                       self.myProfile.email];
@@ -163,7 +163,7 @@
                         if (resultJson != nil && [resultJson count] > 0) {
                             NSMutableArray *newList = [[NSMutableArray alloc] init];
                             for (NSDictionary *entry in resultJson) {
-                                IBMAcmeFlight *flight = [[IBMAcmeFlight alloc] init];
+                                SBTAcmeFlight *flight = [[SBTAcmeFlight alloc] init];
                                 flight.flightId = [entry objectForKey:@"FlightId"];
                                 flight.status = [entry objectForKey:@"state"];
                                 flight.approver = [entry objectForKey:@"ApproverId"];

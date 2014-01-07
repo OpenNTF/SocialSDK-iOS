@@ -16,26 +16,26 @@
 
 //  This class shows an update along with its comments. It also allows user to like and comment on a post
 
-#import "IBMAcmeStatusUpdateView.h"
+#import "SBTAcmeStatusUpdateView.h"
 #import <QuartzCore/QuartzCore.h>
 #import "IBMAcmeConstant.h"
-#import "IBMAcmeUtils.h"
+#import "SBTAcmeUtils.h"
 #import "LikeButton.h"
 #import "IBMCommunityMember.h"
 #import "ComposeUpdate.h"
-#import "IBMAcmeCommunityView.h"
-#import "IBMAcmeLargeImageView.h"
-#import "IBMProfileListView.h"
+#import "SBTAcmeCommunityView.h"
+#import "SBTAcmeLargeImageView.h"
+#import "SBTProfileListView.h"
 #import "FBLog.h"
 #import "IBMConnectionsBasicEndPoint.h"
 
-@interface IBMAcmeStatusUpdateView ()
+@interface SBTAcmeStatusUpdateView ()
 
 @property (strong, nonatomic) UIBarButtonItem *addLikePostItem;
 
 @end
 
-@implementation IBMAcmeStatusUpdateView
+@implementation SBTAcmeStatusUpdateView
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -110,9 +110,9 @@
     }
     
     if ([entry.objectType isEqualToString:@"comment"])
-        return [IBMAcmeUtils getCommentCellForEntry:entry tableView:tableView atIndexPath:indexPath viewController:self];
+        return [SBTAcmeUtils getCommentCellForEntry:entry tableView:tableView atIndexPath:indexPath viewController:self];
     else
-        return [IBMAcmeUtils getStatusUpdateCellForEntry:entry tableView:tableView atIndexPath:indexPath viewController:self];
+        return [SBTAcmeUtils getStatusUpdateCellForEntry:entry tableView:tableView atIndexPath:indexPath viewController:self];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -125,9 +125,9 @@
     }
     
     if ([entry.objectType isEqualToString:@"comment"])
-        return [IBMAcmeUtils getHeightForCommentCell:entry];
+        return [SBTAcmeUtils getHeightForCommentCell:entry];
     else
-        return [IBMAcmeUtils getHeightForStatusUpdateCell:entry];
+        return [SBTAcmeUtils getHeightForStatusUpdateCell:entry];
 }
 
 
@@ -136,9 +136,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
-        if ([IBMAcmeUtils hasImage:self.entry] == YES) {
+        if ([SBTAcmeUtils hasImage:self.entry] == YES) {
             IBMActivityStreamAttachment *attachment = [self.entry.attachments objectAtIndex:0];
-            IBMAcmeLargeImageView *largeImageView = [[IBMAcmeLargeImageView alloc] init];
+            SBTAcmeLargeImageView *largeImageView = [[SBTAcmeLargeImageView alloc] init];
             largeImageView.urlStr = attachment.url;
             [self presentViewController:largeImageView animated:YES completion:^(void) {
                 
@@ -198,15 +198,15 @@
     } else {
         NSError *error = [userDict objectForKey:@"error"];
         if (error == nil) {
-            UIAlertView *progressView = [IBMAcmeUtils showProgressBar];
+            UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
             [self getEntryWithCompletionHandler:^(BOOL success) {
                 if (success)
                     [self.tableView reloadData];
                 [progressView dismissWithClickedButtonIndex:100 animated:YES];
                 [self showAlertViewWithTitle:@"" message:@"Comment is posted successfully!"];
             }];
-            if ([self.delegateViewController isKindOfClass:[IBMAcmeCommunityView class]]) {
-                ((IBMAcmeCommunityView *)self.delegateViewController).isStatusChanged = [NSNumber numberWithBool:YES];
+            if ([self.delegateViewController isKindOfClass:[SBTAcmeCommunityView class]]) {
+                ((SBTAcmeCommunityView *)self.delegateViewController).isStatusChanged = [NSNumber numberWithBool:YES];
             }
         } else {
             [self showAlertViewWithTitle:@"" message:@"Oops there was a problem while uploading!"];
@@ -226,7 +226,7 @@
         return;
     }
     
-    UIAlertView *progressView = [IBMAcmeUtils showProgressBar];
+    UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
     
     NSString *eId = self.entry.eId;
     if ([self.entry.verb isEqualToString:@"like"]) {
@@ -260,7 +260,7 @@
         }
         
         [progressView dismissWithClickedButtonIndex:100 animated:YES];
-        IBMProfileListView *listView = [[IBMProfileListView alloc] init];
+        SBTProfileListView *listView = [[SBTProfileListView alloc] init];
         listView.listOfProfiles = peopleLiked;
         listView.title = @"Likes";
         [self.navigationController pushViewController:listView animated:YES];
@@ -294,13 +294,13 @@
         path = [NSString stringWithFormat:@"connections/opensocial/rest/ublog/@all/@all/%@/likes", eId];
     }
     
-    if ([IBMAcmeUtils didILikeThisEntry:entry] == NO) {
+    if ([SBTAcmeUtils didILikeThisEntry:entry] == NO) {
         NSMutableDictionary *headers = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                         @"application/json", @"Content-Type",
                                         nil];
         [[actStrService getClientService] initPostRequestWithPath:path headers:headers parameters:nil format:RESPONSE_JSON success:^(id response, id result) {
-            if ([self.delegateViewController isKindOfClass:[IBMAcmeCommunityView class]]) {
-                ((IBMAcmeCommunityView *)self.delegateViewController).isStatusChanged = [NSNumber numberWithBool:YES];
+            if ([self.delegateViewController isKindOfClass:[SBTAcmeCommunityView class]]) {
+                ((SBTAcmeCommunityView *)self.delegateViewController).isStatusChanged = [NSNumber numberWithBool:YES];
             }
             
             [self getEntryWithCompletionHandler:^(BOOL success) {
@@ -313,8 +313,8 @@
         }];
     } else {
         [[actStrService getClientService] initDeleteRequestWithPath:path parameters:nil format:RESPONSE_JSON success:^(id response, id result) {
-            if ([self.delegateViewController isKindOfClass:[IBMAcmeCommunityView class]]) {
-                ((IBMAcmeCommunityView *)self.delegateViewController).isStatusChanged = [NSNumber numberWithBool:YES];
+            if ([self.delegateViewController isKindOfClass:[SBTAcmeCommunityView class]]) {
+                ((SBTAcmeCommunityView *)self.delegateViewController).isStatusChanged = [NSNumber numberWithBool:YES];
             }
             [self getEntryWithCompletionHandler:^(BOOL success) {
                 if (success)

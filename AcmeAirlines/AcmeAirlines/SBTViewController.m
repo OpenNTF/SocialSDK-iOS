@@ -16,7 +16,7 @@
 
 //  This is the main view of the Acme Sample App
 
-#import "IBMViewController.h"
+#import "SBTViewController.h"
 #import "IBMAcmeConstant.h"
 #import "GDataXMLNode.h"
 #import "IBMConnectionsCommunityService.h"
@@ -24,33 +24,33 @@
 #import "IBMActivityStreamEntry.h"
 #import "IBMConnectionsFileService.h"
 #import "IBMEndPointFactory.h"
-#import "IBMAppDelegate.h"
+#import "SBTAppDelegate.h"
 #import "LoginView.h"
 #import "IBMCredentialStore.h"
-#import "IBMAcmeUtils.h"
-#import "IBMAcmeCommunityView.h"
-#import "IBMAcmeSettingsView.h"
+#import "SBTAcmeUtils.h"
+#import "SBTAcmeCommunityView.h"
+#import "SBTAcmeSettingsView.h"
 #import "IBMCredentialStore.h"
 #import "IBMConstants.h"
 #import "FBLog.h"
 #import "IBMHttpClient.h"
 #import <QuartzCore/QuartzCore.h>
 #import "IBMConnectionsBasicEndPoint.h"
-#import "IBMAcmeMainViewCommonOperations.h"
+#import "SBTAcmeMainViewCommonOperations.h"
 
-@interface IBMViewController ()
+@interface SBTViewController ()
 
 @property (strong, nonatomic) NSMutableArray *listOfTitles;
 @property (strong, nonatomic) NSMutableArray *listOfIcons;
 
 @end
 
-@implementation IBMViewController
+@implementation SBTViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        _listOfTitles = [IBMAcmeMainViewCommonOperations getTitles];
-        _listOfIcons = [IBMAcmeMainViewCommonOperations getIconNames];
+        _listOfTitles = [SBTAcmeMainViewCommonOperations getTitles];
+        _listOfIcons = [SBTAcmeMainViewCommonOperations getIconNames];
     }
     
     return self;
@@ -99,8 +99,8 @@
                 if (self.myProfile == nil) {
                     [self performSelector:@selector(getMyProfile) withObject:nil afterDelay:0.2];
                 } else {
-                    if (self.myProfile != [IBMAcmeUtils getMyProfileForce:NO]) {
-                        self.myProfile = [IBMAcmeUtils getMyProfileForce:NO];
+                    if (self.myProfile != [SBTAcmeUtils getMyProfileForce:NO]) {
+                        self.myProfile = [SBTAcmeUtils getMyProfileForce:NO];
                         [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:3]] withRowAnimation:UITableViewRowAnimationAutomatic];
                     }
                 }
@@ -222,7 +222,7 @@
     } else {
         if (self.myProfile != nil && self.myProfile.thumbnailURL != nil) {
             // This sometimes returns a cached image need to look at that.
-            [IBMAcmeUtils downloadAndSetImage:imageView url:self.myProfile.thumbnailURL];
+            [SBTAcmeUtils downloadAndSetImage:imageView url:self.myProfile.thumbnailURL];
         }
     }
     
@@ -243,23 +243,23 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == 0) {
-        [IBMAcmeMainViewCommonOperations openFlightViewFor:self
+        [SBTAcmeMainViewCommonOperations openFlightViewFor:self
                                                  myProfile:self.myProfile
                                              listOfFlights:self.listOfFlights
                                               airportCodes:self.airportCodes];
     } else if (indexPath.section == 1) {
-        [IBMAcmeMainViewCommonOperations openMyFlightViewFor:self
+        [SBTAcmeMainViewCommonOperations openMyFlightViewFor:self
                                                    myProfile:self.myProfile
                                                listOfFlights:self.listOfFlights];
     } else if (indexPath.section == 2) {
-        [IBMAcmeMainViewCommonOperations openFlightStatusViewFor:self
+        [SBTAcmeMainViewCommonOperations openFlightStatusViewFor:self
                                                        myProfile:self.myProfile
                                                    listOfFlights:self.listOfFlights
                                                     airportCodes:self.airportCodes
                                                     flightStatus:self.flightStatus];
     } else if (indexPath.section == 3) {
         if (self.myProfile != nil) {
-            [IBMAcmeMainViewCommonOperations openMyProfileViewFor:self
+            [SBTAcmeMainViewCommonOperations openMyProfileViewFor:self
                                                         myProfile:self.myProfile];
         }
     }
@@ -272,7 +272,7 @@
  Internal method to to be executed when a login is neccessary
  */
 - (void) loginIsNeeded {
-    [IBMAcmeMainViewCommonOperations loginIsNeededForViewController:self];
+    [SBTAcmeMainViewCommonOperations loginIsNeededForViewController:self];
 }
 
 /**
@@ -280,12 +280,12 @@
  */
 - (void) logout {
     self.myProfile = nil;
-    for (IBMAcmeFlight *flight in self.listOfFlights) {
+    for (SBTAcmeFlight *flight in self.listOfFlights) {
         flight.status = @"";
         flight.approver = @"";
         flight.booked =[NSNumber numberWithBool:NO];
     }
-    [IBMAcmeMainViewCommonOperations logoutForViewController:self
+    [SBTAcmeMainViewCommonOperations logoutForViewController:self
                                                    myProfile:self.myProfile
                                                      flights:self.listOfFlights];
 }
@@ -294,7 +294,7 @@
  This method opens the Settings view
  */
 - (void) showSettings {
-    IBMAcmeSettingsView *settings = [[IBMAcmeSettingsView alloc] init];
+    SBTAcmeSettingsView *settings = [[SBTAcmeSettingsView alloc] init];
     settings.listOfFlights = self.listOfFlights;
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:settings];
     [self presentViewController:navController animated:YES completion:^(void) {
@@ -303,7 +303,7 @@
 }
 
 - (void) getMyProfile {
-    self.myProfile = [IBMAcmeUtils getMyProfileForce:YES];
+    self.myProfile = [SBTAcmeUtils getMyProfileForce:YES];
     [self.tableView reloadData];
 }
 
@@ -312,7 +312,7 @@
  */
 - (void) populateFlights {
     
-    [IBMAcmeMainViewCommonOperations populateFlightsWithCompletionHandler:^(NSMutableArray *list) {
+    [SBTAcmeMainViewCommonOperations populateFlightsWithCompletionHandler:^(NSMutableArray *list) {
         if (list != nil) {
             self.listOfFlights = list;
         } else {
@@ -327,7 +327,7 @@
  */
 - (void) populateAirportCodes {
     
-    [IBMAcmeMainViewCommonOperations populateAirportCodesWithCompletionHandler:^(NSMutableDictionary *airportCodes) {
+    [SBTAcmeMainViewCommonOperations populateAirportCodesWithCompletionHandler:^(NSMutableDictionary *airportCodes) {
         if (airportCodes != nil) {
             self.airportCodes = airportCodes;
         } else {
@@ -341,7 +341,7 @@
  This method populate flights' status
  */
 - (void) populateFlightStatus {
-    [IBMAcmeMainViewCommonOperations populateFlightStatusWithCompletionHandler:^(NSMutableDictionary *flightStatus) {
+    [SBTAcmeMainViewCommonOperations populateFlightStatusWithCompletionHandler:^(NSMutableDictionary *flightStatus) {
         if (flightStatus != nil) {
             self.flightStatus = flightStatus;
         } else {

@@ -18,7 +18,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IBMAcmeLargeImageView : UIViewController {
+@interface SBTAcmeLargeImageView : UIViewController {
     bool isNavHidden;
 }
 

@@ -17,17 +17,17 @@
 //  This class is a generic class to show list of people in a table view.
 //  Tapping a row will take to a new full profile view of that person.
 
-#import "IBMProfileListView.h"
+#import "SBTProfileListView.h"
 #import "IBMConnectionsProfile.h"
 #import "IBMAcmeConstant.h"
-#import "IBMAcmeMyProfileView.h"
-#import "IBMAcmeUtils.h"
+#import "SBTAcmeMyProfileView.h"
+#import "SBTAcmeUtils.h"
 
-@interface IBMProfileListView ()
+@interface SBTProfileListView ()
 
 @end
 
-@implementation IBMProfileListView
+@implementation SBTProfileListView
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -241,7 +241,7 @@
         urlStr = profile.thumbnailURL;
     }
     
-    [IBMAcmeUtils downloadAndSetImage:imageView url:urlStr];
+    [SBTAcmeUtils downloadAndSetImage:imageView url:urlStr];
     
     return cell;
 }
@@ -259,7 +259,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     IBMConnectionsProfile *profile = [self.listOfProfiles objectAtIndex:indexPath.row];
-    IBMAcmeMyProfileView *profileView = [[IBMAcmeMyProfileView alloc] init];
+    SBTAcmeMyProfileView *profileView = [[SBTAcmeMyProfileView alloc] init];
     profileView.myProfile = profile;
     [self.navigationController pushViewController:profileView animated:YES];
     

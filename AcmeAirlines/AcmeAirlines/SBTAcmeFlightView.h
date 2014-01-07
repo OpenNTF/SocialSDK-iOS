@@ -17,12 +17,12 @@
 //  This class is used to handle all flights, uncluding showing the list and booking
 
 #import <UIKit/UIKit.h>
-#import "IBMAcmeFlight.h"
+#import "SBTAcmeFlight.h"
 #import "IBMAcmeConstant.h"
 #import "IBMConnectionsProfileService.h"
 #import "IBMConnectionsActivityStreamService.h"
 
-@interface IBMAcmeFlightView : UITableViewController
+@interface SBTAcmeFlightView : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *listOfFlights;
 @property (strong, nonatomic) NSMutableDictionary *airportCodes;

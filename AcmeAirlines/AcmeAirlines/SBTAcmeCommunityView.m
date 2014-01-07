@@ -16,20 +16,20 @@
 
 //  This is a controller class to show information about the community including basic info and status updates
 
-#import "IBMAcmeCommunityView.h"
+#import "SBTAcmeCommunityView.h"
 #import "IBMConnectionsCommunityService.h"
 #import "IBMAcmeConstant.h"
 #import "IBMConnectionsActivityStreamService.h"
 #import <QuartzCore/QuartzCore.h>
-#import "IBMAcmeStatusUpdateView.h"
-#import "IBMAcmeUtils.h"
+#import "SBTAcmeStatusUpdateView.h"
+#import "SBTAcmeUtils.h"
 #import "LikeButton.h"
 #import "ComposeUpdate.h"
-#import "IBMProfileListView.h"
+#import "SBTProfileListView.h"
 #import "FBLog.h"
-#import "IBMAcmeBookmarksView.h"
+#import "SBTAcmeBookmarksView.h"
 
-@interface IBMAcmeCommunityView ()
+@interface SBTAcmeCommunityView ()
 
 @property (strong, nonatomic) IBMConnectionsCommunity *community;
 @property (strong, nonatomic) NSMutableArray *listOfMembers;
@@ -41,7 +41,7 @@
 
 @end
 
-@implementation IBMAcmeCommunityView
+@implementation SBTAcmeCommunityView
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -241,7 +241,7 @@
             UIButton *joinLeaveButton = (UIButton *) [cell.contentView viewWithTag:3];
             
             if (self.community.logoUrl != nil) {
-                [IBMAcmeUtils downloadAndSetImage:imageView url:self.community.logoUrl];
+                [SBTAcmeUtils downloadAndSetImage:imageView url:self.community.logoUrl];
             }
             
             if (self.community.title != nil) {
@@ -309,9 +309,9 @@
             }
             
             if ([entry.objectType isEqualToString:@"comment"])
-                return [IBMAcmeUtils getCommentCellForEntry:entry tableView:tableView atIndexPath:indexPath viewController:self];
+                return [SBTAcmeUtils getCommentCellForEntry:entry tableView:tableView atIndexPath:indexPath viewController:self];
             else
-                return [IBMAcmeUtils getStatusUpdateCellForEntry:entry tableView:tableView atIndexPath:indexPath viewController:self];
+                return [SBTAcmeUtils getStatusUpdateCellForEntry:entry tableView:tableView atIndexPath:indexPath viewController:self];
         }
     }
 }
@@ -338,9 +338,9 @@
             }
             
             if ([entry.objectType isEqualToString:@"comment"]) {
-                return [IBMAcmeUtils getHeightForCommentCell:entry];
+                return [SBTAcmeUtils getHeightForCommentCell:entry];
             } else {
-                return [IBMAcmeUtils getHeightForStatusUpdateCell:entry];
+                return [SBTAcmeUtils getHeightForStatusUpdateCell:entry];
             }
         }
     }
@@ -374,14 +374,14 @@
                     [profiles addObject:profile];
                 }
                 
-                IBMProfileListView *listView = [[IBMProfileListView alloc] init];
+                SBTProfileListView *listView = [[SBTProfileListView alloc] init];
                 listView.listOfProfiles = profiles;
                 listView.title = @"Members";
                 [self.navigationController pushViewController:listView animated:YES];
             } else if (indexPath.row == 2) {
                 // Bookmarks
-                UIAlertView *progressView = [IBMAcmeUtils showProgressBar];
-                IBMAcmeBookmarksView *bookmarksView = [[IBMAcmeBookmarksView alloc] init];
+                UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
+                SBTAcmeBookmarksView *bookmarksView = [[SBTAcmeBookmarksView alloc] init];
                 bookmarksView.community = self.community;
                 [bookmarksView getBookmarksWithCompletionHandler:^(BOOL success) {
                     [progressView dismissWithClickedButtonIndex:100 animated:YES];
@@ -392,9 +392,9 @@
             }
         } else {
             // Details of an entry
-            UIAlertView *progressView = [IBMAcmeUtils showProgressBar];
+            UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
             IBMActivityStreamEntry *entry = [self.listOfUpdates objectAtIndex:(indexPath.section - 1)];
-            IBMAcmeStatusUpdateView *statusUpdateView = [[IBMAcmeStatusUpdateView alloc] init];
+            SBTAcmeStatusUpdateView *statusUpdateView = [[SBTAcmeStatusUpdateView alloc] init];
             statusUpdateView.entry = entry;
             statusUpdateView.myProfile = self.myProfile;
             statusUpdateView.community = self.community;
@@ -438,7 +438,7 @@
         return;
     }
     
-    UIAlertView *progressView = [IBMAcmeUtils showProgressBar];
+    UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
     
     IBMConnectionsActivityStreamService *actStrService = [[IBMConnectionsActivityStreamService alloc] init];
     NSString *path = entry.likesUrl;
@@ -461,7 +461,7 @@
         }
         
         [progressView dismissWithClickedButtonIndex:100 animated:YES];
-        IBMProfileListView *listView = [[IBMProfileListView alloc] init];
+        SBTProfileListView *listView = [[SBTProfileListView alloc] init];
         listView.listOfProfiles = peopleLiked;
         listView.title = @"Likes";
         [self.navigationController pushViewController:listView animated:YES];
@@ -491,7 +491,7 @@
     self.state = @"updates";
     self.navigationItem.rightBarButtonItem = self.addPostItem;
     
-    UIAlertView *progressView = [IBMAcmeUtils showProgressBar];
+    UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
     IBMConnectionsActivityStreamService *actStrSrvc = [[IBMConnectionsActivityStreamService alloc] init];
     NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                        @"true", @"rollup",
@@ -581,7 +581,7 @@
     member.userId = self.myProfile.userId;
     member.email = self.myProfile.email;
     
-    UIAlertView *progressView = [IBMAcmeUtils showProgressBar];
+    UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
     IBMConnectionsCommunityService *communityService = [[IBMConnectionsCommunityService alloc] init];
     if ([self isMember]) {
         [communityService deleteMember:member fromCommunity:self.community success:^(BOOL success) {
