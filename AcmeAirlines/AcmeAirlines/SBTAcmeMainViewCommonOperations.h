@@ -43,7 +43,7 @@
  @param airportCodes: airportcodes populated from the Acme server
  */
 + (void) openFlightViewFor:(UIViewController *) viewController
-                 myProfile:(IBMConnectionsProfile *) myProfile
+                 myProfile:(SBTConnectionsProfile *) myProfile
              listOfFlights:(NSMutableArray *) listOfFlights
               airportCodes:(NSMutableDictionary *) airportCodes;
 
@@ -54,7 +54,7 @@
  @param listOfFlights: list of flights populated from the Acme server
  */
 + (void) openMyFlightViewFor:(UIViewController *) viewController
-                   myProfile:(IBMConnectionsProfile *) myProfile
+                   myProfile:(SBTConnectionsProfile *) myProfile
                listOfFlights:(NSMutableArray *) listOfFlights;
 
 /**
@@ -65,7 +65,7 @@
  @param flightStatus: dictionary of flight status
  */
 + (void) openFlightStatusViewFor:(UIViewController *) viewController
-                       myProfile:(IBMConnectionsProfile *) myProfile
+                       myProfile:(SBTConnectionsProfile *) myProfile
                    listOfFlights:(NSMutableArray *) listOfFlights
                     airportCodes:(NSMutableDictionary *) airportCodes
                     flightStatus:(NSMutableDictionary *) flightStatus;
@@ -76,7 +76,7 @@
  @param myProfile: my profile information
  */
 + (void) openMyProfileViewFor:(UIViewController *) viewController
-                    myProfile:(IBMConnectionsProfile *) myProfile;
+                    myProfile:(SBTConnectionsProfile *) myProfile;
 
 /**
  To be executed when a login is neccessary
@@ -87,7 +87,7 @@
  To be executed when user taps the logout bar button item
  */
 + (void) logoutForViewController:(UIViewController *) viewController
-                       myProfile:(IBMConnectionsProfile *) myProfile
+                       myProfile:(SBTConnectionsProfile *) myProfile
                          flights:(NSMutableArray *) listOfFlights;
 
 /**

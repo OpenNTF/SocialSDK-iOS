@@ -17,12 +17,12 @@
 //  This is a controller class to show information about the community including basic info and status updates
 
 #import <UIKit/UIKit.h>
-#import "IBMConnectionsProfile.h"
+#import <iOSSBTK/SBTConnectionsProfile.h>
 
 @interface SBTAcmeCommunityView : UITableViewController
 
 @property (strong, nonatomic) NSString *communityUuid;
-@property (strong, nonatomic) IBMConnectionsProfile *myProfile;
+@property (strong, nonatomic) SBTConnectionsProfile *myProfile;
 @property (strong, nonatomic) NSNumber *isStatusChanged;
 
 /**

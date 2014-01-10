@@ -15,11 +15,11 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "IBMConnectionsCommunityService.h"
+#import <iOSSBTK/SBTConnectionsCommunityService.h>
 
 @interface SBTAcmeBookmarksView : UITableViewController
 
-@property (strong, nonatomic) IBMConnectionsCommunity *community;
+@property (strong, nonatomic) SBTConnectionsCommunity *community;
 
 /**
  This method retrieves the bookmarks if of the test ocmmunity

@@ -20,16 +20,16 @@
 #import <QuartzCore/QuartzCore.h>
 #import "LikeButton.h"
 #import "SBTAcmeStatusUpdateView.h"
-#import "IBMCredentialStore.h"
+#import <iOSSBTK/SBTCredentialStore.h>
 #import "SBTAcmeCommunityView.h"
 #import "UIImageView+AFNetworking.h"
-#import "IBMConstants.h"
-#import "FBLog.h"
+#import <iOSSBTK/SBTConstants.h>
+#import <iOSSBTK/FBLog.h>
 
 @implementation SBTAcmeUtils
 
 + (NSString *) getAcmeUrl {
-    return [IBMCredentialStore loadWithKey:IBM_CREDENTIAL_ACME_URL];
+    return [SBTCredentialStore loadWithKey:IBM_CREDENTIAL_ACME_URL];
 }
 
 + (void) executeAsyncBlock:(void (^)(void (^completionBlock)(void))) testBlock {
@@ -46,16 +46,16 @@
 }
 
 + (NSString *) getTestCommunityUUidForFlightId:(NSString *) flightId {
-    return [IBMCredentialStore loadWithKey:flightId];
+    return [SBTCredentialStore loadWithKey:flightId];
 }
 
-+ (IBMConnectionsProfile *) getMyProfileForce:(BOOL) force {
-    static IBMConnectionsProfile *myProfile = nil;
++ (SBTConnectionsProfile *) getMyProfileForce:(BOOL) force {
+    static SBTConnectionsProfile *myProfile = nil;
     if (myProfile == nil || force) {
         void (^testBlock)(void (^completionBlock)(void)) = ^(void (^completionBlock)(void)) {
-            NSString *username = [IBMCredentialStore loadWithKey:IBM_CREDENTIAL_USERNAME];
-            IBMConnectionsProfileService *profileService = [[IBMConnectionsProfileService alloc] init];
-            [profileService getProfile:username success:^(IBMConnectionsProfile *profile) {
+            NSString *username = [SBTCredentialStore loadWithKey:IBM_CREDENTIAL_USERNAME];
+            SBTConnectionsProfileService *profileService = [[SBTConnectionsProfileService alloc] init];
+            [profileService getProfile:username success:^(SBTConnectionsProfile *profile) {
                 myProfile = profile;
                 completionBlock();
             } failure:^(NSError *error) {
@@ -94,7 +94,7 @@
     return result;
 }
 
-+ (UITableViewCell *) getStatusUpdateCellForEntry:(IBMActivityStreamEntry *) entry tableView:(UITableView *) tableView atIndexPath:(NSIndexPath *) indexPath viewController:(UIViewController *) viewController  {
++ (UITableViewCell *) getStatusUpdateCellForEntry:(SBTActivityStreamEntry *) entry tableView:(UITableView *) tableView atIndexPath:(NSIndexPath *) indexPath viewController:(UIViewController *) viewController  {
     
     if ([SBTAcmeUtils hasImage:entry] == YES) {
         return [SBTAcmeUtils getStatusUpdateWithImageCellForEntry:entry tableView:tableView atIndexPath:indexPath viewController:viewController];
@@ -119,7 +119,7 @@
     LikeButton *likeImageView = (LikeButton *) [statsView viewWithTag:3];
     LikeButton *likeButton = (LikeButton *) [statsView viewWithTag:7];
     
-    NSString *urlStr = [NSString stringWithFormat:@"%@/profiles/photo.do?userid=%@", [IBMUtils getUrlForEndPoint:@"connections"], entry.actor.aId];
+    NSString *urlStr = [NSString stringWithFormat:@"%@/profiles/photo.do?userid=%@", [SBTUtils getUrlForEndPoint:@"connections"], entry.actor.aId];
     [SBTAcmeUtils downloadAndSetImage:imageView url:urlStr];
     nameLabel.text = entry.plainTitle;
     
@@ -185,7 +185,7 @@
     return cell;
 }
 
-+ (UITableViewCell *) getCommentCellForEntry:(IBMActivityStreamEntry *) entry tableView:(UITableView *) tableView atIndexPath:(NSIndexPath *) indexPath viewController:(UIViewController *) viewController  {
++ (UITableViewCell *) getCommentCellForEntry:(SBTActivityStreamEntry *) entry tableView:(UITableView *) tableView atIndexPath:(NSIndexPath *) indexPath viewController:(UIViewController *) viewController  {
     static NSString *CellIdentifier = @"CommentCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -204,7 +204,7 @@
     LikeButton *likeImageView = (LikeButton *) [statsView viewWithTag:3];
     LikeButton *likeButton = (LikeButton *) [statsView viewWithTag:7];
     
-    NSString *urlStr = [NSString stringWithFormat:@"%@/profiles/photo.do?userid=%@", [IBMUtils getUrlForEndPoint:@"connections"], entry.actor.aId];
+    NSString *urlStr = [NSString stringWithFormat:@"%@/profiles/photo.do?userid=%@", [SBTUtils getUrlForEndPoint:@"connections"], entry.actor.aId];
     [SBTAcmeUtils downloadAndSetImage:imageView url:urlStr];
     nameLabel.text = entry.actor.name;
     
@@ -268,7 +268,7 @@
     return cell;
 }
 
-+ (UITableViewCell *) getStatusUpdateWithImageCellForEntry:(IBMActivityStreamEntry *) entry tableView:(UITableView *) tableView atIndexPath:(NSIndexPath *) indexPath viewController:(UIViewController *) viewController  {
++ (UITableViewCell *) getStatusUpdateWithImageCellForEntry:(SBTActivityStreamEntry *) entry tableView:(UITableView *) tableView atIndexPath:(NSIndexPath *) indexPath viewController:(UIViewController *) viewController  {
     static NSString *CellIdentifier = @"StatusUpdateWithImageCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
@@ -289,7 +289,7 @@
     LikeButton *likeImageView = (LikeButton *) [statsView viewWithTag:3];
     LikeButton *likeButton = (LikeButton *) [statsView viewWithTag:7];
     
-    NSString *urlStr = [NSString stringWithFormat:@"%@/profiles/photo.do?userid=%@", [IBMUtils getUrlForEndPoint:@"connections"], entry.actor.aId];
+    NSString *urlStr = [NSString stringWithFormat:@"%@/profiles/photo.do?userid=%@", [SBTUtils getUrlForEndPoint:@"connections"], entry.actor.aId];
     [SBTAcmeUtils downloadAndSetImage:profilePhotoView url:urlStr];
     nameLabel.text = entry.plainTitle;
     
@@ -353,14 +353,14 @@
         [likeButton setTitle:@"Like" forState:UIControlStateNormal];
     
     // Set image here, use only the first one
-    IBMActivityStreamAttachment *attachment = [entry.attachments objectAtIndex:0];
+    SBTActivityStreamAttachment *attachment = [entry.attachments objectAtIndex:0];
     imageView.image = nil;
     [SBTAcmeUtils downloadAndSetImage:imageView url:attachment.imageUrl];
     
     return cell;
 }
 
-+ (CGFloat) getHeightForStatusUpdateCell:(IBMActivityStreamEntry *) entry {
++ (CGFloat) getHeightForStatusUpdateCell:(SBTActivityStreamEntry *) entry {
     CGSize requiredSize = [self getRequiredSizeForText:entry.summary type:@"update"];
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         if ([SBTAcmeUtils hasImage:entry] == YES) {
@@ -377,7 +377,7 @@
     }
 }
 
-+ (CGFloat) getHeightForCommentCell:(IBMActivityStreamEntry *) entry {
++ (CGFloat) getHeightForCommentCell:(SBTActivityStreamEntry *) entry {
     CGSize requiredSize = [SBTAcmeUtils getRequiredSizeForText:entry.summary type:@"comment"];
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         return 5 + 45 + requiredSize.height + 5 + 30 + 5;
@@ -386,13 +386,13 @@
     }
 }
 
-+ (BOOL) hasImage:(IBMActivityStreamEntry *) entry {
++ (BOOL) hasImage:(SBTActivityStreamEntry *) entry {
     return (entry.attachments != nil &&
             [entry.attachments count] > 0 &&
-            [((IBMActivityStreamAttachment *)[entry.attachments objectAtIndex:0]).isImage boolValue] == YES);
+            [((SBTActivityStreamAttachment *)[entry.attachments objectAtIndex:0]).isImage boolValue] == YES);
 }
 
-+ (void) addUpdateViewToCell:(UITableViewCell *) cell entry:(IBMActivityStreamEntry *) entry viewController:(UIViewController *) viewController atIndexPath:(NSIndexPath *) indexPath {
++ (void) addUpdateViewToCell:(UITableViewCell *) cell entry:(SBTActivityStreamEntry *) entry viewController:(UIViewController *) viewController atIndexPath:(NSIndexPath *) indexPath {
     UIImageView *profilePhotoView = [self addProfilePhotoToCell:cell type:@"update"];
     //UILabel *nameLabel = [self addNameLabelNextToFrame:profilePhotoView.frame forCell:cell type:@"status"];
     UILabel *updateLabel = [self addTextLabelToCell:cell];
@@ -407,7 +407,7 @@
     [cell.contentView addSubview:statsView];
 }
 
-+ (void) addCommentViewToCell:(UITableViewCell *) cell entry:(IBMActivityStreamEntry *) entry viewController:(UIViewController *) viewController atIndexPath:(NSIndexPath *) indexPath {
++ (void) addCommentViewToCell:(UITableViewCell *) cell entry:(SBTActivityStreamEntry *) entry viewController:(UIViewController *) viewController atIndexPath:(NSIndexPath *) indexPath {
     // Profile photo
     cell.backgroundColor = [UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1];
     
@@ -425,7 +425,7 @@
     [cell.contentView addSubview:statsView];
 }
 
-+ (void) addUpdateImageViewToCell:(UITableViewCell *) cell entry:(IBMActivityStreamEntry *) entry viewController:(UIViewController *) viewController atIndexPath:(NSIndexPath *) indexPath {
++ (void) addUpdateImageViewToCell:(UITableViewCell *) cell entry:(SBTActivityStreamEntry *) entry viewController:(UIViewController *) viewController atIndexPath:(NSIndexPath *) indexPath {
     UIImageView *profilePhotoView = [self addProfilePhotoToCell:cell type:@"update"];
     //UILabel *nameLabel = [self addNameLabelNextToFrame:profilePhotoView.frame forCell:cell type:@"update"];
     UILabel *updateLabel = [self addTextLabelToCell:cell];
@@ -677,7 +677,7 @@
     return timeLabel;
 }
 
-+ (UIView *) addStatsViewForCell:(UITableViewCell *) cell after:(id) afterView entry:(IBMActivityStreamEntry *) entry viewController:(UIViewController *) viewController type:(NSString *) type atIndexPath:(NSIndexPath *) indexPath {
++ (UIView *) addStatsViewForCell:(UITableViewCell *) cell after:(id) afterView entry:(SBTActivityStreamEntry *) entry viewController:(UIViewController *) viewController type:(NSString *) type atIndexPath:(NSIndexPath *) indexPath {
     
     UIView *view = [[UIView alloc] initWithFrame:CGRectZero];
     view.backgroundColor = [UIColor clearColor];
@@ -789,15 +789,15 @@
     return view;
 }
 
-+ (BOOL) didILikeThisEntry:(IBMActivityStreamEntry *) entry {
-    IBMConnectionsProfile *myProfile = [SBTAcmeUtils getMyProfileForce:NO];
++ (BOOL) didILikeThisEntry:(SBTActivityStreamEntry *) entry {
+    SBTConnectionsProfile *myProfile = [SBTAcmeUtils getMyProfileForce:NO];
     NSMutableArray *likes;
     if ([entry.objectObjectType isEqualToString:@"comment"])
         likes = entry.targetLikes;
     else
         likes = entry.objectLikes;
     
-    for (IBMActivityStreamActor *actor in likes) {
+    for (SBTActivityStreamActor *actor in likes) {
         if ([actor.aId isEqualToString:myProfile.userId]) {
             return YES;
         }

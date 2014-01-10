@@ -17,12 +17,12 @@
 //  LikeButton used in status update and comment cells
 
 #import <UIKit/UIKit.h>
-#import "IBMActivityStreamEntry.h"
+#import <iOSSBTK/SBTActivityStreamEntry.h>
 
 @interface LikeButton : UIButton
 
 // Entry to be liked
-@property (strong, nonatomic) IBMActivityStreamEntry *entry;
+@property (strong, nonatomic) SBTActivityStreamEntry *entry;
 
 // Indexpath of the entry
 @property (strong, nonatomic) NSIndexPath *indexPath;

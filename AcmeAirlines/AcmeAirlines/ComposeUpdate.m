@@ -21,9 +21,9 @@
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <QuartzCore/QuartzCore.h>
 #import "SBTAcmeUtils.h"
-#import "IBMConnectionsFileService.h"
-#import "IBMConnectionsProfile.h"
-#import "FBLog.h"
+#import <iOSSBTK/SBTConnectionsFileService.h>
+#import <iOSSBTK/SBTConnectionsProfile.h>
+#import <iOSSBTK/FBLog.h>
 
 #define TEXT_SIZE 2000
 
@@ -386,7 +386,7 @@
                 self.statusLabel.text = @"Uploading...";
                 self.view.userInteractionEnabled = NO;
                 
-                IBMConnectionsActivityStreamService *actStrSrv = [[IBMConnectionsActivityStreamService alloc] init];
+                SBTConnectionsActivityStreamService *actStrSrv = [[SBTConnectionsActivityStreamService alloc] init];
                 NSMutableDictionary *payload = [[NSMutableDictionary alloc] initWithObjectsAndKeys:
                                                 text, @"content",
                                                 nil];
@@ -428,12 +428,12 @@
     NSString *contentType = @"image/png";
     
     NSString *fileName = [NSString stringWithFormat:@"%@.png", [[NSDate date] description]];
-    IBMConnectionsFileService *fS = [[IBMConnectionsFileService alloc] initWithEndPointName:@"connections"];
+    SBTConnectionsFileService *fS = [[SBTConnectionsFileService alloc] initWithEndPointName:@"connections"];
     [fS uploadMultiPartFileWithContent:imageData fileName:fileName mimeType:contentType fromUserType:@"communitylibrary" groupType:self.community.communityUuid appType:@"feed" success:^(id result) {
         // Now construct the payload for posting an image along with text
         NSMutableDictionary *jsonPayload = [self constructPayload:result text:text];
         
-        IBMConnectionsActivityStreamService *actStrSrv = [[IBMConnectionsActivityStreamService alloc] init];
+        SBTConnectionsActivityStreamService *actStrSrv = [[SBTConnectionsActivityStreamService alloc] init];
         NSString *communityUuidFull = [NSString stringWithFormat:@"urn:lsid:lconn.ibm.com:communities.community:%@", self.community.communityUuid];
         [actStrSrv postMBEntryUserType:communityUuidFull groupType:@"@all" appType:nil payload:jsonPayload success:^(id result) {
             [self performSelectorOnMainThread:@selector(completeUploadOption:) withObject:@"text" waitUntilDone:YES];
@@ -519,7 +519,7 @@
     }
     
     // Now construct the payload
-    IBMConnectionsProfile *myProfile = [SBTAcmeUtils getMyProfileForce:NO];
+    SBTConnectionsProfile *myProfile = [SBTAcmeUtils getMyProfileForce:NO];
     NSDictionary *author = [NSDictionary dictionaryWithObjectsAndKeys:
                             myProfile.userId, @"id",
                             nil];

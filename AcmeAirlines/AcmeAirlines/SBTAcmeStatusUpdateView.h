@@ -17,15 +17,15 @@
 //  This class shows an update along with its comments. It also allows user to like and comment on a post
 
 #import <UIKit/UIKit.h>
-#import "IBMConnectionsActivityStreamService.h"
-#import "IBMConnectionsProfile.h"
-#import "IBMConnectionsCommunity.h"
+#import <iOSSBTK/SBTConnectionsActivityStreamService.h>
+#import <iOSSBTK/SBTConnectionsProfile.h>
+#import <iOSSBTK/SBTConnectionsCommunity.h>
 
 @interface SBTAcmeStatusUpdateView : UITableViewController
 
-@property (strong, nonatomic) IBMActivityStreamEntry *entry;
-@property (strong, nonatomic) IBMConnectionsProfile *myProfile;
-@property (strong, nonatomic) IBMConnectionsCommunity *community;
+@property (strong, nonatomic) SBTActivityStreamEntry *entry;
+@property (strong, nonatomic) SBTConnectionsProfile *myProfile;
+@property (strong, nonatomic) SBTConnectionsCommunity *community;
 @property (strong, nonatomic) UIViewController *delegateViewController;
 
 /**

@@ -17,12 +17,12 @@
 //  This class present the profile information of a user
 
 #import "SBTAcmeMyProfileView.h"
-#import "IBMAcmeConstant.h"
+#import "SBTAcmeConstant.h"
 #import "SBTAcmeWebView.h"
 #import <QuartzCore/QuartzCore.h>
-#import "IBMConnectionsProfileService.h"
+#import <iOSSBTK/SBTConnectionsProfileService.h>
 #import "SBTProfileListView.h"
-#import "FBLog.h"
+#import <iOSSBTK/FBLog.h>
 #import "SBTAcmeUtils.h"
 
 @interface SBTAcmeMyProfileView ()
@@ -426,7 +426,7 @@
  This methods handles the upload process of the photo
  */
 - (void) uploadProfilePhotoWithContent:(NSData *) content {
-    IBMConnectionsProfileService *profileService = [[IBMConnectionsProfileService alloc] init];
+    SBTConnectionsProfileService *profileService = [[SBTConnectionsProfileService alloc] init];
     [profileService uploadProfilePhotoForUserId:self.myProfile.userId data:content contentType:@"image/png" success:^(BOOL success) {
         [self performSelectorOnMainThread:@selector(updateUI) withObject:nil waitUntilDone:NO];
     } failure:^(NSError *error) {
@@ -463,8 +463,8 @@
  Retrieve profile to complete missing information
  */
 - (void) retrieveProfileWithCompletionHandler:(void (^)(BOOL)) completionHandler {
-    IBMConnectionsProfileService *profileService = [[IBMConnectionsProfileService alloc] init];
-    [profileService getProfile:self.myProfile.userId success:^(IBMConnectionsProfile *profile) {
+    SBTConnectionsProfileService *profileService = [[SBTConnectionsProfileService alloc] init];
+    [profileService getProfile:self.myProfile.userId success:^(SBTConnectionsProfile *profile) {
         if (profile != nil) {
             self.myProfile = profile;
             self.title = self.myProfile.displayName;
@@ -494,7 +494,7 @@
 - (void) getReportToChain {
     
     UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
-    IBMConnectionsProfileService *profileService = [[IBMConnectionsProfileService alloc] init];
+    SBTConnectionsProfileService *profileService = [[SBTConnectionsProfileService alloc] init];
     [profileService getReportToChainWithUserId:self.myProfile.email parameters:nil success:^(NSMutableArray *list) {
         if (list != nil)
             [self openProfileListViewWithList:list];
@@ -513,11 +513,11 @@
  */
 - (void) getSameManager {
     UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
-    IBMConnectionsProfileService *profileService = [[IBMConnectionsProfileService alloc] init];
+    SBTConnectionsProfileService *profileService = [[SBTConnectionsProfileService alloc] init];
     [profileService getReportToChainWithUserId:self.myProfile.email parameters:nil success:^(NSMutableArray *list) {
         if (list != nil && [list count] >= 2) {
-            IBMConnectionsProfile *manager = [list objectAtIndex:1];
-            IBMConnectionsProfileService *profileService_ = [[IBMConnectionsProfileService alloc] init];
+            SBTConnectionsProfile *manager = [list objectAtIndex:1];
+            SBTConnectionsProfileService *profileService_ = [[SBTConnectionsProfileService alloc] init];
             [profileService_ getDirectReportsWithUserId:manager.userId parameters:nil success:^(NSMutableArray *list) {
                 if (list != nil) {
                     [self openProfileListViewWithList:list];
@@ -551,7 +551,7 @@
 - (void) getPeopleManaged {
     
     UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
-    IBMConnectionsProfileService *profileService = [[IBMConnectionsProfileService alloc] init];
+    SBTConnectionsProfileService *profileService = [[SBTConnectionsProfileService alloc] init];
     [profileService getDirectReportsWithUserId:self.myProfile.userId parameters:nil success:^(NSMutableArray *list) {
         if (list != nil) {
             [self openProfileListViewWithList:list];

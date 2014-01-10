@@ -18,14 +18,14 @@
 
 #import <UIKit/UIKit.h>
 #import "SBTAcmeFlight.h"
-#import "IBMAcmeConstant.h"
-#import "IBMConnectionsProfileService.h"
-#import "IBMConnectionsActivityStreamService.h"
+#import "SBTAcmeConstant.h"
+#import <iOSSBTK/SBTConnectionsProfileService.h>
+#import <iOSSBTK/SBTConnectionsActivityStreamService.h>
 
 @interface SBTAcmeFlightView : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *listOfFlights;
 @property (strong, nonatomic) NSMutableDictionary *airportCodes;
-@property (strong, nonatomic) IBMConnectionsProfile *myProfile;
+@property (strong, nonatomic) SBTConnectionsProfile *myProfile;
 
 @end

@@ -17,7 +17,7 @@
 //  This class list the flight status read from a static file
 
 #import "SBTAcmeFlightStatusView.h"
-#import "IBMAcmeConstant.h"
+#import "SBTAcmeConstant.h"
 #import "SBTAcmeFlight.h"
 
 @interface SBTAcmeFlightStatusView ()

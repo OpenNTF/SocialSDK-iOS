@@ -1,0 +1,18 @@
+Social Business SDK-iOS
+(c) Copyright IBM Corp. 2010, 2013
+
+This product includes software developed for
+OpenNTF (http://www.OpenNTF.Org/).
+
+AFNetworking 1.3.1
+Licensed under MIT
+Available from http://afnetworking.com/
+
+GDataXMLNode
+Licensed under Apache 2.0
+Available from http://code.google.com/p/gdata-objectivec-client/source/browse/trunk/Source/XMLSupport/
+
+Your use of this project to create applications for iOS will require the use of xCode and the iOS SDK.  Use of this material is governed by the Apple Mac SDK and xCode agreements and the iOS SDK agreement- http://www.apple.com/legal/sla/docs/xcode.pdf. 
+
+IBM has submitted the sample application included in this toolkit for distribution at the Apple App store.  Therefore, according to Apple's requirements, you may not submit an application based on the sample application to the Apple App Store without making substantial modifications to functionality and appearance.   
+

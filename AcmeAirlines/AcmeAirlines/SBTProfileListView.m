@@ -18,8 +18,8 @@
 //  Tapping a row will take to a new full profile view of that person.
 
 #import "SBTProfileListView.h"
-#import "IBMConnectionsProfile.h"
-#import "IBMAcmeConstant.h"
+#import <iOSSBTK/SBTConnectionsProfile.h>
+#import "SBTAcmeConstant.h"
 #import "SBTAcmeMyProfileView.h"
 #import "SBTAcmeUtils.h"
 
@@ -66,7 +66,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    IBMConnectionsProfile *profile = [self.listOfProfiles objectAtIndex:indexPath.row];
+    SBTConnectionsProfile *profile = [self.listOfProfiles objectAtIndex:indexPath.row];
     
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -236,7 +236,7 @@
     // Download and set the profile photo
     NSString *urlStr;
     if (profile.thumbnailURL == nil) {
-        urlStr = [NSString stringWithFormat:@"%@/profiles/photo.do?userid=%@", [IBMUtils getUrlForEndPoint:@"connections"], profile.userId];
+        urlStr = [NSString stringWithFormat:@"%@/profiles/photo.do?userid=%@", [SBTUtils getUrlForEndPoint:@"connections"], profile.userId];
     } else {
         urlStr = profile.thumbnailURL;
     }
@@ -258,7 +258,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    IBMConnectionsProfile *profile = [self.listOfProfiles objectAtIndex:indexPath.row];
+    SBTConnectionsProfile *profile = [self.listOfProfiles objectAtIndex:indexPath.row];
     SBTAcmeMyProfileView *profileView = [[SBTAcmeMyProfileView alloc] init];
     profileView.myProfile = profile;
     [self.navigationController pushViewController:profileView animated:YES];

@@ -17,12 +17,12 @@
 //   This class list and handles my booked flights
 
 #import <UIKit/UIKit.h>
-#import "IBMConnectionsProfile.h"
+#import <iOSSBTK/SBTConnectionsProfile.h>
 
 @interface SBTAcmeMyFlightView : UITableViewController
 
 @property (strong, nonatomic) NSMutableArray *listOfFlights;
 @property (strong, nonatomic) NSMutableArray *listOfMyFlights;
-@property (strong, nonatomic) IBMConnectionsProfile *myProfile;
+@property (strong, nonatomic) SBTConnectionsProfile *myProfile;
 
 @end

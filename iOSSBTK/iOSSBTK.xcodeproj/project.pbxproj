@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		073B65EA18508A56000FDFB6 /* OCLint */ = {
+		073B65EA18508A56000FDFB6 /* iOSSBTK-OCLint */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 073B65ED18508A56000FDFB6 /* Build configuration list for PBXAggregateTarget "OCLint" */;
+			buildConfigurationList = 073B65ED18508A56000FDFB6 /* Build configuration list for PBXAggregateTarget "iOSSBTK-OCLint" */;
 			buildPhases = (
 				073B65EE1850C593000FDFB6 /* ShellScript */,
 			);
@@ -17,7 +17,7 @@
 				073B65F21850DE08000FDFB6 /* PBXTargetDependency */,
 				073B65F01850DE04000FDFB6 /* PBXTargetDependency */,
 			);
-			name = OCLint;
+			name = "iOSSBTK-OCLint";
 			productName = OCLint;
 		};
 /* End PBXAggregateTarget section */
@@ -961,7 +961,7 @@
 			targets = (
 				3D824C4617AFECB8000AD1EF /* iOSSBTK */,
 				3D824ED917B00FC3000AD1EF /* TestiOSSBTK */,
-				073B65EA18508A56000FDFB6 /* OCLint */,
+				073B65EA18508A56000FDFB6 /* iOSSBTK-OCLint */,
 			);
 		};
 /* End PBXProject section */
@@ -1181,6 +1181,7 @@
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = iOSSBTK;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -1194,6 +1195,7 @@
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = iOSSBTK;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -1237,7 +1239,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		073B65ED18508A56000FDFB6 /* Build configuration list for PBXAggregateTarget "OCLint" */ = {
+		073B65ED18508A56000FDFB6 /* Build configuration list for PBXAggregateTarget "iOSSBTK-OCLint" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				073B65EB18508A56000FDFB6 /* Debug */,

@@ -17,7 +17,7 @@
 //  This class is the main view designed for iPad
 
 #import <UIKit/UIKit.h>
-#import "IBMConnectionsProfileService.h"
+#import <iOSSBTK/SBTConnectionsProfileService.h>
 
 @interface SBTViewControllerIpad : UIViewController
 
@@ -25,6 +25,6 @@
 @property (strong, nonatomic) NSMutableArray *listOfFlights;
 @property (strong, nonatomic) NSMutableDictionary *flightStatus;
 @property (strong, nonatomic) NSMutableDictionary *airportCodes;
-@property (strong, nonatomic) IBMConnectionsProfile *myProfile;
+@property (strong, nonatomic) SBTConnectionsProfile *myProfile;
 
 @end

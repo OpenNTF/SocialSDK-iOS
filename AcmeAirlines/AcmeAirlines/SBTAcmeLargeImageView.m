@@ -20,7 +20,7 @@
 #import "ComposeUpdate.h"
 #import "SBTAcmeUtils.h"
 #import "UIImageView+AFNetworking.h"
-#import "FBLog.h"
+#import <iOSSBTK/FBLog.h>
 
 #define ZOOM_STEP 1.5
 

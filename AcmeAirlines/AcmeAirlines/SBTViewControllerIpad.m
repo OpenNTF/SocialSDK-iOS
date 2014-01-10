@@ -17,20 +17,20 @@
 //  This class is the main view designed for iPad
 
 #import "SBTViewControllerIpad.h"
-#import "IBMViewControllerIpadCell.h"
-#import "IBMCredentialStore.h"
+#import "SBTViewControllerIpadCell.h"
+#import <iOSSBTK/SBTCredentialStore.h>
 #import "SBTAcmeUtils.h"
-#import "IBMAcmeConstant.h"
+#import "SBTAcmeConstant.h"
 #import "SBTAcmeFlight.h"
 #import "LoginView.h"
 #import "SBTAcmeSettingsView.h"
 #import "AFImageRequestOperation.h"
 #import "SBTAcmeCommunityView.h"
-#import "IBMCredentialStore.h"
-#import "IBMConstants.h"
-#import "IBMHttpClient.h"
-#import "FBLog.h"
-#import "IBMConnectionsBasicEndPoint.h"
+#import <iOSSBTK/SBTCredentialStore.h>
+#import <iOSSBTK/SBTConstants.h>
+#import <iOSSBTK/SBTHttpClient.h>
+#import <iOSSBTK/FBLog.h>
+#import <iOSSBTK/SBTConnectionsBasicEndPoint.h>
 #import "SBTAcmeMainViewCommonOperations.h"
 
 @interface SBTViewControllerIpad ()
@@ -72,21 +72,21 @@
     self.navigationItem.rightBarButtonItem = logoutItem;
     self.navigationItem.leftBarButtonItem = settingsItem;
     
-    [self.collectionView registerClass:[IBMViewControllerIpadCell class]
-            forCellWithReuseIdentifier:@"IBMViewControllerIpadCell"];
+    [self.collectionView registerClass:[SBTViewControllerIpadCell class]
+            forCellWithReuseIdentifier:@"SBTViewControllerIpadCell"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    NSString *connectionsUrl = [IBMCredentialStore loadWithKey:IBM_CREDENTIAL_CONNECTIONS_URL];
-    NSString *acmeUrl = [IBMCredentialStore loadWithKey:IBM_CREDENTIAL_ACME_URL];
+    NSString *connectionsUrl = [SBTCredentialStore loadWithKey:IBM_CREDENTIAL_CONNECTIONS_URL];
+    NSString *acmeUrl = [SBTCredentialStore loadWithKey:IBM_CREDENTIAL_ACME_URL];
     
     if (connectionsUrl == nil || acmeUrl == nil) {
         // login is required
         [self performSelector:@selector(loginIsNeeded) withObject:nil afterDelay:0.2];
     } else {
-        IBMConnectionsBasicEndPoint *endPoint = (IBMConnectionsBasicEndPoint *) [IBMEndPoint findEndPoint:@"connections"];
+        SBTConnectionsBasicEndPoint *endPoint = (SBTConnectionsBasicEndPoint *) [SBTEndPoint findEndPoint:@"connections"];
         [endPoint isAuthenticatedWithCompletionHandler:^(NSError *error) {
             if (error == nil) {
                 if (self.airportCodes == nil)
@@ -133,7 +133,7 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    IBMViewControllerIpadCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"IBMViewControllerIpadCell" forIndexPath:indexPath];
+    SBTViewControllerIpadCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"SBTViewControllerIpadCell" forIndexPath:indexPath];
     cell.backgroundColor = [UIColor clearColor];
     
     NSString *title = [self.titles objectAtIndex:(indexPath.section * 2 + indexPath.row)];;

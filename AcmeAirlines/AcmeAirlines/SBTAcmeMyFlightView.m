@@ -17,11 +17,11 @@
 //   This class list and handles my booked flights
 
 #import "SBTAcmeMyFlightView.h"
-#import "IBMAcmeConstant.h"
+#import "SBTAcmeConstant.h"
 #import "SBTAcmeFlight.h"
 #import "SBTAcmeUtils.h"
-#import "IBMHttpClient.h"
-#import "FBLog.h"
+#import <iOSSBTK/SBTHttpClient.h>
+#import <iOSSBTK/FBLog.h>
 
 @interface SBTAcmeMyFlightView ()
 
@@ -147,7 +147,7 @@
     if (self.myProfile == nil)
         return;
     
-    IBMHttpClient *httpClient = [[IBMHttpClient alloc] initWithBaseURL:
+    SBTHttpClient *httpClient = [[SBTHttpClient alloc] initWithBaseURL:
                                  [NSURL URLWithString:[SBTAcmeUtils getAcmeUrl]]];
     
     NSString *path = [NSString stringWithFormat:@"/acme.social.sample.dataapp/rest/flights/%@/lists",

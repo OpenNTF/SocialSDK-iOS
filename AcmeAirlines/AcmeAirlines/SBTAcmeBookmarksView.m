@@ -15,7 +15,7 @@
  */
 
 #import "SBTAcmeBookmarksView.h"
-#import "FBLog.h"
+#import <iOSSBTK/FBLog.h>
 #import "SBTAcmeUtils.h"
 #import "SBTAcmeWebView.h"
 
@@ -73,7 +73,7 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
-    IBMCommunityBookmark *bookmark = [self.listOfBookmarks objectAtIndex:indexPath.row];
+    SBTCommunityBookmark *bookmark = [self.listOfBookmarks objectAtIndex:indexPath.row];
     cell.textLabel.text = bookmark.title;
     cell.detailTextLabel.text = bookmark.summary;
     
@@ -81,7 +81,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    IBMCommunityBookmark *bookmark = [self.listOfBookmarks objectAtIndex:indexPath.row];
+    SBTCommunityBookmark *bookmark = [self.listOfBookmarks objectAtIndex:indexPath.row];
     SBTAcmeWebView *webView = [[SBTAcmeWebView alloc] init];
     webView.link = bookmark.bUrl;
     [self.navigationController pushViewController:webView animated:YES];
@@ -92,7 +92,7 @@
 #pragma mark - Helper methods
 
 - (void) getBookmarksWithCompletionHandler:(void (^)(BOOL)) completionHandler {
-    IBMConnectionsCommunityService *commService = [[IBMConnectionsCommunityService alloc] init];
+    SBTConnectionsCommunityService *commService = [[SBTConnectionsCommunityService alloc] init];
     [commService getBookmarksForCommunity:self.community
                                   success:^(NSMutableArray *list) {
                                       self.listOfBookmarks = list;

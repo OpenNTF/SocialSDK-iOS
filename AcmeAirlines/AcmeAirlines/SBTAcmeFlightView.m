@@ -20,8 +20,8 @@
 #import "SBTAcmeUtils.h"
 #import "SBTAcmeCommunityView.h"
 #import "SBTProfileListView.h"
-#import "IBMHttpClient.h"
-#import "FBLog.h"
+#import <iOSSBTK/SBTHttpClient.h>
+#import <iOSSBTK/FBLog.h>
 
 @interface SBTAcmeFlightView ()
 
@@ -218,7 +218,7 @@
 
 - (void) getUsersAndCheckWithColleagues:(NSMutableDictionary *) colleagues flight:(SBTAcmeFlight *) flight completionHandler:(void (^)(NSMutableArray *)) completionHandler; {
     NSURL *baseUrl = [NSURL URLWithString:[SBTAcmeUtils getAcmeUrl]];
-    IBMHttpClient *httpClient = [[IBMHttpClient alloc] initWithBaseURL:baseUrl];
+    SBTHttpClient *httpClient = [[SBTHttpClient alloc] initWithBaseURL:baseUrl];
     NSString *path = [NSString stringWithFormat:@"/acme.social.sample.dataapp/rest/flights/%@/users", flight.flightId];
     [httpClient getPath:path
              parameters:nil
@@ -241,10 +241,10 @@
 }
 
 - (void) retrieveColleaguesForFlight:(SBTAcmeFlight *) flight completionHandler:(void (^)(NSMutableArray *)) completionHandler {
-    IBMConnectionsProfileService *profileService = [[IBMConnectionsProfileService alloc] init];
+    SBTConnectionsProfileService *profileService = [[SBTConnectionsProfileService alloc] init];
     [profileService getColleaguesWithProfile:self.myProfile success:^(NSMutableArray *list) {
         NSMutableDictionary *dictionary = [[NSMutableDictionary alloc] init];
-        for (IBMConnectionsProfile *profile in list) {
+        for (SBTConnectionsProfile *profile in list) {
             [dictionary setObject:profile forKey:profile.email];
         }
         [dictionary setObject:self.myProfile forKey:self.myProfile.email];
@@ -263,15 +263,15 @@
  @param myProfile: myProfile
  */
 - (void) getFirstLineManagerWithFlight:(SBTAcmeFlight *) flight
-                             myProfile:(IBMConnectionsProfile *) myProfile
+                             myProfile:(SBTConnectionsProfile *) myProfile
                      completionHandler:(void (^)(BOOL)) completionHandler {
     
-    IBMConnectionsProfileService *profileService = [[IBMConnectionsProfileService alloc] init];
+    SBTConnectionsProfileService *profileService = [[SBTConnectionsProfileService alloc] init];
     [profileService getReportToChainWithUserId:self.myProfile.email
                                     parameters:nil
                                        success:^(NSMutableArray *list) {
                                            if (list != nil && [list count] > 1) {
-                                               IBMConnectionsProfile *manager = [list objectAtIndex:1];
+                                               SBTConnectionsProfile *manager = [list objectAtIndex:1];
                                                flight.approver = manager.displayName;
                                                [self putRequestToAcmeWithFlight:flight
                                                                       myProfile:myProfile
@@ -302,12 +302,12 @@
  @param manager
  */
 - (void) putRequestToAcmeWithFlight:(SBTAcmeFlight *) flight
-                          myProfile:(IBMConnectionsProfile *) myProfile
-                            manager:(IBMConnectionsProfile *) manager
+                          myProfile:(SBTConnectionsProfile *) myProfile
+                            manager:(SBTConnectionsProfile *) manager
                   completionHandler:(void (^)(BOOL)) completionHandler {
     
     NSURL *baseUrl = [NSURL URLWithString:[SBTAcmeUtils getAcmeUrl]];
-    IBMHttpClient *httpClient = [[IBMHttpClient alloc] initWithBaseURL:baseUrl];
+    SBTHttpClient *httpClient = [[SBTHttpClient alloc] initWithBaseURL:baseUrl];
     [httpClient setDefaultHeader:@"Content-Type" value:@"application/json"];
     NSDictionary *jsonDict = [NSDictionary dictionaryWithObjectsAndKeys:
                               myProfile.email, @"UserId",
@@ -345,11 +345,11 @@
  @param manager
  */
 - (void) postActivityStreamWithFlight:(SBTAcmeFlight *) flight
-                            myProfile:(IBMConnectionsProfile *) myProfile
-                              manager:(IBMConnectionsProfile *) manager
+                            myProfile:(SBTConnectionsProfile *) myProfile
+                              manager:(SBTConnectionsProfile *) manager
                     completionHandler:(void (^)(BOOL)) completionHandler {
     
-    IBMConnectionsActivityStreamService *actStrService = [[IBMConnectionsActivityStreamService alloc] init];
+    SBTConnectionsActivityStreamService *actStrService = [[SBTConnectionsActivityStreamService alloc] init];
     NSDictionary *payload = [self generatePayloaWithFlight:flight myProfile:myProfile manager:manager];
     [actStrService postEntry:payload
                   parameters:nil
@@ -380,8 +380,8 @@
  @param manager
  */
 - (NSDictionary *) generatePayloaWithFlight:(SBTAcmeFlight *) flight
-                                  myProfile:(IBMConnectionsProfile *) myProfile
-                                    manager:(IBMConnectionsProfile *) manager {
+                                  myProfile:(SBTConnectionsProfile *) myProfile
+                                    manager:(SBTConnectionsProfile *) manager {
     
     NSString *homePageUrl = [NSString stringWithFormat:@"%@/acme.social.sample.webapp", [SBTAcmeUtils getAcmeUrl]];
     NSString *myId = myProfile.userId;

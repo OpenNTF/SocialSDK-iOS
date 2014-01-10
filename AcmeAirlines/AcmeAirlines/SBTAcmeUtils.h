@@ -17,9 +17,9 @@
 //  Utils class for various operations
 
 #import <Foundation/Foundation.h>
-#import "IBMAcmeConstant.h"
-#import "IBMActivityStreamEntry.h"
-#import "IBMConnectionsProfileService.h"
+#import "SBTAcmeConstant.h"
+#import <iOSSBTK/SBTActivityStreamEntry.h>
+#import <iOSSBTK/SBTConnectionsProfileService.h>
 
 @interface SBTAcmeUtils : NSObject
 
@@ -32,7 +32,7 @@
  Get currently logged in user's profile
  @param force: if YES, it will retrieve it again. Otherwise static variable will be returned
  */
-+ (IBMConnectionsProfile *) getMyProfileForce:(BOOL) force;
++ (SBTConnectionsProfile *) getMyProfileForce:(BOOL) force;
 
 /**
  Get the test community uuid from Credential Store
@@ -47,27 +47,27 @@
 /**
  This method returns a table view cell for status update
  */
-+ (UITableViewCell *) getStatusUpdateCellForEntry:(IBMActivityStreamEntry *) entry tableView:(UITableView *) tableView atIndexPath:(NSIndexPath *) indexPath viewController:(UIViewController *) viewController;
++ (UITableViewCell *) getStatusUpdateCellForEntry:(SBTActivityStreamEntry *) entry tableView:(UITableView *) tableView atIndexPath:(NSIndexPath *) indexPath viewController:(UIViewController *) viewController;
 
 /**
  This method returns a table view cell for comment entry
  */
-+ (UITableViewCell *) getCommentCellForEntry:(IBMActivityStreamEntry *) entry tableView:(UITableView *) tableView atIndexPath:(NSIndexPath *) indexPath viewController:(UIViewController *) viewController;
++ (UITableViewCell *) getCommentCellForEntry:(SBTActivityStreamEntry *) entry tableView:(UITableView *) tableView atIndexPath:(NSIndexPath *) indexPath viewController:(UIViewController *) viewController;
 
 /**
  This method returns a table view cell for status update with an image in it
  */
-+ (UITableViewCell *) getStatusUpdateWithImageCellForEntry:(IBMActivityStreamEntry *) entry tableView:(UITableView *) tableView atIndexPath:(NSIndexPath *) indexPath viewController:(UIViewController *) viewController;
++ (UITableViewCell *) getStatusUpdateWithImageCellForEntry:(SBTActivityStreamEntry *) entry tableView:(UITableView *) tableView atIndexPath:(NSIndexPath *) indexPath viewController:(UIViewController *) viewController;
 
 /**
  Get the actual height of the given entry for status update
  */
-+ (CGFloat) getHeightForStatusUpdateCell:(IBMActivityStreamEntry *) entry;
++ (CGFloat) getHeightForStatusUpdateCell:(SBTActivityStreamEntry *) entry;
 
 /**
  Get the actual height of the given entry for comment
  */
-+ (CGFloat) getHeightForCommentCell:(IBMActivityStreamEntry *) entry;
++ (CGFloat) getHeightForCommentCell:(SBTActivityStreamEntry *) entry;
 
 /**
  Text Size for the status updaye
@@ -106,12 +106,12 @@
 /**
  Convenience method to decide if I liked a given entry
  */
-+ (BOOL) didILikeThisEntry:(IBMActivityStreamEntry *) entry;
++ (BOOL) didILikeThisEntry:(SBTActivityStreamEntry *) entry;
 
 /**
  Determine if an entry has an image
  */
-+ (BOOL) hasImage:(IBMActivityStreamEntry *) entry;
++ (BOOL) hasImage:(SBTActivityStreamEntry *) entry;
 
 /**
  Show progress bar to indicate some processing is taking place

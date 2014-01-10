@@ -17,7 +17,7 @@
 //  This is the main view of the Acme Sample App
 
 #import <UIKit/UIKit.h>
-#import "IBMConnectionsProfileService.h"
+#import <iOSSBTK/SBTConnectionsProfileService.h>
 
 @interface SBTViewController : UIViewController
 
@@ -26,6 +26,6 @@
 @property (strong, nonatomic) NSMutableArray *listOfFlights;
 @property (strong, nonatomic) NSMutableDictionary *flightStatus;
 @property (strong, nonatomic) NSMutableDictionary *airportCodes;
-@property (strong, nonatomic) IBMConnectionsProfile *myProfile;
+@property (strong, nonatomic) SBTConnectionsProfile *myProfile;
 
 @end

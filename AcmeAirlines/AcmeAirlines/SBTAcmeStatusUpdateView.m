@@ -18,16 +18,16 @@
 
 #import "SBTAcmeStatusUpdateView.h"
 #import <QuartzCore/QuartzCore.h>
-#import "IBMAcmeConstant.h"
+#import "SBTAcmeConstant.h"
 #import "SBTAcmeUtils.h"
 #import "LikeButton.h"
-#import "IBMCommunityMember.h"
+#import <iOSSBTK/SBTCommunityMember.h>
 #import "ComposeUpdate.h"
 #import "SBTAcmeCommunityView.h"
 #import "SBTAcmeLargeImageView.h"
 #import "SBTProfileListView.h"
-#import "FBLog.h"
-#import "IBMConnectionsBasicEndPoint.h"
+#import <iOSSBTK/FBLog.h>
+#import <iOSSBTK/SBTConnectionsBasicEndPoint.h>
 
 @interface SBTAcmeStatusUpdateView ()
 
@@ -102,7 +102,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    IBMActivityStreamEntry *entry;
+    SBTActivityStreamEntry *entry;
     if (indexPath.row == 0) {
         entry = self.entry;
     } else {
@@ -117,7 +117,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    IBMActivityStreamEntry *entry;
+    SBTActivityStreamEntry *entry;
     if (indexPath.row == 0) {
         entry = self.entry;
     } else {
@@ -137,7 +137,7 @@
 {
     if (indexPath.row == 0) {
         if ([SBTAcmeUtils hasImage:self.entry] == YES) {
-            IBMActivityStreamAttachment *attachment = [self.entry.attachments objectAtIndex:0];
+            SBTActivityStreamAttachment *attachment = [self.entry.attachments objectAtIndex:0];
             SBTAcmeLargeImageView *largeImageView = [[SBTAcmeLargeImageView alloc] init];
             largeImageView.urlStr = attachment.url;
             [self presentViewController:largeImageView animated:YES completion:^(void) {
@@ -220,7 +220,7 @@
  See who liked the entry
  */
 - (void) whoLikeButtonIsTapped:(LikeButton *) button {
-    IBMActivityStreamEntry *entry = button.entry;
+    SBTActivityStreamEntry *entry = button.entry;
     
     if ([entry.numLikes intValue] == 0) {
         return;
@@ -239,7 +239,7 @@
         eId =  entry.objectId;
     }
     
-    IBMConnectionsActivityStreamService *actStrService = [[IBMConnectionsActivityStreamService alloc] init];
+    SBTConnectionsActivityStreamService *actStrService = [[SBTConnectionsActivityStreamService alloc] init];
     NSString *path = [NSString stringWithFormat:@"connections/opensocial/rest/ublog/@all/@all/%@/likes", eId];
     //path = [path stringByAppendingFormat:@"/%@", self.myProfile.userId];
     [[actStrService getClientService] initGetRequestWithPath:path parameters:nil format:RESPONSE_JSON success:^(id response, NSDictionary *resultDict) {
@@ -248,7 +248,7 @@
         NSMutableArray *list = [resultDict objectForKey:@"list"];
         for (NSDictionary *item in list) {
             NSDictionary *author = [item objectForKey:@"author"];
-            IBMConnectionsProfile *profile = [[IBMConnectionsProfile alloc] init];
+            SBTConnectionsProfile *profile = [[SBTConnectionsProfile alloc] init];
             NSString *actorIdPattern = @"urn:lsid:lconn.ibm.com:profiles.person:";
             if ([[author valueForKey:@"id"] hasPrefix:actorIdPattern]) {
                 profile.userId = [[author valueForKey:@"id"] substringFromIndex:[actorIdPattern length]];
@@ -277,8 +277,8 @@
  */
 - (void) likeButtonIsTapped:(LikeButton *) button {
     
-    IBMActivityStreamEntry *entry = button.entry;
-    IBMConnectionsActivityStreamService *actStrService = [[IBMConnectionsActivityStreamService alloc] init];
+    SBTActivityStreamEntry *entry = button.entry;
+    SBTConnectionsActivityStreamService *actStrService = [[SBTConnectionsActivityStreamService alloc] init];
     NSString *eId = entry.eId;
     NSString *path;
     if ([entry.verb isEqualToString:@"like"]) {
@@ -349,11 +349,11 @@
     }
     
     // First get the status update entry
-    IBMConnectionsBasicEndPoint *endPoint = (IBMConnectionsBasicEndPoint *) [IBMEndPoint findEndPoint:@"connections"];
+    SBTConnectionsBasicEndPoint *endPoint = (SBTConnectionsBasicEndPoint *) [SBTEndPoint findEndPoint:@"connections"];
     NSString *path = [NSString stringWithFormat:@"connections/opensocial/basic/rest/ublog/@me/@all/%@", eId];
     [endPoint initGetRequestWithPath:path parameters:nil format:RESPONSE_JSON success:^(id response, NSDictionary *result) {
         NSDictionary *resultDict = [result objectForKey:@"entry"];
-        IBMActivityStreamEntry *entry = [[IBMActivityStreamEntry alloc] init];
+        SBTActivityStreamEntry *entry = [[SBTActivityStreamEntry alloc] init];
         entry.summary = [resultDict objectForKey:@"summary"];
         entry.numComments = [[resultDict objectForKey:@"replies"] objectForKey:@"totalItems"];
         entry.objectType = [resultDict objectForKey:@"objectType"];
@@ -363,7 +363,7 @@
         entry.numLikes = [[resultDict objectForKey:@"likes"] objectForKey:@"totalItems"];
         entry.published = [resultDict objectForKey:@"published"];
         entry.updated = [resultDict objectForKey:@"published"];
-        IBMActivityStreamActor *actor = [[IBMActivityStreamActor alloc] init];
+        SBTActivityStreamActor *actor = [[SBTActivityStreamActor alloc] init];
         NSDictionary *authorD = [resultDict objectForKey:@"author"];
         NSString *actorIdPattern = @"urn:lsid:lconn.ibm.com:profiles.person:";
         if ([[authorD valueForKey:@"id"] hasPrefix:actorIdPattern]) {
@@ -384,7 +384,7 @@
             NSMutableArray *replies = [[NSMutableArray alloc] init];
             NSMutableArray *list = [resultDict objectForKey:@"list"];
             for (NSDictionary *item in list) {
-                IBMActivityStreamEntry *comment = [[IBMActivityStreamEntry alloc] init];
+                SBTActivityStreamEntry *comment = [[SBTActivityStreamEntry alloc] init];
                 comment.objectType = @"comment";
                 comment.objectObjectType = @"comment";
                 comment.verb = @"comment";
@@ -394,7 +394,7 @@
                 comment.updated = [item objectForKey:@"published"];
                 comment.published = [item objectForKey:@"published"];
                 NSDictionary *authorDict = [item objectForKey:@"author"];
-                IBMActivityStreamActor *actor = [[IBMActivityStreamActor alloc] init];
+                SBTActivityStreamActor *actor = [[SBTActivityStreamActor alloc] init];
                 NSString *actorIdPattern = @"urn:lsid:lconn.ibm.com:profiles.person:";
                 if ([[authorDict valueForKey:@"id"] hasPrefix:actorIdPattern]) {
                     actor.aId = [[authorDict valueForKey:@"id"] substringFromIndex:[actorIdPattern length]];
@@ -420,7 +420,7 @@
                 NSMutableArray *list = [resultDict objectForKey:@"list"];
                 for (NSDictionary *item in list) {
                     NSDictionary *author = [item objectForKey:@"author"];
-                    IBMActivityStreamActor *member = [[IBMActivityStreamActor alloc] init];
+                    SBTActivityStreamActor *member = [[SBTActivityStreamActor alloc] init];
                     NSString *actorIdPattern = @"urn:lsid:lconn.ibm.com:profiles.person:";
                     if ([[author valueForKey:@"id"] hasPrefix:actorIdPattern]) {
                         member.aId = [[author valueForKey:@"id"] substringFromIndex:[actorIdPattern length]];
@@ -461,7 +461,7 @@
         NSMutableArray *items = [likes objectForKey:@"items"];
         if (items != nil && [items count] > 0) {
             for (NSDictionary *item in items) {
-                IBMActivityStreamActor *actor = [[IBMActivityStreamActor alloc] init];
+                SBTActivityStreamActor *actor = [[SBTActivityStreamActor alloc] init];
                 NSString *actorIdPattern = @"urn:lsid:lconn.ibm.com:profiles.person:";
                 if ([[item valueForKey:@"id"] hasPrefix:actorIdPattern]) {
                     actor.aId = [[item valueForKey:@"id"] substringFromIndex:[actorIdPattern length]];
@@ -482,13 +482,13 @@
     NSMutableArray *listOfAttachments = [[NSMutableArray alloc] init];
     NSMutableArray *attachments = [object objectForKey:@"attachments"];
     for (NSDictionary *attachmentDict in attachments) {
-        IBMActivityStreamAttachment *attachment = [[IBMActivityStreamAttachment alloc] init];
+        SBTActivityStreamAttachment *attachment = [[SBTActivityStreamAttachment alloc] init];
         attachment.aId = [attachmentDict objectForKey:@"id"];
         attachment.displayName = [attachmentDict objectForKey:@"displayName"];
         attachment.summary = [attachmentDict objectForKey:@"summary"];
         NSDictionary *authorDict = [attachmentDict objectForKey:@"author"];
         
-        IBMActivityStreamActor *author = [[IBMActivityStreamActor alloc] init];
+        SBTActivityStreamActor *author = [[SBTActivityStreamActor alloc] init];
         author.aId = [authorDict objectForKey:@"id"];
         author.name = [authorDict objectForKey:@"displayName"];
         author.type = [authorDict objectForKey:@"objectType"];

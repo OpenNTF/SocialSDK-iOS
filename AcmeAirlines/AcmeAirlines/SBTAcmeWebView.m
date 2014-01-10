@@ -17,8 +17,8 @@
 //  This class is a generic webview. Before pushing or presenting it, a link needs to be set
 
 #import "SBTAcmeWebView.h"
-#import "FBLog.h"
-#import "IBMAcmeConstant.h"
+#import <iOSSBTK/FBLog.h>
+#import "SBTAcmeConstant.h"
 
 @interface SBTAcmeWebView ()
 

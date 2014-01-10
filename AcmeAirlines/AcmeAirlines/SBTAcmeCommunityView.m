@@ -17,21 +17,21 @@
 //  This is a controller class to show information about the community including basic info and status updates
 
 #import "SBTAcmeCommunityView.h"
-#import "IBMConnectionsCommunityService.h"
-#import "IBMAcmeConstant.h"
-#import "IBMConnectionsActivityStreamService.h"
+#import <iOSSBTK/SBTConnectionsCommunityService.h>
+#import "SBTAcmeConstant.h"
+#import <iOSSBTK/SBTConnectionsActivityStreamService.h>
 #import <QuartzCore/QuartzCore.h>
 #import "SBTAcmeStatusUpdateView.h"
 #import "SBTAcmeUtils.h"
 #import "LikeButton.h"
 #import "ComposeUpdate.h"
 #import "SBTProfileListView.h"
-#import "FBLog.h"
+#import <iOSSBTK/FBLog.h>
 #import "SBTAcmeBookmarksView.h"
 
 @interface SBTAcmeCommunityView ()
 
-@property (strong, nonatomic) IBMConnectionsCommunity *community;
+@property (strong, nonatomic) SBTConnectionsCommunity *community;
 @property (strong, nonatomic) NSMutableArray *listOfMembers;
 @property (strong, nonatomic) NSMutableArray *listOfUpdates;
 @property (strong, nonatomic) NSNumber *joinLeaveInProgress;
@@ -303,7 +303,7 @@
             
             return cell;
         } else {
-            IBMActivityStreamEntry *entry = [self.listOfUpdates objectAtIndex:(indexPath.section - 1)];
+            SBTActivityStreamEntry *entry = [self.listOfUpdates objectAtIndex:(indexPath.section - 1)];
             if (indexPath.row > 0) {
                 entry = [entry.replies objectAtIndex:(indexPath.row-1)];
             }
@@ -332,7 +332,7 @@
                 return 40;
         }
         else {
-            IBMActivityStreamEntry *entry = [self.listOfUpdates objectAtIndex:(indexPath.section - 1)];
+            SBTActivityStreamEntry *entry = [self.listOfUpdates objectAtIndex:(indexPath.section - 1)];
             if (indexPath.row > 0) {
                 entry = [entry.replies objectAtIndex:(indexPath.row - 1)];
             }
@@ -364,10 +364,10 @@
                 }
             } else if (indexPath.row == 1) {
                 // Members
-                // Lets convert IBMCommunityMember to IBMConnectionsProfile to show it in the IBMProfileListView
+                // Lets convert SBTCommunityMember to SBTConnectionsProfile to show it in the SBTProfileListView
                 NSMutableArray *profiles = [[NSMutableArray alloc] init];
-                for (IBMCommunityMember *member in self.listOfMembers) {
-                    IBMConnectionsProfile *profile = [[IBMConnectionsProfile alloc] init];
+                for (SBTCommunityMember *member in self.listOfMembers) {
+                    SBTConnectionsProfile *profile = [[SBTConnectionsProfile alloc] init];
                     profile.userId = member.userId;
                     profile.displayName = member.name;
                     profile.title = member.role;
@@ -393,7 +393,7 @@
         } else {
             // Details of an entry
             UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
-            IBMActivityStreamEntry *entry = [self.listOfUpdates objectAtIndex:(indexPath.section - 1)];
+            SBTActivityStreamEntry *entry = [self.listOfUpdates objectAtIndex:(indexPath.section - 1)];
             SBTAcmeStatusUpdateView *statusUpdateView = [[SBTAcmeStatusUpdateView alloc] init];
             statusUpdateView.entry = entry;
             statusUpdateView.myProfile = self.myProfile;
@@ -432,7 +432,7 @@
  Get and see who liked a status update
  */
 - (void) whoLikeButtonIsTapped:(LikeButton *) button {
-    IBMActivityStreamEntry *entry = button.entry;
+    SBTActivityStreamEntry *entry = button.entry;
     
     if ([entry.numLikes intValue] == 0) {
         return;
@@ -440,7 +440,7 @@
     
     UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
     
-    IBMConnectionsActivityStreamService *actStrService = [[IBMConnectionsActivityStreamService alloc] init];
+    SBTConnectionsActivityStreamService *actStrService = [[SBTConnectionsActivityStreamService alloc] init];
     NSString *path = entry.likesUrl;
     path = [path stringByAppendingFormat:@""];
     [[actStrService getClientService] initGetRequestWithPath:path parameters:nil format:RESPONSE_JSON success:^(id response, NSDictionary *resultDict) {
@@ -449,7 +449,7 @@
         NSMutableArray *list = [resultDict objectForKey:@"list"];
         for (NSDictionary *item in list) {
             NSDictionary *author = [item objectForKey:@"author"];
-            IBMConnectionsProfile *profile = [[IBMConnectionsProfile alloc] init];
+            SBTConnectionsProfile *profile = [[SBTConnectionsProfile alloc] init];
             NSString *actorIdPattern = @"urn:lsid:lconn.ibm.com:profiles.person:";
             if ([[author valueForKey:@"id"] hasPrefix:actorIdPattern]) {
                 profile.userId = [[author valueForKey:@"id"] substringFromIndex:[actorIdPattern length]];
@@ -492,7 +492,7 @@
     self.navigationItem.rightBarButtonItem = self.addPostItem;
     
     UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
-    IBMConnectionsActivityStreamService *actStrSrvc = [[IBMConnectionsActivityStreamService alloc] init];
+    SBTConnectionsActivityStreamService *actStrSrvc = [[SBTConnectionsActivityStreamService alloc] init];
     NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                                        @"true", @"rollup",
                                        @"20", @"count",
@@ -530,8 +530,8 @@
  Get the community information
  */
 - (void) getCommunityWithCompletionHandler:(void (^)(BOOL)) completionHandler {
-    IBMConnectionsCommunityService *cs = [[IBMConnectionsCommunityService alloc] init];
-    [cs getCommunityWithUuid:self.communityUuid success:^(IBMConnectionsCommunity *community) {
+    SBTConnectionsCommunityService *cs = [[SBTConnectionsCommunityService alloc] init];
+    [cs getCommunityWithUuid:self.communityUuid success:^(SBTConnectionsCommunity *community) {
         self.title = community.title;
         self.community = community;
         [self getMembersWithCompletionHandler:completionHandler];
@@ -547,7 +547,7 @@
  Get the members of the community
  */
 - (void) getMembersWithCompletionHandler:(void (^)(BOOL)) completionHandler {
-    IBMConnectionsCommunityService *cs = [[IBMConnectionsCommunityService alloc] init];
+    SBTConnectionsCommunityService *cs = [[SBTConnectionsCommunityService alloc] init];
     [cs getMembersForCommunity:self.community success:^(NSMutableArray *list) {
         self.listOfMembers = list;
         completionHandler(YES);
@@ -561,7 +561,7 @@
  Check if the currently logged in user is a member of the community
  */
 - (BOOL) isMember {
-    for (IBMCommunityMember *member in self.listOfMembers) {
+    for (SBTCommunityMember *member in self.listOfMembers) {
         if ([member.userId isEqualToString:self.myProfile.userId]) {
             return YES;
         }
@@ -577,12 +577,12 @@
     
     self.joinLeaveInProgress = [NSNumber numberWithBool:YES];
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
-    IBMCommunityMember *member = [[IBMCommunityMember alloc] init];
+    SBTCommunityMember *member = [[SBTCommunityMember alloc] init];
     member.userId = self.myProfile.userId;
     member.email = self.myProfile.email;
     
     UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
-    IBMConnectionsCommunityService *communityService = [[IBMConnectionsCommunityService alloc] init];
+    SBTConnectionsCommunityService *communityService = [[SBTConnectionsCommunityService alloc] init];
     if ([self isMember]) {
         [communityService deleteMember:member fromCommunity:self.community success:^(BOOL success) {
             [self getCommunityWithCompletionHandler:^(BOOL success) {

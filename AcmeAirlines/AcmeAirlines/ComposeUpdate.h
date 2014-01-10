@@ -17,13 +17,14 @@
 //  This class is used to generate and post new blog post
 
 #import <UIKit/UIKit.h>
-#import "IBMConnectionsCommunity.h"
-#import "IBMConnectionsActivityStreamService.h"
+#import <iOSSBTK/SBTConnectionsCommunity.h>
+#import <iOSSBTK/SBTActivityStreamEntry.h>
+#import <iOSSBTK/SBTConnectionsActivityStreamService.h>
 
 @interface ComposeUpdate : UIViewController
 
-@property (strong, nonatomic) IBMConnectionsCommunity *community;
-@property (strong, nonatomic) IBMActivityStreamEntry *entry;
+@property (strong, nonatomic) SBTConnectionsCommunity *community;
+@property (strong, nonatomic) SBTActivityStreamEntry *entry;
 @property (nonatomic, strong) UIViewController *delegateViewController;
 
 - (void) alert:(NSString *) title message:(NSString *) message;

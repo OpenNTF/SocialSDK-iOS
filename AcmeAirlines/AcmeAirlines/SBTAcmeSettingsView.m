@@ -17,13 +17,13 @@
 //  This class is a way to set up things for the purpose of demo.
 
 #import "SBTAcmeSettingsView.h"
-#import "IBMAcmeConstant.h"
+#import "SBTAcmeConstant.h"
 #import "SBTAcmeUtils.h"
-#import "IBMCredentialStore.h"
+#import <iOSSBTK/SBTCredentialStore.h>
 #import "SBTAcmeFlight.h"
-#import "IBMConnectionsCommunityService.h"
-#import "IBMConnectionsFileService.h"
-#import "FBLog.h"
+#import <iOSSBTK/SBTConnectionsCommunityService.h>
+#import <iOSSBTK/SBTConnectionsFileService.h>
+#import <iOSSBTK/FBLog.h>
 
 @interface SBTAcmeSettingsView ()
 
@@ -178,13 +178,13 @@
             // Create a community
             NSString *key = @"101";
             UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
-            IBMConnectionsCommunityService *comService = [[IBMConnectionsCommunityService alloc] init];
-            IBMConnectionsCommunity *comm = [[IBMConnectionsCommunity alloc] init];
+            SBTConnectionsCommunityService *comService = [[SBTConnectionsCommunityService alloc] init];
+            SBTConnectionsCommunity *comm = [[SBTConnectionsCommunity alloc] init];
             comm.title = [NSString stringWithFormat:@"Flight %@ Community %f", key, [[NSDate date] timeIntervalSince1970]];
             comm.content = [NSString stringWithFormat:@"This community is created to enable discussion on flight %@. Here you can share about preparation and purpose for the trip.", key];
             comm.communityType = @"public";
-            [comService createCommunity:comm success:^(IBMConnectionsCommunity *commmunity) {
-                [IBMCredentialStore storeWithKey:key value:commmunity.communityUuid];
+            [comService createCommunity:comm success:^(SBTConnectionsCommunity *commmunity) {
+                [SBTCredentialStore storeWithKey:key value:commmunity.communityUuid];
                 [progressView dismissWithClickedButtonIndex:100 animated:YES];
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Community is successfully created for flight 101" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
                 [alert show];
@@ -200,11 +200,11 @@
             // Remove the community
             NSString *key = @"101";
             UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
-            IBMConnectionsCommunityService *comService = [[IBMConnectionsCommunityService alloc] init];
-            IBMConnectionsCommunity *comm = [[IBMConnectionsCommunity alloc] init];
-            comm.communityUuid = [IBMCredentialStore loadWithKey:key];
+            SBTConnectionsCommunityService *comService = [[SBTConnectionsCommunityService alloc] init];
+            SBTConnectionsCommunity *comm = [[SBTConnectionsCommunity alloc] init];
+            comm.communityUuid = [SBTCredentialStore loadWithKey:key];
             [comService deleteCommunity:comm success:^(BOOL success) {
-                [IBMCredentialStore removeWithKey:key];
+                [SBTCredentialStore removeWithKey:key];
                 [progressView dismissWithClickedButtonIndex:100 animated:YES];
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Community 101 is successfully removed" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
                 [alert show];
@@ -224,7 +224,7 @@
         NSString *documentsDirectory = [paths objectAtIndex:0];
         NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"fb_log"];
         NSData *content = [NSData dataWithContentsOfFile:filePath];
-        IBMConnectionsFileService *fS = [[IBMConnectionsFileService alloc] initWithEndPointName:@"connections"];
+        SBTConnectionsFileService *fS = [[SBTConnectionsFileService alloc] initWithEndPointName:@"connections"];
         [fS uploadMultiPartFileWithContent:content
                                   fileName:[NSString stringWithFormat:@"%@.png", [[NSDate date] description]]
                                   mimeType:@"text/plain"

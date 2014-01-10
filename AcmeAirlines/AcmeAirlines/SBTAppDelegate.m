@@ -18,12 +18,12 @@
 #import "SBTViewController.h"
 #import "SBTViewControllerIpad.h"
 #import "LoginView.h"
-#import "FBLog.h"
-#import "IBMHttpClient.h"
-#import "IBMConnectionsActivityStreamService.h"
-#import "IBMCredentialStore.h"
-#import "IBMConstants.h"
-#import "IBMConnectionsOAuth2EndPoint.h"
+#import <iOSSBTK/FBLog.h>
+#import <iOSSBTK/SBTHttpClient.h>
+#import <iOSSBTK/SBTConnectionsActivityStreamService.h>
+#import <iOSSBTK/SBTCredentialStore.h>
+#import <iOSSBTK/SBTConstants.h>
+#import <iOSSBTK/SBTConnectionsOAuth2EndPoint.h>
 
 @implementation SBTAppDelegate
 

@@ -16,10 +16,10 @@
 
 //  This is collection cell to be showed in the main view
 
-#import "IBMViewControllerIpadCell.h"
-#import "IBMAcmeConstant.h"
+#import "SBTViewControllerIpadCell.h"
+#import "SBTAcmeConstant.h"
 
-@implementation IBMViewControllerIpadCell
+@implementation SBTViewControllerIpadCell
 
 @synthesize imageView, titleLabel;
 

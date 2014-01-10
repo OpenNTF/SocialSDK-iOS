@@ -19,13 +19,13 @@
 #import "LoginView.h"
 #import "SBTAppDelegate.h"
 #import <QuartzCore/QuartzCore.h>
-#import "IBMCredentialStore.h"
-#import "IBMConstants.h"
-#import "IBMAcmeConstant.h"
-#import "IBMHttpClient.h"
-#import "FBLog.h"
-#import "IBMConnectionsOAuth2EndPoint.h"
-#import "IBMConnectionsBasicEndPoint.h"
+#import <iOSSBTK/SBTCredentialStore.h>
+#import <iOSSBTK/SBTConstants.h>
+#import "SBTAcmeConstant.h"
+#import <iOSSBTK/SBTHttpClient.h>
+#import <iOSSBTK/FBLog.h>
+#import <iOSSBTK/SBTConnectionsOAuth2EndPoint.h>
+#import <iOSSBTK/SBTConnectionsBasicEndPoint.h>
 
 @interface LoginView ()
 
@@ -56,16 +56,16 @@
 	self.loginButton.layer.cornerRadius = 5;
     [self.loginButton setTitle:@"Login" forState:UIControlStateNormal];
     
-    NSString *connectionsUrl = [IBMCredentialStore loadWithKey:IBM_CREDENTIAL_CONNECTIONS_URL];
-    NSString *acmeUrl = [IBMCredentialStore loadWithKey:IBM_CREDENTIAL_ACME_URL];
+    NSString *connectionsUrl = [SBTCredentialStore loadWithKey:IBM_CREDENTIAL_CONNECTIONS_URL];
+    NSString *acmeUrl = [SBTCredentialStore loadWithKey:IBM_CREDENTIAL_ACME_URL];
     
     if (connectionsUrl.length > 0)
         self.connectionsUrlField.text = connectionsUrl;
     if (acmeUrl.length > 0)
         self.acmeUrlField.text = acmeUrl;
     
-    NSString *username = [IBMCredentialStore loadWithKey:IBM_CREDENTIAL_USERNAME];
-    NSString *password = [IBMCredentialStore loadWithKey:IBM_CREDENTIAL_PASSWORD];
+    NSString *username = [SBTCredentialStore loadWithKey:IBM_CREDENTIAL_USERNAME];
+    NSString *password = [SBTCredentialStore loadWithKey:IBM_CREDENTIAL_PASSWORD];
     
     if (username.length > 0)
         self.userNameField.text = username;
@@ -130,8 +130,8 @@
         return;
     }
     
-    [IBMCredentialStore storeWithKey:IBM_CREDENTIAL_CONNECTIONS_URL value:self.connectionsUrlField.text];
-    [IBMCredentialStore storeWithKey:IBM_CREDENTIAL_ACME_URL value:self.acmeUrlField.text];
+    [SBTCredentialStore storeWithKey:IBM_CREDENTIAL_CONNECTIONS_URL value:self.connectionsUrlField.text];
+    [SBTCredentialStore storeWithKey:IBM_CREDENTIAL_ACME_URL value:self.acmeUrlField.text];
 
     [self.actIndicator startAnimating];
     [self.loginButton setTitle:@"Loging in..." forState:UIControlStateNormal];
@@ -140,7 +140,7 @@
     self.passwordField.userInteractionEnabled = NO;
     
     
-    IBMConnectionsBasicEndPoint *endPoint = (IBMConnectionsBasicEndPoint *) [IBMEndPoint findEndPoint:@"connections"];
+    SBTConnectionsBasicEndPoint *endPoint = (SBTConnectionsBasicEndPoint *) [SBTEndPoint findEndPoint:@"connections"];
     [endPoint authenticateWithUsername:self.userNameField.text
                               password:self.passwordField.text
                      completionHandler:^(NSError *error) {

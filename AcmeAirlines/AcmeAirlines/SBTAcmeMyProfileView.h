@@ -17,11 +17,11 @@
 //  This class present the profile information of a user
 
 #import <UIKit/UIKit.h>
-#import "IBMConnectionsProfile.h"
+#import <iOSSBTK/SBTConnectionsProfile.h>
 
 @interface SBTAcmeMyProfileView : UITableViewController
 
-@property (strong, nonatomic) IBMConnectionsProfile *myProfile;
+@property (strong, nonatomic) SBTConnectionsProfile *myProfile;
 @property (strong, nonatomic) NSString *comingFrom;
 
 /**

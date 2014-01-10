@@ -15,7 +15,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "IBMConnectionsProfile.h"
+#import <iOSSBTK/SBTConnectionsProfile.h>
 
 @class SBTViewController;
 @class SBTViewControllerIpad;

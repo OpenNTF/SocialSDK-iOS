@@ -18,7 +18,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IBMViewControllerIpadCell : UICollectionViewCell
+@interface SBTViewControllerIpadCell : UICollectionViewCell
 
 @property (strong, nonatomic) UILabel *titleLabel;
 @property (strong, nonatomic) UIButton *imageView;

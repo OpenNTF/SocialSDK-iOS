@@ -17,25 +17,25 @@
 //  This is the main view of the Acme Sample App
 
 #import "SBTViewController.h"
-#import "IBMAcmeConstant.h"
+#import "SBTAcmeConstant.h"
 #import "GDataXMLNode.h"
-#import "IBMConnectionsCommunityService.h"
-#import "IBMConnectionsActivityStreamService.h"
-#import "IBMActivityStreamEntry.h"
-#import "IBMConnectionsFileService.h"
-#import "IBMEndPointFactory.h"
+#import <iOSSBTK/SBTConnectionsCommunityService.h>
+#import <iOSSBTK/SBTConnectionsActivityStreamService.h>
+#import <iOSSBTK/SBTActivityStreamEntry.h>
+#import <iOSSBTK/SBTConnectionsFileService.h>
+#import <iOSSBTK/SBTEndPointFactory.h>
 #import "SBTAppDelegate.h"
 #import "LoginView.h"
-#import "IBMCredentialStore.h"
+#import <iOSSBTK/SBTCredentialStore.h>
 #import "SBTAcmeUtils.h"
 #import "SBTAcmeCommunityView.h"
 #import "SBTAcmeSettingsView.h"
-#import "IBMCredentialStore.h"
-#import "IBMConstants.h"
-#import "FBLog.h"
-#import "IBMHttpClient.h"
+#import <iOSSBTK/SBTCredentialStore.h>
+#import <iOSSBTK/SBTConstants.h>
+#import <iOSSBTK/FBLog.h>
+#import <iOSSBTK/SBTHttpClient.h>
 #import <QuartzCore/QuartzCore.h>
-#import "IBMConnectionsBasicEndPoint.h"
+#import <iOSSBTK/SBTConnectionsBasicEndPoint.h>
 #import "SBTAcmeMainViewCommonOperations.h"
 
 @interface SBTViewController ()
@@ -80,14 +80,14 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    NSString *connectionsUrl = [IBMCredentialStore loadWithKey:IBM_CREDENTIAL_CONNECTIONS_URL];
-    NSString *acmeUrl = [IBMCredentialStore loadWithKey:IBM_CREDENTIAL_ACME_URL];
+    NSString *connectionsUrl = [SBTCredentialStore loadWithKey:IBM_CREDENTIAL_CONNECTIONS_URL];
+    NSString *acmeUrl = [SBTCredentialStore loadWithKey:IBM_CREDENTIAL_ACME_URL];
     
     if (connectionsUrl == nil || acmeUrl == nil) {
         // login is required
         [self performSelector:@selector(loginIsNeeded) withObject:nil afterDelay:0.2];
     } else {
-        IBMConnectionsBasicEndPoint *endPoint = (IBMConnectionsBasicEndPoint *) [IBMEndPoint findEndPoint:@"connections"];
+        SBTConnectionsBasicEndPoint *endPoint = (SBTConnectionsBasicEndPoint *) [SBTEndPoint findEndPoint:@"connections"];
         [endPoint isAuthenticatedWithCompletionHandler:^(NSError *error) {
             if (error == nil) {
                 if (self.airportCodes == nil)
