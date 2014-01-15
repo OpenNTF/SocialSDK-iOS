@@ -22,7 +22,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		07E3638A1880176400620433 /* libiOSSBTK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E363851880174200620433 /* libiOSSBTK.a */; };
+		07E3638D1886DC7B00620433 /* libiOSSBTK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E363851880174200620433 /* libiOSSBTK.a */; };
 		3D09FEBE17C28210006B5159 /* SBTAcmeMainViewCommonOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09FEBD17C28210006B5159 /* SBTAcmeMainViewCommonOperations.m */; };
 		3D824D5717AFF8AB000AD1EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824D5617AFF8AB000AD1EF /* UIKit.framework */; };
 		3D824D5917AFF8AB000AD1EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824D5817AFF8AB000AD1EF /* Foundation.framework */; };
@@ -261,7 +261,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07E3638A1880176400620433 /* libiOSSBTK.a in Frameworks */,
+				07E3638D1886DC7B00620433 /* libiOSSBTK.a in Frameworks */,
 				3DCCFC0117B3E80C0063C199 /* Security.framework in Frameworks */,
 				3D824E9D17AFFCAB000AD1EF /* MobileCoreServices.framework in Frameworks */,
 				3D824E2B17AFFA8E000AD1EF /* libxml2.dylib in Frameworks */,
