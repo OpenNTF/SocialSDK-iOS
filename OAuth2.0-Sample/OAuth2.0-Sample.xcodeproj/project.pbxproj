@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		072CAE2E187D69FD00BCA2FF /* libiOSSBTK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 072CAE29187D69E700BCA2FF /* libiOSSBTK.a */; };
+		077B443A188801C4006D86B7 /* libiOSSBTK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 072CAE29187D69E700BCA2FF /* libiOSSBTK.a */; };
 		3D9994FE17BBDB790038CEE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9994FD17BBDB790038CEE2 /* UIKit.framework */; };
 		3D99950017BBDB790038CEE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9994FF17BBDB790038CEE2 /* Foundation.framework */; };
 		3D99950217BBDB790038CEE2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D99950117BBDB790038CEE2 /* CoreGraphics.framework */; };
@@ -51,7 +51,7 @@
 			remoteGlobalIDString = 3D824EDA17B00FC3000AD1EF;
 			remoteInfo = TestiOSSBTK;
 		};
-		072CAE2C187D69F200BCA2FF /* PBXContainerItemProxy */ = {
+		077B443B188801F6006D86B7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 072CAE22187D69E700BCA2FF /* iOSSBTK.xcodeproj */;
 			proxyType = 1;
@@ -112,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				072CAE2E187D69FD00BCA2FF /* libiOSSBTK.a in Frameworks */,
+				077B443A188801C4006D86B7 /* libiOSSBTK.a in Frameworks */,
 				3D99956B17BBE16A0038CEE2 /* Security.framework in Frameworks */,
 				3D99956917BBE0B00038CEE2 /* MobileCoreServices.framework in Frameworks */,
 				3D99956717BBE0A20038CEE2 /* libxml2.dylib in Frameworks */,
@@ -254,7 +254,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				072CAE2D187D69F200BCA2FF /* PBXTargetDependency */,
+				077B443C188801F6006D86B7 /* PBXTargetDependency */,
 			);
 			name = "OAuth2.0-Sample";
 			productName = "OAuth2.0-Sample";
@@ -352,10 +352,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		072CAE2D187D69F200BCA2FF /* PBXTargetDependency */ = {
+		077B443C188801F6006D86B7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = iOSSBTK;
-			targetProxy = 072CAE2C187D69F200BCA2FF /* PBXContainerItemProxy */;
+			targetProxy = 077B443B188801F6006D86B7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -441,12 +441,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OAuth2.0-Sample/OAuth2.0-Sample-Prefix.pch";
-				HEADER_SEARCH_PATHS = /usr/include/libxml2;
-				INFOPLIST_FILE = "OAuth2.0-Sample/OAuth2.0-Sample-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/OAuth2.0-Sample/iOSSBTK\"",
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"$(CONFIGURATION_BUILD_DIR)",
 				);
+				INFOPLIST_FILE = "OAuth2.0-Sample/OAuth2.0-Sample-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
@@ -459,12 +459,12 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OAuth2.0-Sample/OAuth2.0-Sample-Prefix.pch";
-				HEADER_SEARCH_PATHS = /usr/include/libxml2;
-				INFOPLIST_FILE = "OAuth2.0-Sample/OAuth2.0-Sample-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/OAuth2.0-Sample/iOSSBTK\"",
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"$(CONFIGURATION_BUILD_DIR)",
 				);
+				INFOPLIST_FILE = "OAuth2.0-Sample/OAuth2.0-Sample-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;

@@ -17,8 +17,8 @@
 //  This is the controller of the main view. It allows user to authenticate, logout and explore some of the APIs that reuqire authentication
 
 #import "SBTViewController.h"
-#import "SBTConnectionsOAuth2EndPoint.h"
-#import "SBTCredentialStore.h"
+#import <iOSSBTK/SBTConnectionsOAuth2EndPoint.h>
+#import <iOSSBTK/SBTCredentialStore.h>
 #import "SBTAPIExplorer.h"
 
 @interface SBTViewController ()

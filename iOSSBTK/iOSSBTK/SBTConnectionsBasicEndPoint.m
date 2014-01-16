@@ -34,7 +34,7 @@
                 completionHandler:(void (^)(NSError *)) completionHandler {
     
     if (username == nil || password == nil) {
-        completionHandler([NSError errorWithDomain:@"com.ibm.IBMBasicEndPoint"
+        completionHandler([NSError errorWithDomain:@"com.ibm.SBTBasicEndPoint"
                                               code:100
                                           userInfo:[NSDictionary dictionaryWithObject:@"username or password cannot be nil" forKey:@"description"]]);
         return;
@@ -58,7 +58,7 @@
     NSString *username = [SBTCredentialStore loadWithKey:IBM_CREDENTIAL_USERNAME];
     NSString *password = [SBTCredentialStore loadWithKey:IBM_CREDENTIAL_PASSWORD];
     if (username == nil || password == nil) {
-        completionHandler([NSError errorWithDomain:@"com.ibm.IBMConnectionsBasicEndPoint"
+        completionHandler([NSError errorWithDomain:@"com.ibm.SBTConnectionsBasicEndPoint"
                                               code:100
                                           userInfo:[NSDictionary dictionaryWithObject:@"Username or password is nil" forKey:@"description"]]);
         return;

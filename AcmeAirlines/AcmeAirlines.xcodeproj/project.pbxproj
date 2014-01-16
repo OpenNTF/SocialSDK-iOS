@@ -22,7 +22,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		07E3638D1886DC7B00620433 /* libiOSSBTK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E363851880174200620433 /* libiOSSBTK.a */; };
+		0718D74C1887F69800101EC2 /* libiOSSBTK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E363851880174200620433 /* libiOSSBTK.a */; };
 		3D09FEBE17C28210006B5159 /* SBTAcmeMainViewCommonOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09FEBD17C28210006B5159 /* SBTAcmeMainViewCommonOperations.m */; };
 		3D824D5717AFF8AB000AD1EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824D5617AFF8AB000AD1EF /* UIKit.framework */; };
 		3D824D5917AFF8AB000AD1EF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824D5817AFF8AB000AD1EF /* Foundation.framework */; };
@@ -43,7 +43,7 @@
 		3D824DB717AFF948000AD1EF /* SBTAcmeWebView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9517AFF948000AD1EF /* SBTAcmeWebView.xib */; };
 		3D824DB817AFF948000AD1EF /* SBTProfileListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9617AFF948000AD1EF /* SBTProfileListView.xib */; };
 		3D824DB917AFF948000AD1EF /* SBTViewControllerIpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9717AFF948000AD1EF /* SBTViewControllerIpad.xib */; };
-		3D824DBA17AFF948000AD1EF /* IBMAcmeLargeImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9817AFF948000AD1EF /* IBMAcmeLargeImageView.xib */; };
+		3D824DBA17AFF948000AD1EF /* SBTAcmeLargeImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9817AFF948000AD1EF /* SBTAcmeLargeImageView.xib */; };
 		3D824DBB17AFF948000AD1EF /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9917AFF948000AD1EF /* LoginView.xib */; };
 		3D824DBC17AFF948000AD1EF /* ComposeUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D9A17AFF948000AD1EF /* ComposeUpdate.m */; };
 		3D824DBF17AFF948000AD1EF /* SBTAcmeCommunityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D9D17AFF948000AD1EF /* SBTAcmeCommunityView.m */; };
@@ -180,7 +180,7 @@
 		3D824D9517AFF948000AD1EF /* SBTAcmeWebView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTAcmeWebView.xib; sourceTree = "<group>"; };
 		3D824D9617AFF948000AD1EF /* SBTProfileListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTProfileListView.xib; sourceTree = "<group>"; };
 		3D824D9717AFF948000AD1EF /* SBTViewControllerIpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTViewControllerIpad.xib; sourceTree = "<group>"; };
-		3D824D9817AFF948000AD1EF /* IBMAcmeLargeImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IBMAcmeLargeImageView.xib; sourceTree = "<group>"; };
+		3D824D9817AFF948000AD1EF /* SBTAcmeLargeImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTAcmeLargeImageView.xib; sourceTree = "<group>"; };
 		3D824D9917AFF948000AD1EF /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		3D824D9A17AFF948000AD1EF /* ComposeUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeUpdate.m; sourceTree = "<group>"; };
 		3D824D9D17AFF948000AD1EF /* SBTAcmeCommunityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTAcmeCommunityView.m; sourceTree = "<group>"; };
@@ -261,7 +261,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07E3638D1886DC7B00620433 /* libiOSSBTK.a in Frameworks */,
+				0718D74C1887F69800101EC2 /* libiOSSBTK.a in Frameworks */,
 				3DCCFC0117B3E80C0063C199 /* Security.framework in Frameworks */,
 				3D824E9D17AFFCAB000AD1EF /* MobileCoreServices.framework in Frameworks */,
 				3D824E2B17AFFA8E000AD1EF /* libxml2.dylib in Frameworks */,
@@ -604,7 +604,7 @@
 			children = (
 				3D824D8917AFF948000AD1EF /* SBTAcmeLargeImageView.h */,
 				3D824DAB17AFF948000AD1EF /* SBTAcmeLargeImageView.m */,
-				3D824D9817AFF948000AD1EF /* IBMAcmeLargeImageView.xib */,
+				3D824D9817AFF948000AD1EF /* SBTAcmeLargeImageView.xib */,
 			);
 			name = LargeImageView;
 			sourceTree = "<group>";
@@ -665,7 +665,7 @@
 		3D824D4B17AFF8AB000AD1EF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = IBM;
+				CLASSPREFIX = SBT;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = ibm;
 			};
@@ -730,7 +730,7 @@
 				3D824DB717AFF948000AD1EF /* SBTAcmeWebView.xib in Resources */,
 				3D824DB817AFF948000AD1EF /* SBTProfileListView.xib in Resources */,
 				3D824DB917AFF948000AD1EF /* SBTViewControllerIpad.xib in Resources */,
-				3D824DBA17AFF948000AD1EF /* IBMAcmeLargeImageView.xib in Resources */,
+				3D824DBA17AFF948000AD1EF /* SBTAcmeLargeImageView.xib in Resources */,
 				3D824DBB17AFF948000AD1EF /* LoginView.xib in Resources */,
 				3D824DED17AFF960000AD1EF /* @btnDefault.png in Resources */,
 				3D824DEE17AFF960000AD1EF /* @btnDefault@2x.png in Resources */,
@@ -941,6 +941,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AcmeAirlines/AcmeAirlines-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					"$(CONFIGURATION_BUILD_DIR)",
+				);
+				"HEADER_SEARCH_PATHS[arch=*]" = (
 					/usr/include/libxml2,
 					"$(CONFIGURATION_BUILD_DIR)",
 				);

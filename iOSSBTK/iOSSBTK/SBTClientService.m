@@ -62,7 +62,7 @@
         if (userName != nil && password != nil)
             [self.httpClient setUsername:userName andPassword:password];
         else
-            [NSException raise:@"Authentication Problem" format:@"Username or password is not set yet (IBMClientService)"];
+            [NSException raise:@"Authentication Problem" format:@"Username or password is not set yet (SBTClientService)"];
     } else if ([[self.endPoint getAuthType] isEqualToString:OAUTH2]) {
         // OAUTH2
         NSString *accessToken = [SBTCredentialStore loadWithKey:IBM_CREDENTIAL_OAUTH2_TOKEN];
@@ -74,11 +74,11 @@
                                             value:[NSString stringWithFormat:@"Bearer %@", accessToken]];
             }
         } else {
-            [NSException raise:@"Authentication Problem" format:@"Access Token is not provided (IBMClientService)"];
+            [NSException raise:@"Authentication Problem" format:@"Access Token is not provided (SBTClientService)"];
         }
         
     } else {
-        [NSException raise:@"Authentication Problem" format:@"Unknown authentication format (IBMClientService)"];
+        [NSException raise:@"Authentication Problem" format:@"Unknown authentication format (SBTClientService)"];
     }
 }
 

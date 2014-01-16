@@ -239,7 +239,7 @@ const NSString *CUSTOM = @"custom"; //indicates user passed in the search string
         if (IS_DEBUGGING_SBTK)
             [FBLog log:[NSString stringWithFormat:@"userId is nil"] from:self];
         
-        failure([NSError errorWithDomain:@"IBMConnectionActivityStreamService"
+        failure([NSError errorWithDomain:@"SBTConnectionActivityStreamService"
                                     code:100
                                 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"userId cannot be nil", @"description", nil]]);
         return;
@@ -272,7 +272,7 @@ const NSString *CUSTOM = @"custom"; //indicates user passed in the search string
         if (IS_DEBUGGING_SBTK)
             [FBLog log:[NSString stringWithFormat:@"communityId is nil"] from:self];
         
-        failure([NSError errorWithDomain:@"IBMConnectionActivityStreamService"
+        failure([NSError errorWithDomain:@"SBTConnectionActivityStreamService"
                                     code:100
                                 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"communityId cannot be nil", @"description", nil]]);
         return;
@@ -447,7 +447,7 @@ const NSString *CUSTOM = @"custom"; //indicates user passed in the search string
         if (IS_DEBUGGING_SBTK)
             [FBLog log:[NSString stringWithFormat:@"query is nil"] from:self];
         
-        failure([NSError errorWithDomain:@"IBMConnectionActivityStreamService"
+        failure([NSError errorWithDomain:@"SBTConnectionActivityStreamService"
                                     code:100
                                 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"query cannot be nil", @"description", nil]]);
         return;
@@ -482,7 +482,7 @@ const NSString *CUSTOM = @"custom"; //indicates user passed in the search string
         if (IS_DEBUGGING_SBTK)
             [FBLog log:[NSString stringWithFormat:@"tags is nil"] from:self];
         
-        failure([NSError errorWithDomain:@"IBMConnectionActivityStreamService"
+        failure([NSError errorWithDomain:@"SBTConnectionActivityStreamService"
                                     code:100
                                 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"tags cannot be nil", @"description", nil]]);
         return;
@@ -537,7 +537,7 @@ const NSString *CUSTOM = @"custom"; //indicates user passed in the search string
         if (IS_DEBUGGING_SBTK)
             [FBLog log:[NSString stringWithFormat:@"filterType or query is nil"] from:self];
         
-        failure([NSError errorWithDomain:@"IBMConnectionActivityStreamService"
+        failure([NSError errorWithDomain:@"SBTConnectionActivityStreamService"
                                     code:100
                                 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"Filter type and query cannot be nil", @"description", nil]]);
         return;
@@ -592,7 +592,7 @@ const NSString *CUSTOM = @"custom"; //indicates user passed in the search string
         if (IS_DEBUGGING_SBTK)
             [FBLog log:[NSString stringWithFormat:@"searchPattern is nil"] from:self];
         
-        failure([NSError errorWithDomain:@"IBMConnectionActivityStreamService"
+        failure([NSError errorWithDomain:@"SBTConnectionActivityStreamService"
                                     code:100
                                 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"searchPattern cannot be nil", @"description", nil]]);
         return;
@@ -630,7 +630,7 @@ const NSString *CUSTOM = @"custom"; //indicates user passed in the search string
         if (IS_DEBUGGING_SBTK)
             [FBLog log:[NSString stringWithFormat:@"jsonPayload is nil"] from:self];
         
-        failure([NSError errorWithDomain:@"IBMConnectionActivityStreamService"
+        failure([NSError errorWithDomain:@"SBTConnectionActivityStreamService"
                                     code:100
                                 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"jsonPayload cannot be nil", @"description", nil]]);
         return;
@@ -684,7 +684,7 @@ const NSString *CUSTOM = @"custom"; //indicates user passed in the search string
         if (IS_DEBUGGING_SBTK)
             [FBLog log:[NSString stringWithFormat:@"jsonPayload is nil"] from:self];
         
-        failure([NSError errorWithDomain:@"IBMConnectionActivityStreamService"
+        failure([NSError errorWithDomain:@"SBTConnectionActivityStreamService"
                                     code:100
                                 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"jsonPayload cannot be nil", @"description", nil]]);
         return;
@@ -738,7 +738,7 @@ const NSString *CUSTOM = @"custom"; //indicates user passed in the search string
     
     /*if (jsonPayload == nil) {
         [FBLog log:[NSString stringWithFormat:@"jsonPayload is nil"] from:self];
-        failure([NSError errorWithDomain:@"IBMConnectionActivityStreamService"
+        failure([NSError errorWithDomain:@"SBTConnectionActivityStreamService"
                                     code:100
                                 userInfo:[NSDictionary dictionaryWithObjectsAndKeys:@"jsonPayload cannot be nil", @"description", nil]]);
         return;

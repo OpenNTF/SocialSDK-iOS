@@ -123,7 +123,7 @@
                                      [NSString stringWithFormat:@"Test content-%ld", time], @"content",
                                      object, @"object",
                                      nil];
-        IBMConnectionsActivityStreamService *actStrService = [[IBMConnectionsActivityStreamService alloc] init];
+        SBTConnectionsActivityStreamService *actStrService = [[SBTConnectionsActivityStreamService alloc] init];
         [actStrService postEntry:jsonPayload parameters:nil success:^(id result) {
             STAssertNotNil(result, @"Returned result is nil");
             completionBlock();
@@ -133,7 +133,7 @@
         }];
     };
     
-    [IBMUtilsTest executeAsyncBlock:testBlock];*/
+    [SBTUtilsTest executeAsyncBlock:testBlock];*/
 }
 
 /**
@@ -162,7 +162,7 @@
 - (void) testPostMBEntry {
     
     /*void (^testBlock)(void (^completionBlock)(void)) = ^(void (^completionBlock)(void)) {
-        IBMConnectionsActivityStreamService *actStrService = [[IBMConnectionsActivityStreamService alloc] init];
+        SBTConnectionsActivityStreamService *actStrService = [[SBTConnectionsActivityStreamService alloc] init];
         NSDictionary *payload = [NSDictionary dictionaryWithObject:@"This is mb entry post" forKey:@"content"];
         [actStrService postMBEntryUserType:nil groupType:nil appType:nil payload:payload success:^(id result) {
             NSLog(@"%@", [result description]);
@@ -173,7 +173,7 @@
         }];
     };
     
-    [IBMUtilsTest executeAsyncBlock:testBlock];*/
+    [SBTUtilsTest executeAsyncBlock:testBlock];*/
 }
 
 

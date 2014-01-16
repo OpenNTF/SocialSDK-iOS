@@ -130,7 +130,7 @@
         
         UIButton *editButton = (UIButton *) [cell.contentView viewWithTag:3];
         // Hide or show edit label
-        if ([self.comingFrom isEqualToString:@"IBMViewController"]) {
+        if ([self.comingFrom isEqualToString:@"SBTViewController"]) {
             editButton.hidden = NO;
         } else {
             editButton.hidden = YES;
@@ -479,7 +479,7 @@
 }
 
 /**
- Push IBMProfileListView to the navigation controller
+ Push SBTProfileListView to the navigation controller
  */
 - (void) openProfileListViewWithList:(NSMutableArray *) list {
     

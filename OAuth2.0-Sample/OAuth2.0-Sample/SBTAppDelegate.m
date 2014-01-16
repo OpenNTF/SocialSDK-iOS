@@ -17,9 +17,9 @@
 #import "SBTAppDelegate.h"
 
 #import "SBTViewController.h"
-#import "SBTConnectionsOAuth2EndPoint.h"
-#import "SBTConnectionsActivityStreamService.h"
-#import "SBTCredentialStore.h"
+#import <iOSSBTK/SBTConnectionsOAuth2EndPoint.h>
+#import <iOSSBTK/SBTConnectionsActivityStreamService.h>
+#import <iOSSBTK/SBTCredentialStore.h>
 
 @implementation SBTAppDelegate
 
@@ -27,7 +27,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[SBTViewController alloc] initWithNibName:@"IBMViewController" bundle:nil];
+    self.viewController = [[SBTViewController alloc] initWithNibName:@"SBTViewController" bundle:nil];
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
     self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];

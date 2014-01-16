@@ -196,7 +196,7 @@ const NSString *PROFILE_URL = @"/profiles";
                                          parameters:parameters
                                              format:RESPONSE_XML
                                             success:^(id response, id result) {
-                                                //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                 // Parse the xml file and return the list of profiles
                                                 NSMutableArray *list = [self convertToProfileListWithXML:result];
                                                 success(list);

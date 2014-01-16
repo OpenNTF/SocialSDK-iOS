@@ -17,12 +17,12 @@
 //  This is a controller for the API explorer.
 
 #import "SBTAPIExplorer.h"
-#import "SBTConnectionsProfileService.h"
-#import "SBTConnectionsActivityStreamService.h"
-#import "SBTConnectionsCommunityService.h"
-#import "SBTCredentialStore.h"
-#import "SBTConnectionsFileService.h"
-#import "SBTConnectionsOAuth2EndPoint.h"
+#import <iOSSBTK/SBTConnectionsProfileService.h>
+#import <iOSSBTK/SBTConnectionsActivityStreamService.h>
+#import <iOSSBTK/SBTConnectionsCommunityService.h>
+#import <iOSSBTK/SBTCredentialStore.h>
+#import <iOSSBTK/SBTConnectionsFileService.h>
+#import <iOSSBTK/SBTConnectionsOAuth2EndPoint.h>
 
 @interface SBTAPIExplorer ()
 

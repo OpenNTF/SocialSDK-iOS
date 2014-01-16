@@ -108,7 +108,7 @@
 				</array>
 			</object>
 			<dictionary class="NSMutableDictionary" key="flattenedProperties">
-				<string key="-1.CustomClassName">IBMAcmeBookmarksView</string>
+				<string key="-1.CustomClassName">SBTAcmeBookmarksView</string>
 				<string key="-1.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="-2.CustomClassName">UIResponder</string>
 				<string key="-2.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -123,11 +123,11 @@
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
-					<string key="className">IBMAcmeBookmarksView</string>
+					<string key="className">SBTAcmeBookmarksView</string>
 					<string key="superclassName">UITableViewController</string>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/IBMAcmeBookmarksView.h</string>
+						<string key="minorKey">./Classes/SBTAcmeBookmarksView.h</string>
 					</object>
 				</object>
 			</array>

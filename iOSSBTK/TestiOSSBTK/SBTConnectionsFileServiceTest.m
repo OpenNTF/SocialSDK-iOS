@@ -63,19 +63,19 @@ NSString *folderId = @"";
                     [fS___ addFilesToFolder:folderId files:files parameters:nil success:^(BOOL success) {
                         completionBlock();
                     } failure:^(NSError *error) {
-                        [NSException raise:@"File Test SetUp Failed" format:@"Adding file to the folder is failed at the SETUP in IBMConnectionsFileServiceTest"];
+                        [NSException raise:@"File Test SetUp Failed" format:@"Adding file to the folder is failed at the SETUP in SBTConnectionsFileServiceTest"];
                         completionBlock();
                     }];
                 } failure:^(NSError *error) {
-                    [NSException raise:@"File Test SetUp Failed" format:@"Folder creation is failed at the SETUP in IBMConnectionsFileServiceTest"];
+                    [NSException raise:@"File Test SetUp Failed" format:@"Folder creation is failed at the SETUP in SBTConnectionsFileServiceTest"];
                     completionBlock();
                 }];
             } failure:^(NSError *error) {
-                [NSException raise:@"File Test SetUp Failed" format:@"File comment creation is failed at the SETUP in IBMConnectionsFileServiceTest"];
+                [NSException raise:@"File Test SetUp Failed" format:@"File comment creation is failed at the SETUP in SBTConnectionsFileServiceTest"];
                 completionBlock();
             }];
         } failure:^(NSError *error) {
-            [NSException raise:@"File Test SetUp Failed" format:@"File creation is failed at the SETUP in IBMConnectionsFileServiceTest"];
+            [NSException raise:@"File Test SetUp Failed" format:@"File creation is failed at the SETUP in SBTConnectionsFileServiceTest"];
             completionBlock();
         }];
     };
@@ -94,11 +94,11 @@ NSString *folderId = @"";
             [fS_ deleteFolderWithId:folderId success:^(BOOL success) {
                 completionBlock();
             } failure:^(NSError *error) {
-                [NSException raise:@"File Test TearDown Failed" format:@"Folder deletion is failed at the TEARDOWN in IBMConnectionsFileServiceTest"];
+                [NSException raise:@"File Test TearDown Failed" format:@"Folder deletion is failed at the TEARDOWN in SBTConnectionsFileServiceTest"];
                 completionBlock();
             }];
         } failure:^(NSError *error) {
-            [NSException raise:@"File Test TearDown Failed" format:@"File deletion is failed at the TEARDOWN in IBMConnectionsFileServiceTest"];
+            [NSException raise:@"File Test TearDown Failed" format:@"File deletion is failed at the TEARDOWN in SBTConnectionsFileServiceTest"];
             completionBlock();
         }];
     };

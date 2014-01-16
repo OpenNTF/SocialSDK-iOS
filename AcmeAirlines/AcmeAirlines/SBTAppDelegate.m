@@ -35,9 +35,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-        self.viewController = [[SBTViewControllerIpad alloc] initWithNibName:@"IBMViewControllerIpad" bundle:nil];
+        self.viewController = [[SBTViewControllerIpad alloc] initWithNibName:@"SBTViewControllerIpad" bundle:nil];
     else
-        self.viewController = [[SBTViewController alloc] initWithNibName:@"IBMViewController" bundle:nil];
+        self.viewController = [[SBTViewController alloc] initWithNibName:@"SBTViewController" bundle:nil];
     
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
     self.window.rootViewController = navController;

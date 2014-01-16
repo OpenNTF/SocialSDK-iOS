@@ -100,7 +100,7 @@ typedef enum {
                                          parameters:parameters
                                              format:RESPONSE_XML
                                             success:^(id response, id result) {
-                                                //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                 
                                                 if (((SBTXMLDocument *)result) != nil) {
                                                     SBTFileEntry *file = [[SBTFileEntry alloc] initWithXMLDocument:result];
@@ -133,7 +133,7 @@ typedef enum {
                                          parameters:parameters
                                              format:RESPONSE_XML
                                             success:^(id response, id result) {
-                                                //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                 NSMutableArray *list = [self convertFileListWithXML:result];
                                                 success(list);
                                             } failure:^(id response, NSError * error) {
@@ -162,7 +162,7 @@ typedef enum {
                                          parameters:parameters
                                              format:RESPONSE_XML
                                             success:^(id response, id result) {
-                                                //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                 NSMutableArray *list = [self convertFileListWithXML:result];
                                                 success(list);
                                             } failure:^(id response, NSError * error) {
@@ -192,7 +192,7 @@ typedef enum {
                                          parameters:parameters
                                              format:RESPONSE_XML
                                             success:^(id response, id result) {
-                                                //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                 NSMutableArray *list = [self convertFileListWithXML:result];
                                                 success(list);
                                             } failure:^(id response, NSError * error) {
@@ -222,7 +222,7 @@ typedef enum {
                                          parameters:parameters
                                              format:RESPONSE_XML
                                             success:^(id response, id result) {
-                                                //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                 NSMutableArray *list = [self convertFileListWithXML:result];
                                                 success(list);
                                             } failure:^(id response, NSError * error) {
@@ -247,7 +247,7 @@ typedef enum {
                                          parameters:parameters
                                              format:RESPONSE_XML
                                             success:^(id response, id result) {
-                                                //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                 NSMutableArray *list = [self convertFileListWithXML:result];
                                                 success(list);
                                             } failure:^(id response, NSError * error) {
@@ -271,7 +271,7 @@ typedef enum {
                                          parameters:parameters
                                              format:RESPONSE_XML
                                             success:^(id response, id result) {
-                                                //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                 NSMutableArray *list = [self convertFileListWithXML:result];
                                                 success(list);
                                             } failure:^(id response, NSError * error) {
@@ -296,7 +296,7 @@ typedef enum {
                                          parameters:parameters
                                              format:RESPONSE_XML
                                             success:^(id response, id result) {
-                                                //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                 NSMutableArray *list = [self convertFileListWithXML:result];
                                                 success(list);
                                             } failure:^(id response, NSError * error) {
@@ -320,7 +320,7 @@ typedef enum {
                                          parameters:parameters
                                              format:RESPONSE_XML
                                             success:^(id response, id result) {
-                                                //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                 NSMutableArray *list = [self convertFileListWithXML:result];
                                                 success(list);
                                             } failure:^(id response, NSError * error) {
@@ -355,7 +355,7 @@ typedef enum {
                                          parameters:parameters
                                              format:RESPONSE_XML
                                             success:^(id response, id result) {
-                                                //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                 NSMutableArray *list = [self convertFileListWithXML:result];
                                                 success(list);
                                             } failure:^(id response, NSError * error) {
@@ -379,7 +379,7 @@ typedef enum {
                                          parameters:parameters
                                              format:RESPONSE_XML
                                             success:^(id response, id result) {
-                                                //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                 NSMutableArray *list = [self convertFileListWithXML:result];
                                                 success(list);
                                             } failure:^(id response, NSError * error) {
@@ -415,7 +415,7 @@ typedef enum {
                                          parameters:parameters
                                              format:RESPONSE_XML
                                             success:^(id response, id result) {
-                                                //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                 NSMutableArray *list = [self convertFileListWithXML:result];
                                                 success(list);
                                             } failure:^(id response, NSError * error) {
@@ -454,7 +454,7 @@ typedef enum {
                                          parameters:parameters
                                              format:RESPONSE_XML
                                             success:^(id response, id result) {
-                                                //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                 NSMutableArray *list = [self convertCommentListWithXML:result];
                                                 success(list);
                                             } failure:^(id response, NSError * error) {
@@ -494,7 +494,7 @@ typedef enum {
                                          parameters:parameters
                                              format:RESPONSE_XML
                                             success:^(id response, id result) {
-                                                //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                 NSMutableArray *list = [self convertCommentListWithXML:result];
                                                 success(list);
                                             } failure:^(id response, NSError * error) {
@@ -534,7 +534,7 @@ typedef enum {
                                          parameters:parameters
                                              format:RESPONSE_XML
                                             success:^(id response, id result) {
-                                                //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                 NSMutableArray *list = [self convertCommentListWithXML:result];
                                                 success(list);
                                             } failure:^(id response, NSError * error) {
@@ -560,7 +560,7 @@ typedef enum {
                                          parameters:parameters
                                              format:RESPONSE_XML
                                             success:^(id response, id result) {
-                                                //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                 NSMutableArray *list = [self convertFileListWithXML:result];
                                                 success(list);
                                             } failure:^(id response, NSError * error) {
@@ -699,7 +699,7 @@ typedef enum {
                                               parameters:parameters
                                                   format:RESPONSE_NONE
                                                  success:^(id response, id result) {
-                                                     //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                     //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                      success(YES);
                                                  } failure:^(id response, NSError * error) {
                                                      failure(error);
@@ -749,7 +749,7 @@ typedef enum {
                                           parameters:parameters
                                               format:RESPONSE_XML
                                              success:^(id response, id result) {
-                                                 //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                 //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                  SBTFileCommentEntry *comment = [[SBTFileCommentEntry alloc] initWithXMLDocument:result];
                                                  success(comment);
                                              } failure:^(id response, NSError * error) {
@@ -797,7 +797,7 @@ typedef enum {
                                           parameters:parameters
                                               format:RESPONSE_XML
                                              success:^(id response, id result) {
-                                                 //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                 //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                  SBTFileCommentEntry *comment = [[SBTFileCommentEntry alloc] initWithXMLDocument:result];
                                                  success(comment);
                                              } failure:^(id response, NSError * error) {
@@ -880,7 +880,7 @@ typedef enum {
                                          parameters:parameters
                                              format:RESPONSE_XML
                                             success:^(id response, id result) {
-                                                //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                 SBTFileCommentEntry *comment = [[SBTFileCommentEntry alloc] initWithXMLDocument:result];
                                                 success(comment);
                                             } failure:^(id response, NSError * error) {
@@ -919,7 +919,7 @@ typedef enum {
                                          parameters:parameters
                                              format:RESPONSE_XML
                                             success:^(id response, id result) {
-                                                //NSLog(@"Success: %@", [((IBMXMLDocument *) result).rootElement description]);
+                                                //NSLog(@"Success: %@", [((SBTXMLDocument *) result).rootElement description]);
                                                 SBTFileCommentEntry *comment = [[SBTFileCommentEntry alloc] initWithXMLDocument:result];
                                                 success(comment);
                                             } failure:^(id response, NSError * error) {
@@ -1042,7 +1042,7 @@ typedef enum {
                                             parameters:parameters
                                                 format:RESPONSE_XML
                                                success:^(id response, id result) {
-                                                   //NSLog(@"%@", [((IBMXMLDocument *) result).rootElement description]);
+                                                   //NSLog(@"%@", [((SBTXMLDocument *) result).rootElement description]);
                                                    SBTFileCommentEntry *comment = [[SBTFileCommentEntry alloc] initWithXMLDocument:result];
                                                    success(comment);
                                                } failure:^(id response, NSError * error) {

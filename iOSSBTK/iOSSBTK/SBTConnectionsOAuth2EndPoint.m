@@ -33,7 +33,7 @@
                              callbackUri:(NSString *) callbackUri {
     
     if (clientId == nil || callbackUri == nil) {
-        return [NSError errorWithDomain:@"com.ibm.IBMOAuth2EndPoint"
+        return [NSError errorWithDomain:@"com.ibm.SBTOAuth2EndPoint"
                                    code:100
                                userInfo:[NSDictionary dictionaryWithObject:@"clientId or callbackUri cannot be nil" forKey:@"description"]];
     }
@@ -55,7 +55,7 @@
                       completionHandler:(void (^)(NSError *)) completionHandler {
     
     if (clientId == nil || clientSecret == nil || callbackUri == nil || oauthCode == nil) {
-        completionHandler([NSError errorWithDomain:@"com.ibm.IBMOAuth2EndPoint"
+        completionHandler([NSError errorWithDomain:@"com.ibm.SBTOAuth2EndPoint"
                                               code:100
                                           userInfo:[NSDictionary dictionaryWithObject:@"clientId, clientSecret, callbackUri or oauthCode cannot be nil" forKey:@"description"]]);
         return;
@@ -76,7 +76,7 @@
                      id processedResult = [NSJSONSerialization JSONObjectWithData:response options:kNilOptions error:&error];
                      
                      if (error != nil) {
-                         completionHandler([NSError errorWithDomain:@"com.ibm.IBMOAuth2EndPoint"
+                         completionHandler([NSError errorWithDomain:@"com.ibm.SBTOAuth2EndPoint"
                                                                code:100
                                                            userInfo:[NSDictionary dictionaryWithObject:@"Error while processing Json response" forKey:@"description"]]);
                      } else {
@@ -98,7 +98,7 @@
     
     NSString *accessToken = [SBTCredentialStore loadWithKey:IBM_CREDENTIAL_OAUTH2_TOKEN];
     if (accessToken == nil) {
-        [NSException raise:@"Authentication Problem" format:@"Access Token is not provided (IBMClientService)"];
+        [NSException raise:@"Authentication Problem" format:@"Access Token is not provided (SBTClientService)"];
     }
     
     SBTConnectionsActivityStreamService *actService = [[SBTConnectionsActivityStreamService alloc] initWithEndPointName:self.endPointName];
