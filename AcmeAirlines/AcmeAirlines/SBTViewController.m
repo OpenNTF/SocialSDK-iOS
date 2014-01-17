@@ -331,7 +331,7 @@
         if (airportCodes != nil) {
             self.airportCodes = airportCodes;
         } else {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Could not populate ariport codes from server" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Could not populate airport codes from server" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
             [alert show];
         }
     }];
