@@ -79,7 +79,8 @@
     NSLog(@"OAuth code: %@", oauthCode);
     
     NSString *clientId = @"iosOAuthSampleApp";
-    NSString *clientSecret = @"VN8r45rl9953Fv5TxawLaIcT6f9IbhXyeVxORXu3fJ3t9e5ozf9IVIf5jjmw";
+    //NSString *clientSecret = @"VN8r45rl9953Fv5TxawLaIcT6f9IbhXyeVxORXu3fJ3t9e5ozf9IVIf5jjmw"; //sbtdev.swg.usma.ibm.com
+    NSString *clientSecret = @"nKfdJGauX1MJYTl4BPHzD9YRVYPVEtbi8Ctps41OmgeglakmhsnT7ggavllM"; //demo.sdkdemo.com
     NSString *redirectUri = @"ibmoauthsample://test";
     
     SBTConnectionsOAuth2EndPoint *endPoint = (SBTConnectionsOAuth2EndPoint *) [SBTEndPoint findEndPoint:@"connectionsOA2"];
