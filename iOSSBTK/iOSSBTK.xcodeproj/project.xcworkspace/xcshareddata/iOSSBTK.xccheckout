@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F661A99B-4EE6-43B1-9022-C103AE9922A9</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iOSSBTK</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4ACB8DFE-88E4-4422-9106-D3259A8E4200</key>
+		<string>ssh://sbtdev.swg.usma.ibm.com/repo/SocialSDK-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOSSBTK/iOSSBTK.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4ACB8DFE-88E4-4422-9106-D3259A8E4200</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://sbtdev.swg.usma.ibm.com/repo/SocialSDK-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4ACB8DFE-88E4-4422-9106-D3259A8E4200</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4ACB8DFE-88E4-4422-9106-D3259A8E4200</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SocialSDK-iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>
