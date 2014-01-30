@@ -193,6 +193,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		07F83918189A68090022CFFB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3D824C4717AFECB8000AD1EF /* libiOSSBTK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libiOSSBTK.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D824C4A17AFECB8000AD1EF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3D824C4E17AFECB8000AD1EF /* iOSSBTK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOSSBTK-Prefix.pch"; sourceTree = "<group>"; };
@@ -953,6 +954,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
 			);
 			mainGroup = 3D824C3E17AFECB8000AD1EF;
 			productRefGroup = 3D824C4817AFECB8000AD1EF /* Products */;
@@ -1098,6 +1100,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				3D824EE417B00FC3000AD1EF /* en */,
+				07F83918189A68090022CFFB /* es */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";

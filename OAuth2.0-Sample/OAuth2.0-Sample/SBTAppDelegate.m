@@ -91,11 +91,23 @@
                            completionHandler:^(NSError *error)  {
                                if (error == nil) {
                                    NSLog(@"%@", [SBTCredentialStore loadWithKey:@"IBM_CREDENTIAL_OAUTH2_TOKEN"]);
-                                   UIAlertView *alerView = [[UIAlertView alloc] initWithTitle:@"Great!"
-                                                                                      message:@"You're now authenticated, you can now explore the APIs. You can see the access token from the log"
+                                   UIAlertView *alerView = [[UIAlertView alloc] initWithTitle:NSLocalizedStringWithDefaultValue(@"AuthSuccessAlertTitle",
+                                                                                          nil,
+                                                                                          [NSBundle mainBundle],
+                                                                                          @"Great",
+                                                                                          @"Auth alert success Title")
+                                                                                      message:NSLocalizedStringWithDefaultValue(@"AuthSuccessAlertMessage",
+                                                                                          nil,
+                                                                                          [NSBundle mainBundle],
+                                                                                          @"You're now authenticated, you can now explore the APIs. You can see the access token from the log",
+                                                                                          @"Auth alert success message")
                                                                                      delegate:self
                                                                             cancelButtonTitle:nil
-                                                                            otherButtonTitles:@"OK", nil];
+                                                                            otherButtonTitles:NSLocalizedStringWithDefaultValue(@"AuthSuccessAlertOKButton",
+                                                                                          nil,
+                                                                                          [NSBundle mainBundle],
+                                                                                          @"OK",
+                                                                                          @"Auth alert success button"), nil];
                                    [alerView show];
                                } else {
                                    NSLog(@"%@", [error description]);

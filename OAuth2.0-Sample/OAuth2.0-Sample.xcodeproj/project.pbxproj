@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		077B443A188801C4006D86B7 /* libiOSSBTK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 072CAE29187D69E700BCA2FF /* libiOSSBTK.a */; };
+		07F83914189A67F60022CFFB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07F83912189A67F60022CFFB /* Localizable.strings */; };
+		07F8391B189A6CE30022CFFB /* SBTViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07F83919189A6CE30022CFFB /* SBTViewController.strings */; };
 		3D9994FE17BBDB790038CEE2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9994FD17BBDB790038CEE2 /* UIKit.framework */; };
 		3D99950017BBDB790038CEE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D9994FF17BBDB790038CEE2 /* Foundation.framework */; };
 		3D99950217BBDB790038CEE2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D99950117BBDB790038CEE2 /* CoreGraphics.framework */; };
@@ -62,6 +64,12 @@
 
 /* Begin PBXFileReference section */
 		072CAE22187D69E700BCA2FF /* iOSSBTK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iOSSBTK.xcodeproj; path = ../iOSSBTK/iOSSBTK.xcodeproj; sourceTree = "<group>"; };
+		07F83913189A67F60022CFFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		07F83915189A68090022CFFB /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = es.lproj/SBTViewController.xib; sourceTree = "<group>"; };
+		07F83916189A68090022CFFB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		07F83917189A68090022CFFB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07F8391A189A6CE30022CFFB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SBTViewController.strings; sourceTree = "<group>"; };
+		07F8391C189A6D070022CFFB /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/SBTViewController.strings; sourceTree = "<group>"; };
 		3D9994FA17BBDB790038CEE2 /* OAuth2.0-Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "OAuth2.0-Sample.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D9994FD17BBDB790038CEE2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3D9994FF17BBDB790038CEE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -184,6 +192,8 @@
 		3D99950417BBDB790038CEE2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				07F83912189A67F60022CFFB /* Localizable.strings */,
+				07F83919189A6CE30022CFFB /* SBTViewController.strings */,
 				3D99950517BBDB790038CEE2 /* OAuth2.0-Sample-Info.plist */,
 				3D99950617BBDB790038CEE2 /* InfoPlist.strings */,
 				3D99950917BBDB790038CEE2 /* main.m */,
@@ -277,6 +287,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
 			);
 			mainGroup = 3D9994F117BBDB790038CEE2;
 			productRefGroup = 3D9994FB17BBDB790038CEE2 /* Products */;
@@ -317,8 +328,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D99950817BBDB790038CEE2 /* InfoPlist.strings in Resources */,
+				07F8391B189A6CE30022CFFB /* SBTViewController.strings in Resources */,
 				3D99951017BBDB790038CEE2 /* Default.png in Resources */,
 				3D99951217BBDB790038CEE2 /* Default@2x.png in Resources */,
+				07F83914189A67F60022CFFB /* Localizable.strings in Resources */,
 				3D99951417BBDB790038CEE2 /* Default-568h@2x.png in Resources */,
 				3D99951A17BBDB790038CEE2 /* SBTViewController.xib in Resources */,
 				3D99957517BD483B0038CEE2 /* SBTAPIExplorer.xib in Resources */,
@@ -360,10 +373,29 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		07F83912189A67F60022CFFB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07F83913189A67F60022CFFB /* en */,
+				07F83916189A68090022CFFB /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		07F83919189A6CE30022CFFB /* SBTViewController.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07F8391A189A6CE30022CFFB /* en */,
+				07F8391C189A6D070022CFFB /* es */,
+			);
+			name = SBTViewController.strings;
+			sourceTree = "<group>";
+		};
 		3D99950617BBDB790038CEE2 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3D99950717BBDB790038CEE2 /* en */,
+				07F83917189A68090022CFFB /* es */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -372,6 +404,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				3D99951917BBDB790038CEE2 /* en */,
+				07F83915189A68090022CFFB /* es */,
 			);
 			name = SBTViewController.xib;
 			sourceTree = "<group>";

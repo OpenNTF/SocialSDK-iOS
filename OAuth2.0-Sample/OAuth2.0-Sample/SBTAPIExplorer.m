@@ -52,11 +52,31 @@
     
     // Fill out the API titles here and initiate requestst when a cell is selected
     self.apisToExplore = [[NSMutableArray alloc] initWithObjects:
-                          @"Get My Communities",
-                          @"Get My Status Updates",
-                          @"Post an Activity Stream Entry",
-                          @"Post a Microblog Entry",
-                          @"Upload a file",
+                          NSLocalizedStringWithDefaultValue(@"APITitleGetMyCommunities",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Get My Communities",
+                                  @"API Title Get My Communities"),
+                          NSLocalizedStringWithDefaultValue(@"APITitleGetMyStatusUpdates",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Get My Status Updates",
+                                  @"API Title Get My Status Updates"),
+                          NSLocalizedStringWithDefaultValue(@"APITitlePostAnActivityStreamEntry",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Post an Activity Stream Entry",
+                                  @"API Title Post an Activity Stream Entry"),
+                          NSLocalizedStringWithDefaultValue(@"APITitlePostAMicroblogEntry",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Post a Microblog Entry",
+                                  @"API Title Post a Microblog Entry"),
+                          NSLocalizedStringWithDefaultValue(@"APITitleUploadAFile",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Upload a file",
+                                  @"API Title Upload a file"),
                           nil];
     
     // Lets check if user is authenticated
@@ -101,6 +121,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    NSString *APISuccess = NSLocalizedStringWithDefaultValue(@"APISuccessMessage",
+                                                             nil,
+                                                             [NSBundle mainBundle],
+                                                             @"Success! You can see the output at the console",
+                                                             @"Message shown on API run success");
+    
+    NSString *APIFailure = NSLocalizedStringWithDefaultValue(@"APIFailureMessage",
+                                                             nil,
+                                                             [NSBundle mainBundle],
+                                                             @"Failure! Check the console for an explanation",
+                                                             @"Message shown on API run failure");
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if ([self.isAuthenticated boolValue] == NO)
@@ -114,10 +146,10 @@
             for (SBTConnectionsCommunity *comm in listOfCommunities) {
                 NSLog(@"%@", [comm description]);
             }
-            [self reportWithAlert:@"Success! You can see the output at the console"];
+            [self reportWithAlert:APISuccess];
         } failure:^(NSError *error) {
             NSLog(@"%@", [error description]);
-            [self reportWithAlert:@"Failure! Check the console for an explanation"];
+            [self reportWithAlert:APIFailure];
         }];
     } else if (indexPath.section == 1) {
         // Get my status updates from activity stream
@@ -127,10 +159,10 @@
                                                   for (SBTActivityStreamEntry *entry in list) {
                                                       NSLog(@"%@", [entry description]);
                                                   }
-                                                  [self reportWithAlert:@"Success! You can see the output at the console"];
+                                                  [self reportWithAlert:APISuccess];
                                               } failure:^(NSError * error) {
                                                   NSLog(@"%@", [error description]);
-                                                  [self reportWithAlert:@"Failure! Check the console for an explanation"];
+                                                  [self reportWithAlert:APIFailure];
                                               }];
     } else if (indexPath.section == 2) {
         // Post an Activity Stream Entry
@@ -141,11 +173,23 @@
         NSDictionary *actor = [NSDictionary dictionaryWithObjectsAndKeys:
                                @"@me", @"id",
                                nil];
+        
+        NSString *ASUpdateSummary = NSLocalizedStringWithDefaultValue(@"ASUpdateSummary",
+                                                                    nil,
+                                                                    [NSBundle mainBundle],
+                                                                    @"Test update from iOS",
+                                                                    @"Test Activity Stream update summary");
+        
+        NSString *ASUpdateDisplayName = NSLocalizedStringWithDefaultValue(@"ASUpdateDisplayName",
+                                                                    nil,
+                                                                    [NSBundle mainBundle],
+                                                                    @"iOS test update",
+                                                                    @"Test Activity Stream update displayName");
         NSDictionary *object = [NSDictionary dictionaryWithObjectsAndKeys:
-                                @"test update from iOS", @"summary",
+                                ASUpdateSummary, @"summary",
                                 @"note", @"objectType",
                                 objectId, @"id",
-                                @"iOS test update", @"displayName",
+                                ASUpdateDisplayName, @"displayName",
                                 @"http://www.ibm.com", @"url",
                                 nil];
         NSDictionary *jsonPayload = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -160,30 +204,39 @@
                    parameters:nil
                       success:^(id result) {
                           NSLog(@"%@", [result description]);
-                          [self reportWithAlert:@"Success! You can see the output at the console"];
+                          [self reportWithAlert:APISuccess];
                       }failure:^(NSError *error) {
                           NSLog(@"%@", [error description]);
-                          [self reportWithAlert:@"Failure! Check the console for an explanation"];
+                          [self reportWithAlert:APIFailure];
                       }];
     } else if (indexPath.section == 3) {
+        NSString *testEntryPost = NSLocalizedStringWithDefaultValue(@"MicroblogTestEntryPost",
+                                                                    nil,
+                                                                    [NSBundle mainBundle],
+                                                                    @"This is mb entry post",
+                                                                    @"Microblog test entry post");
         // Post a Microblog entry
         SBTConnectionsActivityStreamService *actService = [[SBTConnectionsActivityStreamService alloc] initWithEndPointName:@"connectionsOA2"];
-        NSDictionary *payload = [NSDictionary dictionaryWithObject:@"This is mb entry post" forKey:@"content"];
+        NSDictionary *payload = [NSDictionary dictionaryWithObject:testEntryPost forKey:@"content"];
         [actService postMBEntryUserType:nil
                               groupType:nil
                                 appType:nil
                                 payload:payload
                                 success:^(id result) {
                                     NSLog(@"%@", [result description]);
-                                    [self reportWithAlert:@"Success! You can see the output at the console"];
+                                    [self reportWithAlert:APISuccess];
                                 } failure:^(NSError *error) {
                                     NSLog(@"%@", [error description]);
-                                    [self reportWithAlert:@"Failure! Check the console for an explanation"];
+                                    [self reportWithAlert:APIFailure];
                                 }];
         
     } else if (indexPath.section == 4) {
         // Upload a file
-        NSString *content = @"This is the test content of the file";
+        NSString *content = NSLocalizedStringWithDefaultValue(@"TestFileContent",
+                                                             nil,
+                                                             [NSBundle mainBundle],
+                                                             @"This is the test content of the file",
+                                                             @"Content of the Test File");
         long time = [[NSDate date] timeIntervalSince1970];
         NSString *fileName = [NSString stringWithFormat:@"OAuthFile_%ld", time];
         SBTConnectionsFileService *fS = [[SBTConnectionsFileService alloc] initWithEndPointName:@"connectionsOA2"];
@@ -192,10 +245,10 @@
                          mimeType:@"text/plain"
                           success:^(SBTFileEntry *file) {
                               NSLog(@"%@", [file description]);
-                              [self reportWithAlert:@"Success! You can see the output at the console"];
+                              [self reportWithAlert:APISuccess];
                           } failure:^(NSError *error) {
                               NSLog(@"%@", [error description]);
-                              [self reportWithAlert:@"Failure! Check the console for an explanation"];
+                              [self reportWithAlert:APIFailure];
                           }];
     }
 }
@@ -211,7 +264,11 @@
             [endPoint isAuthenticatedWithCompletionHandler:^(NSError *error) {
                 if (error != nil) {
                     NSLog(@"%@", [error description]);
-                    [self reportWithAlert:@"Failure! Authentication problem!"];
+                    [self reportWithAlert:NSLocalizedStringWithDefaultValue(@"AuthProblemMessage",
+                                                             nil,
+                                                             [NSBundle mainBundle],
+                                                             @"Failure! Authentication problem!",
+                                                             @"Message shown when there is a problem with authentication")];
                 } else {
                     self.isAuthenticated = [NSNumber numberWithBool:YES];
                 }
@@ -219,7 +276,11 @@
             }];
         } @catch (NSException *exception) {
             NSLog(@"%@", [exception description]);
-            [self reportWithAlert:@"Failure! You need to authenticate first!"];
+            [self reportWithAlert:NSLocalizedStringWithDefaultValue(@"NotAuthenticatedErrorMessage",
+                                                             nil,
+                                                             [NSBundle mainBundle],
+                                                             @"Failure! You need to authenticate first!",
+                                                             @"Message shown when the user is not authenticated")];
             completionBlock();
         }
     };
@@ -228,11 +289,19 @@
 }
 
 - (void) reportWithAlert:(NSString *) message {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Result"
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedStringWithDefaultValue(@"ResultAlertTitle",
+                                                             nil,
+                                                             [NSBundle mainBundle],
+                                                             @"Result",
+                                                             @"Title for Result Alert")
                                                         message:message
                                                        delegate:self
                                               cancelButtonTitle:nil
-                                              otherButtonTitles:@"OK", nil];
+                                              otherButtonTitles:NSLocalizedStringWithDefaultValue(@"ResultAlertButton",
+                                                             nil,
+                                                             [NSBundle mainBundle],
+                                                             @"OK",
+                                                             @"Button for Result Alert"), nil];
     [alertView show];
 }
 

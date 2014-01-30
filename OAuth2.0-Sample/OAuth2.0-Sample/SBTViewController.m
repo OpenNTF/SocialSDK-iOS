@@ -32,10 +32,12 @@
     [super viewDidLoad];
     self.title = @"OAuth 2.0 Sample App";
     
+    
     NSString *IBM_CREDENTIAL_CONNECTIONS_URL = @"IBM_CREDENTIAL_CONNECTIONS_URL";
     //NSString *TEST_BASE_URL = @"https://sbtdev.swg.usma.ibm.com:444";
     NSString *TEST_BASE_URL = @"https://demo.sdkdemo.com:444";
     [SBTCredentialStore storeWithKey:IBM_CREDENTIAL_CONNECTIONS_URL value:TEST_BASE_URL];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -63,11 +65,24 @@
 - (IBAction)logout:(id)sender {
     SBTConnectionsOAuth2EndPoint *endPoint = (SBTConnectionsOAuth2EndPoint *) [SBTEndPoint findEndPoint:@"connectionsOA2"];
     [endPoint logout];
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Success"
-                                                        message:@"You logged out!"
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle: NSLocalizedStringWithDefaultValue(@"LogoutSuccessAlertTitle",
+                                                                                          nil,
+                                                                                          [NSBundle mainBundle],
+                                                                                          @"Success",
+                                                                                          @"Logout alert success Title")
+                                                        message:NSLocalizedStringWithDefaultValue(@"LogoutSuccessAlertMessage",
+                                                                                                  nil,
+                                                                                                  [NSBundle mainBundle],
+                                                                                                  @"You have logged out!!",
+                                                                                                  "Logout alert success message")
                                                        delegate:self
                                               cancelButtonTitle:nil
-                                              otherButtonTitles:@"OK", nil];
+                                              otherButtonTitles:NSLocalizedStringWithDefaultValue(@"LogoutSuccessAlertOKButton",
+                                                                                                  nil,
+                                                                                                  [NSBundle mainBundle],
+                                                                                                  @"OK",
+                                                                                                  "Logout alert OK button"),
+                              nil];
     [alertView show];
 }
 
