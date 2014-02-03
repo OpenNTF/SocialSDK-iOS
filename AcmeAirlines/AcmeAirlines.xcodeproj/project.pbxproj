@@ -25,6 +25,8 @@
 		07110B65189FB71F00AAD859 /* Common.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07110B61189FB71F00AAD859 /* Common.strings */; };
 		07110B66189FB71F00AAD859 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07110B63189FB71F00AAD859 /* Localizable.strings */; };
 		07110B6E189FE7FE00AAD859 /* xib.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07110B6C189FE7FE00AAD859 /* xib.strings */; };
+		07110B70189FF15500AAD859 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07110B72189FF15500AAD859 /* LoginView.xib */; };
+		07110B74189FF19400AAD859 /* ComposeUpdate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07110B76189FF19400AAD859 /* ComposeUpdate.xib */; };
 		0718D74C1887F69800101EC2 /* libiOSSBTK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E363851880174200620433 /* libiOSSBTK.a */; };
 		3D09FEBE17C28210006B5159 /* SBTAcmeMainViewCommonOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09FEBD17C28210006B5159 /* SBTAcmeMainViewCommonOperations.m */; };
 		3D824D5717AFF8AB000AD1EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824D5617AFF8AB000AD1EF /* UIKit.framework */; };
@@ -35,7 +37,6 @@
 		3D824D6917AFF8AB000AD1EF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D6817AFF8AB000AD1EF /* Default.png */; };
 		3D824D6B17AFF8AB000AD1EF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D6A17AFF8AB000AD1EF /* Default@2x.png */; };
 		3D824D6D17AFF8AB000AD1EF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D6C17AFF8AB000AD1EF /* Default-568h@2x.png */; };
-		3D824DAE17AFF948000AD1EF /* ComposeUpdate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D8C17AFF948000AD1EF /* ComposeUpdate.xib */; };
 		3D824DB017AFF948000AD1EF /* SBTAcmeCommunityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D8E17AFF948000AD1EF /* SBTAcmeCommunityView.xib */; };
 		3D824DB117AFF948000AD1EF /* SBTAcmeFlightStatusView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D8F17AFF948000AD1EF /* SBTAcmeFlightStatusView.xib */; };
 		3D824DB217AFF948000AD1EF /* SBTAcmeFlightView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9017AFF948000AD1EF /* SBTAcmeFlightView.xib */; };
@@ -47,7 +48,6 @@
 		3D824DB817AFF948000AD1EF /* SBTProfileListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9617AFF948000AD1EF /* SBTProfileListView.xib */; };
 		3D824DB917AFF948000AD1EF /* SBTViewControllerIpad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9717AFF948000AD1EF /* SBTViewControllerIpad.xib */; };
 		3D824DBA17AFF948000AD1EF /* SBTAcmeLargeImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9817AFF948000AD1EF /* SBTAcmeLargeImageView.xib */; };
-		3D824DBB17AFF948000AD1EF /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D824D9917AFF948000AD1EF /* LoginView.xib */; };
 		3D824DBC17AFF948000AD1EF /* ComposeUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D9A17AFF948000AD1EF /* ComposeUpdate.m */; };
 		3D824DBF17AFF948000AD1EF /* SBTAcmeCommunityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D9D17AFF948000AD1EF /* SBTAcmeCommunityView.m */; };
 		3D824DC017AFF948000AD1EF /* SBTAcmeConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D824D9E17AFF948000AD1EF /* SBTAcmeConstant.m */; };
@@ -147,6 +147,10 @@
 		07110B6B189FB75E00AAD859 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		07110B6D189FE7FE00AAD859 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/xib.strings; sourceTree = "<group>"; };
 		07110B6F189FE81D00AAD859 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/xib.strings; sourceTree = "<group>"; };
+		07110B71189FF15500AAD859 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/LoginView.xib; sourceTree = "<group>"; };
+		07110B73189FF16900AAD859 /* es */ = {isa = PBXFileReference; lastKnownFileType = file; name = es; path = es.lproj/LoginView.xib; sourceTree = "<group>"; };
+		07110B75189FF19400AAD859 /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/ComposeUpdate.xib; sourceTree = "<group>"; };
+		07110B77189FF19500AAD859 /* es */ = {isa = PBXFileReference; lastKnownFileType = file; name = es; path = es.lproj/ComposeUpdate.xib; sourceTree = "<group>"; };
 		075DE144187C52CD0099BA87 /* iOSSBTK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iOSSBTK.xcodeproj; path = ../iOSSBTK/iOSSBTK.xcodeproj; sourceTree = "<group>"; };
 		3D09FEBC17C28210006B5159 /* SBTAcmeMainViewCommonOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTAcmeMainViewCommonOperations.h; sourceTree = "<group>"; };
 		3D09FEBD17C28210006B5159 /* SBTAcmeMainViewCommonOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTAcmeMainViewCommonOperations.m; sourceTree = "<group>"; };
@@ -179,7 +183,6 @@
 		3D824D8917AFF948000AD1EF /* SBTAcmeLargeImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTAcmeLargeImageView.h; sourceTree = "<group>"; };
 		3D824D8A17AFF948000AD1EF /* LikeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikeButton.h; sourceTree = "<group>"; };
 		3D824D8B17AFF948000AD1EF /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
-		3D824D8C17AFF948000AD1EF /* ComposeUpdate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComposeUpdate.xib; sourceTree = "<group>"; };
 		3D824D8E17AFF948000AD1EF /* SBTAcmeCommunityView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTAcmeCommunityView.xib; sourceTree = "<group>"; };
 		3D824D8F17AFF948000AD1EF /* SBTAcmeFlightStatusView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTAcmeFlightStatusView.xib; sourceTree = "<group>"; };
 		3D824D9017AFF948000AD1EF /* SBTAcmeFlightView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTAcmeFlightView.xib; sourceTree = "<group>"; };
@@ -191,7 +194,6 @@
 		3D824D9617AFF948000AD1EF /* SBTProfileListView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTProfileListView.xib; sourceTree = "<group>"; };
 		3D824D9717AFF948000AD1EF /* SBTViewControllerIpad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTViewControllerIpad.xib; sourceTree = "<group>"; };
 		3D824D9817AFF948000AD1EF /* SBTAcmeLargeImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SBTAcmeLargeImageView.xib; sourceTree = "<group>"; };
-		3D824D9917AFF948000AD1EF /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
 		3D824D9A17AFF948000AD1EF /* ComposeUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComposeUpdate.m; sourceTree = "<group>"; };
 		3D824D9D17AFF948000AD1EF /* SBTAcmeCommunityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTAcmeCommunityView.m; sourceTree = "<group>"; };
 		3D824D9E17AFF948000AD1EF /* SBTAcmeConstant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTAcmeConstant.m; sourceTree = "<group>"; };
@@ -547,7 +549,7 @@
 			children = (
 				3D824D8B17AFF948000AD1EF /* LoginView.h */,
 				3D824DAD17AFF948000AD1EF /* LoginView.m */,
-				3D824D9917AFF948000AD1EF /* LoginView.xib */,
+				07110B72189FF15500AAD859 /* LoginView.xib */,
 			);
 			name = LoginView;
 			sourceTree = "<group>";
@@ -607,7 +609,7 @@
 			children = (
 				3D824D7917AFF948000AD1EF /* ComposeUpdate.h */,
 				3D824D9A17AFF948000AD1EF /* ComposeUpdate.m */,
-				3D824D8C17AFF948000AD1EF /* ComposeUpdate.xib */,
+				07110B76189FF19400AAD859 /* ComposeUpdate.xib */,
 			);
 			name = ComposeUpdateView;
 			sourceTree = "<group>";
@@ -733,7 +735,7 @@
 				3D824D6917AFF8AB000AD1EF /* Default.png in Resources */,
 				3D824D6B17AFF8AB000AD1EF /* Default@2x.png in Resources */,
 				3D824D6D17AFF8AB000AD1EF /* Default-568h@2x.png in Resources */,
-				3D824DAE17AFF948000AD1EF /* ComposeUpdate.xib in Resources */,
+				07110B74189FF19400AAD859 /* ComposeUpdate.xib in Resources */,
 				07110B65189FB71F00AAD859 /* Common.strings in Resources */,
 				3D824DB017AFF948000AD1EF /* SBTAcmeCommunityView.xib in Resources */,
 				3D824DB117AFF948000AD1EF /* SBTAcmeFlightStatusView.xib in Resources */,
@@ -748,7 +750,7 @@
 				3D824DB817AFF948000AD1EF /* SBTProfileListView.xib in Resources */,
 				3D824DB917AFF948000AD1EF /* SBTViewControllerIpad.xib in Resources */,
 				3D824DBA17AFF948000AD1EF /* SBTAcmeLargeImageView.xib in Resources */,
-				3D824DBB17AFF948000AD1EF /* LoginView.xib in Resources */,
+				07110B70189FF15500AAD859 /* LoginView.xib in Resources */,
 				3D824DED17AFF960000AD1EF /* @btnDefault.png in Resources */,
 				3D824DEE17AFF960000AD1EF /* @btnDefault@2x.png in Resources */,
 				3D824DF217AFF960000AD1EF /* blue.png in Resources */,
@@ -876,6 +878,24 @@
 				07110B6F189FE81D00AAD859 /* es */,
 			);
 			name = xib.strings;
+			sourceTree = "<group>";
+		};
+		07110B72189FF15500AAD859 /* LoginView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07110B71189FF15500AAD859 /* en */,
+				07110B73189FF16900AAD859 /* es */,
+			);
+			name = LoginView.xib;
+			sourceTree = "<group>";
+		};
+		07110B76189FF19400AAD859 /* ComposeUpdate.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07110B75189FF19400AAD859 /* en */,
+				07110B77189FF19500AAD859 /* es */,
+			);
+			name = ComposeUpdate.xib;
 			sourceTree = "<group>";
 		};
 		3D824D5F17AFF8AB000AD1EF /* InfoPlist.strings */ = {
