@@ -225,6 +225,46 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSString *leaveCommunity = NSLocalizedStringWithDefaultValue(@"LEAVE_COMMUNITY",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Leave Community",
+                              @"Leave Community");
+    NSString *joinCommunity = NSLocalizedStringWithDefaultValue(@"JOIN_COMMUNITY",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Join Community",
+                              @"Join Community");
+    NSString *membersLabel = NSLocalizedStringWithDefaultValue(@"MEMBERS",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Members",
+                              @"Members");
+    NSString *membersNumLabel = NSLocalizedStringWithDefaultValue(@"MEMBERS_NUM",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Members (%d)",
+                              @"Members ({numMembers})");
+    NSString *descriptionLabel = NSLocalizedStringWithDefaultValue(@"DESCRIPTION",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"Description",
+                              @"Description Common Label");
+    NSString *bookmarksLabel = NSLocalizedStringWithDefaultValue(@"BOOKMARKS",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Bookmarks",
+                              @"Bookmarks");
+    NSString *filesLabel = NSLocalizedStringWithDefaultValue(@"FILES",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Files",
+                              @"Files");
+    NSString *forumsLabel = NSLocalizedStringWithDefaultValue(@"FORUMS",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Forums",
+                              @"Forums");
     if (indexPath.section == 0) {
         static NSString *CellIdentifier = @"Cell1";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -250,9 +290,9 @@
             
             if (self.listOfMembers != nil) {
                 if ([self isMember]) {
-                    [joinLeaveButton setTitle:@"Leave Community" forState:UIControlStateNormal];
+                    [joinLeaveButton setTitle:leaveCommunity forState:UIControlStateNormal];
                 } else {
-                    [joinLeaveButton setTitle:@"Join Community" forState:UIControlStateNormal];
+                    [joinLeaveButton setTitle:joinCommunity forState:UIControlStateNormal];
                 }
             }
         }
@@ -288,18 +328,18 @@
             
             UILabel *rowLabel = (UILabel *) [cell.contentView viewWithTag:1];
             if (indexPath.row == 0)
-                rowLabel.text = @"Description";
+                rowLabel.text = descriptionLabel;
             else if (indexPath.row == 1) {
                 if ([self.listOfMembers count] > 0)
-                    rowLabel.text = [NSString stringWithFormat:@"Members (%d)", [self.listOfMembers count]];
+                    rowLabel.text = [NSString stringWithFormat:membersNumLabel, [self.listOfMembers count]];
                 else
-                    rowLabel.text = @"Members";
+                    rowLabel.text = membersLabel;
             } else if (indexPath.row == 2)
-                rowLabel.text = @"Bookmarks";
+                rowLabel.text = bookmarksLabel;
             else if (indexPath.row == 3)
-                rowLabel.text = @"Files";
+                rowLabel.text = filesLabel;
             else if (indexPath.row == 4)
-                rowLabel.text = @"Forums";
+                rowLabel.text = forumsLabel;
             
             return cell;
         } else {
@@ -352,6 +392,31 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSString *descriptionLabel = NSLocalizedStringWithDefaultValue(@"DESCRIPTION",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"Description",
+                              @"Description Common Label");
+    NSString *membersLabel = NSLocalizedStringWithDefaultValue(@"MEMBERS",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Members",
+                              @"Members");
+    NSString *okLabel = NSLocalizedStringWithDefaultValue(@"OK",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"OK",
+                              @"OK Common label");
+    NSString *errorLabel = NSLocalizedStringWithDefaultValue(@"ERROR",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"Error",
+                              @"Error Common label");
+    NSString *updateErrorLabel = NSLocalizedStringWithDefaultValue(@"UPDATE_ERROR",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Error while retrieving the details of the update",
+                              @"Error message when retrieving update");
     if (indexPath.section == 0) {
         
     } else {
@@ -359,7 +424,7 @@
             if (indexPath.row == 0) {
                 // Description
                 if (self.community.summary != nil) {
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Description" message:self.community.summary delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:descriptionLabel message:self.community.summary delegate:self cancelButtonTitle:nil otherButtonTitles:okLabel, nil];
                     [alert show];
                 }
             } else if (indexPath.row == 1) {
@@ -376,7 +441,7 @@
                 
                 SBTProfileListView *listView = [[SBTProfileListView alloc] init];
                 listView.listOfProfiles = profiles;
-                listView.title = @"Members";
+                listView.title = membersLabel;
                 [self.navigationController pushViewController:listView animated:YES];
             } else if (indexPath.row == 2) {
                 // Bookmarks
@@ -406,7 +471,7 @@
                     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
                 }
                 else
-                    [self showAlertViewWithTitle:@"Error" message:@"Error while retriving the details of the update"];
+                    [self showAlertViewWithTitle:errorLabel message:updateErrorLabel];
             }];
         }
     }
@@ -432,6 +497,11 @@
  Get and see who liked a status update
  */
 - (void) whoLikeButtonIsTapped:(LikeButton *) button {
+    NSString *likes = NSLocalizedStringWithDefaultValue(@"LIKES",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Likes",
+                              @"Likes");
     SBTActivityStreamEntry *entry = button.entry;
     
     if ([entry.numLikes intValue] == 0) {
@@ -463,7 +533,7 @@
         [progressView dismissWithClickedButtonIndex:100 animated:YES];
         SBTProfileListView *listView = [[SBTProfileListView alloc] init];
         listView.listOfProfiles = peopleLiked;
-        listView.title = @"Likes";
+        listView.title = likes;
         [self.navigationController pushViewController:listView animated:YES];
     } failure:^(id response, NSError *error) {
         if (IS_DEBUGGING)
@@ -488,6 +558,11 @@
  @param: message: Message to be displayed in an alert view
  */
 - (void) showUpdatesWithAlertMessage:(NSString *) message {
+    NSString *noUpdatesYet = NSLocalizedStringWithDefaultValue(@"NO_UPDATES_YET",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"No update yet! Start sharing by tapping + button",
+                              @"No updates yet");
     self.state = @"updates";
     self.navigationItem.rightBarButtonItem = self.addPostItem;
     
@@ -507,7 +582,7 @@
         if (message != nil) {
             [self showAlertViewWithTitle:@"" message:message];
         } else if ([self.listOfUpdates count] == 0) {
-            [self showAlertViewWithTitle:@"" message:@"No update yet! Start sharing by tapping + button"];
+            [self showAlertViewWithTitle:@"" message:noUpdatesYet];
         }
     } failure:^(NSError *error) {
         if (IS_DEBUGGING)
@@ -574,7 +649,21 @@
  This method is executed when user tapped the join/leave button.
  */
 - (void) joinOrLeaveCommunity {
-    
+    NSString *leaveCommunitySuccess = NSLocalizedStringWithDefaultValue(@"LEAVE_COMMUNITY_SUCCESS",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"You successfully left the community!",
+                              @"Leave community Success");
+    NSString *joinCommunitySuccess = NSLocalizedStringWithDefaultValue(@"JOIN_COMMUNITY_SUCCESS",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"You successfully joined to the community!",
+                              @"Join community Success");
+    NSString *okLabel = NSLocalizedStringWithDefaultValue(@"OK",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"OK",
+                              @"OK Common label");
     self.joinLeaveInProgress = [NSNumber numberWithBool:YES];
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationAutomatic];
     SBTCommunityMember *member = [[SBTCommunityMember alloc] init];
@@ -594,7 +683,7 @@
                 }
             }];
             [progressView dismissWithClickedButtonIndex:100 animated:YES];
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"You successfully left the community!" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:leaveCommunitySuccess delegate:self cancelButtonTitle:nil otherButtonTitles:okLabel, nil];
             [alert show];
             self.joinLeaveInProgress = [NSNumber numberWithBool:NO];
         } failure:^(NSError *error) {
@@ -616,7 +705,7 @@
                 }
             }];
             [progressView dismissWithClickedButtonIndex:100 animated:YES];
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"You successfully joined to the community!" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:joinCommunitySuccess delegate:self cancelButtonTitle:nil otherButtonTitles:okLabel, nil];
             [alert show];
             self.joinLeaveInProgress = [NSNumber numberWithBool:NO];
         } failure:^(NSError *error) {
@@ -634,15 +723,25 @@
  This method is called by ComposeUpdate when a status update is successful
  */
 - (void) postStatus:(NSDictionary *) userDict {
+    NSString *messagePostedSucess = NSLocalizedStringWithDefaultValue(@"MESSAGE_POSTED_SUCCESS",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Message is posted successfully!",
+                              @"Success posting message");
+    NSString *messagePostedFailure = NSLocalizedStringWithDefaultValue(@"MESSAGE_POSTED_FAILURE",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Oops there was a problem while uploading!",
+                              @"Success posting message");
     if (userDict == nil) {
-        [self showUpdatesWithAlertMessage:@"Message is posted successfully!"];
+        [self showUpdatesWithAlertMessage:messagePostedSucess];
         
     } else {
         NSError *error = [userDict objectForKey:@"error"];
         if (error == nil) {
-            [self showUpdatesWithAlertMessage:@"Message is posted successfully!"];
+            [self showUpdatesWithAlertMessage:messagePostedSucess];
         } else {
-            [self showAlertViewWithTitle:@"" message:@"Oops there was a problem while uploading!"];
+            [self showAlertViewWithTitle:@"" message:messagePostedFailure];
             if (IS_DEBUGGING)
                 [FBLog log:[error description] from:self];
         }
@@ -654,13 +753,23 @@
  Usually this happens when a user is in status update view and post a new update
  */
 - (void) popStatusUpdateView {
+    NSString *messagePostedSucess = NSLocalizedStringWithDefaultValue(@"MESSAGE_POSTED_SUCCESS",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Message is posted successfully!",
+                              @"Success posting message");
     self.isStatusChanged = nil;
     [self.navigationController popViewControllerAnimated:YES];
-    [self showUpdatesWithAlertMessage:@"Message is posted successfully!"];
+    [self showUpdatesWithAlertMessage:messagePostedSucess];
 }
 
 - (void) showAlertViewWithTitle:(NSString *) title message:(NSString *) message {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    NSString *okLabel = NSLocalizedStringWithDefaultValue(@"OK",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"OK",
+                              @"OK Common label");
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:nil otherButtonTitles:okLabel, nil];
     [alertView show];
 }
 

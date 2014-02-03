@@ -177,10 +177,23 @@
     likeImageView.indexPath = indexPath;
     likeButton.entry = entry;
     likeButton.indexPath = indexPath;
+    
     if ([SBTAcmeUtils didILikeThisEntry:entry])
-        [likeButton setTitle:@"Unlike" forState:UIControlStateNormal];
+        [likeButton setTitle:
+                        NSLocalizedStringWithDefaultValue(@"UNLIKE",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Unlike",
+                                  @"Unlike")
+                    forState:UIControlStateNormal];
     else
-        [likeButton setTitle:@"Like" forState:UIControlStateNormal];
+        [likeButton setTitle:
+                        NSLocalizedStringWithDefaultValue(@"LIKE",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Like",
+                              @"Like")
+                    forState:UIControlStateNormal];
     
     return cell;
 }
@@ -924,7 +937,11 @@
     [progressView addSubview:actIndicator];
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(actIndicator.frame.origin.x + actIndicator.frame.size.width + 8, actIndicator.frame.origin.y, 100, 30)];
     label.backgroundColor = [UIColor clearColor];
-    label.text = @"Loading...";
+    label.text = NSLocalizedStringWithDefaultValue(@"LOADING",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"Loading...",
+                              @"Loading common label");
     label.textColor = [UIColor whiteColor];
     [progressView addSubview:label];
     [progressView show];

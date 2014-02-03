@@ -41,8 +41,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@"Back"
+    NSString *backLabel = NSLocalizedStringWithDefaultValue(@"BACK",
+                                  @"Common",
+                                  [NSBundle mainBundle],
+                                  @"Back",
+                                  @"Back common label");
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:backLabel
                                                                  style:UIBarButtonItemStylePlain
                                                                 target:self
                                                                 action:@selector(cancel)];
@@ -113,6 +117,22 @@
 #pragma mark Utility methods
 
 - (void) downloadAndSetImage {
+    
+    NSString *errorLabel = NSLocalizedStringWithDefaultValue(@"ERROR",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"Error",
+                              @"Error Common label");
+    NSString *okLabel = NSLocalizedStringWithDefaultValue(@"OK",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"OK",
+                              @"OK Common label");
+    NSString *failedDownload = NSLocalizedStringWithDefaultValue(@"DOWNLOAD_IMAGE_FAILED",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Failed to download image",
+                              @"Failed to download image");
     __block SBTAcmeLargeImageView *largeImageView = self;
     __block UIImageView *imageView = self.photoView;
     UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
@@ -128,7 +148,7 @@
                                            [FBLog log:[error description] from:largeImageView];
                                        
                                        [progressView dismissWithClickedButtonIndex:100 animated:YES];
-                                       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Failed to download image" delegate:largeImageView cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                                       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:errorLabel message:failedDownload delegate:largeImageView cancelButtonTitle:nil otherButtonTitles:okLabel, nil];
                                        [alert show];
                                    }];
 }

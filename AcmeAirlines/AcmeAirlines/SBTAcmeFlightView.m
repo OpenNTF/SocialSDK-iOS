@@ -85,7 +85,11 @@
     UILabel *departTimeLabel = (UILabel *) [cell.contentView viewWithTag:101];
     UILabel *departCityLabel = (UILabel *) [cell.contentView viewWithTag:102];
     
-    departLabel.text = @"DEPART";
+    departLabel.text = NSLocalizedStringWithDefaultValue(@"DEPART_LABEL",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"DEPART",
+                                  @"Depart");
     departTimeLabel.text = flight.departureTime;
     departCityLabel.text = [[self.airportCodes objectForKey:flight.departureCity] objectForKey:@"city"];
     
@@ -95,8 +99,16 @@
     UILabel *arriveTimeLabel = (UILabel *) [cell.contentView viewWithTag:201];
     UILabel *arriveCityLabel = (UILabel *) [cell.contentView viewWithTag:202];
     
-    arriveLabel.text = @"ARRIVE";
-    arriveTimeLabel.text = [NSString stringWithFormat:@"%@ hour later", flight.flightTime];
+    arriveLabel.text = NSLocalizedStringWithDefaultValue(@"ARRIVE_LABEL",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"ARRIVE",
+                                  @"Arrive");
+    arriveTimeLabel.text = [NSString stringWithFormat:NSLocalizedStringWithDefaultValue(@"HOUR_LATER",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"%@ hour later",
+                                  @"{hour} hour later"), flight.flightTime];
     arriveCityLabel.text = [[self.airportCodes objectForKey:flight.arrivalCity] objectForKey:@"city"];
     
     
@@ -104,15 +116,28 @@
     UILabel *flightLabel = (UILabel *) [cell.contentView viewWithTag:300];
     UILabel *flightNumberLabel = (UILabel *) [cell.contentView viewWithTag:301];
     
-    flightLabel.text = @"FLIGHT";
+    flightLabel.text = NSLocalizedStringWithDefaultValue(@"FLIGHT_LABEL",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"FLIGHT",
+                                  @"Flight");
     flightNumberLabel.text = [NSString stringWithFormat:@"%d", [flight.flightId intValue]];
     
     // 4th row
     UILabel *cabinLabel = (UILabel *) [cell.contentView viewWithTag:400];
     UILabel *cabinTypeLabel = (UILabel *) [cell.contentView viewWithTag:401];
     
-    cabinLabel.text = @"CABIN";
-    cabinTypeLabel.text = @"Economy";
+    cabinLabel.text = NSLocalizedStringWithDefaultValue(@"CABIN_LABEL",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"CABIN",
+                                  @"Cabin");
+    
+    cabinTypeLabel.text = NSLocalizedStringWithDefaultValue(@"ECONOMY_LABEL",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Economy",
+                                  @"Economy");
     
     // Book button
     for (UIView *view in [cell.contentView subviews]) {
@@ -120,10 +145,18 @@
             UIButton *bookButton = (UIButton *) view;
             bookButton.tag = indexPath.row;
             if ([flight.booked boolValue] == YES) {
-                [bookButton setTitle:@"Booked" forState:UIControlStateNormal];
+                [bookButton setTitle:NSLocalizedStringWithDefaultValue(@"BOOK_BUTTON_BOOKED",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Booked",
+                                  @"Book button with booked state") forState:UIControlStateNormal];
                 [bookButton setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
             } else {
-                [bookButton setTitle:@"Book" forState:UIControlStateNormal];
+                [bookButton setTitle:NSLocalizedStringWithDefaultValue(@"BOOK_BUTTON",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Book",
+                                  @"Book button") forState:UIControlStateNormal];
                 [bookButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
             }
             break;
@@ -159,9 +192,34 @@
     
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@""
                                                              delegate: (id) self
-                                                    cancelButtonTitle:@"Cancel"
+                                                    cancelButtonTitle:
+                                            NSLocalizedStringWithDefaultValue(
+                                                  @"CANCEL",
+                                                  @"Common",
+                                                  [NSBundle mainBundle],
+                                                  @"Cancel",
+                                                  @"Cancel common label")
                                                destructiveButtonTitle:nil
-                                                    otherButtonTitles:@"Book", @"See Colleagues", @"See Community", nil];
+                                                    otherButtonTitles:
+                                            NSLocalizedStringWithDefaultValue(
+                                                  @"BOOK_BUTTON",
+                                                  nil,
+                                                  [NSBundle mainBundle],
+                                                  @"Book",
+                                                  @"Book button"),
+                                            NSLocalizedStringWithDefaultValue(
+                                                  @"SEE_COLLEAGUES",
+                                                  nil,
+                                                  [NSBundle mainBundle],
+                                                  @"See Colleagues",
+                                                  @"See Colleagues"),
+                                            NSLocalizedStringWithDefaultValue(
+                                                  @"SEE_COMMUNITY",
+                                                  nil,
+                                                  [NSBundle mainBundle],
+                                                  @"See Community",
+                                                  @"See Community"),
+                                nil];
     [actionSheet showInView:self.view];
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -179,7 +237,18 @@
                 [progressView dismissWithClickedButtonIndex:100 animated:YES];
             }];
         } else {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"You've already requested to book Flight %@.", self.flightInProgressOfBooking.flightId] delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:NSLocalizedStringWithDefaultValue(
+                                                  @"FLIGHT_ALREADY_BOOKED",
+                                                  nil,
+                                                  [NSBundle mainBundle],
+                                                  @"You've already requested to book Flight %@.",
+                                                  @"You've already requested to book Flight {numFlight}."),
+            self.flightInProgressOfBooking.flightId] delegate:self cancelButtonTitle:nil otherButtonTitles:NSLocalizedStringWithDefaultValue(@"OK",
+                                  @"Common",
+                                  [NSBundle mainBundle],
+                                  @"OK",
+                                  @"OK Common label"), nil];
             [alert show];
         }
     } else if (buttonIndex == 1) {
@@ -190,7 +259,11 @@
             if (list != nil) {
                 SBTProfileListView *listView = [[SBTProfileListView alloc] init];
                 listView.listOfProfiles = list;
-                listView.title = @"Colleagues";
+                listView.title = NSLocalizedStringWithDefaultValue(@"COLLEAGUES",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Colleagues",
+                                  @"Colleagues");
                 [self.navigationController pushViewController:listView animated:YES];
             }
         }];
@@ -208,7 +281,17 @@
                 [progressView dismissWithClickedButtonIndex:100 animated:YES];
             }];
         } else {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Flight %@ has no community associated with it yet.", self.flightInProgressOfBooking.flightId] delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:NSLocalizedStringWithDefaultValue(@"FLIGHT_HAS_NO_COMMUNITY",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Flight %@ has no community associated with it yet.",
+                                  @"Flight {numFlight} has no community associated with it yet."),
+            self.flightInProgressOfBooking.flightId] delegate:self cancelButtonTitle:nil otherButtonTitles:NSLocalizedStringWithDefaultValue(@"OK",
+                                  @"Common",
+                                  [NSBundle mainBundle],
+                                  @"OK",
+                                  @"OK Common label"), nil];
             [alert show];
         }
     }
@@ -356,10 +439,18 @@
                      success:^(id result) {
                          flight.booked = [NSNumber numberWithBool:YES];
                          flight.isBooking = [NSNumber numberWithBool:NO];
-                         flight.status = @"Pending";
+                         flight.status = NSLocalizedStringWithDefaultValue(@"PENDING",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Pending",
+                                  @"Pending");
                          [self.tableView reloadData];
                           completionHandler(YES);
-                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"You've just booked flight # %@", flight.flightId] delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:NSLocalizedStringWithDefaultValue(@"YOU_BOOKED_FLIGHT",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"You've just booked flight # %@",
+                                  @"You've just booked flight # {numFlight}"), flight.flightId] delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
                          [alert show];
                      } failure:^(NSError *error) {
                          if (IS_DEBUGGING)
@@ -368,7 +459,16 @@
                          flight.isBooking = [NSNumber numberWithBool:NO];
                          [self.tableView reloadData];
                           completionHandler(NO);
-                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"There was an error while booking flight # %@", flight.flightId] delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                         
+                         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:NSLocalizedStringWithDefaultValue(@"ERROR_BOOKING_FLIGHT",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"There was an error while booking flight # %@",
+                                  @"There was an error while booking flight # {numFlight}"), flight.flightId] delegate:self cancelButtonTitle:nil otherButtonTitles:NSLocalizedStringWithDefaultValue(@"OK",
+                                  @"Common",
+                                  [NSBundle mainBundle],
+                                  @"OK",
+                                  @"OK Common label"), nil];
                          [alert show];
                      }];
 }
@@ -404,7 +504,11 @@
     
     // Object
     NSString *summary = [NSString stringWithFormat:
-                         @"%@ is requesting to fly from %@ to %@ on flight %d.",
+                         NSLocalizedStringWithDefaultValue(@"FLIGHT_REQUEST_MESSAGE",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"%@ is requesting to fly from %@ to %@ on flight %d.",
+                                  @"{User name} is requesting to fly from {departCity} to {arriveCity} on flight {numFligh}."),
                          self.myProfile.displayName,
                          flight.departureCity,
                          flight.arrivalCity,
@@ -413,7 +517,12 @@
                             summary, @"summary",
                             @"flight", @"objectType",
                             flight.flightId, @"id",
-                            @"Flight Request", @"displayName",
+                            NSLocalizedStringWithDefaultValue(@"FLIGHT_REQUEST",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Flight Request",
+                                  @"Flight Request"),
+                            @"displayName",
                             homePageUrl, @"url",
                             nil];
     
@@ -463,7 +572,11 @@
     
     // Content
     NSString *content = [NSString stringWithFormat:
-                         @"Please approve %@'s flight request for flight %@.",
+                         NSLocalizedStringWithDefaultValue(@"PLEASE_APPROVE",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Please approve %@'s flight request for flight %@.",
+                                  @"Please approve {User's name}'s flight request for flight {numFlight}."),
                          self.myProfile.displayName,
                          flight.flightId];
     // All together
@@ -476,7 +589,12 @@
                                  target, @"target",
                                  openSocial, @"openSocial",
                                  @"created", @"verb",
-                                 @"${Actor} created a ${Object} in the ${Target}", @"title",
+                                 NSLocalizedStringWithDefaultValue(@"ACTOR_CREATED_OBJECT",
+                                      nil,
+                                      [NSBundle mainBundle],
+                                      @"${Actor} created a ${Object} in the ${Target}",
+                                      @"${Actor} created a ${Object} in the ${Target}"),
+                                 @"title",
                                  content, @"content",
                                  object, @"object",
                                  nil];

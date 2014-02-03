@@ -28,10 +28,26 @@
 
 + (NSMutableArray *) getTitles {
     NSMutableArray *listOfTitles = [[NSMutableArray alloc] initWithObjects:
-               @"Flights",
-               @"My Flights",
-               @"Flight Status",
-               @"My Profile",
+               NSLocalizedStringWithDefaultValue(@"FLIGHTS",
+                                      nil,
+                                      [NSBundle mainBundle],
+                                      @"Flights",
+                                      @"Flights"),
+               NSLocalizedStringWithDefaultValue(@"MY_FLIGHTS",
+                                      nil,
+                                      [NSBundle mainBundle],
+                                      @"My Flights",
+                                      @"My Flights"),
+               NSLocalizedStringWithDefaultValue(@"FLIGHT_STATUS",
+                                      nil,
+                                      [NSBundle mainBundle],
+                                      @"Flight Status",
+                                      @"Flight Status"),
+               NSLocalizedStringWithDefaultValue(@"MY_PROFILE",
+                                      nil,
+                                      [NSBundle mainBundle],
+                                      @"My Profile",
+                                      @"My Profile"),
                nil];
     return listOfTitles;
 }

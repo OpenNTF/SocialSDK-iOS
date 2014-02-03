@@ -78,8 +78,18 @@
     self.textView.layer.borderWidth = 1;
     [self.textView becomeFirstResponder];
 	
-	UIBarButtonItem *doneItem1 = [[UIBarButtonItem alloc] initWithTitle:@"Post" style:UIBarButtonItemStylePlain target:self action:@selector(submit)];
-    UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancel)];
+    NSString *postLabel = NSLocalizedStringWithDefaultValue(@"POST",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"Post",
+                              @"Post Common label");
+    NSString *cancelLabel = NSLocalizedStringWithDefaultValue(@"CANCEL",
+                                  @"Common",
+                                  [NSBundle mainBundle],
+                                  @"Cancel",
+                                  @"Cancel common label");
+	UIBarButtonItem *doneItem1 = [[UIBarButtonItem alloc] initWithTitle:postLabel style:UIBarButtonItemStylePlain target:self action:@selector(submit)];
+    UIBarButtonItem *cancel = [[UIBarButtonItem alloc] initWithTitle:cancelLabel style:UIBarButtonItemStylePlain target:self action:@selector(cancel)];
     
     self.navItem.rightBarButtonItem = doneItem1;
     self.navItem.leftBarButtonItem = cancel;
@@ -124,11 +134,27 @@
  Called when photo upload is initiated by user. Presents an option of either take a photo or select from the library
  */
 - (IBAction) addImage:(id)sender {
+    NSString *cancelLabel = NSLocalizedStringWithDefaultValue(@"CANCEL",
+                                  @"Common",
+                                  [NSBundle mainBundle],
+                                  @"Cancel",
+                                  @"Cancel common label");
+    
+    NSString *takePhoto = NSLocalizedStringWithDefaultValue(@"TAKE_PHOTO",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Take a photo",
+                                  @"Take a photo");
+    NSString *chooseFromLibrary = NSLocalizedStringWithDefaultValue(@"CHOOSE_FROM_LIBRARY",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Choose from Library",
+                                  @"Choose from Library");
     UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@""
                                                              delegate:(id)self
-                                                    cancelButtonTitle:@"Cancel"
+                                                    cancelButtonTitle:cancelLabel
                                                destructiveButtonTitle:nil
-                                                    otherButtonTitles:@"Take a photo", @"Choose from library",nil];
+                                                    otherButtonTitles:takePhoto, chooseFromLibrary,nil];
     [actionSheet showInView:self.view];
 }
 
@@ -219,7 +245,11 @@
         
         self.view.userInteractionEnabled = NO;
         [self.actIndicator startAnimating];
-        self.statusLabel.text = @"Saving...";
+        self.statusLabel.text = NSLocalizedStringWithDefaultValue(@"SAVING",
+                                  @"Common",
+                                  [NSBundle mainBundle],
+                                  @"Saving...",
+                                  @"Saving label");
         originalImage = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
             if (picker.sourceType == UIImagePickerControllerSourceTypeCamera) {
@@ -367,15 +397,35 @@
  Initiate the uploading process
  */
 - (void) submit {
+    NSString *textLengthTitle = NSLocalizedStringWithDefaultValue(@"TEXT_LENGTH_TITLE",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Text Length",
+                              @"Text length title");
+    NSString *textLengthMessage = NSLocalizedStringWithDefaultValue(@"TEXT_LENGTH_MESSAGE",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"You can write at most %d characters!",
+                              @"You can write at most {numCharacters} characters!");
+    NSString *textEmpty = NSLocalizedStringWithDefaultValue(@"TEXT_EMPTY",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Text cannot be empty!",
+                              @"Text cannot be empty!");
+    NSString *uploadingLabel = NSLocalizedStringWithDefaultValue(@"UPLOADING",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"Uploading...",
+                              @"Uploading...");
     NSString *text = self.textToSend;
     if (text.length > TEXT_SIZE) {
-        [self alert:@"Text Length" message:[NSString stringWithFormat:@"You can write at most %d characters!", TEXT_SIZE]];
+        [self alert:textLengthTitle message:[NSString stringWithFormat:textLengthMessage, TEXT_SIZE]];
     } else if (text.length == 0) {
-        [self alert:@"Text Length" message:[NSString stringWithFormat:@"Text cannot be empty!"]];
+        [self alert:textLengthTitle message:textEmpty];
     }  else {
         if (self.selectedImage != nil) {
             [self.actIndicator startAnimating];
-            self.statusLabel.text = @"Uploading...";
+            self.statusLabel.text = uploadingLabel;
             self.view.userInteractionEnabled = NO;
             
             //perform sending operation in background thread
@@ -383,7 +433,7 @@
         } else {
             if (text.length > 0) {
                 [self.actIndicator startAnimating];
-                self.statusLabel.text = @"Uploading...";
+                self.statusLabel.text = uploadingLabel;
                 self.view.userInteractionEnabled = NO;
                 
                 SBTConnectionsActivityStreamService *actStrSrv = [[SBTConnectionsActivityStreamService alloc] init];
@@ -456,11 +506,16 @@
     [self.actIndicator stopAnimating];
     self.statusLabel.text = @"";
     
+    NSString *addedComment = NSLocalizedStringWithDefaultValue(@"COMMENT_ADDED",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"comment is added",
+                              @"Comment is added");
     if ([option isEqualToString:@"text"] || [option isEqualToString:@"comment"]) {
         if ([self.delegateViewController respondsToSelector:@selector(postStatus:)]) {
             NSDictionary *userDict = nil;
             if ([option isEqualToString:@"comment"]) {
-                userDict = [NSDictionary dictionaryWithObjectsAndKeys:@"message", @"comment is added", nil];
+                userDict = [NSDictionary dictionaryWithObjectsAndKeys:@"message", addedComment, nil];
             }
             
             [self dismissViewControllerAnimated:YES completion:^(void) {
@@ -473,12 +528,18 @@
 }
 
 - (void) alert:(NSString *) title message:(NSString *) message {
+    
+    NSString *okLabel = NSLocalizedStringWithDefaultValue(@"OK",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"OK",
+                              @"OK Common label");
 	UIAlertView* dialog = [[UIAlertView alloc] init];
     dialog.tag = 22;
 	[dialog setDelegate:self];
 	[dialog setTitle:title];
 	[dialog setMessage:message];
-	[dialog addButtonWithTitle:@"OK"];
+	[dialog addButtonWithTitle:okLabel];
 	[dialog show];
 }
 

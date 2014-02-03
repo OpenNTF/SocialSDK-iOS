@@ -155,11 +155,31 @@
  This method allows user to select if he wants to add a new update or a comment
  */
 - (void) addNewLikePost {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Options"
+    NSString *optionsLabel = NSLocalizedStringWithDefaultValue(@"OPTIONS",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"Options",
+                              @"Options Common label");
+    NSString *cancelLabel = NSLocalizedStringWithDefaultValue(@"CANCEL",
+                                  @"Common",
+                                  [NSBundle mainBundle],
+                                  @"Cancel",
+                                  @"Cancel common label");
+    NSString *addNewPost = NSLocalizedStringWithDefaultValue(@"ADD_NEW_POST",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Add a New Post",
+                                  @"Add new post");
+    NSString *addComment = NSLocalizedStringWithDefaultValue(@"ADD_COMMENT",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Add a Comment",
+                                  @"Add comment");
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:optionsLabel
                                                              delegate: (id) self
-                                                    cancelButtonTitle:@"Cancel"
+                                                    cancelButtonTitle:cancelLabel
                                                destructiveButtonTitle:nil
-                                                    otherButtonTitles:@"Add a New Post", @"Add A Comment", nil];
+                                                    otherButtonTitles:addNewPost, addComment, nil];
     [actionSheet showInView:self.view];
 }
 
@@ -191,6 +211,16 @@
  This method is called by ComposeUpdate when a status update is successful
  */
 - (void) postStatus:(NSDictionary *) userDict {
+    NSString *postCommentSuccess = NSLocalizedStringWithDefaultValue(@"POST_COMMENT_SUCCESS",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Comment is posted successfully!",
+                                  @"Comment is posted successfully!");
+    NSString *postCommentFailure = NSLocalizedStringWithDefaultValue(@"POST_COMMENT_FAILURE",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Oops there was a problem while uploading!",
+                                  @"Problem uploading");
     if (userDict == nil) {
         if (self.delegateViewController != nil && [self.delegateViewController respondsToSelector:@selector(popStatusUpdateView)]) {
             [self.delegateViewController performSelector:@selector(popStatusUpdateView)];
@@ -203,13 +233,13 @@
                 if (success)
                     [self.tableView reloadData];
                 [progressView dismissWithClickedButtonIndex:100 animated:YES];
-                [self showAlertViewWithTitle:@"" message:@"Comment is posted successfully!"];
+                [self showAlertViewWithTitle:@"" message:postCommentSuccess];
             }];
             if ([self.delegateViewController isKindOfClass:[SBTAcmeCommunityView class]]) {
                 ((SBTAcmeCommunityView *)self.delegateViewController).isStatusChanged = [NSNumber numberWithBool:YES];
             }
         } else {
-            [self showAlertViewWithTitle:@"" message:@"Oops there was a problem while uploading!"];
+            [self showAlertViewWithTitle:@"" message:postCommentFailure];
             if (IS_DEBUGGING)
                 [FBLog log:[error description] from:self];
         }
@@ -262,7 +292,13 @@
         [progressView dismissWithClickedButtonIndex:100 animated:YES];
         SBTProfileListView *listView = [[SBTProfileListView alloc] init];
         listView.listOfProfiles = peopleLiked;
-        listView.title = @"Likes";
+        
+        NSString *likes = NSLocalizedStringWithDefaultValue(@"LIKES",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Likes",
+                                  @"Likes");
+        listView.title = likes;
         [self.navigationController pushViewController:listView animated:YES];
     } failure:^(id response, NSError *error) {
         if (IS_DEBUGGING)
@@ -511,7 +547,12 @@
 }
 
 - (void) showAlertViewWithTitle:(NSString *) title message:(NSString *) message {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+    NSString *okLabel = NSLocalizedStringWithDefaultValue(@"OK",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"OK",
+                              @"OK Common label");
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:title message:message delegate:self cancelButtonTitle:nil otherButtonTitles:okLabel, nil];
     [alertView show];
 }
 

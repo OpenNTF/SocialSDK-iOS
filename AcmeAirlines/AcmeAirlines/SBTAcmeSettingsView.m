@@ -44,13 +44,22 @@
 {
     [super viewDidLoad];
 
-    self.title = @"Settings";
+    self.title = NSLocalizedStringWithDefaultValue(@"SETTINGS",
+                                  @"Common",
+                                  [NSBundle mainBundle],
+                                  @"Settings",
+                                  @"Settings common label");
     self.clearsSelectionOnViewWillAppear = NO;
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:90.0/255
                                                                         green:91.0/255
                                                                          blue:71.0/255
                                                                         alpha:1];
-    UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancel)];
+    UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedStringWithDefaultValue(@"CANCEL",
+                                  @"Common",
+                                  [NSBundle mainBundle],
+                                  @"Cancel",
+                                  @"Cancel common label")
+                        style:UIBarButtonItemStylePlain target:self action:@selector(cancel)];
     self.navigationItem.leftBarButtonItem = cancelItem;
 }
 
@@ -124,9 +133,19 @@
         label.adjustsFontSizeToFitWidth = YES;
         label.numberOfLines = 0;
         if (section == 0)
-            label.text = @"Here you can create/remove test community";
+            
+            label.text = NSLocalizedStringWithDefaultValue(@"CREATE_REMOVE_TEST_COMMUNITY",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Here you can create/remove test community",
+                                  @"Create or remove test community");
         else if (section == 1)
-            label.text = @"Here you can upload log file to Connections";
+            
+            label.text = NSLocalizedStringWithDefaultValue(@"UPLOAD_LOG_FILE_TO_CONNECTIONS",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Here you can upload log file to Connections",
+                                  @"Upload log file to Connections");
         
         label.backgroundColor = [UIColor clearColor];
         [view addSubview:label];
@@ -159,11 +178,23 @@
     
     if (indexPath.section == 0) {
         if (indexPath.row == 0)
-            cell.textLabel.text = @"Create Test Community for Flight 101";
+            cell.textLabel.text = NSLocalizedStringWithDefaultValue(@"CREATE_TEST_FLIGHT_101_COMMUNITY",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Create Test Community for Flight 101",
+                                  @"Create Test Community for Flight 101");
         else if (indexPath.row == 1)
-            cell.textLabel.text = @"Remove Test Community for Flight 101";
+            cell.textLabel.text = NSLocalizedStringWithDefaultValue(@"REMOVE_TEST_FLIGHT_101_COMMUNITY",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Remove Test Community for Flight 101",
+                                  @"Remove Test Community for Flight 101");
     } else if (indexPath.section == 1) {
-        cell.textLabel.text = @"Upload log file";
+        cell.textLabel.text = NSLocalizedStringWithDefaultValue(@"UPLOAD_LOG",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Upload log file",
+                                  @"Upload log file");
     }
     
     return cell;
@@ -173,6 +204,58 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+        NSString *okLabel = NSLocalizedStringWithDefaultValue(@"OK",
+                                  @"Common",
+                                  [NSBundle mainBundle],
+                                  @"OK",
+                                  @"OK Common label");
+    
+        NSString *errorLabel = NSLocalizedStringWithDefaultValue(@"ERROR",
+                                  @"Common",
+                                  [NSBundle mainBundle],
+                                  @"Error",
+                                  @"Error Common label");
+        NSString *flightCommunityTitle = NSLocalizedStringWithDefaultValue(@"FLIGHT_COMMUNITY_TITLE",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Flight %@ Community %f",
+                              @"Flight {number} Community {date}");
+        
+        NSString *flightCommunityDesc = NSLocalizedStringWithDefaultValue(@"FLIGHT_COMMUNITY_DESCRIPTION",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"This community is created to enable discussion on flight %@. Here you can share about preparation and purpose for the trip.",
+                              @"Flight Community description for flight {flight}");
+        NSString *createCommunityResultSuccess = NSLocalizedStringWithDefaultValue(@"CREATE_COMMUNITY_101_RESULT_SUCCESS",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Community is successfully created for flight 101",
+                              @"Success creating flight community");
+        NSString *createCommunityResultFailure = NSLocalizedStringWithDefaultValue(@"CREATE_COMMUNITY_101_RESULT_FAILURE",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Community 101 can not be created.",
+                              @"Success creating flight community");
+        NSString *deleteCommunityResultSuccess = NSLocalizedStringWithDefaultValue(@"DELETE_COMMUNITY_101_RESULT_SUCCESS",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Community 101 has been successfully deleted",
+                              @"Success deleting flight community");
+        NSString *deleteCommunityResultFailure = NSLocalizedStringWithDefaultValue(@"DELETE_COMMUNITY_101_RESULT_FAILURE",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Community 101 can't be deleted",
+                              @"Success deleting flight community");
+        NSString *fileUploadSuccess = NSLocalizedStringWithDefaultValue(@"LOG_FILE_UPLOAD_SUCCESS",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Log file named fb_log uploaded successfully",
+                              @"Log file upload success");
+        NSString *fileUploadFailure = NSLocalizedStringWithDefaultValue(@"LOG_FILE_UPLOAD_FAILURE",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Could not upload the log file",
+                              @"Log file upload failure");
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
             // Create a community
@@ -180,20 +263,20 @@
             UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
             SBTConnectionsCommunityService *comService = [[SBTConnectionsCommunityService alloc] init];
             SBTConnectionsCommunity *comm = [[SBTConnectionsCommunity alloc] init];
-            comm.title = [NSString stringWithFormat:@"Flight %@ Community %f", key, [[NSDate date] timeIntervalSince1970]];
-            comm.content = [NSString stringWithFormat:@"This community is created to enable discussion on flight %@. Here you can share about preparation and purpose for the trip.", key];
+            comm.title = [NSString stringWithFormat:flightCommunityTitle, key, [[NSDate date] timeIntervalSince1970]];
+            comm.content = [NSString stringWithFormat:flightCommunityDesc, key];
             comm.communityType = @"public";
             [comService createCommunity:comm success:^(SBTConnectionsCommunity *commmunity) {
                 [SBTCredentialStore storeWithKey:key value:commmunity.communityUuid];
                 [progressView dismissWithClickedButtonIndex:100 animated:YES];
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Community is successfully created for flight 101" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:createCommunityResultSuccess delegate:nil cancelButtonTitle:nil otherButtonTitles:okLabel, nil];
                 [alert show];
             } failure:^(NSError *error) {
                 if (IS_DEBUGGING)
                     [FBLog log:[error description] from:self];
                 
                 [progressView dismissWithClickedButtonIndex:100 animated:YES];
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Community 101 can not be created." delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:errorLabel message:createCommunityResultFailure delegate:nil cancelButtonTitle:nil otherButtonTitles:okLabel, nil];
                 [alert show];
             }];
         } else if (indexPath.row == 1) {
@@ -206,14 +289,14 @@
             [comService deleteCommunity:comm success:^(BOOL success) {
                 [SBTCredentialStore removeWithKey:key];
                 [progressView dismissWithClickedButtonIndex:100 animated:YES];
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Community 101 is successfully removed" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:deleteCommunityResultSuccess delegate:nil cancelButtonTitle:nil otherButtonTitles:okLabel, nil];
                 [alert show];
             } failure:^(NSError *error) {
                 if (IS_DEBUGGING)
                     [FBLog log:[error description] from:self];
                 
                 [progressView dismissWithClickedButtonIndex:100 animated:YES];
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Community 101 can not be deleted" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:errorLabel message:deleteCommunityResultFailure delegate:nil cancelButtonTitle:nil otherButtonTitles:okLabel, nil];
                 [alert show];
             }];
         }
@@ -230,14 +313,14 @@
                                   mimeType:@"text/plain"
                                    success:^(id result) {
                                        [progressView dismissWithClickedButtonIndex:100 animated:YES];
-                                       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"File named fb_log uploaded successfully" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                                       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:fileUploadSuccess delegate:nil cancelButtonTitle:nil otherButtonTitles:okLabel, nil];
                                        [alert show];
                                    } failure:^(NSError *error) {
                                        [progressView dismissWithClickedButtonIndex:100 animated:YES];
                                        if (IS_DEBUGGING)
                                            [FBLog log:[error description] from:self];
                                        
-                                       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"Could not upload the log file" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                                       UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:fileUploadFailure delegate:nil cancelButtonTitle:nil otherButtonTitles:okLabel, nil];
                                        [alert show];
                                    }];
     }

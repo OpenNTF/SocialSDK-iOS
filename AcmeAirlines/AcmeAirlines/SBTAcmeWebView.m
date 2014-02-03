@@ -69,7 +69,12 @@
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
-    self.title = @"Loading...";
+    NSString *loadingLabel = NSLocalizedStringWithDefaultValue(@"LOADING",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"Loading...",
+                              @"Loading common label");
+    self.title = loadingLabel;
 	[self.actIndicator startAnimating];
     
 	return YES;

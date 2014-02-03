@@ -46,15 +46,42 @@
 {
     [super viewDidLoad];
     
+    NSString *acmeUrlLabel = NSLocalizedStringWithDefaultValue(@"ACME_URL_LABEL",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Acme server url",
+                              @"Acme server url");
+    
+    NSString *connectionsUrlLabel = NSLocalizedStringWithDefaultValue(@"CONNECTIONS_URL_LABEL",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Connections server url",
+                              @"Connections server url");
+    
+    NSString *usernameLabel = NSLocalizedStringWithDefaultValue(@"USERNAME",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"Username",
+                              @"Username label");
+    NSString *passwordLabel = NSLocalizedStringWithDefaultValue(@"PASSWORD",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"Password",
+                              @"Password label");
+    NSString *loginLabel = NSLocalizedStringWithDefaultValue(@"LOGIN",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"Login",
+                              @"Login label");
     self.smartCloudTitle.text = @"Acme Airlines";
-    self.connectionsUrlField.placeholder = @"Connections server url";
-    self.acmeUrlField.placeholder = @"Acme server url";
-    self.userNameField.placeholder = @"Username";
-    self.passwordField.placeholder = @"Password";
+    self.connectionsUrlField.placeholder = connectionsUrlLabel;
+    self.acmeUrlField.placeholder = acmeUrlLabel;
+    self.userNameField.placeholder = usernameLabel;
+    self.passwordField.placeholder = passwordLabel;
     
     self.loginButton.layer.masksToBounds = YES;
 	self.loginButton.layer.cornerRadius = 5;
-    [self.loginButton setTitle:@"Login" forState:UIControlStateNormal];
+    [self.loginButton setTitle:loginLabel forState:UIControlStateNormal];
     
     NSString *connectionsUrl = [SBTCredentialStore loadWithKey:IBM_CREDENTIAL_CONNECTIONS_URL];
     NSString *acmeUrl = [SBTCredentialStore loadWithKey:IBM_CREDENTIAL_ACME_URL];
@@ -122,9 +149,39 @@
 
 - (IBAction)login:(id)sender {
     
+    NSString *okLabel = NSLocalizedStringWithDefaultValue(@"OK",
+                                  @"Common",
+                                  [NSBundle mainBundle],
+                                  @"OK",
+                                  @"OK Common label");
+    NSString *fieldsCantBeEmpty = NSLocalizedStringWithDefaultValue(@"FIELDS_CANT_BE_EMPTY",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"None of the fields can be empty!",
+                              @"None of the fields can be empty!");
+    NSString *loggingIn = NSLocalizedStringWithDefaultValue(@"LOGGING_IN",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Logging in...",
+                              @"Logging in...");
+    NSString *loginLabel = NSLocalizedStringWithDefaultValue(@"LOGIN",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"Login",
+                              @"Login label");
+    NSString *errorLabel = NSLocalizedStringWithDefaultValue(@"ERROR",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"Error",
+                              @"Error Common label");
+    NSString *urlUsernameOrPasswordWrong = NSLocalizedStringWithDefaultValue(@"URL_USERNAME_OR_PASSWORD_WRONG",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Connections url, username or password is wrong!",
+                              @"Connections url, username or password is wrong!");
     if (self.connectionsUrlField.text.length == 0 || self.acmeUrlField.text.length == 0 || self.userNameField.text.length == 0 || self.passwordField.text.length == 0 ) {
         
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"None of the fields can be empty!" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:fieldsCantBeEmpty delegate:self cancelButtonTitle:nil otherButtonTitles:okLabel, nil];
         [alert show];
         
         return;
@@ -134,7 +191,7 @@
     [SBTCredentialStore storeWithKey:IBM_CREDENTIAL_ACME_URL value:self.acmeUrlField.text];
 
     [self.actIndicator startAnimating];
-    [self.loginButton setTitle:@"Loging in..." forState:UIControlStateNormal];
+    [self.loginButton setTitle:loggingIn forState:UIControlStateNormal];
     self.loginButton.enabled = NO;
     self.userNameField.userInteractionEnabled = NO;
     self.passwordField.userInteractionEnabled = NO;
@@ -146,7 +203,7 @@
                      completionHandler:^(NSError *error) {
                          if (error == nil) {
                              [self.actIndicator stopAnimating];
-                             [self.loginButton setTitle:@"Login" forState:UIControlStateNormal];
+                             [self.loginButton setTitle:loginLabel forState:UIControlStateNormal];
                              self.loginButton.enabled = YES;
                              
                              self.connectionsUrlField.userInteractionEnabled = YES;
@@ -161,14 +218,14 @@
                              [FBLog log:[error description] from:self];
                              
                              [self.actIndicator stopAnimating];
-                             [self.loginButton setTitle:@"Login" forState:UIControlStateNormal];
+                             [self.loginButton setTitle:loginLabel forState:UIControlStateNormal];
                              self.loginButton.enabled = YES;
                              
                              self.connectionsUrlField.userInteractionEnabled = YES;
                              self.acmeUrlField.userInteractionEnabled = YES;
                              self.userNameField.userInteractionEnabled = YES;
                              self.passwordField.userInteractionEnabled = YES;
-                             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Connections url, username or password is wrong!" delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:errorLabel message:urlUsernameOrPasswordWrong delegate:self cancelButtonTitle:nil otherButtonTitles:okLabel, nil];
                              [alert show];
                          }
                      }];    

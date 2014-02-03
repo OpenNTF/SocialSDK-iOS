@@ -39,7 +39,12 @@
 {
     [super viewDidLoad];
 
-    self.title = @"Flight Status";
+    NSString *flightStatusLabel = NSLocalizedStringWithDefaultValue(@"FLIGHT_STATUS",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Flight Status",
+                                  @"Flight Status");
+    self.title = flightStatusLabel;
 }
 
 - (void)didReceiveMemoryWarning
@@ -115,6 +120,26 @@
  */
 - (void) addSubViewsToCell:(UITableViewCell *) cell {
     
+    NSString *flightText = NSLocalizedStringWithDefaultValue(@"FLIGHT",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Flight",
+                                  @"Flight label");
+    NSString *departText = NSLocalizedStringWithDefaultValue(@"DEPART",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Depart",
+                                  @"Depart label");
+    NSString *arriveText = NSLocalizedStringWithDefaultValue(@"ARRIVE",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Arrive",
+                                  @"Arrive label");
+    NSString *stateText = NSLocalizedStringWithDefaultValue(@"STATE",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"State",
+                                  @"State label");
     CGRect frame;
     float textSize;
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
@@ -126,7 +151,7 @@
     }
     UILabel *flightNumberTitleLabel = [[UILabel alloc] initWithFrame:frame];
     flightNumberTitleLabel.font = [UIFont boldSystemFontOfSize:textSize];
-    flightNumberTitleLabel.text = @"Flight";
+    flightNumberTitleLabel.text = flightText;
     flightNumberTitleLabel.backgroundColor = [UIColor clearColor];
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
@@ -136,7 +161,7 @@
     }
     UILabel *departTitleLabel = [[UILabel alloc] initWithFrame:frame];
     departTitleLabel.font = [UIFont boldSystemFontOfSize:textSize];
-    departTitleLabel.text = @"Depart";
+    departTitleLabel.text = departText;
     departTitleLabel.backgroundColor = [UIColor clearColor];
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
@@ -146,7 +171,7 @@
     }
     UILabel *arriveTitleLabel = [[UILabel alloc] initWithFrame:frame];
     arriveTitleLabel.font = [UIFont boldSystemFontOfSize:textSize];
-    arriveTitleLabel.text = @"Arrive";
+    arriveTitleLabel.text = arriveText;
     arriveTitleLabel.backgroundColor = [UIColor clearColor];
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
@@ -156,7 +181,7 @@
     }
     UILabel *stateTitleLabel = [[UILabel alloc] initWithFrame:frame];
     stateTitleLabel.font = [UIFont boldSystemFontOfSize:textSize];
-    stateTitleLabel.text = @"State";
+    stateTitleLabel.text = stateText;
     stateTitleLabel.backgroundColor = [UIColor clearColor];
     
     // Dynamic fields

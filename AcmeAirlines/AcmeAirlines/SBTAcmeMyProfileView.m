@@ -49,12 +49,36 @@
     [super viewDidLoad];
     
     self.listOfTitles = [[NSMutableArray alloc] initWithObjects:
-                         @"Email",
-                         @"Phone Number",
-                         @"Connections Profile",
-                         @"Report-to Chain",
-                         @"Same Manager",
-                         @"People Managed",
+                         NSLocalizedStringWithDefaultValue(@"EMAIL",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Email",
+                              @"Email"),
+                         NSLocalizedStringWithDefaultValue(@"PHONE_NUMBER",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Phone Number",
+                              @"Phone Number"),
+                         NSLocalizedStringWithDefaultValue(@"CONNECTIONS_PROFILE",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Connections Profile",
+                              @"Connections Profile"),
+                         NSLocalizedStringWithDefaultValue(@"REPORT_TO_CHAIN",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Report-to Chain",
+                              @"Report-to Chain"),
+                         NSLocalizedStringWithDefaultValue(@"SAME_MANAGER",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Same Manager",
+                              @"Same Manager"),
+                         NSLocalizedStringWithDefaultValue(@"PEOPLE_MANAGED",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"People Managed",
+                              @"People Managed"),
                          nil];
     
     if (self.myProfile.displayName != nil)
@@ -326,6 +350,31 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    NSString *warningLabel = NSLocalizedStringWithDefaultValue(@"WARNING",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Warning!",
+                              @"Warning title");
+    NSString *closeAcmeOpenPhone = NSLocalizedStringWithDefaultValue(@"CLOSE_ACME_OPEN_PHONE",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"This action will close Acme Airlines app and will open Phone app on your iPhone?",
+                              @"Action will close Acme and open Phone app");
+    NSString *okLabel = NSLocalizedStringWithDefaultValue(@"OK",
+                                  @"Common",
+                                  [NSBundle mainBundle],
+                                  @"OK",
+                                  @"OK Common label");
+    NSString *cancelLabel = NSLocalizedStringWithDefaultValue(@"CANCEL",
+                                  @"Common",
+                                  [NSBundle mainBundle],
+                                  @"Cancel",
+                                  @"Cancel common label");
+    NSString *needConnectionsInstalled = NSLocalizedStringWithDefaultValue(@"NEED_CONNECTIONS_INSTALLED",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"You need IBM Connections' app installed for this action.",
+                              @"Need IBM Connections installed");
     if (indexPath.section == 1) {
         if (indexPath.row == 0) {
             // Email
@@ -335,20 +384,20 @@
             [[UIApplication sharedApplication] openURL:url];
         } else if (indexPath.row == 1) {
             // Phone
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Warning!"
-                                                            message:@"This action will close Acme Airlines app and will open Phone app on your iPhone?"
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:warningLabel
+                                                            message:closeAcmeOpenPhone
                                                            delegate:self
                                                   cancelButtonTitle:nil
-                                                  otherButtonTitles:@"Cancel", @"OK", nil];
+                                                  otherButtonTitles:cancelLabel, okLabel, nil];
             [alert show];
         } else if (indexPath.row == 2) {
             NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"ibmscp://com.ibm.connections/profiles?email=%@", self.myProfile.email]];
             if ([[UIApplication sharedApplication] openURL:url] == NO) {
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
-                                                                message:@"You need IBM Connections' app installed for this action."
+                                                                message:needConnectionsInstalled
                                                                delegate:self
                                                       cancelButtonTitle:nil
-                                                      otherButtonTitles:@"OK", nil];
+                                                      otherButtonTitles:okLabel, nil];
                 [alert show];
             }
         }
@@ -439,13 +488,23 @@
  This methods updates the profile photo and let user knows about the result
  */
 - (void) updateUI {
+    NSString *changedPhoto = NSLocalizedStringWithDefaultValue(@"PHOTO_CHANGED",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"Your photo has been changed",
+                              @"Photo has been changed");
+    NSString *okLabel = NSLocalizedStringWithDefaultValue(@"OK",
+                                  @"Common",
+                                  [NSBundle mainBundle],
+                                  @"OK",
+                                  @"OK Common label");
     self.myProfile = [SBTAcmeUtils getMyProfileForce:YES];
     [self.popOverController dismissPopoverAnimated:YES];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
-                                                    message:[NSString stringWithFormat:@"Your photo has been changed"]
+                                                    message:[NSString stringWithFormat:changedPhoto]
                                                    delegate:self
                                           cancelButtonTitle:nil
-                                          otherButtonTitles:@"OK", nil];
+                                          otherButtonTitles:okLabel, nil];
     [alert show];
     [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
@@ -512,6 +571,21 @@
  Get the profiles with the same manager as the current person
  */
 - (void) getSameManager {
+    NSString *noSameManager = NSLocalizedStringWithDefaultValue(@"NO_SAME_MANAGER",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"%@ doesn't have a person reporting to the same manager",
+                              @"{Profile Name} doesn't have a person reporting to the same manager");
+    NSString *noManager = NSLocalizedStringWithDefaultValue(@"NO_MANAGER",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"%@ doesn't have manager",
+                              @"{Profile Name} doesn't have manager");
+    NSString *okLabel = NSLocalizedStringWithDefaultValue(@"OK",
+                                  @"Common",
+                                  [NSBundle mainBundle],
+                                  @"OK",
+                                  @"OK Common label");
     UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
     SBTConnectionsProfileService *profileService = [[SBTConnectionsProfileService alloc] init];
     [profileService getReportToChainWithUserId:self.myProfile.email parameters:nil success:^(NSMutableArray *list) {
@@ -522,7 +596,7 @@
                 if (list != nil) {
                     [self openProfileListViewWithList:list];
                 } else {
-                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"%@ doesn't have a person reporting to the same manager", self.myProfile.displayName] delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:noSameManager, self.myProfile.displayName] delegate:self cancelButtonTitle:nil otherButtonTitles:okLabel, nil];
                     [alert show];
                 }
                 [progressView dismissWithClickedButtonIndex:100 animated:YES];
@@ -534,7 +608,7 @@
             }];
         } else {
             [progressView dismissWithClickedButtonIndex:100 animated:YES];
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"%@ doesn't have a manager", self.myProfile.displayName] delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:noManager, self.myProfile.displayName] delegate:self cancelButtonTitle:nil otherButtonTitles:okLabel, nil];
             [alert show];
         }
     } failure:^(NSError *error) {
@@ -549,14 +623,23 @@
  Get managed persons' profile
  */
 - (void) getPeopleManaged {
-    
+    NSString *isNoManager = NSLocalizedStringWithDefaultValue(@"IS_NO_MANAGER",
+                              nil,
+                              [NSBundle mainBundle],
+                              @"%@ doesn't manage any person",
+                              @"{Profile Name} doesn't manager any person");
+    NSString *okLabel = NSLocalizedStringWithDefaultValue(@"OK",
+                                  @"Common",
+                                  [NSBundle mainBundle],
+                                  @"OK",
+                                  @"OK Common label");
     UIAlertView *progressView = [SBTAcmeUtils showProgressBar];
     SBTConnectionsProfileService *profileService = [[SBTConnectionsProfileService alloc] init];
     [profileService getDirectReportsWithUserId:self.myProfile.userId parameters:nil success:^(NSMutableArray *list) {
         if (list != nil) {
             [self openProfileListViewWithList:list];
         } else {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"%@ doesn't manage any person", self.myProfile.displayName] delegate:self cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:isNoManager, self.myProfile.displayName] delegate:self cancelButtonTitle:nil otherButtonTitles:okLabel, nil];
             [alert show];
         }
         

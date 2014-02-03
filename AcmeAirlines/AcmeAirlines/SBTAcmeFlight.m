@@ -23,15 +23,55 @@
 
 - (NSString *) description {
     
+    NSString *flightDesc = NSLocalizedStringWithDefaultValue(@"FLIGHT_DESC",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Flight id: %@\n",
+                                  @"Flight id: {flightId}\n");
+    NSString *departureCityDesc = NSLocalizedStringWithDefaultValue(@"DEPARTURE_CITY_DESC",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Departure city: %@\n",
+                                  @"Departure city: {departureCity}\n");
+    NSString *arrivalCity = NSLocalizedStringWithDefaultValue(@"ARRIVAL_CITY_DESC",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Arrival city: %@\n",
+                                  @"Arrival city: {arrivalCity}\n");
+    NSString *departureTime = NSLocalizedStringWithDefaultValue(@"DEPARTURE_TIME_DESC",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Departure time: %@\n",
+                                  @"Departure time: {departureTime}\n");
+    NSString *flightTime = NSLocalizedStringWithDefaultValue(@"FLIGHT_TIME_DESC",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Flight time: %@\n",
+                                  @"Flight time: {flightTime}\n");
+    NSString *approver = NSLocalizedStringWithDefaultValue(@"APPROVER_DESC",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Approver: %@\n",
+                                  @"Approver: {approver}\n");
+    NSString *status = NSLocalizedStringWithDefaultValue(@"STATUS_DESC",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Status: %@\n",
+                                  @"Status: {status}\n");
+    NSString *checkedIn = NSLocalizedStringWithDefaultValue(@"CHECKEDIN_DESC",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"CheckedIn: %@\n",
+                                  @"CheckedIn: {checkedIn}\n");
     NSString *description = @"\n";
-    description = [description stringByAppendingFormat:@"Flight id: %@\n", self.flightId];
-    description = [description stringByAppendingFormat:@"Departure city: %@\n", self.departureCity];
-    description = [description stringByAppendingFormat:@"Arrival city: %@\n", self.arrivalCity];
-    description = [description stringByAppendingFormat:@"Departure time: %@\n", self.departureTime];
-    description = [description stringByAppendingFormat:@"Flight time: %@\n", self.flightTime];
-    description = [description stringByAppendingFormat:@"Approver: %@\n", self.approver];
-    description = [description stringByAppendingFormat:@"Status: %@\n", self.status];
-    description = [description stringByAppendingFormat:@"CheckedIn: %@\n", [self.checkedIn description]];
+    description = [description stringByAppendingFormat:flightDesc, self.flightId];
+    description = [description stringByAppendingFormat:departureCityDesc, self.departureCity];
+    description = [description stringByAppendingFormat:arrivalCity, self.arrivalCity];
+    description = [description stringByAppendingFormat:departureTime, self.departureTime];
+    description = [description stringByAppendingFormat:flightTime, self.flightTime];
+    description = [description stringByAppendingFormat:approver, self.approver];
+    description = [description stringByAppendingFormat:status, self.status];
+    description = [description stringByAppendingFormat:checkedIn, [self.checkedIn description]];
     
     return description;
 }

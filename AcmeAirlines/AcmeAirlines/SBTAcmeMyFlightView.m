@@ -40,9 +40,14 @@
 
 - (void)viewDidLoad
 {
+    NSString *myFlights = NSLocalizedStringWithDefaultValue(@"MY_FLIGHTS",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"My Flights",
+                                  @"My Flights");
     [super viewDidLoad];
     
-    self.title = @"My Flights";
+    self.title = myFlights;
     UIBarButtonItem *refreshItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh target:self action:@selector(getRequestStatusFromAcme)];
     self.navigationItem.rightBarButtonItem = refreshItem;
 
@@ -131,11 +136,26 @@
 - (void) checkedIn:(UIButton *) sender {
     //NSInteger index = sender.tag - 400;
     
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Congrats!"
-                                                        message:@"You successfully checkedin"
+    NSString *congrats = NSLocalizedStringWithDefaultValue(@"CONGRATS",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Congrats!",
+                                  @"Congrats!");
+    NSString *checkinSuccessful = NSLocalizedStringWithDefaultValue(@"CHECKIN_SUCCESSFUL",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"You successfully checked-in",
+                                  @"You successfully checked-in");
+    NSString *okLabel = NSLocalizedStringWithDefaultValue(@"OK",
+                              @"Common",
+                              [NSBundle mainBundle],
+                              @"OK",
+                              @"OK Common label");
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:congrats
+                                                        message:checkinSuccessful
                                                        delegate:self
                                               cancelButtonTitle:nil
-                                              otherButtonTitles:@"OK", nil];
+                                              otherButtonTitles:okLabel, nil];
     [alertView show];
 }
 
@@ -189,6 +209,26 @@
  */
 - (void) addSubViewsToCell:(UITableViewCell *) cell indexPath:(NSIndexPath *) indexPath {
     
+    NSString *flightText = NSLocalizedStringWithDefaultValue(@"FLIGHT",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Flight",
+                                  @"Flight label");
+    NSString *approverText = NSLocalizedStringWithDefaultValue(@"APPROVE",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Approver",
+                                  @"Approver label");
+    NSString *statusText = NSLocalizedStringWithDefaultValue(@"STATUS",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Status",
+                                  @"Status label");
+    NSString *checkinText = NSLocalizedStringWithDefaultValue(@"CHECKIN",
+                                  nil,
+                                  [NSBundle mainBundle],
+                                  @"Checkin",
+                                  @"Checkin label");
     CGRect frame;
     float textSize;
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
@@ -200,7 +240,7 @@
     }
     UILabel *flightNumberTitleLabel = [[UILabel alloc] initWithFrame:frame];
     flightNumberTitleLabel.font = [UIFont boldSystemFontOfSize:textSize];
-    flightNumberTitleLabel.text = @"Flight";
+    flightNumberTitleLabel.text = flightText;
     flightNumberTitleLabel.backgroundColor = [UIColor clearColor];
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
@@ -210,7 +250,7 @@
     }
     UILabel *approverTitleLabel = [[UILabel alloc] initWithFrame:frame];
     approverTitleLabel.font = [UIFont boldSystemFontOfSize:textSize];
-    approverTitleLabel.text = @"Approver";
+    approverTitleLabel.text = approverText;
     approverTitleLabel.backgroundColor = [UIColor clearColor];
     
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
@@ -221,7 +261,7 @@
     UILabel *statusTitleLabel = [[UILabel alloc] initWithFrame:frame];
     statusTitleLabel.font = [UIFont boldSystemFontOfSize:textSize];
     statusTitleLabel.textColor = [UIColor blackColor];
-    statusTitleLabel.text = @"Status";
+    statusTitleLabel.text = statusText;
     statusTitleLabel.backgroundColor = [UIColor clearColor];
     
     UILabel *flightNumberLabel = [[UILabel alloc] initWithFrame:CGRectMake(flightNumberTitleLabel.frame.origin.x, flightNumberTitleLabel.frame.origin.y + flightNumberTitleLabel.frame.size.height, flightNumberTitleLabel.frame.size.width, flightNumberTitleLabel.frame.size.height)];
@@ -250,7 +290,7 @@
     UIButton *checkinButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     checkinButton.frame = frame;
     checkinButton.titleLabel.font = [UIFont boldSystemFontOfSize:textSize-1];
-    [checkinButton setTitle:@"Checkin" forState:UIControlStateNormal];
+    [checkinButton setTitle:checkinText forState:UIControlStateNormal];
     [checkinButton setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
     [checkinButton addTarget:self action:@selector(checkedIn:) forControlEvents:UIControlEventTouchUpInside];
     checkinButton.tag = 400 + indexPath.row;

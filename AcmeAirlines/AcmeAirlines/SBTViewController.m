@@ -65,11 +65,21 @@
                                                                         green:91.0/255
                                                                          blue:71.0/255
                                                                         alpha:1];
-    UIBarButtonItem *logoutItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout"
+    UIBarButtonItem *logoutItem = [[UIBarButtonItem alloc] initWithTitle:
+                                                                  NSLocalizedStringWithDefaultValue(@"LOGOUT",
+                                                                      @"Common",
+                                                                      [NSBundle mainBundle],
+                                                                      @"Logout",
+                                                                      @"Logout")
                                                                    style:UIBarButtonItemStylePlain
                                                                   target:self
                                                                   action:@selector(logout)];
-    UIBarButtonItem *settingsItem = [[UIBarButtonItem alloc] initWithTitle:@"Settings"
+    UIBarButtonItem *settingsItem = [[UIBarButtonItem alloc] initWithTitle:
+                                                                    NSLocalizedStringWithDefaultValue(@"SETTINGS",
+                                                                      @"Common",
+                                                                      [NSBundle mainBundle],
+                                                                      @"Settings",
+                                                                      @"Settings common label")
                                                                      style:UIBarButtonItemStylePlain
                                                                     target:self
                                                                     action:@selector(showSettings)];
@@ -316,7 +326,29 @@
         if (list != nil) {
             self.listOfFlights = list;
         } else {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Could not populate flights from server" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+            
+            UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle:
+                                    NSLocalizedStringWithDefaultValue(@"ERROR",
+                                      @"Common",
+                                      [NSBundle mainBundle],
+                                      @"Error",
+                                      @"Error Common label")
+                                  message:
+                                   NSLocalizedStringWithDefaultValue(@"NO_FLIGHTS_FROM_SERVER",
+                                      nil,
+                                      [NSBundle mainBundle],
+                                      @"Could not populate flights from server",
+                                      @"Could not populate flights from server")
+                                  delegate:nil
+                                  cancelButtonTitle:nil
+                                  otherButtonTitles:
+                                    NSLocalizedStringWithDefaultValue(@"OK",
+                                      @"Common",
+                                      [NSBundle mainBundle],
+                                      @"OK",
+                                      @"OK Common label"),
+                                  nil];
             [alert show];
         }
     }];
@@ -331,7 +363,28 @@
         if (airportCodes != nil) {
             self.airportCodes = airportCodes;
         } else {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Could not populate airport codes from server" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+           UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle:
+                                    NSLocalizedStringWithDefaultValue(@"ERROR",
+                                      @"Common",
+                                      [NSBundle mainBundle],
+                                      @"Error",
+                                      @"Error Common label")
+                                  message:
+                                    NSLocalizedStringWithDefaultValue(@"NO_AIRPORT_CODES_FROM_SERVER",
+                                      nil,
+                                      [NSBundle mainBundle],
+                                      @"Could not populate airport codes from server",
+                                      @"Could not populate airport codes from server")
+                                  delegate:nil
+                                  cancelButtonTitle:nil
+                                  otherButtonTitles:
+                                    NSLocalizedStringWithDefaultValue(@"OK",
+                                      @"Common",
+                                      [NSBundle mainBundle],
+                                      @"OK",
+                                      @"OK Common label"),
+                                  nil]; 
             [alert show];
         }
     }];
@@ -345,7 +398,28 @@
         if (flightStatus != nil) {
             self.flightStatus = flightStatus;
         } else {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Could not populate flight status from server" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil];
+           UIAlertView *alert = [[UIAlertView alloc]
+                                  initWithTitle:
+                                    NSLocalizedStringWithDefaultValue(@"ERROR",
+                                      @"Common",
+                                      [NSBundle mainBundle],
+                                      @"Error",
+                                      @"Error Common label")
+                                  message:
+                                    NSLocalizedStringWithDefaultValue(@"NO_FLIGHT_STATUS_FROM_SERVER",
+                                      nil,
+                                      [NSBundle mainBundle],
+                                      @"Could not populate flight status from server",
+                                      @"Could not populate flight status from server")
+                                  delegate:nil
+                                  cancelButtonTitle:nil
+                                  otherButtonTitles:
+                                    NSLocalizedStringWithDefaultValue(@"OK",
+                                      @"Common",
+                                      [NSBundle mainBundle],
+                                      @"OK",
+                                      @"OK Common label"),
+                                  nil];
             [alert show];
         }
     }];
