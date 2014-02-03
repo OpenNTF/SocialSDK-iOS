@@ -22,6 +22,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		07110B65189FB71F00AAD859 /* Common.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07110B61189FB71F00AAD859 /* Common.strings */; };
+		07110B66189FB71F00AAD859 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07110B63189FB71F00AAD859 /* Localizable.strings */; };
+		07110B6E189FE7FE00AAD859 /* xib.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07110B6C189FE7FE00AAD859 /* xib.strings */; };
 		0718D74C1887F69800101EC2 /* libiOSSBTK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07E363851880174200620433 /* libiOSSBTK.a */; };
 		3D09FEBE17C28210006B5159 /* SBTAcmeMainViewCommonOperations.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D09FEBD17C28210006B5159 /* SBTAcmeMainViewCommonOperations.m */; };
 		3D824D5717AFF8AB000AD1EF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D824D5617AFF8AB000AD1EF /* UIKit.framework */; };
@@ -137,6 +140,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07110B62189FB71F00AAD859 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Common.strings; sourceTree = "<group>"; };
+		07110B64189FB71F00AAD859 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		07110B69189FB75E00AAD859 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		07110B6A189FB75E00AAD859 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Common.strings; sourceTree = "<group>"; };
+		07110B6B189FB75E00AAD859 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		07110B6D189FE7FE00AAD859 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/xib.strings; sourceTree = "<group>"; };
+		07110B6F189FE81D00AAD859 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/xib.strings; sourceTree = "<group>"; };
 		075DE144187C52CD0099BA87 /* iOSSBTK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = iOSSBTK.xcodeproj; path = ../iOSSBTK/iOSSBTK.xcodeproj; sourceTree = "<group>"; };
 		3D09FEBC17C28210006B5159 /* SBTAcmeMainViewCommonOperations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBTAcmeMainViewCommonOperations.h; sourceTree = "<group>"; };
 		3D09FEBD17C28210006B5159 /* SBTAcmeMainViewCommonOperations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBTAcmeMainViewCommonOperations.m; sourceTree = "<group>"; };
@@ -346,8 +356,11 @@
 		3D824D5D17AFF8AB000AD1EF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				07110B6C189FE7FE00AAD859 /* xib.strings */,
 				3D824D5E17AFF8AB000AD1EF /* AcmeAirlines-Info.plist */,
 				3D824D5F17AFF8AB000AD1EF /* InfoPlist.strings */,
+				07110B61189FB71F00AAD859 /* Common.strings */,
+				07110B63189FB71F00AAD859 /* Localizable.strings */,
 				3D824D6217AFF8AB000AD1EF /* main.m */,
 				3D824D6417AFF8AB000AD1EF /* AcmeAirlines-Prefix.pch */,
 				3D824D6817AFF8AB000AD1EF /* Default.png */,
@@ -675,6 +688,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
 			);
 			mainGroup = 3D824D4A17AFF8AB000AD1EF;
 			productRefGroup = 3D824D5417AFF8AB000AD1EF /* Products */;
@@ -720,10 +734,13 @@
 				3D824D6B17AFF8AB000AD1EF /* Default@2x.png in Resources */,
 				3D824D6D17AFF8AB000AD1EF /* Default-568h@2x.png in Resources */,
 				3D824DAE17AFF948000AD1EF /* ComposeUpdate.xib in Resources */,
+				07110B65189FB71F00AAD859 /* Common.strings in Resources */,
 				3D824DB017AFF948000AD1EF /* SBTAcmeCommunityView.xib in Resources */,
 				3D824DB117AFF948000AD1EF /* SBTAcmeFlightStatusView.xib in Resources */,
+				07110B66189FB71F00AAD859 /* Localizable.strings in Resources */,
 				3D824DB217AFF948000AD1EF /* SBTAcmeFlightView.xib in Resources */,
 				3D824DB317AFF948000AD1EF /* SBTAcmeMyFlightView.xib in Resources */,
+				07110B6E189FE7FE00AAD859 /* xib.strings in Resources */,
 				3D824DB417AFF948000AD1EF /* SBTAcmeMyProfileView.xib in Resources */,
 				3D824DB517AFF948000AD1EF /* SBTAcmeSettingsView.xib in Resources */,
 				3D824DB617AFF948000AD1EF /* SBTAcmeStatusUpdateView.xib in Resources */,
@@ -834,10 +851,38 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		07110B61189FB71F00AAD859 /* Common.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07110B62189FB71F00AAD859 /* en */,
+				07110B6A189FB75E00AAD859 /* es */,
+			);
+			name = Common.strings;
+			sourceTree = "<group>";
+		};
+		07110B63189FB71F00AAD859 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07110B64189FB71F00AAD859 /* en */,
+				07110B6B189FB75E00AAD859 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		07110B6C189FE7FE00AAD859 /* xib.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07110B6D189FE7FE00AAD859 /* en */,
+				07110B6F189FE81D00AAD859 /* es */,
+			);
+			name = xib.strings;
+			sourceTree = "<group>";
+		};
 		3D824D5F17AFF8AB000AD1EF /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3D824D6017AFF8AB000AD1EF /* en */,
+				07110B69189FB75E00AAD859 /* es */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
